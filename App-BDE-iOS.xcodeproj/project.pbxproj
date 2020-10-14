@@ -76,6 +76,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03559E57253735DE0059F1F0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		03559E58253735E80059F1F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		03559E59253735EE0059F1F0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		03C54BD0252F37D10014FF4E = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +120,9 @@
 		03C54BDB252F37D10014FF4E /* App-BDE-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				03559E59253735EE0059F1F0 /* Services */,
+				03559E58253735E80059F1F0 /* Models */,
+				03559E57253735DE0059F1F0 /* Screens */,
 				03C54BDC252F37D10014FF4E /* AppDelegate.swift */,
 				03C54BDE252F37D10014FF4E /* SceneDelegate.swift */,
 				03C54BE0252F37D10014FF4E /* ViewController.swift */,
@@ -443,7 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ynov.lyon.bde.App-BDE-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ynovlyon.bde;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,7 +486,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ynov.lyon.bde.App-BDE-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ynovlyon.bde;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
