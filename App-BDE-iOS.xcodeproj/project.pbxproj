@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03559E62253740CA0059F1F0 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03559E61253740CA0059F1F0 /* UIViewExtensions.swift */; };
+		03AD8E222538BA9E009B6435 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 03AD8E212538BA9E009B6435 /* SnapKit */; };
 		03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDC252F37D10014FF4E /* AppDelegate.swift */; };
 		03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDE252F37D10014FF4E /* SceneDelegate.swift */; };
 		03C54BE1252F37D10014FF4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BE0252F37D10014FF4E /* ViewController.swift */; };
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03559E61253740CA0059F1F0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = "../../../../../../Projet-perso/FYD/FYD/FYD/Additions/Extensions/UIViewExtensions.swift"; sourceTree = "<group>"; };
 		03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-BDE-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C54BDC252F37D10014FF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03C54BDE252F37D10014FF4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03AD8E222538BA9E009B6435 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +83,7 @@
 		03559E57253735DE0059F1F0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				03C54BE0252F37D10014FF4E /* ViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -95,6 +100,43 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		03559E5D25373FE60059F1F0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				03C54BE2252F37D10014FF4E /* Main.storyboard */,
+				03C54BDC252F37D10014FF4E /* AppDelegate.swift */,
+				03C54BDE252F37D10014FF4E /* SceneDelegate.swift */,
+				03559E5E25373FF00059F1F0 /* Supporting Files */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		03559E5E25373FF00059F1F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03C54BE5252F37D30014FF4E /* Assets.xcassets */,
+				03C54BE7252F37D30014FF4E /* LaunchScreen.storyboard */,
+				03C54BEA252F37D30014FF4E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03559E5F253740360059F1F0 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				03559E60253740420059F1F0 /* Extensions */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		03559E60253740420059F1F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				03559E61253740CA0059F1F0 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		03C54BD0252F37D10014FF4E = {
@@ -120,16 +162,11 @@
 		03C54BDB252F37D10014FF4E /* App-BDE-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				03559E5F253740360059F1F0 /* Additions */,
+				03559E5D25373FE60059F1F0 /* Application */,
 				03559E59253735EE0059F1F0 /* Services */,
 				03559E58253735E80059F1F0 /* Models */,
 				03559E57253735DE0059F1F0 /* Screens */,
-				03C54BDC252F37D10014FF4E /* AppDelegate.swift */,
-				03C54BDE252F37D10014FF4E /* SceneDelegate.swift */,
-				03C54BE0252F37D10014FF4E /* ViewController.swift */,
-				03C54BE2252F37D10014FF4E /* Main.storyboard */,
-				03C54BE5252F37D30014FF4E /* Assets.xcassets */,
-				03C54BE7252F37D30014FF4E /* LaunchScreen.storyboard */,
-				03C54BEA252F37D30014FF4E /* Info.plist */,
 			);
 			path = "App-BDE-iOS";
 			sourceTree = "<group>";
@@ -168,6 +205,9 @@
 			dependencies = (
 			);
 			name = "App-BDE-iOS";
+			packageProductDependencies = (
+				03AD8E212538BA9E009B6435 /* SnapKit */,
+			);
 			productName = "App-BDE-iOS";
 			productReference = 03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +279,9 @@
 				Base,
 			);
 			mainGroup = 03C54BD0252F37D10014FF4E;
+			packageReferences = (
+				03AD8E202538BA9E009B6435 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 03C54BDA252F37D10014FF4E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,6 +327,7 @@
 			files = (
 				03C54BE1252F37D10014FF4E /* ViewController.swift in Sources */,
 				03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */,
+				03559E62253740CA0059F1F0 /* UIViewExtensions.swift in Sources */,
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,15 +504,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
-				INFOPLIST_FILE = "App-BDE-iOS/Info.plist";
+				INFOPLIST_FILE = "App-BDE-iOS/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ynovlyon.bde;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ynovlyon.bde";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -479,15 +526,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
-				INFOPLIST_FILE = "App-BDE-iOS/Info.plist";
+				INFOPLIST_FILE = "App-BDE-iOS/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ynovlyon.bde;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.ynovlyon.bde";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,7 +548,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -520,7 +570,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOSTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -541,7 +591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -561,7 +611,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -617,6 +667,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03AD8E202538BA9E009B6435 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03AD8E212538BA9E009B6435 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03AD8E202538BA9E009B6435 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 03C54BD1252F37D10014FF4E /* Project object */;
 }
