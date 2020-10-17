@@ -1,0 +1,25 @@
+fastlane_version '2.53.1'
+
+platform :ios do
+	desc 'Build the prod iOS application.'
+	lane :prod do |options|
+		match(type: 'appstore')
+		update_code_signing_settings(
+	        use_automatic_signing: false,
+	        path: "./App-BDE-iOS.xcodeproj"
+		)
+		build_app(
+			project: "./App-BDE-iOS.xcodeproj",
+			scheme: "App-BDE-iOS",
+			clean: true,
+			export_method: "app-store"
+        )
+		pilot(skip_waiting_for_build_processing:true)
+	end
+
+	lane :devices do
+  		register_devices(devices_file: "./fastlane/devices.txt")
+  		match(type: "development", force_for_new_devices: true)
+	end
+end
+
