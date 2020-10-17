@@ -27,7 +27,8 @@ class ViewController: UIViewController {
         
         passwordTextField.placeholder = "test"
         passwordTextField.snp.makeConstraints { make in
-            make
+            make.top.equalTo(mailTextField.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
         }
         
     }
