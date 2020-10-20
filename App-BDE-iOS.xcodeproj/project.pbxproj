@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0302A196253AF008005F48AD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0302A195253AF008005F48AD /* Launch Screen.storyboard */; };
-		0302A19F253AF598005F48AD /* logo_bde.png in Resources */ = {isa = PBXBuildFile; fileRef = 0302A19E253AF598005F48AD /* logo_bde.png */; };
-		03559E62253740CA0059F1F0 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03559E61253740CA0059F1F0 /* UIViewExtensions.swift */; };
+		038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386369F253F361000CB2A05 /* onBoardingView.swift */; };
+		038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */; };
 		03AD8E222538BA9E009B6435 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 03AD8E212538BA9E009B6435 /* SnapKit */; };
 		03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDC252F37D10014FF4E /* AppDelegate.swift */; };
 		03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDE252F37D10014FF4E /* SceneDelegate.swift */; };
-		03C54BE1252F37D10014FF4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BE0252F37D10014FF4E /* ViewController.swift */; };
 		03C54BE4252F37D10014FF4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C54BE2252F37D10014FF4E /* Main.storyboard */; };
 		03C54BE6252F37D30014FF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C54BE5252F37D30014FF4E /* Assets.xcassets */; };
 		03C54BF4252F37D30014FF4E /* App_BDE_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BF3252F37D30014FF4E /* App_BDE_iOSTests.swift */; };
@@ -39,12 +38,11 @@
 
 /* Begin PBXFileReference section */
 		0302A195253AF008005F48AD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		0302A19E253AF598005F48AD /* logo_bde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_bde.png; sourceTree = "<group>"; };
-		03559E61253740CA0059F1F0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = "../../../../../../Projet-perso/FYD/FYD/FYD/Additions/Extensions/UIViewExtensions.swift"; sourceTree = "<group>"; };
+		0386369F253F361000CB2A05 /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
+		038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-BDE-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C54BDC252F37D10014FF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03C54BDE252F37D10014FF4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		03C54BE0252F37D10014FF4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03C54BE3252F37D10014FF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03C54BE5252F37D30014FF4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03C54BEA252F37D30014FF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,18 +80,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0302A19D253AF58B005F48AD /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				0302A19E253AF598005F48AD /* logo_bde.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		03559E57253735DE0059F1F0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				03C54BE0252F37D10014FF4E /* ViewController.swift */,
+				038636AD253F3DE700CB2A05 /* OnBoarding */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -144,9 +134,17 @@
 		03559E60253740420059F1F0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				03559E61253740CA0059F1F0 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		038636AD253F3DE700CB2A05 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				0386369F253F361000CB2A05 /* onBoardingView.swift */,
+				038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 		03C54BD0252F37D10014FF4E = {
@@ -172,7 +170,6 @@
 		03C54BDB252F37D10014FF4E /* App-BDE-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				0302A19D253AF58B005F48AD /* Images */,
 				03559E5F253740360059F1F0 /* Additions */,
 				03559E5D25373FE60059F1F0 /* Application */,
 				03559E59253735EE0059F1F0 /* Services */,
@@ -311,7 +308,6 @@
 			files = (
 				03C54BE6252F37D30014FF4E /* Assets.xcassets in Resources */,
 				0302A196253AF008005F48AD /* Launch Screen.storyboard in Resources */,
-				0302A19F253AF598005F48AD /* logo_bde.png in Resources */,
 				03C54BE4252F37D10014FF4E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,10 +333,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C54BE1252F37D10014FF4E /* ViewController.swift in Sources */,
 				03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */,
-				03559E62253740CA0059F1F0 /* UIViewExtensions.swift in Sources */,
+				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
+				038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
