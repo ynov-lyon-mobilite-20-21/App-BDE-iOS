@@ -7,6 +7,14 @@
 
 import Foundation
 
-final class OnBoardingViewModel {
+final class OnBoardingViewModel: ObservableObject {
     
+    
+    func Next() {
+        
+    }
+    
+    func Previous() {
+        
+    }
 }
