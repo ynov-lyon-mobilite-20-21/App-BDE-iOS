@@ -10,7 +10,8 @@ import SwiftUI
 struct BottonTabView: View {
     
     @ObservedObject var viewRouter = ViewRouter()
-    
+    @State private var showModal = false
+
     
     var body: some View {
         GeometryReader { geometry in
@@ -44,13 +45,20 @@ struct BottonTabView: View {
                         ZStack {
                             Circle()
                                 .foregroundColor(Color.white)
-                                .frame(width: 80, height: 80)
-                                .shadow(radius: 2 )
+                                .frame(width: 100, height: 100)
+                                .shadow(radius: 6 )
                             Image("logo_bde")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 80, height: 80)
                         }.offset(y: -geometry.size.height/10/2)
+                        .onTapGesture {
+                            self.showModal = true
+                        }.sheet(isPresented: $showModal, onDismiss: {
+                            self.showModal = false
+                        }) {
+                            ContactsView()
+                        }
                         
                         
                         VStack {
