@@ -36,7 +36,7 @@ struct BottonTabView: View {
                                     self.viewRouter.currentView = "Event"
                                 }
                             Text("ÉVÉNEMENTS")
-                                .font(.custom(self.viewRouter.currentView == "Event" ? "Fashion Fetish Bold" : "Fashion Fetish Regular", size: 12))
+                                .font(.custom("Fashion Fetish Regular", size: self.viewRouter.currentView == "Event" ? 14 : 12))
                                 .offset(y: -25)
                         }
                         
@@ -71,7 +71,7 @@ struct BottonTabView: View {
                                     self.viewRouter.currentView = "Profil"
                                 }
                             Text("PROFIL")
-                                .font(.custom(self.viewRouter.currentView == "Profil" ? "Fashion Fetish Bold" : "Fashion Fetish Regular", size: 12))
+                                .font(.custom("Fashion Fetish Regular", size: self.viewRouter.currentView == "Profil" ? 14 : 12))
                                 .offset(y: -25)
                         }
                         
