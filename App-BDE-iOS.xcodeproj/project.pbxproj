@@ -46,6 +46,7 @@
 		03538DBB2541CA1C00FCAD06 /* Fashion Fetish Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Regular.ttf"; sourceTree = "<group>"; };
 		0376A3FE25445CA600A74D92 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarModalItem.swift; sourceTree = "<group>"; };
+		0376A42725447EB900A74D92 /* tabac big sans semibold italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tabac big sans semibold italic.ttf"; sourceTree = "<group>"; };
 		0386369F253F361000CB2A05 /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
 		038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		03A8E3392541BA7C00B02210 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		03538DBA2541CA0F00FCAD06 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0376A42725447EB900A74D92 /* tabac big sans semibold italic.ttf */,
 				032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */,
 				03538DBB2541CA1C00FCAD06 /* Fashion Fetish Regular.ttf */,
 			);

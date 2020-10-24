@@ -13,6 +13,12 @@ struct EventView: View {
             Color.black.opacity(0.05).edgesIgnoringSafeArea(.all)
             Text("Hello, Events!")
         }
+        .background(Image("background_event")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .edgesIgnoringSafeArea(.top))
+        .navigationBarTitle("événements")
+
     }
 }
 
