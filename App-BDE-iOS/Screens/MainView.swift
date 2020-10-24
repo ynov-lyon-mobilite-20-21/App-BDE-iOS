@@ -12,12 +12,10 @@ struct MainView: View {
     @State private var currentView: Tab = .Tab1
     @State private var showModal: Bool = false
     var body: some View {
-        NavigationView {
             VStack {
                 CurrentScreen(currentView: self.$currentView)
                 BottomTabBar(currentView: self.$currentView, showModal: self.$showModal)
             }
-        }
         .sheet(isPresented: self.$showModal) { ContactsView() }
     }
 }
