@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
         
         window?.windowScene = windowScene
-        window?.rootViewController = UIHostingController(rootView: BottonTabView())
+        window?.rootViewController = UIHostingController(rootView: MainView())
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0302A196253AF008005F48AD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0302A195253AF008005F48AD /* Launch Screen.storyboard */; };
-		03538DAE2541BFC200FCAD06 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03538DAD2541BFC200FCAD06 /* ViewRouter.swift */; };
+		0376A3FF25445CA600A74D92 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A3FE25445CA600A74D92 /* MainView.swift */; };
+		0376A40425445CE400A74D92 /* CurrentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A40325445CE400A74D92 /* CurrentScreen.swift */; };
+		0376A40925445EA100A74D92 /* TabEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A40825445EA100A74D92 /* TabEnum.swift */; };
+		0376A41D254460B600A74D92 /* BottomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A41C254460B600A74D92 /* BottomTabBarItem.swift */; };
+		0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */; };
 		038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386369F253F361000CB2A05 /* onBoardingView.swift */; };
 		038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */; };
-		03A8E3302541B98400B02210 /* BottonTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E32F2541B98400B02210 /* BottonTabView.swift */; };
+		03A8E3302541B98400B02210 /* BottomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E32F2541B98400B02210 /* BottomTabBar.swift */; };
 		03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E3392541BA7C00B02210 /* EventView.swift */; };
 		03A8E33F2541BA8E00B02210 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E33E2541BA8E00B02210 /* ProfilView.swift */; };
 		03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E3442541BAD300B02210 /* ContactsView.swift */; };
@@ -43,11 +47,15 @@
 /* Begin PBXFileReference section */
 		0302A195253AF008005F48AD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
-		03538DAD2541BFC200FCAD06 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		03538DBB2541CA1C00FCAD06 /* Fashion Fetish Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Regular.ttf"; sourceTree = "<group>"; };
+		0376A3FE25445CA600A74D92 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0376A40325445CE400A74D92 /* CurrentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentScreen.swift; sourceTree = "<group>"; };
+		0376A40825445EA100A74D92 /* TabEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEnum.swift; sourceTree = "<group>"; };
+		0376A41C254460B600A74D92 /* BottomTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarItem.swift; sourceTree = "<group>"; };
+		0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarModalItem.swift; sourceTree = "<group>"; };
 		0386369F253F361000CB2A05 /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
 		038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
-		03A8E32F2541B98400B02210 /* BottonTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottonTabView.swift; sourceTree = "<group>"; };
+		03A8E32F2541B98400B02210 /* BottomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBar.swift; sourceTree = "<group>"; };
 		03A8E3392541BA7C00B02210 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		03A8E33E2541BA8E00B02210 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		03A8E3442541BAD300B02210 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
@@ -105,8 +113,11 @@
 				03A8E3432541BAB400B02210 /* Contacts */,
 				03A8E3352541BA5400B02210 /* Profil */,
 				03A8E3342541BA4100B02210 /* Events */,
-				03A8E32E2541B95000B02210 /* BottomTabView */,
+				03A8E32E2541B95000B02210 /* BottomTabBar */,
 				038636AD253F3DE700CB2A05 /* OnBoarding */,
+				0376A3FE25445CA600A74D92 /* MainView.swift */,
+				0376A40325445CE400A74D92 /* CurrentScreen.swift */,
+				0376A40825445EA100A74D92 /* TabEnum.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -170,13 +181,14 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
-		03A8E32E2541B95000B02210 /* BottomTabView */ = {
+		03A8E32E2541B95000B02210 /* BottomTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				03A8E32F2541B98400B02210 /* BottonTabView.swift */,
-				03538DAD2541BFC200FCAD06 /* ViewRouter.swift */,
+				03A8E32F2541B98400B02210 /* BottomTabBar.swift */,
+				0376A41C254460B600A74D92 /* BottomTabBarItem.swift */,
+				0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */,
 			);
-			path = BottomTabView;
+			path = BottomTabBar;
 			sourceTree = "<group>";
 		};
 		03A8E3342541BA4100B02210 /* Events */ = {
@@ -388,14 +400,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03538DAE2541BFC200FCAD06 /* ViewRouter.swift in Sources */,
+				0376A40925445EA100A74D92 /* TabEnum.swift in Sources */,
+				0376A41D254460B600A74D92 /* BottomTabBarItem.swift in Sources */,
 				03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */,
 				03A8E33F2541BA8E00B02210 /* ProfilView.swift in Sources */,
+				0376A3FF25445CA600A74D92 /* MainView.swift in Sources */,
+				0376A40425445CE400A74D92 /* CurrentScreen.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
 				03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */,
+				0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */,
 				038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */,
-				03A8E3302541B98400B02210 /* BottonTabView.swift in Sources */,
+				03A8E3302541B98400B02210 /* BottomTabBar.swift in Sources */,
 				03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
