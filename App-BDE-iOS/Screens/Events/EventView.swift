@@ -9,16 +9,13 @@ import SwiftUI
 
 struct EventView: View {
     var body: some View {
-        ZStack {
-            Color.black.opacity(0.05).edgesIgnoringSafeArea(.all)
-            Text("Hello, Events!")
-        }
-        .background(Image("background_event")
+        VStack {
+            Spacer()
+            Text("Test")
+        }.background(Image("background_event")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .edgesIgnoringSafeArea(.top))
-        .navigationBarTitle("événements")
-
     }
 }
 
