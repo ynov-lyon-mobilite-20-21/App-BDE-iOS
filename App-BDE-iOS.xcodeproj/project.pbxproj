@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03012A982547659A00DD9D64 /* Fashion Fetish Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */; };
+		03012A9C2547659D00DD9D64 /* Fashion Fetish Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03538DBB2541CA1C00FCAD06 /* Fashion Fetish Regular.ttf */; };
+		03012AA0254765A000DD9D64 /* tabac big sans semibold italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0376A42725447EB900A74D92 /* tabac big sans semibold italic.ttf */; };
+		03012AA52547668100DD9D64 /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AA42547668100DD9D64 /* EventItem.swift */; };
+		03012AAA254772C700DD9D64 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AA9254772C700DD9D64 /* Event.swift */; };
+		03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AAE254888B900DD9D64 /* EventViewModel.swift */; };
 		0302A196253AF008005F48AD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0302A195253AF008005F48AD /* Launch Screen.storyboard */; };
 		0376A3FF25445CA600A74D92 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A3FE25445CA600A74D92 /* MainView.swift */; };
 		0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */; };
@@ -41,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03012AA42547668100DD9D64 /* EventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItem.swift; sourceTree = "<group>"; };
+		03012AA9254772C700DD9D64 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		03012AAE254888B900DD9D64 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		0302A195253AF008005F48AD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
 		03538DBB2541CA1C00FCAD06 /* Fashion Fetish Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Regular.ttf"; sourceTree = "<group>"; };
@@ -117,6 +126,7 @@
 		03559E58253735E80059F1F0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03012AA9254772C700DD9D64 /* Event.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				03A8E3392541BA7C00B02210 /* EventView.swift */,
+				03012AA42547668100DD9D64 /* EventItem.swift */,
+				03012AAE254888B900DD9D64 /* EventViewModel.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -365,7 +377,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C54BE6252F37D30014FF4E /* Assets.xcassets in Resources */,
+				03012AA0254765A000DD9D64 /* tabac big sans semibold italic.ttf in Resources */,
+				03012A982547659A00DD9D64 /* Fashion Fetish Bold.ttf in Resources */,
 				0302A196253AF008005F48AD /* Launch Screen.storyboard in Resources */,
+				03012A9C2547659D00DD9D64 /* Fashion Fetish Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,13 +407,16 @@
 			files = (
 				03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */,
 				03A8E33F2541BA8E00B02210 /* ProfilView.swift in Sources */,
+				03012AAA254772C700DD9D64 /* Event.swift in Sources */,
 				0376A3FF25445CA600A74D92 /* MainView.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
 				03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */,
 				0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */,
 				038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */,
+				03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */,
 				03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */,
+				03012AA52547668100DD9D64 /* EventItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
