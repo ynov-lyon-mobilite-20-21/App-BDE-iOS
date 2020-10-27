@@ -16,4 +16,8 @@ struct Event: Identifiable {
     let address: String?
     let description: String?
     let price: Int?
+    
+    init() {
+        
+    }
 }
