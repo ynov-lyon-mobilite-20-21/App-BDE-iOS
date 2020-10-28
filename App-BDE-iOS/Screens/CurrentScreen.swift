@@ -9,13 +9,16 @@ import SwiftUI
 
 struct CurrentScreen: View {
         
-    @Binding var currentView: Tab
+    @Binding var selected: String
     var body: some View {
         VStack {
-            if self.currentView == .Tab1 {
+            if self.selected == "Event" {
                 EventView()
+                    .tag("Event")
+                
             } else {
                 ProfilView()
+                    .tag("Profil")
             }
         }
     }
@@ -23,6 +26,6 @@ struct CurrentScreen: View {
 
 struct CurrentScreen_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentScreen(currentView: .constant(.Tab1))
+        CurrentScreen(selected: .constant("Event"))
     }
 }

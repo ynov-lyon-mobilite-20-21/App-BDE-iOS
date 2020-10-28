@@ -11,7 +11,7 @@
 		0376A3FF25445CA600A74D92 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A3FE25445CA600A74D92 /* MainView.swift */; };
 		0376A40425445CE400A74D92 /* CurrentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A40325445CE400A74D92 /* CurrentScreen.swift */; };
 		0376A40925445EA100A74D92 /* TabEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A40825445EA100A74D92 /* TabEnum.swift */; };
-		0376A41D254460B600A74D92 /* BottomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A41C254460B600A74D92 /* BottomTabBarItem.swift */; };
+		0376A41D254460B600A74D92 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A41C254460B600A74D92 /* TabBarButton.swift */; };
 		0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */; };
 		038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386369F253F361000CB2A05 /* onBoardingView.swift */; };
 		038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */; };
@@ -51,7 +51,7 @@
 		0376A3FE25445CA600A74D92 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0376A40325445CE400A74D92 /* CurrentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentScreen.swift; sourceTree = "<group>"; };
 		0376A40825445EA100A74D92 /* TabEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEnum.swift; sourceTree = "<group>"; };
-		0376A41C254460B600A74D92 /* BottomTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarItem.swift; sourceTree = "<group>"; };
+		0376A41C254460B600A74D92 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarModalItem.swift; sourceTree = "<group>"; };
 		0386369F253F361000CB2A05 /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
 		038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				03A8E32F2541B98400B02210 /* BottomTabBar.swift */,
-				0376A41C254460B600A74D92 /* BottomTabBarItem.swift */,
+				0376A41C254460B600A74D92 /* TabBarButton.swift */,
 				0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */,
 			);
 			path = BottomTabBar;
@@ -401,7 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0376A40925445EA100A74D92 /* TabEnum.swift in Sources */,
-				0376A41D254460B600A74D92 /* BottomTabBarItem.swift in Sources */,
+				0376A41D254460B600A74D92 /* TabBarButton.swift in Sources */,
 				03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */,
 				03A8E33F2541BA8E00B02210 /* ProfilView.swift in Sources */,
 				0376A3FF25445CA600A74D92 /* MainView.swift in Sources */,

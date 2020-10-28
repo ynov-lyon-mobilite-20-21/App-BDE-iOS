@@ -18,12 +18,12 @@ struct BottomTabBarModalItem: View {
         ZStack {
             Circle()
                 .foregroundColor(Color.white)
-                .frame(width: 100, height: 100)
+                .frame(width: 70, height: 50)
                 .shadow(radius: 6 )
             Image("logo_bde")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 80, height: 80)
+                .frame(width: 70, height: 50)
         }
         .onTapGesture(perform: action)
     }
