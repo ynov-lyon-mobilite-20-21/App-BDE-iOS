@@ -7,17 +7,26 @@
 
 import Foundation
 
-struct Event: Identifiable {
-    let id: Int?
-    let name: String?
-    let type: String?
-    let image: String?
-    let date: String?
-    let address: String?
-    let description: String?
-    let price: Int?
+struct Event: Identifiable, Hashable {
+    var id: Int?  = nil
+    var name: String?  = nil
+    var type: String?  = nil
+    var image: String?  = nil
+    var date: String?  = nil
+    var address: String?  = nil
+    var description: String?  = nil
+    var price: Int?  = nil
     
-    init() {
-        
-    }
+    init() {}
+    
+    init(id: Int, name: String, type: String, image: String, date: String, address: String, description: String, price: Int) {
+            self.id = id
+            self.name = name
+            self.type = type
+            self.image = image
+            self.date = date
+            self.address = address
+            self.description = description
+            self.price = price
+        }
 }

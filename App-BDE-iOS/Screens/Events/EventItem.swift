@@ -17,10 +17,10 @@ struct EventItem: View {
                     .overlay(
                         VStack(alignment: .leading) {
                                 VStack(alignment: .leading) {
-                                    Text(event.name)
+                                    Text(event.name ?? "")
                                         .font(.largeTitle)
                                         .padding(.bottom, gr.size.height * 0.005)
-                                    Text(event.type)
+                                    Text(event.type ?? "")
                                         .font(.subheadline)
                                 }
                                 .padding(.top, gr.size.height * 0.09)
@@ -28,7 +28,7 @@ struct EventItem: View {
                             
 //                                .offset(x: -20, y: 50)
                             Spacer()
-                            Text(event.date)
+                            Text(event.date ?? "")
                                 .font(.title3)
                                 .padding(.bottom, 30)
                             })

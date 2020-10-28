@@ -8,24 +8,28 @@
 import SwiftUI
 
 struct EventView: View {
-    let eventitem: Event = Event(id: 1, name: "Espit Chupitos", type: EventViewModel.eventType.party, image: "", date: "22/12/2020", address: "", description: "", price: 0)
+    let eventList: [Event] = [Event(id: 1, name: "Espit Chupitos", type: "Soirée Etudiante", image: "blabla", date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré description", price: 5), Event(id: 1, name: "Espit Chupitos", type: "Soirée Etudiante", image: "blabla", date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré description", price: 5)]
 
     var body: some View {
-        ZStack {
-            GeometryReader { gr in
-                VStack {
-                    Spacer()
-                    Text("Evenements").font(.custom("Fashion Fetish Regular", size: 30))
-                    Spacer()
-                    EventItem(event: eventitem)
-                        .frame(width: gr.size.width * 0.7, height: gr.size.height * 0.6)
-                    Spacer()
+        NavigationView {
+            VStack {
+                GeometryReader { gr in
+                    VStack {
+                        HStack {
+                            ForEach(eventList, id: \.self) { event in
+                                EventItem(event: event)
+                                    .frame(width: gr.size.width * 0.7, height: gr.size.height * 0.7)
+                            }
+                        }
+
+                        Spacer()
+                    }.navigationBarTitle("Evenement")
                 }
-            }
-        }.background(Image("background_event")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
+            }.background(Image("background_event")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
                         .edgesIgnoringSafeArea(.top))
+        }
     }
 }
 
