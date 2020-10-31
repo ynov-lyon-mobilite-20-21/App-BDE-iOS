@@ -10,32 +10,30 @@ import SwiftUI
 struct EventItem: View {
     let event: Event
     var body: some View {
-        GeometryReader { gr in
-            ZStack {
-                RoundedRectangle(cornerRadius: 30)
-                    .fill(Color.blue)
-                    .overlay(
-                        VStack(alignment: .leading) {
-                                VStack(alignment: .leading) {
-                                    Text(event.name ?? "")
-                                        .font(.largeTitle)
-                                        .padding(.bottom, gr.size.height * 0.005)
-                                    Text(event.type ?? "")
-                                        .font(.subheadline)
-                                }
-                                .padding(.top, gr.size.height * 0.09)
-                                .padding(.trailing, gr.size.width * 0.05)
-                            
-//                                .offset(x: -20, y: 50)
-                            Spacer()
-                            Text(event.date ?? "")
-                                .font(.title3)
-                                .padding(.bottom, 30)
-                            })
-                
-            }
+        ZStack {
+            RoundedRectangle(cornerRadius: 30)
+                .fill(Color.blue)
+                .overlay(
+                    VStack(alignment: .leading) {
+                        GeometryReader { gr in
+                            VStack(alignment: .leading) {
+                                Text(event.name ?? "")
+                                    .font(.title)
+                                    .padding(.bottom, 5)
+                                Text(event.type ?? "")
+                                    .font(.subheadline)
+                            }
+                            .padding(.top)
+                        }
+                        Spacer()
+                        Text(event.date ?? "")
+                            .font(.title3)
+                    }
+                    .padding()
+                )
             
         }
+        
     }
 }
 
