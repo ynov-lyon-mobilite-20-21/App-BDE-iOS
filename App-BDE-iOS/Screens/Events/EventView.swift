@@ -14,7 +14,6 @@ struct EventView: View {
         NavigationView {
             GeometryReader { gr in
                 VStack{
-                    
                     Spacer()
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
@@ -44,7 +43,11 @@ struct EventView: View {
 
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
-        EventView()
+        Group {
+            EventView()
+            EventView()
+                .previewDevice("iPhone 8")
+        }
     }
 }
 
