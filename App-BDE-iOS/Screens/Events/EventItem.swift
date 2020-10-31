@@ -12,33 +12,46 @@ struct EventItem: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 30)
-                .fill(Color.blue)
+                .fill(LinearGradient(
+                    gradient: Gradient(stops: [
+                        .init(color: Color.blue.opacity(0.85), location: 0),
+                        .init(color: Color.white.opacity(1), location: 1)
+                    ]),
+                    startPoint: .top,
+                    endPoint: .bottom
+                ))
                 .overlay(
-                    VStack(alignment: .leading) {
-                        GeometryReader { gr in
-                            VStack(alignment: .leading) {
-                                Text(event.name ?? "")
-                                    .font(.title)
-                                    .padding(.bottom, 5)
-                                Text(event.type ?? "")
-                                    .font(.subheadline)
-                            }
-                            .padding(.top)
-                        }
+                    VStack() {
                         Spacer()
-                        Text(event.date ?? "")
-                            .font(.title3)
+                        VStack() {
+                            Spacer()
+
+                            HStack {
+                                VStack(alignment: .leading) {
+                                        Text(event.type ?? "")
+                                            .font(.headline).foregroundColor(.secondary)
+                                        Text(event.name ?? "")
+                                            .font(.title2).bold()
+                                        Text(event.description ?? "")
+                                            .font(.body).foregroundColor(.primary).bold()
+                                            .frame(minHeight: 0, maxHeight: .infinity)
+
+                                }
+                                Spacer()
+                            }.padding(.horizontal)
+                        }
+                        .background(Color.white)
+                        .frame(height: 150)
                     }
-                    .padding()
+
                 )
-            
-        }
+        }.cornerRadius(30)
         
     }
 }
 
 struct EventItem_Previews: PreviewProvider {
     static var previews: some View {
-        EventItem(event: Event(id: 1, name: "Espit Chupitos", type: "Soirée Etudiante", image: "blabla", date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré description", price: 5))
+        EventItem(event: Event(id: 1, name: "Espit Chupitos", type: "Soirée Etudiante", image: "blabla", date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5))
     }
 }

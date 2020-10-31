@@ -27,6 +27,7 @@
 		03C54BE6252F37D30014FF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C54BE5252F37D30014FF4E /* Assets.xcassets */; };
 		03C54BF4252F37D30014FF4E /* App_BDE_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BF3252F37D30014FF4E /* App_BDE_iOSTests.swift */; };
 		03C54BFF252F37D30014FF4E /* App_BDE_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BFE252F37D30014FF4E /* App_BDE_iOSUITests.swift */; };
+		03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC5FA2254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		03C54BFA252F37D30014FF4E /* App-BDE-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-BDE-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C54BFE252F37D30014FF4E /* App_BDE_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_BDE_iOSUITests.swift; sourceTree = "<group>"; };
 		03C54C00252F37D30014FF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03FC5FA2254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardInformationsContainerShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		03559E57253735DE0059F1F0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				03FC5FA1254DFF4600F8BF94 /* Shapes */,
 				03A8E3432541BAB400B02210 /* Contacts */,
 				03A8E3352541BA5400B02210 /* Profil */,
 				03A8E3342541BA4100B02210 /* Events */,
@@ -267,6 +270,14 @@
 			path = "App-BDE-iOSUITests";
 			sourceTree = "<group>";
 		};
+		03FC5FA1254DFF4600F8BF94 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				03FC5FA2254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,6 +422,7 @@
 				0376A3FF25445CA600A74D92 /* MainView.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
+				03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */,
 				03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */,
 				0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */,
 				038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */,
