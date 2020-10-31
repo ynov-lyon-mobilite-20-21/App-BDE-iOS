@@ -17,9 +17,7 @@ struct BottomTabBar: View {
             Spacer()
             TabBarButton(selected: $selected, value: "Event", imageSelected:"ticket-gris-outline", imageUnselected: "ticket-noir-outline")
             Spacer()
-            BottomTabBarModalItem() {
-                self.showModal.toggle()
-            }
+            Spacer()
             Spacer()
 
             TabBarButton(selected: $selected, value: "Profil", imageSelected: "user-gris-outline", imageUnselected: "user-noir-outline")
@@ -39,6 +37,4 @@ struct BottonTabBar_Previews: PreviewProvider {
 
 
 
-//BottomTabBarModalItem() {
-//    self.showModal.toggle()
-//}.offset(y: -55)
+
