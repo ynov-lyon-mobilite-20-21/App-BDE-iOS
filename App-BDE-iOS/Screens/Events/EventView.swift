@@ -34,7 +34,7 @@ struct EventView: View {
                     
                 }
             }
-            .navigationBarTitle("Evenement")
+            .navigationBarTitle("Evenement").font(.custom("tabac big sans semibold italic", size: 15))
             .background(Image("background_event")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
