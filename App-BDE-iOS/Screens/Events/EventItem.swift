@@ -23,6 +23,9 @@ struct EventItem: View {
                 .overlay(
                     VStack() {
                         Spacer()
+                        Image("logo_bde")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                         VStack() {
                             Spacer()
 
