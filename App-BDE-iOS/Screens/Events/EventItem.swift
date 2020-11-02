@@ -12,20 +12,14 @@ struct EventItem: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 30)
-                .fill(LinearGradient(
-                    gradient: Gradient(stops: [
-                        .init(color: Color.blue.opacity(0.85), location: 0),
-                        .init(color: Color.white.opacity(1), location: 1)
-                    ]),
-                    startPoint: .top,
-                    endPoint: .bottom
-                ))
+                .fill(Color.whiteToBlue)
                 .overlay(
                     VStack() {
                         Spacer()
                         Image("logo_bde")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
+                        Spacer()
                         VStack() {
                             Spacer()
 
@@ -43,7 +37,16 @@ struct EventItem: View {
                                 Spacer()
                             }.padding(.horizontal)
                         }
-                        .background(Color.white)
+                        .background(
+                            LinearGradient(
+                                gradient: Gradient(stops: [
+                                    .init(color: Color.whiteToBlue.opacity(0.85), location: 0),
+                                    .init(color: Color.whiteToPink.opacity(1), location: 1)
+                                ]),
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        )
                         .frame(height: 150)
                     }
 
@@ -56,5 +59,11 @@ struct EventItem: View {
 struct EventItem_Previews: PreviewProvider {
     static var previews: some View {
         EventItem(event: Event(id: 1, name: "Espit Chupitos", type: "Soirée Etudiante", image: "blabla", date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5))
+            
+            
+            
     }
 }
+
+
+

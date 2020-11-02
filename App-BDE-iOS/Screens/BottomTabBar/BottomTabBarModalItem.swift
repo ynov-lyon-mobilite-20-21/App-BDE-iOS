@@ -17,8 +17,8 @@ struct BottomTabBarModalItem: View {
     public var body: some View {
         ZStack {
             Circle()
-                .foregroundColor(Color.white)
-                .frame(width: 75, height: 75)
+                .foregroundColor(Color.whiteToBlack)
+                .frame(width: 85, height: 85)
                 .shadow(radius: 6 )
             Image("logo_bde")
                 .resizable()
@@ -32,5 +32,6 @@ struct BottomTabBarModalItem: View {
 struct BottomTabBarModalItem_Previews: PreviewProvider {
     static var previews: some View {
         BottomTabBarModalItem() {}
+            
     }
 }

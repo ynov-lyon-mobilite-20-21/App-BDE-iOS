@@ -28,17 +28,23 @@ struct EventView: View {
                     .offset(y: -30)
                     .shadow(radius: 6)
                     
-
+                    
                     
                     Spacer()
                     
                 }
             }
             .navigationBarTitle("Evenement").font(.custom("tabac big sans semibold italic", size: 15))
-            .background(Image("background_event")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .edgesIgnoringSafeArea(.top))
+            .background(
+                ZStack {
+                Color.whiteToBlue
+                Image("background_event")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .edgesIgnoringSafeArea(.top)
+                    .colorMultiply(.whiteToBlue)
+            })
+            
         }
     }
 }
@@ -47,6 +53,14 @@ struct EventView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             EventView()
+                
+                
+                
+            
+            
+            
+            
+            
             EventView()
                 .previewDevice("iPhone 8")
         }

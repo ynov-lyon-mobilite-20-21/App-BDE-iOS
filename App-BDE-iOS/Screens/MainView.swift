@@ -10,27 +10,28 @@ import SwiftUI
 struct MainView: View {
     
     @State private var showModal: Bool = false
-
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView {
-                            EventView()
-                                .tabItem {
-                                    Image(systemName: "house")
-                                    Text("Event")
-                                }
-                            
-                            ProfilView()
-                                .tabItem {
-                                    Image(systemName: "house")
-                                    Text("Event")
-                                }
-                        }
-            .accentColor(.blue)
+                EventView()
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text("Event")
+                    }
+                
+                ProfilView()
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text("Event")
+                    }
+            }
+            .accentColor(.blackToWhite)
+            
             
             BottomTabBarModalItem() {
                 self.showModal.toggle()
-            }.offset(y: -15)
+            }.offset(y: -8)
         }
         .sheet(isPresented: self.$showModal) { ContactsView() }
     }
