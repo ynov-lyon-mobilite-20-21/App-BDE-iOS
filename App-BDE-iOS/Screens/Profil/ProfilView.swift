@@ -10,25 +10,35 @@ import SwiftUI
 struct ProfilView: View {
     var body: some View {
 
-        VStack {
-            HStack {
-                HStack {
-                    Text("mon profil")
+        GeometryReader { gr in
+            VStack {
+                ZStack {
+                    VStack {
+                        Spacer()
+                        Text("mon profil")
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .foregroundColor(.white)
+                            .padding()
+                    }
+                    .frame(minWidth: 0, maxWidth: gr.size.width - 35, minHeight: 180, maxHeight: 180)
+                    .background(Color.blueToBlack)
+                    .clipShape(ProfilTopShape())
+                    Spacer()
                 }
-                .frame(minWidth: 0, maxWidth: 400, minHeight: 180, maxHeight: 180)
-                .background(Color.blue)
-                .clipShape(ProfilTopShape())
                 Spacer()
             }
-            Spacer()
+            
+            .edgesIgnoringSafeArea(.top)
         }
-        
-                    .edgesIgnoringSafeArea(.top)
     }
 }
 
 struct ProfilView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilView()
+        Group {
+            ProfilView()
+            ProfilView()
+                .previewDevice("iPhone 8")
+        }
     }
 }
