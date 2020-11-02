@@ -14,6 +14,7 @@
 		03012AAA254772C700DD9D64 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AA9254772C700DD9D64 /* Event.swift */; };
 		03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AAE254888B900DD9D64 /* EventViewModel.swift */; };
 		0302A196253AF008005F48AD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0302A195253AF008005F48AD /* Launch Screen.storyboard */; };
+		0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D94425506DE90017F09C /* ProfilTopShape.swift */; };
 		036A2BE525503BCB0057B1C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036A2BE425503BCB0057B1C9 /* Colors.xcassets */; };
 		036A2BEA25503C8F0057B1C9 /* Fonts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036A2BE925503C8F0057B1C9 /* Fonts.xcassets */; };
 		036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A2BF025503D010057B1C9 /* ColorExtension.swift */; };
@@ -55,6 +56,7 @@
 		03012AA9254772C700DD9D64 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		03012AAE254888B900DD9D64 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		0302A195253AF008005F48AD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		0314D94425506DE90017F09C /* ProfilTopShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilTopShape.swift; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
 		03538DBB2541CA1C00FCAD06 /* Fashion Fetish Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Regular.ttf"; sourceTree = "<group>"; };
 		036A2BE425503BCB0057B1C9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 		03FC5FA1254DFF4600F8BF94 /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
+				0314D94425506DE90017F09C /* ProfilTopShape.swift */,
 				03FC5FA2254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift */,
 			);
 			path = Shapes;
@@ -446,6 +449,7 @@
 				03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */,
 				0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */,
 				038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */,
+				0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */,
 				03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */,
 				03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */,
 				03012AA52547668100DD9D64 /* EventItem.swift in Sources */,

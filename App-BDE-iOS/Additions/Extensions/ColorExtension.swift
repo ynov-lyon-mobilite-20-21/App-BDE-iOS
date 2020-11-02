@@ -17,5 +17,6 @@ extension Color {
     static let whiteToBlue = Color("whiteToBlue")
     static let yellowToWhite = Color("yellowToWhite")
     static let whiteToPink = Color("whiteToPink")
+    static let blueToBlack = Color("blueToBlack")
 
 }

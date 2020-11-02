@@ -9,10 +9,21 @@ import SwiftUI
 
 struct ProfilView: View {
     var body: some View {
-        ZStack {
-            Color.black.opacity(0.05).edgesIgnoringSafeArea(.all)
-            Text("Hello, Profil!")
+
+        VStack {
+            HStack {
+                HStack {
+                    Text("mon profil")
+                }
+                .frame(minWidth: 0, maxWidth: 400, minHeight: 180, maxHeight: 180)
+                .background(Color.blue)
+                .clipShape(ProfilTopShape())
+                Spacer()
+            }
+            Spacer()
         }
+        
+                    .edgesIgnoringSafeArea(.top)
     }
 }
 
