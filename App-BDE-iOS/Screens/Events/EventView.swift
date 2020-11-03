@@ -17,7 +17,7 @@ struct EventView: View {
                 VStack{
                     VStack {
                         Spacer()
-                        TitleCustom(textColor: .blackToWhite, shadowColor: .green, size: 35, title: "EVENEMENT")
+                        TitleCustom(textColor: .blackToWhite, shadowColor: .bdeGreen, size: 35, title: "EVENEMENT")
                     }.frame(height: gr.size.height * 0.2)
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {

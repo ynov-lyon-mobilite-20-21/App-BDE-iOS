@@ -30,7 +30,6 @@
 		03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E3392541BA7C00B02210 /* EventView.swift */; };
 		03A8E33F2541BA8E00B02210 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E33E2541BA8E00B02210 /* ProfilView.swift */; };
 		03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E3442541BAD300B02210 /* ContactsView.swift */; };
-		03AD8E222538BA9E009B6435 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 03AD8E212538BA9E009B6435 /* SnapKit */; };
 		03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDC252F37D10014FF4E /* AppDelegate.swift */; };
 		03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDE252F37D10014FF4E /* SceneDelegate.swift */; };
 		03C54BE6252F37D30014FF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C54BE5252F37D30014FF4E /* Assets.xcassets */; };
@@ -99,7 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03AD8E222538BA9E009B6435 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +336,6 @@
 			);
 			name = "App-BDE-iOS";
 			packageProductDependencies = (
-				03AD8E212538BA9E009B6435 /* SnapKit */,
 			);
 			productName = "App-BDE-iOS";
 			productReference = 03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */;
@@ -413,6 +410,7 @@
 			mainGroup = 03C54BD0252F37D10014FF4E;
 			packageReferences = (
 				03AD8E202538BA9E009B6435 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				037C6FBE2552214400678CF2 /* XCRemoteSwiftPackageReference "SwiftFX" */,
 			);
 			productRefGroup = 03C54BDA252F37D10014FF4E /* Products */;
 			projectDirPath = "";
@@ -802,6 +800,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		037C6FBE2552214400678CF2 /* XCRemoteSwiftPackageReference "SwiftFX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hexagons/SwiftFX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
 		03AD8E202538BA9E009B6435 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -811,14 +817,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		03AD8E212538BA9E009B6435 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 03AD8E202538BA9E009B6435 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 03C54BD1252F37D10014FF4E /* Project object */;
 }

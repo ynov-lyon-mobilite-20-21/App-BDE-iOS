@@ -17,7 +17,7 @@ struct ProfilView: View {
                     ZStack {
                         VStack {
                             Spacer()
-                            TitleCustom(textColor: .white, shadowColor: .green, size: 35, title: "MON COMPTE")
+                            TitleCustom(textColor: .white, shadowColor: .bdeGreen, size: 35, title: "MON COMPTE")
                         }
                         .frame(minWidth: 0, maxWidth: gr.size.width - 35, minHeight: gr.size.height * 0.2, maxHeight: gr.size.height * 0.2)
                         .background(Color.blueToBlack)
@@ -27,16 +27,15 @@ struct ProfilView: View {
                     Spacer()
                 }
                 HStack {
-                    Image("ticket-noir-outline")
+                    Image("hugo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                         .clipShape(Circle())
                         .overlay(ZStack{
-                            Circle().stroke(Color.bdeGreen, lineWidth: 3)
+                            Circle().stroke(Color.bdeGreen, lineWidth: 2)
                                 .offset(x: 4, y: 1)
-                            
-                            Circle().stroke(Color.pinkToYellow, lineWidth: 3)
-                                .offset(x: -8, y: -6)
-                            
-
+                            Circle().stroke(Color.pinkToYellow, lineWidth: 2)
+                                .offset(x: -6, y: -6)
                         })
                     VStack{
                         TitleCustom(textColor: .blackToWhite, shadowColor: .greenToYellow, size: 25, title: "Nicolas Barbosa")
@@ -48,9 +47,12 @@ struct ProfilView: View {
                             .offset(x: 0, y: -20)
                     }
                 }
-                .padding()
-                UserInfoView(lineWidth: gr.size.width * 0.7)
-                    .frame(height: gr.size.height * 0.2)
+                .frame(minHeight: 0, maxHeight: gr.size.height * 0.2)
+                .padding(.leading, 30)
+                HStack {
+                    UserInfoView(textColor: .blackToWhite, shadowColor: .pinkToGreen, size: 22, userAdress: "nicolas@test.com", userPhoneNumber: "07 86 35 62 13", userInscription: "Adhérent", lineWidth: gr.size.width * 0.8)
+                    Spacer()
+                }
                 Spacer()
             }
         }

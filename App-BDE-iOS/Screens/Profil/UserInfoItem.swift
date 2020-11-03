@@ -8,28 +8,34 @@
 import SwiftUI
 
 struct UserInfoItem: View {
+    let textColor: Color
+    let shadowColor: Color
+    let size: CGFloat
+    let title: String
     let lineWidth: CGFloat
+    let userInfo: String
     var body: some View {
-        Spacer()
-        VStack(alignment: .leading) {
-            TitleCustom(textColor: .blackToWhite, shadowColor: .pinkToGreen, size: 15, title: "ADRESSE E-MAIL")
-            Text("\n nicolas.barbosa@ynov.com")
-                .font(.custom("FashionFetish", size: 12))
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                .foregroundColor(.blackToWhite)
-                .padding(.leading)
-                .offset(x: -5, y: -25)
+        VStack(alignment: .leading, spacing: -6) {
+            VStack(alignment: .leading, spacing: -6){
+                TitleWithoutPaddingCustom(textColor: textColor, shadowColor: shadowColor, size: size, title: title)
+                Text("\n\(userInfo)")
+                    .font(.custom("FashionFetish", size: size - 8))
+                    .foregroundColor(.blackToWhite)
+            }
+            .padding(.leading, 50)
+
+            
+            LineShape()
+                .stroke(Color.blackToWhite, lineWidth: 2)
+                .opacity(0.15)
+                .frame(width: lineWidth ,height: 2)
+                .padding(.top)
         }
-        LineShape()
-            .stroke(Color.blackToWhite, lineWidth: 2)
-            .frame(width: lineWidth ,height: 2)
-            .offset(x: 0, y: -15)
-        Spacer()
     }
 }
 
 struct UserInfoItem_Previews: PreviewProvider {
     static var previews: some View {
-        UserInfoItem(lineWidth: 200)
+        UserInfoItem(textColor: .black, shadowColor: .green, size: 30, title: "ADRESSE E-MAIL", lineWidth: 2, userInfo: "nicolas.barbosa@orange.fr")
     }
 }
