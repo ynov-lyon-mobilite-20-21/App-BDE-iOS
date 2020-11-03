@@ -11,10 +11,12 @@ struct EventView: View {
     let eventList: [Event] = [Event(id: 1, name: "Espit Chupitos", type: "Soirée Etudiante", image: "blabla", date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5), Event(id: 1, name: "Espit Chupitos", type: "Soirée Etudiante", image: "blabla", date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré description", price: 5)]
     
     var body: some View {
-        NavigationView {
             GeometryReader { gr in
                 VStack{
-                    Spacer()
+                    VStack {
+                        Spacer()
+                        TitleCustom(textColor: .blackToWhite, shadowColor: .green, size: 25, title: "EVENEMENT")
+                    }.frame(height: 180)
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
                             ForEach(eventList, id: \.self) { event in
@@ -24,8 +26,7 @@ struct EventView: View {
                         }
                         .padding(.horizontal, 55)
                     }
-                    .frame(height: gr.size.height * 0.7)
-                    .offset(y: -30)
+                    .frame(height: gr.size.height * 0.6)
                     .shadow(radius: 6)
                     
                     
@@ -34,18 +35,15 @@ struct EventView: View {
                     
                 }
             }
-            .navigationBarTitle("Evenement").font(.custom("tabac big sans semibold italic", size: 15))
             .background(
                 ZStack {
                 Color.whiteToBlue
                 Image("background_event")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .edgesIgnoringSafeArea(.top)
-                    .colorMultiply(.whiteToBlue)
             })
-            
-        }
+            .edgesIgnoringSafeArea(.top)
+
     }
 }
 
@@ -53,6 +51,7 @@ struct EventView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             EventView()
+                .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
                 
                 
                 

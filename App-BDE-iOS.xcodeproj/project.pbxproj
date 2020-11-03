@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		03012A982547659A00DD9D64 /* Fashion Fetish Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */; };
-		03012A9C2547659D00DD9D64 /* Fashion Fetish Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03538DBB2541CA1C00FCAD06 /* Fashion Fetish Regular.ttf */; };
+		03012A9C2547659D00DD9D64 /* FashionFetish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03538DBB2541CA1C00FCAD06 /* FashionFetish-Regular.ttf */; };
 		03012AA0254765A000DD9D64 /* tabac big sans semibold italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0376A42725447EB900A74D92 /* tabac big sans semibold italic.ttf */; };
 		03012AA52547668100DD9D64 /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AA42547668100DD9D64 /* EventItem.swift */; };
 		03012AAA254772C700DD9D64 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AA9254772C700DD9D64 /* Event.swift */; };
 		03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AAE254888B900DD9D64 /* EventViewModel.swift */; };
 		0302A196253AF008005F48AD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0302A195253AF008005F48AD /* Launch Screen.storyboard */; };
 		0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D94425506DE90017F09C /* ProfilTopShape.swift */; };
+		0314D9592551C76D0017F09C /* FashionFetish-Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */; };
+		0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9612551C8B50017F09C /* TitleCustom.swift */; };
 		036A2BE525503BCB0057B1C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036A2BE425503BCB0057B1C9 /* Colors.xcassets */; };
-		036A2BEA25503C8F0057B1C9 /* Fonts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036A2BE925503C8F0057B1C9 /* Fonts.xcassets */; };
 		036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A2BF025503D010057B1C9 /* ColorExtension.swift */; };
 		0376A3FF25445CA600A74D92 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A3FE25445CA600A74D92 /* MainView.swift */; };
 		0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */; };
@@ -57,10 +58,11 @@
 		03012AAE254888B900DD9D64 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		0302A195253AF008005F48AD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		0314D94425506DE90017F09C /* ProfilTopShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilTopShape.swift; sourceTree = "<group>"; };
+		0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Outline.ttf"; sourceTree = "<group>"; };
+		0314D9612551C8B50017F09C /* TitleCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCustom.swift; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
-		03538DBB2541CA1C00FCAD06 /* Fashion Fetish Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Regular.ttf"; sourceTree = "<group>"; };
+		03538DBB2541CA1C00FCAD06 /* FashionFetish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Regular.ttf"; sourceTree = "<group>"; };
 		036A2BE425503BCB0057B1C9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		036A2BE925503C8F0057B1C9 /* Fonts.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Fonts.xcassets; sourceTree = "<group>"; };
 		036A2BF025503D010057B1C9 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		0376A3FE25445CA600A74D92 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarModalItem.swift; sourceTree = "<group>"; };
@@ -110,13 +112,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0314D9602551C89F0017F09C /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				0314D9612551C8B50017F09C /* TitleCustom.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		03538DBA2541CA0F00FCAD06 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				036A2BE925503C8F0057B1C9 /* Fonts.xcassets */,
+				0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */,
 				0376A42725447EB900A74D92 /* tabac big sans semibold italic.ttf */,
 				032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */,
-				03538DBB2541CA1C00FCAD06 /* Fashion Fetish Regular.ttf */,
+				03538DBB2541CA1C00FCAD06 /* FashionFetish-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -124,6 +134,7 @@
 		03559E57253735DE0059F1F0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0314D9602551C89F0017F09C /* Commons */,
 				03FC5FA1254DFF4600F8BF94 /* Shapes */,
 				03A8E3432541BAB400B02210 /* Contacts */,
 				03A8E3352541BA5400B02210 /* Profil */,
@@ -407,13 +418,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0314D9592551C76D0017F09C /* FashionFetish-Outline.ttf in Resources */,
 				03C54BE6252F37D30014FF4E /* Assets.xcassets in Resources */,
 				03012AA0254765A000DD9D64 /* tabac big sans semibold italic.ttf in Resources */,
 				03012A982547659A00DD9D64 /* Fashion Fetish Bold.ttf in Resources */,
 				036A2BE525503BCB0057B1C9 /* Colors.xcassets in Resources */,
 				0302A196253AF008005F48AD /* Launch Screen.storyboard in Resources */,
-				03012A9C2547659D00DD9D64 /* Fashion Fetish Regular.ttf in Resources */,
-				036A2BEA25503C8F0057B1C9 /* Fonts.xcassets in Resources */,
+				03012A9C2547659D00DD9D64 /* FashionFetish-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +458,7 @@
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
 				03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */,
 				03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */,
+				0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */,
 				0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */,
 				038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */,
 				0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */,

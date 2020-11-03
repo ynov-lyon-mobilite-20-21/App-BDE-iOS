@@ -9,27 +9,30 @@ import SwiftUI
 
 struct ProfilView: View {
     var body: some View {
-
         GeometryReader { gr in
             VStack {
-                ZStack {
-                    VStack {
+                HStack {
+                    ZStack {
+                        VStack {
+                            Spacer()
+                            TitleCustom(textColor: .white, shadowColor: .green, size: 25, title: "MON COMPTE")
+                        }
+                        .frame(minWidth: 0, maxWidth: gr.size.width - 35, minHeight: 180, maxHeight: 180)
+                        .background(Color.blueToBlack)
+                        .clipShape(ProfilTopShape())
                         Spacer()
-                        Text("mon profil")
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .foregroundColor(.white)
-                            .padding()
                     }
-                    .frame(minWidth: 0, maxWidth: gr.size.width - 35, minHeight: 180, maxHeight: 180)
-                    .background(Color.blueToBlack)
-                    .clipShape(ProfilTopShape())
                     Spacer()
                 }
                 Spacer()
-            }
-            
-            .edgesIgnoringSafeArea(.top)
+                HStack {
+                    Circle()
+                    Text("test")
+                }
+            } 
         }
+        .background(Color.whiteToBlue)
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
