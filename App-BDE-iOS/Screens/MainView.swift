@@ -41,7 +41,6 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             MainView()
-                .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
                 .previewDevice("iPhone 11")
             MainView()
                 .previewDevice("iPhone SE (2nd generation)")

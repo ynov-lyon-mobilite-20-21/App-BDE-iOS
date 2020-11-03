@@ -17,10 +17,14 @@
 		0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D94425506DE90017F09C /* ProfilTopShape.swift */; };
 		0314D9592551C76D0017F09C /* FashionFetish-Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */; };
 		0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9612551C8B50017F09C /* TitleCustom.swift */; };
+		0314D96D2551EAC50017F09C /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D96C2551EAC40017F09C /* UserInfoView.swift */; };
+		0314D9722551EE1B0017F09C /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9712551EE1B0017F09C /* LineShape.swift */; };
+		0314D9772551F1340017F09C /* UserInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9762551F1340017F09C /* UserInfoItem.swift */; };
 		036A2BE525503BCB0057B1C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036A2BE425503BCB0057B1C9 /* Colors.xcassets */; };
 		036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A2BF025503D010057B1C9 /* ColorExtension.swift */; };
 		0376A3FF25445CA600A74D92 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A3FE25445CA600A74D92 /* MainView.swift */; };
 		0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */; };
+		037C6FB72551F38500678CF2 /* TitleWithoutPaddingCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037C6FB62551F38500678CF2 /* TitleWithoutPaddingCustom.swift */; };
 		038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386369F253F361000CB2A05 /* onBoardingView.swift */; };
 		038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */; };
 		03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E3392541BA7C00B02210 /* EventView.swift */; };
@@ -60,6 +64,9 @@
 		0314D94425506DE90017F09C /* ProfilTopShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilTopShape.swift; sourceTree = "<group>"; };
 		0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Outline.ttf"; sourceTree = "<group>"; };
 		0314D9612551C8B50017F09C /* TitleCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCustom.swift; sourceTree = "<group>"; };
+		0314D96C2551EAC40017F09C /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		0314D9712551EE1B0017F09C /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
+		0314D9762551F1340017F09C /* UserInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoItem.swift; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
 		03538DBB2541CA1C00FCAD06 /* FashionFetish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Regular.ttf"; sourceTree = "<group>"; };
 		036A2BE425503BCB0057B1C9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -67,6 +74,7 @@
 		0376A3FE25445CA600A74D92 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarModalItem.swift; sourceTree = "<group>"; };
 		0376A42725447EB900A74D92 /* tabac big sans semibold italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tabac big sans semibold italic.ttf"; sourceTree = "<group>"; };
+		037C6FB62551F38500678CF2 /* TitleWithoutPaddingCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithoutPaddingCustom.swift; sourceTree = "<group>"; };
 		0386369F253F361000CB2A05 /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
 		038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		03A8E3392541BA7C00B02210 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				0314D9612551C8B50017F09C /* TitleCustom.swift */,
+				037C6FB62551F38500678CF2 /* TitleWithoutPaddingCustom.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -237,7 +246,9 @@
 		03A8E3352541BA5400B02210 /* Profil */ = {
 			isa = PBXGroup;
 			children = (
+				0314D96C2551EAC40017F09C /* UserInfoView.swift */,
 				03A8E33E2541BA8E00B02210 /* ProfilView.swift */,
+				0314D9762551F1340017F09C /* UserInfoItem.swift */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -305,6 +316,7 @@
 			children = (
 				0314D94425506DE90017F09C /* ProfilTopShape.swift */,
 				03FC5FA2254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift */,
+				0314D9712551EE1B0017F09C /* LineShape.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -451,6 +463,7 @@
 			files = (
 				03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */,
 				03A8E33F2541BA8E00B02210 /* ProfilView.swift in Sources */,
+				037C6FB72551F38500678CF2 /* TitleWithoutPaddingCustom.swift in Sources */,
 				03012AAA254772C700DD9D64 /* Event.swift in Sources */,
 				0376A3FF25445CA600A74D92 /* MainView.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
@@ -462,8 +475,11 @@
 				0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */,
 				038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */,
 				0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */,
+				0314D9722551EE1B0017F09C /* LineShape.swift in Sources */,
 				03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */,
 				03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */,
+				0314D96D2551EAC50017F09C /* UserInfoView.swift in Sources */,
+				0314D9772551F1340017F09C /* UserInfoItem.swift in Sources */,
 				03012AA52547668100DD9D64 /* EventItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

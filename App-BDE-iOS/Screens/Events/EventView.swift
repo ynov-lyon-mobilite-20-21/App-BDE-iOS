@@ -10,13 +10,15 @@ import SwiftUI
 struct EventView: View {
     let eventList: [Event] = [Event(id: 1, name: "Espit Chupitos", type: "Soirée Etudiante", image: "blabla", date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5), Event(id: 1, name: "Espit Chupitos", type: "Soirée Etudiante", image: "blabla", date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré description", price: 5)]
     
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
             GeometryReader { gr in
                 VStack{
                     VStack {
                         Spacer()
-                        TitleCustom(textColor: .blackToWhite, shadowColor: .green, size: 25, title: "EVENEMENT")
-                    }.frame(height: 180)
+                        TitleCustom(textColor: .blackToWhite, shadowColor: .green, size: 35, title: "EVENEMENT")
+                    }.frame(height: gr.size.height * 0.2)
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
                             ForEach(eventList, id: \.self) { event in
@@ -41,6 +43,8 @@ struct EventView: View {
                 Image("background_event")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
+                    .opacity(colorScheme == .dark ? 0.2 : 1)
+
             })
             .edgesIgnoringSafeArea(.top)
 

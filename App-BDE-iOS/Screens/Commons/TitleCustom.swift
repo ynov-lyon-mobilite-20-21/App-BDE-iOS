@@ -15,14 +15,14 @@ struct TitleCustom: View {
     var body: some View {
         ZStack {
             Text("\n" + title)
-                .font(.custom("Fashion-Fetish-Outline", size: size))
+                .font(.custom("TabacBigSans-SemiBoldIt", size: size))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(shadowColor)
                 .padding()
                 .offset(x: 2, y: 2)
             
             Text("\n" + title)
-                .font(.custom("FashionFetish", size: size))
+                .font(.custom("TabacBigSans-SemiBoldIt", size: size))
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(textColor)
                 .padding()
