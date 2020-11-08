@@ -41,7 +41,7 @@ struct ProfilView: View {
                             
                             , secondaryButton: .cancel())
                         }
-                        .sheet(isPresented: self.$showModal) { ContactsView() }
+                        .sheet(isPresented: self.$showModal) { SignUpView() }
                         
                         Spacer()
                     }
