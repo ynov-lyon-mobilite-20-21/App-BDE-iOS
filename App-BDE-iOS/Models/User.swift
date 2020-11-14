@@ -23,8 +23,9 @@ struct User: Decodable {
 }
 
 
-enum Promotion: String, Decodable {
-    case B1 = "B1",
+enum Promotion: String, Decodable, CaseIterable {
+    case defaultValue = "Choisissez votre promotion",
+         B1 = "B1",
          B2 = "B2",
          B3 = "B3",
          M1 = "M1",
@@ -32,8 +33,6 @@ enum Promotion: String, Decodable {
     
 }
 enum Formation: String, Decodable, CaseIterable {
-    
-    
     case defaultValue = "Choisissez votre formation",
          informatique = "Informatique",
          audiovisuel = "Audiovisuel",

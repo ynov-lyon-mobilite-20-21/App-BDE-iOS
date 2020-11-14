@@ -22,5 +22,6 @@ class HelperAssembly: Assembly {
         
         //  API
         container.autoregister(AuthenticationRequests.self, initializer: AuthenticationRequests.init)
+        container.autoregister(SignUpRequests.self, initializer: SignUpRequests.init)
     }
 }

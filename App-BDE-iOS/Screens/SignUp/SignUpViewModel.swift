@@ -14,28 +14,44 @@ class SignUpViewModel: ObservableObject {
     @Published var password: String = ""
     @Published var lastName: String = ""
     @Published var firstName: String = ""
-    @Published var photo: String = ""
+    @Published var formation: Formation = Formation.defaultValue
+    @Published var promotion: Promotion = Promotion.defaultValue
+    @Published var pictureUrl: String = ""
+    
     @Published var mailIsValid: Bool = false
     @Published var passwordIsValid: Bool = false
     
-    @Injected private var authenticationRequests: AuthenticationRequests
+    @Injected private var signUpRequest: SignUpRequests
+    
+    var bag = Set<AnyCancellable>()
+    var user: SignUpDTO?
+    
+    public func handleSignUp() {
+        mailIsValid = !mail.emailValidation()
+        self.passwordIsValid = self.password.isEmpty
         
-        var bag = Set<AnyCancellable>()
-        
-        public func handleLogin() {
-            mailIsValid = !mail.emailValidation()
-            self.passwordIsValid = self.password.isEmpty
-            
-            if passwordIsValid || mailIsValid {
-                return
-            }
-            
-            let dto = LoginDTO(mail: mail, password: password)
-            authenticationRequests.login(dto).sink(
-                receiveCompletion: { print($0) },
-                receiveValue: { user in
-                    print(user)
-                }
-            ).store(in: &bag)
+        if passwordIsValid || mailIsValid {
+            return
         }
+        
+        let dto = SignUpDTO(mail: mail,
+                            password: password,
+                            firstName: firstName,
+                            lastName: lastName,
+                            formation: formation.rawValue,
+                            promotion: promotion.rawValue,
+                            pictureUrl: pictureUrl)
+        signUpRequest.signUp(dto).sink(
+            receiveCompletion: { print($0) },
+            receiveValue: { [weak self] user in
+                guard let strongSelf = self else {return}
+                strongSelf.user = user
+                
+                //solution 2 pour tester que self est pas nul
+//                if let strongSelf = self {
+//                    strongSelf.user = user
+//                }
+            }
+        ).store(in: &bag)
+    }
 }

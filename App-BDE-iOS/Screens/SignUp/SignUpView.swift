@@ -11,8 +11,6 @@ struct SignUpView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentation
     @InjectedObservedObject private var signUpViewModel: SignUpViewModel
-
-    @State private var selection = 0
     
     var body: some View {
         GeometryReader { gr in
@@ -47,20 +45,28 @@ struct SignUpView: View {
                                    .border(Color.red,
                                            width: signUpViewModel.mailIsValid ? 1 : 0)
                     
-                    TextField("Photo", text: $signUpViewModel.photo)
+                    TextField("Photo", text: $signUpViewModel.pictureUrl)
                                    .textFieldStyle(RoundedBorderTextFieldStyle())
                                    .border(Color.red,
                                            width: signUpViewModel.mailIsValid ? 1 : 0)
                     
+                    Picker(selection: $signUpViewModel.formation, label:
+                     Text("Picker Name")) {
+                        ForEach(Formation.allCases, id: \.self) {
+                            Text($0.rawValue)
+                                .tag($0)
+                        }
+                     }
+                    .pickerStyle(WheelPickerStyle())
                     
-                    
-//                    Picker(selection: $selection, label:
-//                     Text("Picker Name")) {
-//                        ForEach(Formation.allCases, id: \.self) {
-//                            Text($0.rawValue)
-//                         }
-//                     }
-//                    .pickerStyle(WheelPickerStyle())
+                    Picker(selection: $signUpViewModel.promotion, label:
+                     Text("Picker Name")) {
+                        ForEach(Promotion.allCases, id: \.self) {
+                            Text($0.rawValue)
+                                .tag($0)
+                        }
+                     }
+                    .pickerStyle(WheelPickerStyle())
                     
                     SecureField("Mot de passe", text: $signUpViewModel.password)
                                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -68,7 +74,7 @@ struct SignUpView: View {
                                             width: signUpViewModel.passwordIsValid ? 1 : 0)
                     
                     Button {
-                        signUpViewModel.handleLogin()
+                        signUpViewModel.handleSignUp()
                     } label: {
                         Text("Login")
                     }

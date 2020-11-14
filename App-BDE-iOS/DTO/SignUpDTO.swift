@@ -12,6 +12,7 @@ struct SignUpDTO: Encodable, Decodable {
     var password: String
     var firstName: String
     var lastName: String
-    var classRoom: String
+    var formation: String
+    var promotion: String
     var pictureUrl: String
 }

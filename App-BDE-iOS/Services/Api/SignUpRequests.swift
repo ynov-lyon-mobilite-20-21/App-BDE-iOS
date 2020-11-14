@@ -10,7 +10,7 @@ import Combine
 
 final class SignUpRequests: Request {
     
-    func SignUp(_ body: SignUpDTO ) -> AnyPublisher<SignUpDTO, Error> {
+    func signUp(_ body: SignUpDTO ) -> AnyPublisher<SignUpDTO, Error> {
         guard let url = URL(string: "https://lyon-ynov-bde-api.herokuapp.com/api/users")
         else {
             return AnyPublisher(Empty())
