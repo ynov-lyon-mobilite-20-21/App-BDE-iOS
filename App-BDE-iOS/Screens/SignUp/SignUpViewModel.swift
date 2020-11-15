@@ -44,6 +44,8 @@ class SignUpViewModel: ObservableObject {
         signUpRequest.signUp(dto).sink(
             receiveCompletion: { print($0) },
             receiveValue: { [weak self] user in
+                
+                print(user)
                 guard let strongSelf = self else {return}
                 strongSelf.user = user
                 

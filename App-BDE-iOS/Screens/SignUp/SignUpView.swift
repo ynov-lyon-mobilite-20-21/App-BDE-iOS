@@ -22,7 +22,7 @@ struct SignUpView: View {
                         }
                         .padding()
                         Spacer()
-                        Text("Connexion")
+                        Text("Créer un compte")
                         .padding()
                             .offset(x: -40)
                         
@@ -76,7 +76,7 @@ struct SignUpView: View {
                     Button {
                         signUpViewModel.handleSignUp()
                     } label: {
-                        Text("Login")
+                        Text("Créer un compte")
                     }
                 }
             }
