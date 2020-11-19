@@ -45,7 +45,12 @@ extension Request {
             }
             
             return URLSession.shared.dataTaskPublisher(for: request)
-                .map { $0.data }
+                .tryMap {(data, response) -> Data in
+                    if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+                        throw NSError(domain: "Test", code: 1, userInfo: nil)
+                    }
+                    return data
+                }
                 .decode(type: GenericServerResponse<T>.self, decoder: JSONDecoder())
                 .map { $0.data }
                 .eraseToAnyPublisher()

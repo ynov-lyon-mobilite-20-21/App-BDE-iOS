@@ -14,9 +14,6 @@ struct ProfilView: View {
     
     
     var body: some View {
-        
-        
-        
         GeometryReader { gr in
             ScrollView {
                 VStack {
@@ -31,7 +28,7 @@ struct ProfilView: View {
                             .clipShape(ProfilTopShape())
                             Spacer()
                         }
-                        Button("test") {
+                        Button("Connexion") {
                             self.isConnected = true
                         }
                         .alert(isPresented: $isConnected) {
@@ -41,7 +38,7 @@ struct ProfilView: View {
                             
                             , secondaryButton: .cancel())
                         }
-                        .sheet(isPresented: self.$showModal) { SignUpView() }
+                        .sheet(isPresented: self.$showModal) { SignInView() }
                         
                         Spacer()
                     }

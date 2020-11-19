@@ -12,7 +12,7 @@ import Combine
 final class AuthenticationRequests: Request {
     
     func login(_ body: LoginDTO) -> AnyPublisher<AuthToken, Error> {
-        guard let url = URL(string: "https://lyon-ynov-bde-api.herokuapp.com/api/") else {
+        guard let url = URL(string: "https://lyon-ynov-bde-api.herokuapp.com/api/auth") else {
             return AnyPublisher(Empty())
         }
         

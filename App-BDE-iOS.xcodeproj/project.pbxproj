@@ -27,6 +27,9 @@
 		037C6FB72551F38500678CF2 /* TitleWithoutPaddingCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037C6FB62551F38500678CF2 /* TitleWithoutPaddingCustom.swift */; };
 		038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386369F253F361000CB2A05 /* onBoardingView.swift */; };
 		038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */; };
+		038D79742565D7E0006FF950 /* ServerResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D79732565D7E0006FF950 /* ServerResponses.swift */; };
+		038D797A2566F60C006FF950 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D79792566F60C006FF950 /* SignInView.swift */; };
+		038D79822566F668006FF950 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D79812566F668006FF950 /* SignInViewModel.swift */; };
 		03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E3392541BA7C00B02210 /* EventView.swift */; };
 		03A8E33F2541BA8E00B02210 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E33E2541BA8E00B02210 /* ProfilView.swift */; };
 		03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E3442541BAD300B02210 /* ContactsView.swift */; };
@@ -95,6 +98,9 @@
 		037C6FB62551F38500678CF2 /* TitleWithoutPaddingCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithoutPaddingCustom.swift; sourceTree = "<group>"; };
 		0386369F253F361000CB2A05 /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
 		038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
+		038D79732565D7E0006FF950 /* ServerResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponses.swift; sourceTree = "<group>"; };
+		038D79792566F60C006FF950 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		038D79812566F668006FF950 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		03A8E3392541BA7C00B02210 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		03A8E33E2541BA8E00B02210 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		03A8E3442541BAD300B02210 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 		03559E57253735DE0059F1F0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				038D79782566F5F0006FF950 /* SignIn */,
 				03DB0F092556E6060019E87E /* SignUp */,
 				0314D9602551C89F0017F09C /* Commons */,
 				03A8E3432541BAB400B02210 /* Contacts */,
@@ -207,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				03B230C325585977006EF0EA /* Api */,
+				038D79732565D7E0006FF950 /* ServerResponses.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -268,6 +276,15 @@
 				038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		038D79782566F5F0006FF950 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				038D79792566F60C006FF950 /* SignInView.swift */,
+				038D79812566F668006FF950 /* SignInViewModel.swift */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		03A8E32E2541B95000B02210 /* BottomTabBar */ = {
@@ -579,6 +596,7 @@
 				03A8E33F2541BA8E00B02210 /* ProfilView.swift in Sources */,
 				03B230F625585E98006EF0EA /* SignUpRequests.swift in Sources */,
 				037C6FB72551F38500678CF2 /* TitleWithoutPaddingCustom.swift in Sources */,
+				038D79822566F668006FF950 /* SignInViewModel.swift in Sources */,
 				03B230D22558599A006EF0EA /* UserDefaultsPropertyWrapper.swift in Sources */,
 				03012AAA254772C700DD9D64 /* Event.swift in Sources */,
 				03B230B92558583A006EF0EA /* SignUpViewModel.swift in Sources */,
@@ -587,6 +605,7 @@
 				03B230E825585A0B006EF0EA /* GenericServerResponse.swift in Sources */,
 				03B230AF25585816006EF0EA /* HelperAssembly.swift in Sources */,
 				0376A3FF25445CA600A74D92 /* MainView.swift in Sources */,
+				038D797A2566F60C006FF950 /* SignInView.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
 				036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */,
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
@@ -602,6 +621,7 @@
 				0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */,
 				0314D9722551EE1B0017F09C /* LineShape.swift in Sources */,
 				03DB0F0B2556E6280019E87E /* SignUpView.swift in Sources */,
+				038D79742565D7E0006FF950 /* ServerResponses.swift in Sources */,
 				03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */,
 				03B2310425586372006EF0EA /* SignUpDTO.swift in Sources */,
 				03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */,

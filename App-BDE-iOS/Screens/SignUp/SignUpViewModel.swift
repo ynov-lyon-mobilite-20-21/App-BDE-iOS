@@ -42,7 +42,15 @@ class SignUpViewModel: ObservableObject {
                             promotion: promotion.rawValue,
                             pictureUrl: pictureUrl)
         signUpRequest.signUp(dto).sink(
-            receiveCompletion: { print($0) },
+            receiveCompletion: {
+            
+                switch $0 {
+                case .failure(let error):
+                    print("ERROR : \(error)")
+                case .finished:
+                    print("succes")
+                }
+            },
             receiveValue: { [weak self] user in
                 
                 print(user)
