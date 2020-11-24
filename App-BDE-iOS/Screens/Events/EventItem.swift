@@ -10,48 +10,44 @@ import SwiftUI
 struct EventItem: View {
     let event: Event
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 30)
-                .fill(Color.whiteToBlue)
-                .overlay(
-                    VStack() {
-                        Spacer()
-                        Image("logo_bde")
+        VStack {
+            VStack() {
+                Image("LAN-card")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .background(Color.blueToBlack)
+                    .frame(minHeight: 0, maxHeight: 500)
+                
+                HStack {
+                    VStack {
+                        Image("LAN_manette")
+                            .renderingMode(.template)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                        Spacer()
-                        VStack() {
-                            Spacer()
-
-                            HStack {
-                                VStack(alignment: .leading) {
-                                        Text(event.type ?? "")
-                                            .font(.headline).foregroundColor(.secondary)
-                                        Text(event.name ?? "")
-                                            .font(.title2).bold()
-                                        Text(event.description ?? "")
-                                            .font(.body).foregroundColor(.primary).bold()
-                                            .frame(minHeight: 0, maxHeight: .infinity)
-
-                                }
-                                Spacer()
-                            }.padding(.horizontal)
-                        }
-                        .background(
-                            LinearGradient(
-                                gradient: Gradient(stops: [
-                                    .init(color: Color.whiteToBlue.opacity(0.85), location: 0),
-                                    .init(color: Color.whiteToPink.opacity(1), location: 1)
-                                ]),
-                                startPoint: .top,
-                                endPoint: .bottom
-                            )
-                        )
-                        .frame(height: 150)
+                            .padding(.all, 5)
+                            .foregroundColor(.whiteToYellow)                    }
+                        .frame(width: 50, height: 50)
+                        .background(Color.bdeBlue)
+                        .cornerRadius(10)
+                        .padding()
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .leading) {
+                        Text(event.type ?? "")
+                            .font(.headline).foregroundColor(.gray)
+                        Text(event.name ?? "")
+                            .font(.title2).bold()
+                            .foregroundColor(.blackToGreen)
                     }
-
-                )
-        }.cornerRadius(30)
+                    Spacer()
+                }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 75, maxHeight: 75)
+                .background(Color.whiteToBlue)
+            }
+        }
+        .background(Color.whiteToBlue)
+        .cornerRadius(30)
         
     }
 }
@@ -59,9 +55,9 @@ struct EventItem: View {
 struct EventItem_Previews: PreviewProvider {
     static var previews: some View {
         EventItem(event: Event(id: 1, name: "Espit Chupitos", type: "Soirée Etudiante", image: "blabla", date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5))
-            
-            
-            
+        
+        
+        
     }
 }
 

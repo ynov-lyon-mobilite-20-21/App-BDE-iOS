@@ -47,7 +47,7 @@ struct SignInView: View {
                                                 width: signInViewModel.passwordIsValid ? 1 : 0)
                         
                         Button {
-                            signInViewModel.handleSignIn()
+                            signInViewModel.handleSignUp()
                         } label: {
                             Text("Connexion")
                         }

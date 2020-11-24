@@ -20,6 +20,7 @@
 		0314D96D2551EAC50017F09C /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D96C2551EAC40017F09C /* UserInfoView.swift */; };
 		0314D9722551EE1B0017F09C /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9712551EE1B0017F09C /* LineShape.swift */; };
 		0314D9772551F1340017F09C /* UserInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9762551F1340017F09C /* UserInfoItem.swift */; };
+		035EF1B9256C11F60009D79D /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035EF1B8256C11F60009D79D /* KeyChain.swift */; };
 		036A2BE525503BCB0057B1C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036A2BE425503BCB0057B1C9 /* Colors.xcassets */; };
 		036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A2BF025503D010057B1C9 /* ColorExtension.swift */; };
 		0376A3FF25445CA600A74D92 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A3FE25445CA600A74D92 /* MainView.swift */; };
@@ -90,6 +91,7 @@
 		0314D9762551F1340017F09C /* UserInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoItem.swift; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
 		03538DBB2541CA1C00FCAD06 /* FashionFetish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Regular.ttf"; sourceTree = "<group>"; };
+		035EF1B8256C11F60009D79D /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		036A2BE425503BCB0057B1C9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		036A2BF025503D010057B1C9 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		0376A3FE25445CA600A74D92 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -188,12 +190,12 @@
 			children = (
 				038D79782566F5F0006FF950 /* SignIn */,
 				03DB0F092556E6060019E87E /* SignUp */,
-				0314D9602551C89F0017F09C /* Commons */,
 				03A8E3432541BAB400B02210 /* Contacts */,
 				03A8E3352541BA5400B02210 /* Profil */,
 				03A8E3342541BA4100B02210 /* Events */,
 				03A8E32E2541B95000B02210 /* BottomTabBar */,
 				038636AD253F3DE700CB2A05 /* OnBoarding */,
+				0314D9602551C89F0017F09C /* Commons */,
 				0376A3FE25445CA600A74D92 /* MainView.swift */,
 			);
 			path = Screens;
@@ -339,6 +341,7 @@
 			children = (
 				03B230C525585977006EF0EA /* AuthenticationRequests.swift */,
 				03B230F525585E98006EF0EA /* SignUpRequests.swift */,
+				035EF1B8256C11F60009D79D /* KeyChain.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				03B230C725585977006EF0EA /* AuthenticationRequests.swift in Sources */,
 				0314D96D2551EAC50017F09C /* UserInfoView.swift in Sources */,
 				03B230FE255860BF006EF0EA /* User.swift in Sources */,
+				035EF1B9256C11F60009D79D /* KeyChain.swift in Sources */,
 				03B230B025585816006EF0EA /* DependencyProvider.swift in Sources */,
 				0314D9772551F1340017F09C /* UserInfoItem.swift in Sources */,
 				03012AA52547668100DD9D64 /* EventItem.swift in Sources */,
@@ -790,7 +794,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOS/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -812,7 +816,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOS/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

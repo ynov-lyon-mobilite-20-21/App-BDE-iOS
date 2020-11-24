@@ -11,7 +11,7 @@ struct ProfilView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var isConnected = false
     @State private var showModal: Bool = false
-    
+    private var keyChain = KeyChain()
     
     var body: some View {
         GeometryReader { gr in
@@ -32,10 +32,10 @@ struct ProfilView: View {
                             self.isConnected = true
                         }
                         .alert(isPresented: $isConnected) {
-                            Alert(title: Text("Vous n'êtes pas connecté"), primaryButton: Alert.Button.default(Text("Se connecter")){
+                            Alert(title: Text("Vous n'êtes pas connecté"), primaryButton: Alert.Button.default(Text("Se ®connecter")){
                                 self.showModal.toggle()
                             }
-                            
+
                             , secondaryButton: .cancel())
                         }
                         .sheet(isPresented: self.$showModal) { SignInView() }

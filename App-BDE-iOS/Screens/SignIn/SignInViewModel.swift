@@ -21,7 +21,7 @@ class SignInViewModel: ObservableObject {
     var bag = Set<AnyCancellable>()
     var user: SignUpDTO?
     
-    public func handleSignIn() {
+    public func handleSignUp() {
         mailIsValid = !mail.emailValidation()
         self.passwordIsValid = self.password.isEmpty
         
@@ -38,10 +38,12 @@ class SignInViewModel: ObservableObject {
                 case .failure(let error):
                     print("ERROR : \(error)")
                 case .finished:
-                    print("succes")
+                    print("success")
                 }
             },
-            receiveValue: {_ in }
+            receiveValue: { user in
+                print(user)
+            }
         ).store(in: &bag)
     }
 }

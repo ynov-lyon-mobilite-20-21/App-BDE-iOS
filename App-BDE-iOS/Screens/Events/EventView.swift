@@ -18,7 +18,10 @@ struct EventView: View {
                     VStack {
                         Spacer()
                         TitleCustom(textColor: .blackToWhite, shadowColor: .bdeGreen, size: 35, title: "EVENEMENT")
-                    }.frame(height: gr.size.height * 0.2)
+                            .padding(.leading, 45)
+                    }
+                    .frame(height: gr.size.height * 0.2)
+                    
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
                             ForEach(eventList, id: \.self) { event in
@@ -26,12 +29,23 @@ struct EventView: View {
                                     .frame(width: gr.size.width * 0.75)
                             }
                         }
-                        .padding(.horizontal, 55)
+                        .padding(.horizontal, 50)
                     }
                     .frame(height: gr.size.height * 0.6)
                     .shadow(radius: 6)
                     
-                    
+                    Button(action: {
+                        print("Delete button tapped!")
+                    }) {
+                        Text("Voir l'évènement")
+                            .foregroundColor(.white)
+                            .padding(.vertical)
+                            .padding(.horizontal, 50)
+                            .background(Color.bdeBlue)
+                            .cornerRadius(30)
+                    }
+                    .padding()
+                    .shadow(radius: 6 )
                     
                     Spacer()
                     
