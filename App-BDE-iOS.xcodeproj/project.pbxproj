@@ -14,6 +14,9 @@
 		03012AAA254772C700DD9D64 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AA9254772C700DD9D64 /* Event.swift */; };
 		03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AAE254888B900DD9D64 /* EventViewModel.swift */; };
 		0302A196253AF008005F48AD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0302A195253AF008005F48AD /* Launch Screen.storyboard */; };
+		0306C298256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306C297256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift */; };
+		0306C29D256EBAB80048A5F5 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306C29C256EBAB80048A5F5 /* EventDetailView.swift */; };
+		0306C2A2256EBDA90048A5F5 /* exemple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306C2A1256EBDA90048A5F5 /* exemple.swift */; };
 		0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D94425506DE90017F09C /* ProfilTopShape.swift */; };
 		0314D9592551C76D0017F09C /* FashionFetish-Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */; };
 		0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9612551C8B50017F09C /* TitleCustom.swift */; };
@@ -83,6 +86,9 @@
 		03012AA9254772C700DD9D64 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		03012AAE254888B900DD9D64 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		0302A195253AF008005F48AD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		0306C297256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeWithTopCorderRadius.swift; sourceTree = "<group>"; };
+		0306C29C256EBAB80048A5F5 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		0306C2A1256EBDA90048A5F5 /* exemple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exemple.swift; sourceTree = "<group>"; };
 		0314D94425506DE90017F09C /* ProfilTopShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilTopShape.swift; sourceTree = "<group>"; };
 		0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Outline.ttf"; sourceTree = "<group>"; };
 		0314D9612551C8B50017F09C /* TitleCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCustom.swift; sourceTree = "<group>"; };
@@ -303,6 +309,8 @@
 				03A8E3392541BA7C00B02210 /* EventView.swift */,
 				03012AA42547668100DD9D64 /* EventItem.swift */,
 				03012AAE254888B900DD9D64 /* EventViewModel.swift */,
+				0306C29C256EBAB80048A5F5 /* EventDetailView.swift */,
+				0306C2A1256EBDA90048A5F5 /* exemple.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -446,6 +454,7 @@
 				0314D94425506DE90017F09C /* ProfilTopShape.swift */,
 				03FC5FA2254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift */,
 				0314D9712551EE1B0017F09C /* LineShape.swift */,
+				0306C297256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -601,6 +610,7 @@
 				037C6FB72551F38500678CF2 /* TitleWithoutPaddingCustom.swift in Sources */,
 				038D79822566F668006FF950 /* SignInViewModel.swift in Sources */,
 				03B230D22558599A006EF0EA /* UserDefaultsPropertyWrapper.swift in Sources */,
+				0306C298256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift in Sources */,
 				03012AAA254772C700DD9D64 /* Event.swift in Sources */,
 				03B230B92558583A006EF0EA /* SignUpViewModel.swift in Sources */,
 				03B230D32558599A006EF0EA /* Request.swift in Sources */,
@@ -610,6 +620,7 @@
 				0376A3FF25445CA600A74D92 /* MainView.swift in Sources */,
 				038D797A2566F60C006FF950 /* SignInView.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
+				0306C2A2256EBDA90048A5F5 /* exemple.swift in Sources */,
 				036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */,
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
 				03B230AE25585816006EF0EA /* InjectedObservedObject.swift in Sources */,
@@ -625,6 +636,7 @@
 				0314D9722551EE1B0017F09C /* LineShape.swift in Sources */,
 				03DB0F0B2556E6280019E87E /* SignUpView.swift in Sources */,
 				038D79742565D7E0006FF950 /* ServerResponses.swift in Sources */,
+				0306C29D256EBAB80048A5F5 /* EventDetailView.swift in Sources */,
 				03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */,
 				03B2310425586372006EF0EA /* SignUpDTO.swift in Sources */,
 				03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */,
@@ -794,7 +806,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOS/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -816,7 +828,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOS/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

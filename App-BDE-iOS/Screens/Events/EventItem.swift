@@ -19,19 +19,21 @@ struct EventItem: View {
                     .frame(minHeight: 0, maxHeight: 500)
                 
                 HStack {
-                    VStack {
+                    VStack(alignment: .center) {
                         Image("LAN_manette")
                             .renderingMode(.template)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .padding(.all, 5)
-                            .foregroundColor(.whiteToYellow)                    }
-                        .frame(width: 50, height: 50)
-                        .background(Color.bdeBlue)
+                            .foregroundColor(.whiteToYellow)
+                            .frame(width: 60, height: 60)
+
+                    }
+                        .background(Color.blueToBlack)
                         .cornerRadius(10)
-                        .padding()
-                    
-                    Spacer()
+                    .padding(.vertical)
+                    .padding(.leading)
+                    .padding(.trailing, 5)
                     
                     VStack(alignment: .leading) {
                         Text(event.type ?? "")

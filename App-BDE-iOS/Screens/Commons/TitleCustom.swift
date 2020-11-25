@@ -14,18 +14,14 @@ struct TitleCustom: View {
     let title: String
     var body: some View {
         ZStack {
-            Text("\n" + title)
+            Text(title)
                 .font(.custom("TabacBigSans-SemiBoldIt", size: size))
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(shadowColor)
-                .padding()
                 .offset(x: 2, y: 2)
             
-            Text("\n" + title)
+            Text(title)
                 .font(.custom("TabacBigSans-SemiBoldIt", size: size))
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(textColor)
-                .padding()
         }
     }
 }

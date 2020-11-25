@@ -23,5 +23,5 @@ extension Color {
     static let bdeBlue = Color("bdeBlue")
     static let bdePink = Color("bdePink")
     static let bdeGreen = Color("bdeGreen")
-
+    static let bdeYellow = Color("bdeYellow")
 }
