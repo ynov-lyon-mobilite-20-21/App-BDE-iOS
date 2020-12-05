@@ -19,9 +19,7 @@ struct User: Decodable {
     var isAdherent: Bool
     var stripeId: String
     var stripeSourceId: String
-    
 }
-
 
 enum Promotion: String, Decodable, CaseIterable {
     case defaultValue = "Choisissez votre promotion",
@@ -30,8 +28,8 @@ enum Promotion: String, Decodable, CaseIterable {
          B3 = "B3",
          M1 = "M1",
          M2 = "M2"
-    
 }
+
 enum Formation: String, Decodable, CaseIterable {
     case defaultValue = "Choisissez votre formation",
          informatique = "Informatique",
@@ -46,8 +44,4 @@ enum Formation: String, Decodable, CaseIterable {
          dirArtistique = "Directeur Artistique Digital",
          entreprenariatStartup = "Entreprenariat & Start Up",
          marketManaBigData = "Marketing Manager & Big Data"
-    
-    
-    
-    
 }

@@ -9,30 +9,41 @@ import SwiftUI
 
 struct MainView: View {
     
+    @Namespace var animation
+    @StateObject var detailObject = DetailViewModel()
     @State private var showModal: Bool = false
     
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            TabView {
-                EventView()
-                    .tabItem {
-                        Image(systemName: "house")
-                        Text("Event")
-                    }
+        ZStack{
+            
+            if detailObject.show{
                 
-                ProfilView()
-                    .tabItem {
-                        Image(systemName: "house")
-                        Text("Event")
+                EventDetailView(detail: detailObject, animation: animation)
+            }else {
+                ZStack(alignment: .bottom) {
+                    TabView {
+                        EventView(animation: animation)
+                            .environmentObject(detailObject)
+                            .tabItem {
+                                Image(systemName: "house")
+                                Text("Event")
+                            }
+                        
+                        ProfilView()
+                            .tabItem {
+                                Image(systemName: "house")
+                                Text("Event")
+                            }
                     }
+                    .accentColor(.blackToWhite)
+                    .opacity(detailObject.show ? 0 : 1)
+                    
+                    BottomTabBarModalItem() {
+                        self.showModal.toggle()
+                    }.offset(y: -8)
+                }
             }
-            .accentColor(.blackToWhite)
-            
-            
-            BottomTabBarModalItem() {
-                self.showModal.toggle()
-            }.offset(y: -8)
         }
         .sheet(isPresented: self.$showModal) { ContactsView() }
     }

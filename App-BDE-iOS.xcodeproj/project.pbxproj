@@ -61,6 +61,7 @@
 		03C54BFF252F37D30014FF4E /* App_BDE_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BFE252F37D30014FF4E /* App_BDE_iOSUITests.swift */; };
 		03DB0F0B2556E6280019E87E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB0F0A2556E6280019E87E /* SignUpView.swift */; };
 		03DB0F14255825C90019E87E /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 03DB0F13255825C90019E87E /* Swinject */; };
+		03FAF65C257BDD9E0014EE6D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FAF65B257BDD9E0014EE6D /* DetailViewModel.swift */; };
 		03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC5FA2254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +141,7 @@
 		03C54BFE252F37D30014FF4E /* App_BDE_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_BDE_iOSUITests.swift; sourceTree = "<group>"; };
 		03C54C00252F37D30014FF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03DB0F0A2556E6280019E87E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		03FAF65B257BDD9E0014EE6D /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		03FC5FA2254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardInformationsContainerShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -415,6 +417,7 @@
 				03559E5F253740360059F1F0 /* Additions */,
 				03559E5D25373FE60059F1F0 /* Application */,
 				03559E59253735EE0059F1F0 /* Services */,
+				03FAF65A257BDD9E0014EE6D /* ViewModel */,
 				03559E58253735E80059F1F0 /* Models */,
 				03559E57253735DE0059F1F0 /* Screens */,
 			);
@@ -446,6 +449,14 @@
 				03B230B82558583A006EF0EA /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		03FAF65A257BDD9E0014EE6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				03FAF65B257BDD9E0014EE6D /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		03FC5FA1254DFF4600F8BF94 /* Shapes */ = {
@@ -617,6 +628,7 @@
 				03B230E3255859F6006EF0EA /* Token.swift in Sources */,
 				03B230E825585A0B006EF0EA /* GenericServerResponse.swift in Sources */,
 				03B230AF25585816006EF0EA /* HelperAssembly.swift in Sources */,
+				03FAF65C257BDD9E0014EE6D /* DetailViewModel.swift in Sources */,
 				0376A3FF25445CA600A74D92 /* MainView.swift in Sources */,
 				038D797A2566F60C006FF950 /* SignInView.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,

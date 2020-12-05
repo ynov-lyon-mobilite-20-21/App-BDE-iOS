@@ -8,70 +8,48 @@
 import SwiftUI
 
 struct EventView: View {
-    let eventList: [Event] = [Event(id: 1, name: "Espit Chupitos", type: "Soirée Etudiante", image: "blabla", date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5), Event(id: 1, name: "Au bal masquée", type: "Soirée Etudiante", image: "blabla", date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré description", price: 5)]
+    let eventList: [Event] = [Event(id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5), Event(id: "2", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5),Event(id: "3", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5), Event(id: "4", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5),Event(id: "5", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5), Event(id: "6", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5)]
     
     @Environment(\.colorScheme) var colorScheme
-    
-    @Namespace var nSpace
-    @State private var hero: Bool = false
-    @State private var selectedEvent: Event = Event()
-    
+    var animation: Namespace.ID
+    @EnvironmentObject var eventDetail : DetailViewModel
+
     var body: some View {
         
-        GeometryReader { gr in
-            
-            if hero {
-                VStack {
-                        EventItem(event: selectedEvent)
-                }                            .onTapGesture {
-                    withAnimation(.easeInOut(duration: 2.0)) { self.hero.toggle() }
+        ScrollView {
+            HStack(alignment: .bottom) {
+                ZStack {
+                    TitleShape(radius: 20)
+                        .fill(Color.blueToBlack)
+                    TitleCustom(textColor: .white, shadowColor: .bdeGreen, size: 30, title: "EVENEMENT")
                 }
-                .matchedGeometryEffect(id: "test1", in: nSpace)
+                .frame(width: 250, height: 40)
+                .shadow(radius: 6)
+                
+                Spacer()
             }
             
-            if !hero {
-                VStack(alignment: .leading){
+            ForEach(eventList, id: \.self) { event in
+                
+                if eventDetail.show {
+                    Rectangle()
+                        .fill(Color.clear)
+                        .frame(height: 320)
+                        .padding(.horizontal)
+                        .padding(.top)
+                } else {
                     
-                    Spacer()
-                    ZStack {
-                        TitleShape(radius: 20)
-                            .fill(Color.blueToBlack)
-                        TitleCustom(textColor: .white, shadowColor: .bdeGreen, size: 30, title: "EVENEMENT")
-                    }
-                    .frame(width: 250, height: 40)
-                    .shadow(radius: 6)
-                    .offset(x: 0, y: -20)
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
-                            ForEach(eventList, id: \.self) { event in
-                                EventItem(event: event)
-                                    .frame(width: gr.size.width * 0.75)
-                                    .onTapGesture {
-                                        withAnimation(.easeOut(duration: 2.0)) { self.hero.toggle() }
-                                        self.selectedEvent = event
-                                    }
+                    EventItem(event: event,animation: animation)
+                        .padding(.horizontal)
+                        .padding(.top)
+                        .shadow(radius: 6)
+                        .onTapGesture {
+                            withAnimation(.spring()) {
+                                eventDetail.selectedItem = event
+                                eventDetail.show.toggle()
                             }
                         }
-                        .padding(.horizontal, 50)
-                    }
-                    .frame(height: gr.size.height * 0.6)
-                    .shadow(radius: 6)
-                    
-                    //                HStack(spacing: 12){
-                    //
-                    //                    ForEach(0..<self.eventList.count,id: \.self){i in
-                    //
-                    //                        Circle()
-                    //                            .fill(self.index == i ? Color.gray : Color.black.opacity(0.07))
-                    //                            .frame(width: 10, height: 10)
-                    //                    }
-                    //                }
-                    //                .padding(.top,30)
-                    Spacer()
-                    
                 }
-                
             }
         }
         .background(
@@ -81,21 +59,7 @@ struct EventView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .opacity(colorScheme == .dark ? 0.2 : 1)
-                
-            })
-        .edgesIgnoringSafeArea(.top)
-        
-    }
-}
 
-struct EventView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            EventView()
-                .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
-            EventView()
-                .previewDevice("iPhone 8")
-                .preferredColorScheme(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
-        }
+            }.ignoresSafeArea())
     }
 }
