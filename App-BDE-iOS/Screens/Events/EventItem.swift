@@ -16,7 +16,6 @@ struct EventItem: View {
                 .frame(width: UIScreen.main.bounds.width - 30)
             
             HStack {
-                
                 VStack(alignment: .center) {
                     Image("LAN_manette")
                         .renderingMode(.template)
@@ -25,11 +24,9 @@ struct EventItem: View {
                         .padding(.all, 5)
                         .foregroundColor(.whiteToYellow)
                         .frame(width: 60, height: 60)
-
                 }
                     .background(Color.blueToBlack)
                     .cornerRadius(10)
-                
                 VStack(alignment: .leading, spacing: 6) {
                     Text(event.name)
                         .font(.headline).foregroundColor(.gray)
@@ -37,14 +34,15 @@ struct EventItem: View {
                         .font(.title2).bold()
                         .foregroundColor(.blackToGreen)
                 }
-                
                 Spacer()
             }
             .matchedGeometryEffect(id: "content" + event.id, in: animation)
             .padding()
+            .background(Color.whiteToBlack)
+
         }
         .frame(height: 320)
-        .background(Color.whiteToBlack)
+        .background(Color.blueToBlack)
         .cornerRadius(15)
     }
 }

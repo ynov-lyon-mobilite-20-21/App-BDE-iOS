@@ -18,29 +18,17 @@ struct EventDetailView: View {
             VStack {
                 GeometryReader { reader in
                     ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
-                        
                         Image(detail.selectedItem.image.rawValue)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .matchedGeometryEffect(id: "image" + detail.selectedItem.id, in: animation)
                             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
-                        
+                            .background(Color.blueToBlack)
                         HStack{
-                            
-                            Text(detail.selectedItem.name)
-                                .font(.title)
-                                .fontWeight(.heavy)
-                                .foregroundColor(.white)
-                            
-                            Spacer(minLength: 0)
-                            
+                            Spacer()
                             Button(action: {
-                                withAnimation(.spring()){
-
-                                    detail.show.toggle()
-                                }
+                                withAnimation(.spring()){ detail.show.toggle() }
                             }) {
-                                
                                 Image(systemName: "xmark")
                                     .foregroundColor(Color.black.opacity(0.7))
                                     .padding()
@@ -58,9 +46,7 @@ struct EventDetailView: View {
                 }
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
                 
-                
                 HStack{
-                    
                     VStack(alignment: .center) {
                         Image("LAN_manette")
                             .renderingMode(.template)
@@ -69,24 +55,20 @@ struct EventDetailView: View {
                             .padding(.all, 5)
                             .foregroundColor(.whiteToYellow)
                             .frame(width: 60, height: 60)
-
                     }
                         .background(Color.blueToBlack)
                         .cornerRadius(10)
-                    
                     VStack(alignment: .leading, spacing: 6) {
-                        
                         Text(detail.selectedItem.type.rawValue)
                             .fontWeight(.bold)
-                        
                         Text(detail.selectedItem.name)
                             .font(.caption)
                             .foregroundColor(.gray)
                     }
+                    Spacer()
                 }
                 .matchedGeometryEffect(id: "content" + detail.selectedItem.id, in: animation)
                 .padding()
-                
                 Text("Race through the ultimate street racing scene at dizzying speed withthe tap of your finger! Have fun winning the racing car collection of your dreams. Pick an event, choose a lineup of cars from your collection, and start racing for infamy in the first Forza game for mobile.\n\nCOLLECT AND UPGRADE ICONIC CARS\nRace to collect legendary cars at intense speed – from classic muscle to modern sports and retro supercars – turning your garage into a trophy case of iconic racing cars, with all the fun, attention to graphics detail, and speed Forza is known for.\n\nTRUE CINEMATIC RACING\nStreamlined controls focus on the fun - timing your gas, brake, and boost are the keys to victory, as action cams chase the racing adrenaline up close showcasing amazing graphics. The stunning, best in class, 3D visuals bring the action to life while you’re speeding across the asphalt. It’s a fun, new, and wholly unique way to enjoy Forza.\n\nRACE ON YOUR TERMS\nRace your collection of cars anytime, anywhere. Squeeze in a fun, quick one-minute race, or dive into immersive story driven events with multiple paths to victory in the cars you love. New controls let you easily race with the tap of a finger to control your gas, brake, and boost. Forza Street has something fun for you any time you feel like racing at high speed and boosting across the finish line to victory.")
                     .padding()
             }
@@ -94,7 +76,9 @@ struct EventDetailView: View {
         .scaleEffect(scale)
         .ignoresSafeArea(.all, edges: .top)
     }
-    
+}
+
+extension EventDetailView {
     
     func onChanged(value: DragGesture.Value){
         

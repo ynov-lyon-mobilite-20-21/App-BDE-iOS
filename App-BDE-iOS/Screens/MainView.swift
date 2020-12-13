@@ -16,9 +16,7 @@ struct MainView: View {
     
     var body: some View {
         ZStack{
-            
             if detailObject.show{
-                
                 EventDetailView(detail: detailObject, animation: animation)
             }else {
                 ZStack(alignment: .bottom) {

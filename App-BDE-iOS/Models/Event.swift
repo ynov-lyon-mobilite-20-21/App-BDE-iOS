@@ -30,7 +30,7 @@ enum EventType: String, Decodable, CaseIterable {
 enum ImageType: String, Decodable, CaseIterable {
     case defaultValue = "",
          kolok = "KOLOK_card",
-         party = "b1",
+         party = "KOLOK_Card_1920x1080",
          lan = "LAN_card",
          sport = "SPORT_card",
          food = "FOOD_card"

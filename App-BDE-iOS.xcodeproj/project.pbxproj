@@ -16,7 +16,6 @@
 		0302A196253AF008005F48AD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0302A195253AF008005F48AD /* Launch Screen.storyboard */; };
 		0306C298256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306C297256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift */; };
 		0306C29D256EBAB80048A5F5 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306C29C256EBAB80048A5F5 /* EventDetailView.swift */; };
-		0306C2A2256EBDA90048A5F5 /* exemple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306C2A1256EBDA90048A5F5 /* exemple.swift */; };
 		0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D94425506DE90017F09C /* ProfilTopShape.swift */; };
 		0314D9592551C76D0017F09C /* FashionFetish-Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */; };
 		0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9612551C8B50017F09C /* TitleCustom.swift */; };
@@ -89,7 +88,6 @@
 		0302A195253AF008005F48AD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		0306C297256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeWithTopCorderRadius.swift; sourceTree = "<group>"; };
 		0306C29C256EBAB80048A5F5 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
-		0306C2A1256EBDA90048A5F5 /* exemple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exemple.swift; sourceTree = "<group>"; };
 		0314D94425506DE90017F09C /* ProfilTopShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilTopShape.swift; sourceTree = "<group>"; };
 		0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Outline.ttf"; sourceTree = "<group>"; };
 		0314D9612551C8B50017F09C /* TitleCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCustom.swift; sourceTree = "<group>"; };
@@ -312,7 +310,6 @@
 				03012AA42547668100DD9D64 /* EventItem.swift */,
 				03012AAE254888B900DD9D64 /* EventViewModel.swift */,
 				0306C29C256EBAB80048A5F5 /* EventDetailView.swift */,
-				0306C2A1256EBDA90048A5F5 /* exemple.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -632,7 +629,6 @@
 				0376A3FF25445CA600A74D92 /* MainView.swift in Sources */,
 				038D797A2566F60C006FF950 /* SignInView.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
-				0306C2A2256EBDA90048A5F5 /* exemple.swift in Sources */,
 				036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */,
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
 				03B230AE25585816006EF0EA /* InjectedObservedObject.swift in Sources */,
