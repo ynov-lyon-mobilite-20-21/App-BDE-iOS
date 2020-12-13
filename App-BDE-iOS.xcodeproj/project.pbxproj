@@ -41,7 +41,7 @@
 		03B230B025585816006EF0EA /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230AC25585816006EF0EA /* DependencyProvider.swift */; };
 		03B230B125585816006EF0EA /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230AD25585816006EF0EA /* Injected.swift */; };
 		03B230B92558583A006EF0EA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230B82558583A006EF0EA /* SignUpViewModel.swift */; };
-		03B230BF255858E6006EF0EA /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 03B230BE255858E6006EF0EA /* SwinjectAutoregistration */; };
+		03B230BF255858E6006EF0EA /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 03B230BE255858E6006EF0EA /* SwiftPackageProductDependency */; };
 		03B230C725585977006EF0EA /* AuthenticationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230C525585977006EF0EA /* AuthenticationRequests.swift */; };
 		03B230D22558599A006EF0EA /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230CF2558599A006EF0EA /* UserDefaultsPropertyWrapper.swift */; };
 		03B230D32558599A006EF0EA /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230D12558599A006EF0EA /* Request.swift */; };
@@ -59,7 +59,7 @@
 		03C54BF4252F37D30014FF4E /* App_BDE_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BF3252F37D30014FF4E /* App_BDE_iOSTests.swift */; };
 		03C54BFF252F37D30014FF4E /* App_BDE_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BFE252F37D30014FF4E /* App_BDE_iOSUITests.swift */; };
 		03DB0F0B2556E6280019E87E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB0F0A2556E6280019E87E /* SignUpView.swift */; };
-		03DB0F14255825C90019E87E /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 03DB0F13255825C90019E87E /* Swinject */; };
+		03DB0F14255825C90019E87E /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 03DB0F13255825C90019E87E /* SwiftPackageProductDependency */; };
 		03FAF65C257BDD9E0014EE6D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FAF65B257BDD9E0014EE6D /* DetailViewModel.swift */; };
 		03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC5FA2254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift */; };
 /* End PBXBuildFile section */
@@ -148,8 +148,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03DB0F14255825C90019E87E /* Swinject in Frameworks */,
-				03B230BF255858E6006EF0EA /* SwinjectAutoregistration in Frameworks */,
+				03DB0F14255825C90019E87E /* BuildFile in Frameworks */,
+				03B230BF255858E6006EF0EA /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,8 +484,8 @@
 			);
 			name = "App-BDE-iOS";
 			packageProductDependencies = (
-				03DB0F13255825C90019E87E /* Swinject */,
-				03B230BE255858E6006EF0EA /* SwinjectAutoregistration */,
+				03DB0F13255825C90019E87E /* SwiftPackageProductDependency */,
+				03B230BE255858E6006EF0EA /* SwiftPackageProductDependency */,
 			);
 			productName = "App-BDE-iOS";
 			productReference = 03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */;
@@ -559,11 +559,11 @@
 			);
 			mainGroup = 03C54BD0252F37D10014FF4E;
 			packageReferences = (
-				03AD8E202538BA9E009B6435 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				037C6FBE2552214400678CF2 /* XCRemoteSwiftPackageReference "SwiftFX" */,
-				03DB0F12255825C90019E87E /* XCRemoteSwiftPackageReference "Swinject" */,
-				03B230BD255858E6006EF0EA /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
-				03B231312558A8FA006EF0EA /* XCRemoteSwiftPackageReference "PartialSheet" */,
+				03AD8E202538BA9E009B6435 /* RemoteSwiftPackageReference */,
+				037C6FBE2552214400678CF2 /* RemoteSwiftPackageReference */,
+				03DB0F12255825C90019E87E /* RemoteSwiftPackageReference */,
+				03B230BD255858E6006EF0EA /* RemoteSwiftPackageReference */,
+				03B231312558A8FA006EF0EA /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 03C54BDA252F37D10014FF4E /* Products */;
 			projectDirPath = "";
@@ -814,7 +814,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOS/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -836,7 +836,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOS/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -977,7 +977,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		037C6FBE2552214400678CF2 /* XCRemoteSwiftPackageReference "SwiftFX" */ = {
+		037C6FBE2552214400678CF2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hexagons/SwiftFX.git";
 			requirement = {
@@ -985,7 +985,7 @@
 				minimumVersion = 0.1.1;
 			};
 		};
-		03AD8E202538BA9E009B6435 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		03AD8E202538BA9E009B6435 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -993,7 +993,7 @@
 				minimumVersion = 5.0.1;
 			};
 		};
-		03B230BD255858E6006EF0EA /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+		03B230BD255858E6006EF0EA /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
 			requirement = {
@@ -1001,7 +1001,7 @@
 				minimumVersion = 2.7.0;
 			};
 		};
-		03B231312558A8FA006EF0EA /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+		03B231312558A8FA006EF0EA /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet.git";
 			requirement = {
@@ -1009,7 +1009,7 @@
 				minimumVersion = 2.1.11;
 			};
 		};
-		03DB0F12255825C90019E87E /* XCRemoteSwiftPackageReference "Swinject" */ = {
+		03DB0F12255825C90019E87E /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
@@ -1020,14 +1020,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		03B230BE255858E6006EF0EA /* SwinjectAutoregistration */ = {
+		03B230BE255858E6006EF0EA /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03B230BD255858E6006EF0EA /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			package = 03B230BD255858E6006EF0EA /* RemoteSwiftPackageReference */;
 			productName = SwinjectAutoregistration;
 		};
-		03DB0F13255825C90019E87E /* Swinject */ = {
+		03DB0F13255825C90019E87E /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03DB0F12255825C90019E87E /* XCRemoteSwiftPackageReference "Swinject" */;
+			package = 03DB0F12255825C90019E87E /* RemoteSwiftPackageReference */;
 			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
