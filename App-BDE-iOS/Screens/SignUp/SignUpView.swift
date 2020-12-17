@@ -11,6 +11,7 @@ struct SignUpView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentation
     @InjectedObservedObject private var signUpViewModel: SignUpViewModel
+    @State private var showCustomModal: Bool = false
     
     var body: some View {
         GeometryReader { gr in
@@ -22,59 +23,54 @@ struct SignUpView: View {
                     .padding()
                     Spacer()
                     Text("Créer un compte")
-                    .padding()
+                        .padding()
                         .offset(x: -40)
                     
                     Spacer()
                 }
-                .background(Color.secondary)
+                .background(Color.bdeBlue)
                 
                 ScrollView {
                     VStack(alignment: .center) {
-
+                        
                         
                         TextField("Email", text: $signUpViewModel.mail)
-                                       .textFieldStyle(RoundedBorderTextFieldStyle())
-                                       .border(Color.red,
-                                               width: signUpViewModel.mailIsValid ? 1 : 0)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .border(Color.red,
+                                    width: signUpViewModel.mailIsValid ? 1 : 0)
                         
-                        TextField("Nom", text: $signUpViewModel.lastName)
-                                       .textFieldStyle(RoundedBorderTextFieldStyle())
-                                       .border(Color.red,
-                                               width: signUpViewModel.mailIsValid ? 1 : 0)
+                        TextField("Nom", text: $signUpViewModel.mail)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .border(Color.red,
+                                    width: signUpViewModel.mailIsValid ? 1 : 0)
                         
                         TextField("Prenom", text: $signUpViewModel.firstName)
-                                       .textFieldStyle(RoundedBorderTextFieldStyle())
-                                       .border(Color.red,
-                                               width: signUpViewModel.mailIsValid ? 1 : 0)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .border(Color.red,
+                                    width: signUpViewModel.mailIsValid ? 1 : 0)
                         
                         TextField("Photo", text: $signUpViewModel.pictureUrl)
-                                       .textFieldStyle(RoundedBorderTextFieldStyle())
-                                       .border(Color.red,
-                                               width: signUpViewModel.mailIsValid ? 1 : 0)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .border(Color.red,
+                                    width: signUpViewModel.mailIsValid ? 1 : 0)
                         
-                        Picker(selection: $signUpViewModel.formation, label:
-                         Text("Picker Name")) {
-                            ForEach(Formation.allCases, id: \.self) {
-                                Text($0.rawValue)
-                                    .tag($0)
-                            }
-                         }
-                        .pickerStyle(WheelPickerStyle())
+                        Button($signUpViewModel.promotion.wrappedValue.rawValue) {
+                            self.showCustomModal.toggle()
+                        }
                         
-                        Picker(selection: $signUpViewModel.promotion, label:
-                         Text("Picker Name")) {
-                            ForEach(Promotion.allCases, id: \.self) {
-                                Text($0.rawValue)
-                                    .tag($0)
-                            }
-                         }
-                        .pickerStyle(WheelPickerStyle())
+                        //                            Picker(selection: $signUpViewModel.formation, label:
+                        //                             Text("Picker Name")) {
+                        //                                ForEach(Formation.allCases, id: \.self) {
+                        //                                    Text($0.rawValue)
+                        //                                        .tag($0)
+                        //                                }
+                        //                             }
+                        //                            .pickerStyle(WheelPickerStyle())
                         
                         SecureField("Mot de passe", text: $signUpViewModel.password)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .border(Color.red,
-                                                width: signUpViewModel.passwordIsValid ? 1 : 0)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .border(Color.red,
+                                    width: signUpViewModel.passwordIsValid ? 1 : 0)
                         
                         Button {
                             signUpViewModel.handleSignUp()
@@ -83,9 +79,9 @@ struct SignUpView: View {
                         }
                     }
                 }
-
+                
             }
-
+            .sheet(isPresented: self.$showCustomModal) { CustomModal() }
         }
         .background(
             ZStack {
@@ -98,6 +94,30 @@ struct SignUpView: View {
         .edgesIgnoringSafeArea(.top)
     }
 }
+
+struct CustomModal: View {
+    @InjectedObservedObject private var signUpViewModel: SignUpViewModel
+    @Environment(\.presentationMode) var presentation
+
+    var body: some View {
+        VStack {
+            Picker(selection: $signUpViewModel.promotion, label:
+                    Text("Picker Name")) {
+                ForEach(Promotion.allCases, id: \.self) { promotion in
+                    Text(promotion.rawValue)
+                        .tag(promotion)
+                }
+            }
+            .pickerStyle(WheelPickerStyle())
+            Button("Ok") {
+                self.presentation.wrappedValue.dismiss()
+            }
+        }
+
+    }
+}
+
+
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {

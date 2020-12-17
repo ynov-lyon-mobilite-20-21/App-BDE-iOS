@@ -21,7 +21,7 @@ struct User: Decodable {
     var stripeSourceId: String
 }
 
-enum Promotion: String, Decodable, CaseIterable {
+enum Promotion: String, Decodable, CaseIterable, Equatable {
     case defaultValue = "Choisissez votre promotion",
          B1 = "B1",
          B2 = "B2",

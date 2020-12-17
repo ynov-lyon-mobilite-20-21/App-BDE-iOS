@@ -19,7 +19,7 @@ class HelperAssembly: Assembly {
         //  Views
         container.autoregister(SignUpViewModel.self, initializer: SignUpViewModel.init)
         container.register(SignUpView.self) { _ in SignUpView() }
-        
+                           
         container.autoregister(SignInViewModel.self, initializer: SignInViewModel.init)
         container.register(SignInView.self) { _ in SignInView() }
         
