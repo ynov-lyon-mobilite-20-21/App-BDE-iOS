@@ -15,7 +15,13 @@ final class AuthenticationRequests: Request {
         guard let url = URL(string: "https://lyon-ynov-bde-api.herokuapp.com/api/auth") else {
             return AnyPublisher(Empty())
         }
-        
         return request(url, httpMethod: .POST, body: body, decodeType: AuthToken.self)
+    }
+    
+    func getMe(_ token: String) -> AnyPublisher<User, Error> {
+        guard let url = URL(string: "https://lyon-ynov-bde-api.herokuapp.com/api/auth") else {
+            return AnyPublisher(Empty())
+        }
+        return request(url, httpMethod: .GET, headers: ["Authorization":"Bearer \(token)"], decodeType: User.self)
     }
 }

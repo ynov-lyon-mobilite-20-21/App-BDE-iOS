@@ -21,7 +21,7 @@ class SignInViewModel: ObservableObject {
     var bag = Set<AnyCancellable>()
     var user: SignUpDTO?
     
-    public func handleSignUp() {
+    public func handleSignIn() {
         mailIsValid = !mail.emailValidation()
         self.passwordIsValid = self.password.isEmpty
         
@@ -33,7 +33,6 @@ class SignInViewModel: ObservableObject {
                             password: password)
         authentication.login(dto).sink(
             receiveCompletion: {
-            
                 switch $0 {
                 case .failure(let error):
                     print("ERROR : \(error)")
@@ -41,8 +40,19 @@ class SignInViewModel: ObservableObject {
                     print("success")
                 }
             },
-            receiveValue: { user in
-                print(user)
+            receiveValue: { AuthToken in
+                self.authentication.getMe(AuthToken.token).sink(
+                    receiveCompletion: {
+                        switch $0 {
+                        case .failure(let error):
+                            print("ERROR : \(error)")
+                        case .finished:
+                            print("get me success")
+                        }
+                    },
+                    receiveValue: { user in
+                        print("user : ", user)
+                    })
             }
         ).store(in: &bag)
     }

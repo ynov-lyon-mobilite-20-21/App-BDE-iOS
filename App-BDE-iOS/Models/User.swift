@@ -14,7 +14,6 @@ struct User: Decodable {
     var lastName: String
     var promotion: Promotion
     var formation: Formation
-    var pictureUrl: String
     var isAdmin: Bool
     var isAdherent: Bool
     var stripeId: String
@@ -22,7 +21,11 @@ struct User: Decodable {
 }
 
 enum Promotion: String, Decodable, CaseIterable, Equatable {
-    case defaultValue = "Choisissez votre promotion",
+    static var allCases: [Promotion] {
+        return [.B1, .B2, .B3, .M1, M2]
+    }
+    
+    case defaultValue = "Promotion",
          B1 = "B1",
          B2 = "B2",
          B3 = "B3",
@@ -31,7 +34,12 @@ enum Promotion: String, Decodable, CaseIterable, Equatable {
 }
 
 enum Formation: String, Decodable, CaseIterable {
-    case defaultValue = "Choisissez votre formation",
+    static var allCases: [Formation] {
+        return [.informatique, .audiovisuel, .anim3D, .creaDesign, .dataScientist, .expertReseau, .expertWeb, .expertLogicielMobile, .strat360, .dirArtistique, .entreprenariatStartup,
+                    .marketManaBigData]
+    }
+    
+    case defaultValue = "Formation",
          informatique = "Informatique",
          audiovisuel = "Audiovisuel",
          anim3D = "Animation 3D Jeux-Vidéo",

@@ -48,7 +48,7 @@
 		03B230D32558599A006EF0EA /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230D12558599A006EF0EA /* Request.swift */; };
 		03B230DD255859D6006EF0EA /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230DB255859D6006EF0EA /* LoginDTO.swift */; };
 		03B230DE255859D6006EF0EA /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230DC255859D6006EF0EA /* AnyEncodable.swift */; };
-		03B230E3255859F6006EF0EA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230E2255859F6006EF0EA /* Token.swift */; };
+		03B230E3255859F6006EF0EA /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230E2255859F6006EF0EA /* AuthToken.swift */; };
 		03B230E825585A0B006EF0EA /* GenericServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230E725585A0B006EF0EA /* GenericServerResponse.swift */; };
 		03B230F125585B59006EF0EA /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230F025585B59006EF0EA /* StringExtensions.swift */; };
 		03B230F625585E98006EF0EA /* SignUpRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230F525585E98006EF0EA /* SignUpRequests.swift */; };
@@ -123,7 +123,7 @@
 		03B230D12558599A006EF0EA /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		03B230DB255859D6006EF0EA /* LoginDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
 		03B230DC255859D6006EF0EA /* AnyEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
-		03B230E2255859F6006EF0EA /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		03B230E2255859F6006EF0EA /* AuthToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
 		03B230E725585A0B006EF0EA /* GenericServerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericServerResponse.swift; sourceTree = "<group>"; };
 		03B230F025585B59006EF0EA /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		03B230F525585E98006EF0EA /* SignUpRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequests.swift; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 			children = (
 				03B230FD255860BF006EF0EA /* User.swift */,
 				03B230E725585A0B006EF0EA /* GenericServerResponse.swift */,
-				03B230E2255859F6006EF0EA /* Token.swift */,
+				03B230E2255859F6006EF0EA /* AuthToken.swift */,
 				03012AA9254772C700DD9D64 /* Event.swift */,
 			);
 			path = Models;
@@ -625,7 +625,7 @@
 				03012AAA254772C700DD9D64 /* Event.swift in Sources */,
 				03B230B92558583A006EF0EA /* SignUpViewModel.swift in Sources */,
 				03B230D32558599A006EF0EA /* Request.swift in Sources */,
-				03B230E3255859F6006EF0EA /* Token.swift in Sources */,
+				03B230E3255859F6006EF0EA /* AuthToken.swift in Sources */,
 				03B230E825585A0B006EF0EA /* GenericServerResponse.swift in Sources */,
 				03B230AF25585816006EF0EA /* HelperAssembly.swift in Sources */,
 				03FAF65C257BDD9E0014EE6D /* DetailViewModel.swift in Sources */,

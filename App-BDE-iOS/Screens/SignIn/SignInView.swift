@@ -9,70 +9,49 @@ import SwiftUI
 
 struct SignInView: View {
     
-    @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentation
     @InjectedObservedObject private var signInViewModel: SignInViewModel
     @State private var showModal: Bool = false
-
-
+    
+    
     var body: some View {
-        GeometryReader { gr in
-            VStack {
-                HStack {
-                    Button("Retour") {
-                        self.presentation.wrappedValue.dismiss()
-                    }
-                    .padding()
-                    Spacer()
-                    Text("Créer un compte")
-                    .padding()
-                        .offset(x: -40)
+        
+        NavigationView {
+            Form {
+                Section(header: Text("Identifiants")) {
+                    TextField("Email", text: $signInViewModel.mail)
+                        .border(Color.red,
+                                width: signInViewModel.mailIsValid ? 1 : 0)
                     
-                    Spacer()
+                    SecureField("Mot de passe", text: $signInViewModel.password)
+                        .border(Color.red,
+                                width: signInViewModel.passwordIsValid ? 1 : 0)
                 }
-                .background(Color.secondary)
+                Button(action: {
+                        signInViewModel.handleSignIn()
+//                        self.presentation.wrappedValue.dismiss()
+                }, label: {
+                            HStack {
+                                Spacer()
+                                Text("Connexion")
+                                Spacer()
+                            }
+                        })
                 
-                ScrollView {
-                    VStack(alignment: .center) {
-
-                        
-                        TextField("Email", text: $signInViewModel.mail)
-                                       .textFieldStyle(RoundedBorderTextFieldStyle())
-                                       .border(Color.red,
-                                               width: signInViewModel.mailIsValid ? 1 : 0)
-                        
-                        SecureField("Mot de passe", text: $signInViewModel.password)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .border(Color.red,
-                                                width: signInViewModel.passwordIsValid ? 1 : 0)
-                        
-                        Button {
-                            signInViewModel.handleSignUp()
-                        } label: {
-                            Text("Connexion")
-                        }
-                        Button {
-                            showModal.toggle()
-
-                        } label: {
-                            Text("Créer un compte")
-                        }
+                Button(action: {
+                    showModal.toggle()
+                }, label: {
+                    HStack {
+                        Spacer()
+                        Text("Créer un compte")
+                        Spacer()
                     }
-                }
+                })
             }
-            
+            .navigationTitle("Connexion")
         }
-        .background(
-            ZStack {
-                Color.whiteToBlue
-                Image("background_event")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .opacity(colorScheme == .dark ? 0.2 : 1)
-            })
-        .edgesIgnoringSafeArea(.top)
         .sheet(isPresented: self.$showModal) { SignUpView() }
-
+        
     }
 }
 

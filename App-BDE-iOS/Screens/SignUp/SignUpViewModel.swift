@@ -16,7 +16,6 @@ class SignUpViewModel: ObservableObject {
     @Published var firstName: String = ""
     @Published var formation: Formation = Formation.defaultValue
     @Published var promotion: Promotion = Promotion.defaultValue
-    @Published var pictureUrl: String = ""
     
     @Published var mailIsValid: Bool = false
     @Published var passwordIsValid: Bool = false
@@ -39,8 +38,7 @@ class SignUpViewModel: ObservableObject {
                             firstName: firstName,
                             lastName: lastName,
                             formation: formation.rawValue,
-                            promotion: promotion.rawValue,
-                            pictureUrl: pictureUrl)
+                            promotion: promotion.rawValue)
         signUpRequest.signUp(dto).sink(
             receiveCompletion: {
             
@@ -56,11 +54,6 @@ class SignUpViewModel: ObservableObject {
                 print(user)
                 guard let strongSelf = self else {return}
                 strongSelf.user = user
-                
-                //solution 2 pour tester que self est pas nul
-//                if let strongSelf = self {
-//                    strongSelf.user = user
-//                }
             }
         ).store(in: &bag)
     }
