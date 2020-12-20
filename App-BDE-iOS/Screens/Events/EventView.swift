@@ -12,7 +12,7 @@ struct EventView: View {
     
     @Environment(\.colorScheme) var colorScheme
     var animation: Namespace.ID
-    @EnvironmentObject var eventDetail : DetailViewModel
+    @EnvironmentObject var eventDetail : EventViewModel
 
     var body: some View {
         

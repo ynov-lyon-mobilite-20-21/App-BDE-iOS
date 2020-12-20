@@ -15,47 +15,51 @@ struct SignUpView: View {
             Form {
                 Section(header: Text("Identifiants")) {
                     TextField("Email", text: $signUpViewModel.mail)
+                        .textContentType(.emailAddress)
+                        .keyboardType(.emailAddress)
                         .border(Color.red,
                                 width: signUpViewModel.mailIsValid ? 1 : 0)
                     
                     SecureField("Mot de passe", text: $signUpViewModel.password)
+                        .textContentType(.password)
                         .border(Color.red,
                                 width: signUpViewModel.passwordIsValid ? 1 : 0)
                 }
                 
                 Section(header: Text("Informations personnelles")) {
                     TextField("Prenom", text: $signUpViewModel.firstName)
+                        .textContentType(.name)
+                        .disableAutocorrection(true)
                         .border(Color.red,
                                 width: signUpViewModel.mailIsValid ? 1 : 0)
                     
                     TextField("Nom", text: $signUpViewModel.lastName)
+                        .textContentType(.familyName)
+                        .disableAutocorrection(true)
                         .border(Color.red,
                                 width: signUpViewModel.mailIsValid ? 1 : 0)
                 }
                 
                 Section(header: Text("Informations étudiant")) {
-                    HStack {
+
                         Picker("Promotion", selection: $signUpViewModel.promotion) {
                             ForEach(Promotion.allCases, id: \.self) { promotion in
                                 Text(promotion.rawValue)
                                     .tag(promotion)
                             }
                         }
-                        .pickerStyle(MenuPickerStyle())
-                        Spacer()
-                        Text(signUpViewModel.promotion.rawValue)
-                    }
-                    HStack {
+                        .foregroundColor(Color.bdeGreen)
+                        .pickerStyle(DefaultPickerStyle())
+
                         Picker("Formation", selection: $signUpViewModel.formation) {
                             ForEach(Formation.allCases, id: \.self) { promotion in
                                 Text(promotion.rawValue)
                                     .tag(promotion)
                             }
                         }
-                        .pickerStyle(MenuPickerStyle())
-                        Spacer()
-                        Text(signUpViewModel.formation.rawValue)
-                    }
+                        .foregroundColor(Color.bdeGreen)
+                        .pickerStyle(DefaultPickerStyle())
+
                 }
                 Button(action: {
                         signUpViewModel.handleSignUp()
@@ -66,7 +70,7 @@ struct SignUpView: View {
                                 Text("Créer un compte")
                                 Spacer()
                             }
-                        })
+                        }).foregroundColor(Color.bdeGreen)
             }
             .navigationTitle("Créer un compte")
         }
@@ -78,6 +82,7 @@ struct SignUpView_Previews: PreviewProvider {
         Group {
             SignUpView()
             SignUpView()
+                .preferredColorScheme(.dark)
                 .previewDevice("iPhone SE (2nd generation)")
         }
     }

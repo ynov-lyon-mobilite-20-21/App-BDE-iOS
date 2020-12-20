@@ -16,47 +16,62 @@ struct SignInView: View {
     
     var body: some View {
         
-        NavigationView {
-            Form {
-                Section(header: Text("Identifiants")) {
-                    TextField("Email", text: $signInViewModel.mail)
-                        .border(Color.red,
-                                width: signInViewModel.mailIsValid ? 1 : 0)
-                    
-                    SecureField("Mot de passe", text: $signInViewModel.password)
-                        .border(Color.red,
-                                width: signInViewModel.passwordIsValid ? 1 : 0)
-                }
-                Button(action: {
-                        signInViewModel.handleSignIn()
-//                        self.presentation.wrappedValue.dismiss()
-                }, label: {
-                            HStack {
-                                Spacer()
-                                Text("Connexion")
-                                Spacer()
-                            }
-                        })
-                
-                Button(action: {
-                    showModal.toggle()
-                }, label: {
-                    HStack {
-                        Spacer()
-                        Text("Créer un compte")
-                        Spacer()
+        if signInViewModel.loadingStatus == .loading {
+            ProgressView()
+        } else if signInViewModel.loadingStatus == .failed {
+            ErrorView(vm: "", error: "C'est raté ma biche")
+        } else if signInViewModel.loadingStatus == .idle || signInViewModel.loadingStatus == .loaded {
+            NavigationView {
+                Form {
+                    Section(header: Text("Identifiants")) {
+                        TextField("Email", text: $signInViewModel.mail)
+                            .textContentType(.emailAddress)
+                            .keyboardType(.emailAddress)
+                            .border(Color.red,
+                                    width: signInViewModel.mailIsValid ? 1 : 0)
+                        
+                        SecureField("Mot de passe", text: $signInViewModel.password)
+                            .textContentType(.password)
+                            .border(Color.red,
+                                    width: signInViewModel.passwordIsValid ? 1 : 0)
                     }
-                })
+                    Button(action: {
+                        signInViewModel.handleSignIn() {
+                            if $0 == .loaded {
+                                self.presentation.wrappedValue.dismiss()
+                            }
+                        }
+                    }, label: {
+                        HStack {
+                            Spacer()
+                            Text("Connexion")
+                            Spacer()
+                        }
+                    }).foregroundColor(Color.bdeGreen)
+                    
+                    Button(action: {
+                        showModal.toggle()
+                    }, label: {
+                        HStack {
+                            Spacer()
+                            Text("Créer un compte")
+                            Spacer()
+                        }
+                    }).foregroundColor(Color.bdeGreen)
+                }
+                .navigationTitle("Connexion")
             }
-            .navigationTitle("Connexion")
+            .sheet(isPresented: self.$showModal) { SignUpView() }
         }
-        .sheet(isPresented: self.$showModal) { SignUpView() }
-        
     }
 }
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView()
+        Group {
+            SignInView()
+            SignInView()
+                .preferredColorScheme(.dark)
+        }
     }
 }

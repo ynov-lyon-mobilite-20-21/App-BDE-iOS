@@ -10,19 +10,18 @@ import SwiftUI
 struct MainView: View {
     
     @Namespace var animation
-    @StateObject var detailObject = DetailViewModel()
+    @StateObject var eventViewModel = EventViewModel()
     @State private var showModal: Bool = false
-    
     
     var body: some View {
         ZStack{
-            if detailObject.show{
-                EventDetailView(detail: detailObject, animation: animation)
+            if eventViewModel.show{
+                EventDetailView(vm: eventViewModel, animation: animation)
             }else {
                 ZStack(alignment: .bottom) {
                     TabView {
                         EventView(animation: animation)
-                            .environmentObject(detailObject)
+                            .environmentObject(eventViewModel)
                             .tabItem {
                                 Image(systemName: "house")
                                 Text("Event")
@@ -35,7 +34,7 @@ struct MainView: View {
                             }
                     }
                     .accentColor(.blackToWhite)
-                    .opacity(detailObject.show ? 0 : 1)
+                    .opacity(eventViewModel.show ? 0 : 1)
                     
                     BottomTabBarModalItem() {
                         self.showModal.toggle()

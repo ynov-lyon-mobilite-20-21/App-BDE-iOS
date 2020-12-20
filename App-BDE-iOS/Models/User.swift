@@ -16,8 +16,7 @@ struct User: Decodable {
     var formation: Formation
     var isAdmin: Bool
     var isAdherent: Bool
-    var stripeId: String
-    var stripeSourceId: String
+    var isActive: Bool
 }
 
 enum Promotion: String, Decodable, CaseIterable, Equatable {

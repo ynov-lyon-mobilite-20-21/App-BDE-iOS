@@ -10,6 +10,14 @@ import SwiftUI
 import Combine
 
 class SignInViewModel: ObservableObject {
+    
+    enum LoadingStatus {
+        case idle
+        case loading
+        case failed
+        case loaded
+    }
+    
     @Published var mail: String = ""
     @Published var password: String = ""
     
@@ -19,29 +27,37 @@ class SignInViewModel: ObservableObject {
     @Injected private var authentication: AuthenticationRequests
 
     var bag = Set<AnyCancellable>()
-    var user: SignUpDTO?
+    var user: User?
     
-    public func handleSignIn() {
+    @Published var loadingStatus: LoadingStatus = .idle
+    public func handleSignIn(onEnd: @escaping (LoadingStatus) -> Void) {
+        
+        self.loadingStatus = .loading
+        
         mailIsValid = !mail.emailValidation()
         self.passwordIsValid = self.password.isEmpty
         
         if passwordIsValid || mailIsValid {
+            self.loadingStatus = .idle
             return
         }
         
-        let dto = LoginDTO(mail: mail,
-                            password: password)
+        let dto = LoginDTO(mail: mail, password: password)
         authentication.login(dto).sink(
             receiveCompletion: {
                 switch $0 {
                 case .failure(let error):
+                    DispatchQueue.main.async { [weak self] in
+                        self?.loadingStatus = .failed
+                    }
                     print("ERROR : \(error)")
                 case .finished:
                     print("success")
                 }
             },
-            receiveValue: { AuthToken in
-                self.authentication.getMe(AuthToken.token).sink(
+            receiveValue: { [weak self] AuthToken in
+                guard let strongSelf = self else {return}
+                strongSelf.authentication.getMe(AuthToken.token).sink(
                     receiveCompletion: {
                         switch $0 {
                         case .failure(let error):
@@ -52,7 +68,9 @@ class SignInViewModel: ObservableObject {
                     },
                     receiveValue: { user in
                         print("user : ", user)
-                    })
+                        strongSelf.user = user
+                        onEnd(.loaded)
+                    }).store(in: &strongSelf.bag)
             }
         ).store(in: &bag)
     }
