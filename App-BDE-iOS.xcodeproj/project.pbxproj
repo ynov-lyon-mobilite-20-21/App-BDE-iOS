@@ -22,6 +22,7 @@
 		0314D96D2551EAC50017F09C /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D96C2551EAC40017F09C /* UserInfoView.swift */; };
 		0314D9722551EE1B0017F09C /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9712551EE1B0017F09C /* LineShape.swift */; };
 		0314D9772551F1340017F09C /* UserInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9762551F1340017F09C /* UserInfoItem.swift */; };
+		0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357F1E6259CD77300C9A972 /* LoadingView.swift */; };
 		035EF1B9256C11F60009D79D /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035EF1B8256C11F60009D79D /* KeyChain.swift */; };
 		036A2BE525503BCB0057B1C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036A2BE425503BCB0057B1C9 /* Colors.xcassets */; };
 		036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A2BF025503D010057B1C9 /* ColorExtension.swift */; };
@@ -99,6 +100,7 @@
 		0314D9762551F1340017F09C /* UserInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoItem.swift; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
 		03538DBB2541CA1C00FCAD06 /* FashionFetish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Regular.ttf"; sourceTree = "<group>"; };
+		0357F1E6259CD77300C9A972 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		035EF1B8256C11F60009D79D /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		036A2BE425503BCB0057B1C9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		036A2BF025503D010057B1C9 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				03BF900425900E7000E13C4E /* ErrorView.swift */,
+				0357F1E6259CD77300C9A972 /* LoadingView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				03B230F625585E98006EF0EA /* SignUpRequests.swift in Sources */,
 				037C6FB72551F38500678CF2 /* TitleWithoutPaddingCustom.swift in Sources */,
 				038D79822566F668006FF950 /* SignInViewModel.swift in Sources */,
+				0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */,
 				03B230D22558599A006EF0EA /* UserDefaultsPropertyWrapper.swift in Sources */,
 				0306C298256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift in Sources */,
 				03012AAA254772C700DD9D64 /* Event.swift in Sources */,

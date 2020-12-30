@@ -16,52 +16,56 @@ struct SignInView: View {
     
     var body: some View {
         
-        if signInViewModel.loadingStatus == .loading {
-            ProgressView()
-        } else if signInViewModel.loadingStatus == .failed {
-            ErrorView(vm: "", error: "C'est raté ma biche")
-        } else if signInViewModel.loadingStatus == .idle || signInViewModel.loadingStatus == .loaded {
-            NavigationView {
-                Form {
-                    Section(header: Text("Identifiants")) {
-                        TextField("Email", text: $signInViewModel.mail)
-                            .textContentType(.emailAddress)
-                            .keyboardType(.emailAddress)
-                            .border(Color.red,
-                                    width: signInViewModel.mailIsValid ? 1 : 0)
-                        
-                        SecureField("Mot de passe", text: $signInViewModel.password)
-                            .textContentType(.password)
-                            .border(Color.red,
-                                    width: signInViewModel.passwordIsValid ? 1 : 0)
-                    }
-                    Button(action: {
-                        signInViewModel.handleSignIn() {
-                            if $0 == .loaded {
-                                self.presentation.wrappedValue.dismiss()
+        ZStack {
+            if signInViewModel.loadingStatus == .failed {
+                ErrorView(vm: "", error: "C'est raté ma biche")
+            } else {
+                NavigationView {
+                    Form {
+                        Section(header: Text("Identifiants")) {
+                            TextField("Email", text: $signInViewModel.mail)
+                                .textContentType(.emailAddress)
+                                .keyboardType(.emailAddress)
+                                .border(Color.red,
+                                        width: signInViewModel.mailIsValid ? 1 : 0)
+                            
+                            SecureField("Mot de passe", text: $signInViewModel.password)
+                                .textContentType(.password)
+                                .border(Color.red,
+                                        width: signInViewModel.passwordIsValid ? 1 : 0)
+                        }
+                        Button(action: {
+                            signInViewModel.handleSignIn() {
+                                if $0 == .loaded {
+                                    self.presentation.wrappedValue.dismiss()
+                                }
                             }
-                        }
-                    }, label: {
-                        HStack {
-                            Spacer()
-                            Text("Connexion")
-                            Spacer()
-                        }
-                    }).foregroundColor(Color.bdeGreen)
-                    
-                    Button(action: {
-                        showModal.toggle()
-                    }, label: {
-                        HStack {
-                            Spacer()
-                            Text("Créer un compte")
-                            Spacer()
-                        }
-                    }).foregroundColor(Color.bdeGreen)
+                        }, label: {
+                            HStack {
+                                Spacer()
+                                Text("Connexion")
+                                Spacer()
+                            }
+                        }).foregroundColor(Color.bdeGreen)
+                        
+                        Button(action: {
+                            showModal.toggle()
+                        }, label: {
+                            HStack {
+                                Spacer()
+                                Text("Créer un compte")
+                                Spacer()
+                            }
+                        }).foregroundColor(Color.bdeGreen)
+                    }
+                    .navigationTitle("Connexion")
                 }
-                .navigationTitle("Connexion")
+                .sheet(isPresented: self.$showModal) { SignUpView() }
+                
+                if signInViewModel.loadingStatus == .loading {
+                    LoadingView()
+                }
             }
-            .sheet(isPresented: self.$showModal) { SignUpView() }
         }
     }
 }

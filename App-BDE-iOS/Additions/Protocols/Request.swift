@@ -18,9 +18,7 @@ enum HTTPMethod: String {
     case DELETE = "DELETE"
 }
 
-protocol Request {
-    
-}
+protocol Request {}
 
 extension Request {
     
@@ -58,5 +56,4 @@ extension Request {
             return AnyPublisher(Fail(error: error))
         }
     }
-    
 }
