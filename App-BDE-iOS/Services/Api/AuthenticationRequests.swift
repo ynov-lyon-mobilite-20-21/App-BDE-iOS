@@ -12,45 +12,45 @@ import Combine
 final class AuthenticationRequests: Request {
     
     var bag = Set<AnyCancellable>()
+    let keyChain = KeyChainService()
     
-    func loginUser(with dto: LoginDTO) {
-        self.login(dto).sink(
+    func login(_ body: LoginDTO, onResult: @escaping (Result<Any, Error>) -> Void) {
+        guard let url = URL(string: "https://lyon-ynov-bde-api.herokuapp.com/api/auth") else {
+            return
+        }
+        request(url, httpMethod: .POST, body: body, decodeType: AuthToken.self).sink(
             receiveCompletion: {
                 switch $0 {
                 case .failure(let error):
-                    print("ERROR : \(error)")
-                case .finished:
-                    print("success")
+                    onResult(.failure(error))
+                case .finished: break
                 }
             },
-            receiveValue: { [weak self] AuthToken in
-                guard let strongSelf = self else {return}
-                strongSelf.getMe(AuthToken.token).sink(
-                    receiveCompletion: {
-                        switch $0 {
-                        case .failure(let error):
-                            print("ERROR : \(error)")
-                        case .finished:
-                            print("get me success")
-                        }
-                    },
-                    receiveValue: { user in
-                    }).store(in: &strongSelf.bag)
+            receiveValue: { authToken in
+                self.keyChain.addStringInKeyChain(value: authToken.token, as: "UserToken")
+                onResult(.success(authToken))
             }
         ).store(in: &bag)
     }
     
-    func login(_ body: LoginDTO) -> AnyPublisher<AuthToken, Error> {
-        guard let url = URL(string: "https://lyon-ynov-bde-api.herokuapp.com/api/auth") else {
-            return AnyPublisher(Empty())
-        }
-        return request(url, httpMethod: .POST, body: body, decodeType: AuthToken.self)
-    }
-    
-    func getMe(_ token: String) -> AnyPublisher<User, Error> {
+    func getMe(onResult: @escaping (Result<Any, Error>) -> Void) {
+        let userToken = keyChain.getStringInKeyChain(name: "UserToken")
+        
         guard let url = URL(string: "https://lyon-ynov-bde-api.herokuapp.com/api/me") else {
-            return AnyPublisher(Empty())
+            return
         }
-        return request(url, httpMethod: .GET, headers: ["Authorization":"Bearer \(token)"], decodeType: User.self)
+        request(url, httpMethod: .GET, headers: ["Authorization":"Bearer \(userToken)"], decodeType: User.self).sink(
+            receiveCompletion: {
+                switch $0 {
+                case .failure(let error):
+                    onResult(.failure(error))
+                case .finished: break
+                }
+            },
+            receiveValue: { user in
+                print(user)
+                onResult(.success(user))
+            }
+        ).store(in: &bag)
     }
 }

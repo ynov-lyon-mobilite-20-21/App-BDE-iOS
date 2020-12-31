@@ -9,14 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-class SignInViewModel: ObservableObject {
-    
-    enum LoadingStatus {
-        case idle
-        case loading
-        case failed
-        case loaded
-    }
+class SignInViewModel: KeyChainService, ObservableObject {
     
     @Published var mail: String = ""
     @Published var password: String = ""
@@ -30,6 +23,7 @@ class SignInViewModel: ObservableObject {
     var user: User?
     
     @Published var loadingStatus: LoadingStatus = .idle
+    
     public func handleSignIn(onEnd: @escaping (LoadingStatus) -> Void) {
         
         self.loadingStatus = .loading
@@ -43,35 +37,32 @@ class SignInViewModel: ObservableObject {
         }
         
         let dto = LoginDTO(mail: mail, password: password)
-        authentication.login(dto).sink(
-            receiveCompletion: {
-                switch $0 {
-                case .failure(let error):
-                    DispatchQueue.main.async { [weak self] in
-                        self?.loadingStatus = .failed
-                    }
-                    print("ERROR : \(error)")
-                case .finished:
-                    print("success")
+        authentication.login(dto) { result in
+            switch result {
+            case .failure(_):
+                DispatchQueue.main.async { [weak self] in
+                    self?.loadingStatus = .failed
                 }
-            },
-            receiveValue: { [weak self] AuthToken in
-                guard let strongSelf = self else {return}
-                strongSelf.authentication.getMe(AuthToken.token).sink(
-                    receiveCompletion: {
-                        switch $0 {
-                        case .failure(let error):
-                            print("ERROR : \(error)")
-                        case .finished:
-                            print("get me success")
-                        }
-                    },
-                    receiveValue: { user in
-                        print("user : ", user)
-                        strongSelf.user = user
+            case .success:
+                self.authentication.getMe() { result in
+                    switch result {
+                    case .success:
                         onEnd(.loaded)
-                    }).store(in: &strongSelf.bag)
+                    case .failure(_):
+                        DispatchQueue.main.async { [weak self] in
+                            self?.loadingStatus = .failed
+                        }
+                    }
+                }
             }
-        ).store(in: &bag)
+        }
+
     }
+}
+
+enum LoadingStatus {
+    case idle
+    case loading
+    case failed
+    case loaded
 }
