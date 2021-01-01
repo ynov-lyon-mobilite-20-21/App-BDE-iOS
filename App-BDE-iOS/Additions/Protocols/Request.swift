@@ -45,7 +45,11 @@ extension Request {
             return URLSession.shared.dataTaskPublisher(for: request)
                 .tryMap {(data, response) -> Data in
                     if let response = response as? HTTPURLResponse, response.statusCode != 200 {
-                        throw NSError(domain: "Test", code: 1, userInfo: nil)
+                        switch response.statusCode {
+                        case 401: throw ApiRequestError.badCredentials
+                        default:
+                            throw ApiRequestError.unknowError
+                        }
                     }
                     return data
                 }
@@ -56,4 +60,11 @@ extension Request {
             return AnyPublisher(Fail(error: error))
         }
     }
+}
+
+enum ApiRequestError: String, Error {
+    typealias RawValue = String
+    
+    case unknowError = "Une erreur est apparue"
+    case badCredentials = "Votre mail ou votre mot de passe est incorrect"
 }

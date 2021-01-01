@@ -17,7 +17,7 @@ class SignInViewModel: KeyChainService, ObservableObject {
     @Published var mailIsValid: Bool = false
     @Published var passwordIsValid: Bool = false
     
-    @Injected private var authentication: AuthenticationRequests
+    @Injected private var authentication: ApiRequestService
 
     var bag = Set<AnyCancellable>()
     var user: User?
@@ -39,8 +39,13 @@ class SignInViewModel: KeyChainService, ObservableObject {
         let dto = LoginDTO(mail: mail, password: password)
         authentication.login(dto) { result in
             switch result {
-            case .failure(_):
+            case .failure(let error):
                 DispatchQueue.main.async { [weak self] in
+                    switch error {
+                    case ApiRequestError.badCredentials:                        print(ApiRequestError.badCredentials.rawValue)
+
+                    default: print(ApiRequestError.unknowError.rawValue)
+                    }
                     self?.loadingStatus = .failed
                 }
             case .success:

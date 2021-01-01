@@ -45,7 +45,7 @@
 		03B230B125585816006EF0EA /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230AD25585816006EF0EA /* Injected.swift */; };
 		03B230B92558583A006EF0EA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230B82558583A006EF0EA /* SignUpViewModel.swift */; };
 		03B230BF255858E6006EF0EA /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 03B230BE255858E6006EF0EA /* SwinjectAutoregistration */; };
-		03B230C725585977006EF0EA /* AuthenticationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230C525585977006EF0EA /* AuthenticationRequests.swift */; };
+		03B230C725585977006EF0EA /* ApiRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230C525585977006EF0EA /* ApiRequestService.swift */; };
 		03B230D22558599A006EF0EA /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230CF2558599A006EF0EA /* UserDefaultsPropertyWrapper.swift */; };
 		03B230D32558599A006EF0EA /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230D12558599A006EF0EA /* Request.swift */; };
 		03B230DD255859D6006EF0EA /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230DB255859D6006EF0EA /* LoginDTO.swift */; };
@@ -124,7 +124,7 @@
 		03B230AC25585816006EF0EA /* DependencyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
 		03B230AD25585816006EF0EA /* Injected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		03B230B82558583A006EF0EA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		03B230C525585977006EF0EA /* AuthenticationRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequests.swift; sourceTree = "<group>"; };
+		03B230C525585977006EF0EA /* ApiRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequestService.swift; sourceTree = "<group>"; };
 		03B230CF2558599A006EF0EA /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
 		03B230D12558599A006EF0EA /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		03B230DB255859D6006EF0EA /* LoginDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
@@ -356,7 +356,7 @@
 		03B230C325585977006EF0EA /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				03B230C525585977006EF0EA /* AuthenticationRequests.swift */,
+				03B230C525585977006EF0EA /* ApiRequestService.swift */,
 				03B230F525585E98006EF0EA /* SignUpRequests.swift */,
 				035EF1B8256C11F60009D79D /* KeyChain.swift */,
 			);
@@ -719,7 +719,7 @@
 				03B2310425586372006EF0EA /* SignUpDTO.swift in Sources */,
 				03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */,
 				03B230B125585816006EF0EA /* Injected.swift in Sources */,
-				03B230C725585977006EF0EA /* AuthenticationRequests.swift in Sources */,
+				03B230C725585977006EF0EA /* ApiRequestService.swift in Sources */,
 				0314D96D2551EAC50017F09C /* UserInfoView.swift in Sources */,
 				03B230FE255860BF006EF0EA /* User.swift in Sources */,
 				035EF1B9256C11F60009D79D /* KeyChain.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-final class AuthenticationRequests: Request {
+final class ApiRequestService: Request {
     
     var bag = Set<AnyCancellable>()
     let keyChain = KeyChainService()
