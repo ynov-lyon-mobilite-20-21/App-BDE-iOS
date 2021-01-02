@@ -6,27 +6,32 @@
 //
 
 import Foundation
+ 
+struct Event: Identifiable, Hashable, Decodable {
+    var id: String
+    var name: String
+    var type: EventType
+    var image: ImageType
+    var date: String
+    var address: String
+    var description: String
+    var price: Int
+}
 
-struct Event: Identifiable, Hashable {
-    var id: Int?  = nil
-    var name: String?  = nil
-    var type: String?  = nil
-    var image: String?  = nil
-    var date: String?  = nil
-    var address: String?  = nil
-    var description: String?  = nil
-    var price: Int?  = nil
-    
-    init() {}
-    
-    init(id: Int, name: String, type: String, image: String, date: String, address: String, description: String, price: Int) {
-            self.id = id
-            self.name = name
-            self.type = type
-            self.image = image
-            self.date = date
-            self.address = address
-            self.description = description
-            self.price = price
-        }
+enum EventType: String, Decodable, CaseIterable {
+    case defaultValue = "",
+         kolok = "Call Kolok",
+         studentParty = "Soirée Etudiante",
+         lan = "LAN",
+         sportParty = "Un moment sportif",
+         foodSelling = "Vente de nourriture"
+}
+
+enum ImageType: String, Decodable, CaseIterable {
+    case defaultValue = "",
+         kolok = "KOLOK_card",
+         party = "KOLOK_Card_1920x1080",
+         lan = "LAN_card",
+         sport = "SPORT_card",
+         food = "FOOD_card"
 }

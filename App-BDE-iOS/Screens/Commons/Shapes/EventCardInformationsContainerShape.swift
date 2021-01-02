@@ -7,40 +7,36 @@
 
 import SwiftUI
 
-struct ContainerTopCornerRadius: Shape {
+struct TitleShape: Shape {
     let radius: CGFloat
     
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
-
-        
+        let tl = CGPoint(x: rect.minX, y: rect.minY)
         let trs = CGPoint(x: rect.maxX - radius, y: rect.minY)
         let trc = CGPoint(x: rect.maxX - radius, y: rect.minY + radius)
-        let br = CGPoint(x: rect.maxX, y: rect.maxY)
+        let brs = CGPoint(x: rect.maxX, y: rect.maxY - radius)
+        let brc = CGPoint(x: rect.maxX - radius, y: rect.maxY - radius)
         let bl = CGPoint(x: rect.minX, y: rect.maxY)
-        let tls = CGPoint(x: rect.minX, y: rect.minY + radius)
-        let tlc = CGPoint(x: rect.minX + radius, y: rect.minY + radius)
-        
-        
-        path.move(to: bl)
-        path.addLine(to: tls)
-        path.addRelativeArc(center: tlc, radius: radius,
-          startAngle: Angle.degrees(180), delta: Angle.degrees(90))
+
+        path.move(to: tl)
         path.addLine(to: trs)
         path.addRelativeArc(center: trc, radius: radius,
           startAngle: Angle.degrees(270), delta: Angle.degrees(90))
-        path.addLine(to: br)
-        path.closeSubpath()
+        path.addLine(to: brs)
+        path.addRelativeArc(center: brc, radius: radius,
+          startAngle: Angle.degrees(0), delta: Angle.degrees(90))
+        path.addLine(to: bl)
         
         
         return path
     }
 }
 
-struct EventCardInformationsContainerShape_Previews: PreviewProvider {
+struct TitleShape_Previews: PreviewProvider {
     static var previews: some View {
-        ContainerTopCornerRadius(radius: 30)
+        TitleShape(radius: 30)
     }
 }
 
