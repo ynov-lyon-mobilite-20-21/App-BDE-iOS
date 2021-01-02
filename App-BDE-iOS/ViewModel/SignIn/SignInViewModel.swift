@@ -23,6 +23,8 @@ class SignInViewModel: KeyChainService, ObservableObject {
     var user: User?
     
     @Published var loadingStatus: LoadingStatus = .idle
+    @Published var requestStatus: String = ""
+    @Published var showAlert: Bool = false
     
     public func handleSignIn(onEnd: @escaping (LoadingStatus) -> Void) {
         
@@ -42,7 +44,10 @@ class SignInViewModel: KeyChainService, ObservableObject {
             case .failure(let error):
                 DispatchQueue.main.async { [weak self] in
                     switch error {
-                    case ApiRequestError.badCredentials:                        print(ApiRequestError.badCredentials.rawValue)
+                    case ApiRequestError.badCredentials: do {
+                        self?.showAlert = true
+                        self?.requestStatus = ApiRequestError.badCredentials.rawValue
+                    }
 
                     default: print(ApiRequestError.unknowError.rawValue)
                     }

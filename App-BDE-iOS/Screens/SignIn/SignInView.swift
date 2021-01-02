@@ -12,14 +12,12 @@ struct SignInView: View {
     @Environment(\.presentationMode) var presentation
     @InjectedObservedObject private var signInViewModel: SignInViewModel
     @State private var showModal: Bool = false
+    @State private var showAlert: Bool = false
     
     
     var body: some View {
         
         ZStack {
-            if signInViewModel.loadingStatus == .failed {
-                ErrorView(vm: "", error: "C'est raté ma biche")
-            } else {
                 NavigationView {
                     Form {
                         Section(header: Text("Identifiants")) {
@@ -65,8 +63,13 @@ struct SignInView: View {
                 if signInViewModel.loadingStatus == .loading {
                     LoadingView()
                 }
-            }
+//                else if signInViewModel.loadingStatus == .failed {
+//                    Alert(title: Text("Important message"), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
+//            }
         }
+        .alert(isPresented: $signInViewModel.showAlert) {
+            Alert(title: Text(signInViewModel.requestStatus), dismissButton: .default(Text("Ok")))
+                }
     }
 }
 
