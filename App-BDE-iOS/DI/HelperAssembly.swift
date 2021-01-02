@@ -23,6 +23,9 @@ class HelperAssembly: Assembly {
         container.autoregister(SignInViewModel.self, initializer: SignInViewModel.init)
         container.register(SignInView.self) { _ in SignInView() }
         
+        //  Service
+        container.autoregister(UserViewModel.self, initializer: UserViewModel.init)
+        
         //  API
         container.autoregister(ApiRequestService.self, initializer: ApiRequestService.init)
         container.autoregister(SignUpRequests.self, initializer: SignUpRequests.init)
