@@ -6,15 +6,25 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class OnBoardingViewModel: ObservableObject {
     
+    @AppStorage("needsAppOnboarding") private var needsAppOnboarding: Bool = true
+    
+    @Published var selected = 0
     
     func Next() {
-        
+        if selected < 2 {
+            selected+=1
+        } else if selected == 2 {
+            needsAppOnboarding = false
+        }
     }
     
     func Previous() {
-        
+        if selected > 0 {
+            selected-=1
+        } else { return }
     }
 }
