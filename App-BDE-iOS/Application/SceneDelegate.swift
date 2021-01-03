@@ -23,8 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
         
         window?.windowScene = windowScene
-        window?.rootViewController = UIHostingController(rootView: MainView())
-        
+        window?.rootViewController = UIHostingController(rootView: onBoardingView())
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

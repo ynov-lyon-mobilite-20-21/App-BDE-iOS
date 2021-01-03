@@ -22,6 +22,8 @@
 		0314D96D2551EAC50017F09C /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D96C2551EAC40017F09C /* UserInfoView.swift */; };
 		0314D9722551EE1B0017F09C /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9712551EE1B0017F09C /* LineShape.swift */; };
 		0314D9772551F1340017F09C /* UserInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9762551F1340017F09C /* UserInfoItem.swift */; };
+		0350F48C25A128D2008059A6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F48B25A128D1008059A6 /* UIApplication.swift */; };
+		0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */; };
 		0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357F1E6259CD77300C9A972 /* LoadingView.swift */; };
 		035EF1B9256C11F60009D79D /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035EF1B8256C11F60009D79D /* KeyChain.swift */; };
 		036A2BE525503BCB0057B1C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036A2BE425503BCB0057B1C9 /* Colors.xcassets */; };
@@ -101,6 +103,8 @@
 		0314D9712551EE1B0017F09C /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
 		0314D9762551F1340017F09C /* UserInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoItem.swift; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
+		0350F48B25A128D1008059A6 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCardView.swift; sourceTree = "<group>"; };
 		03538DBB2541CA1C00FCAD06 /* FashionFetish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Regular.ttf"; sourceTree = "<group>"; };
 		0357F1E6259CD77300C9A972 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		035EF1B8256C11F60009D79D /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
@@ -253,10 +257,11 @@
 		03559E5E25373FF00059F1F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				03538DBA2541CA0F00FCAD06 /* Fonts */,
 				036A2BEE25503CC00057B1C9 /* Colors */,
-				03C54BE5252F37D30014FF4E /* Assets.xcassets */,
 				03C54BEA252F37D30014FF4E /* Info.plist */,
 				0302A195253AF008005F48AD /* Launch Screen.storyboard */,
+				03C54BE5252F37D30014FF4E /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			children = (
 				03B230F025585B59006EF0EA /* StringExtensions.swift */,
 				036A2BF025503D010057B1C9 /* ColorExtension.swift */,
+				0350F48B25A128D1008059A6 /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -285,7 +291,6 @@
 			isa = PBXGroup;
 			children = (
 				036A2BE425503BCB0057B1C9 /* Colors.xcassets */,
-				03538DBA2541CA0F00FCAD06 /* Fonts */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				0386369F253F361000CB2A05 /* onBoardingView.swift */,
+				0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -706,11 +712,13 @@
 				03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */,
 				03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */,
 				0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */,
+				0350F48C25A128D2008059A6 /* UIApplication.swift in Sources */,
 				03B230DE255859D6006EF0EA /* AnyEncodable.swift in Sources */,
 				0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */,
 				038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */,
 				03BF8FF0258E910900E13C4E /* LoadableObject.swift in Sources */,
 				0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */,
+				0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */,
 				0314D9722551EE1B0017F09C /* LineShape.swift in Sources */,
 				03DB0F0B2556E6280019E87E /* SignUpView.swift in Sources */,
 				038D79742565D7E0006FF950 /* ServerResponses.swift in Sources */,

@@ -63,9 +63,7 @@ struct SignInView: View {
                 if signInViewModel.loadingStatus == .loading {
                     LoadingView()
                 }
-//                else if signInViewModel.loadingStatus == .failed {
-//                    Alert(title: Text("Important message"), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
-//            }
+
         }
         .alert(isPresented: $signInViewModel.showAlert) {
             Alert(title: Text(signInViewModel.requestStatus), dismissButton: .default(Text("Ok")))
@@ -82,3 +80,5 @@ struct SignInView_Previews: PreviewProvider {
         }
     }
 }
+
+
