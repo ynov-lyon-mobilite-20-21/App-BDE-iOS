@@ -19,12 +19,13 @@ struct onBoardingView: View {
                     .ignoresSafeArea()
 
                 TabView(selection: $onBoardingViewModel.selected) {
-                    OnBoardingCardView(imageName: "onBoardingPage2", title: "Achète ta place facilement et ne rate aucun évènement", content: "Grâce à cette app, tu peux stocker tous tes billets au même endroit, les retrouver rapidement et les faire scanner par l'équipe du BDE le jour J !").tag(0)
-                    OnBoardingCardView(imageName: "onBoardingPage2", title: "Achète ta place facilement et ne rate aucun évènement", content: "Grâce à cette app, tu peux stocker tous tes billets au même endroit, les retrouver rapidement et les faire scanner par l'équipe du BDE le jour J !").tag(1)
-                    OnBoardingCardView(imageName: "onBoardingPage2", title: "Achète ta place facilement et ne rate aucun évènement", content: "Grâce à cette app, tu peux stocker tous tes billets au même endroit, les retrouver rapidement et les faire scanner par l'équipe du BDE le jour J !").tag(2)
+                    OnBoardingCardView(imageName: "onboarding_1", imageSupp: "", title: "Parcours les évènements à venir de ton BDE ", content: "Tout au long de l'année tu trouveras des évènements variés pour nous retrouver et passer de bons moments.").tag(0)
+                    OnBoardingCardView(imageName: "onboarding_2", imageSupp: "logos_illustration2", title: "Achète ta place facilement et ne rate aucun évènement", content: "Grâce à cette app, tu peux stocker tous tes billets au même endroit, les retrouver rapidement et les faire scanner par l'équipe du BDE le jour J !").tag(1)
+                    OnBoardingCardView(imageName: "onboarding_3", imageSupp: "", title: "Prends contact quand tu veux avec les membres de ton BDE ", content: "Des questions ? Des précisions ? Nous sommes à ta disposition pour t'éclairer et t'aider au mieux à passer des moments inoubliables avec nous !").tag(2)
                 }
                 .tabViewStyle(PageTabViewStyle())
                 .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                
                 .animation(.easeIn)
                 .ignoresSafeArea(edges: .top)
 
