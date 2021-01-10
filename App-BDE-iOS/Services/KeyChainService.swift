@@ -8,7 +8,7 @@
 import Foundation
 import KeychainSwift
 
-class KeyChainService {
+class KeyChainService: ObservableObject {
     
     private let keychain = KeychainSwift()
     

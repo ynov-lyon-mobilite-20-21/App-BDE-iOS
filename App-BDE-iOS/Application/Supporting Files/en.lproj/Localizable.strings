@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  App-BDE-iOS
+
+  Created by Nicolas Barbosa on 05/01/2021.
+  
+*/
+
+"signInView.section1header" = "Identifiers";

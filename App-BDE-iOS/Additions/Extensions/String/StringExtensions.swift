@@ -16,5 +16,8 @@ extension String {
         return emailPred.evaluate(with: self)
     }
     
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
     
 }

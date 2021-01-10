@@ -20,7 +20,7 @@ struct SignInView: View {
         ZStack {
                 NavigationView {
                     Form {
-                        Section(header: Text("Identifiants")) {
+                        Section(header: Text("signInView.section1header".localized)) {
                             TextField("Email", text: $signInViewModel.mail)
                                 .textContentType(.emailAddress)
                                 .keyboardType(.emailAddress)

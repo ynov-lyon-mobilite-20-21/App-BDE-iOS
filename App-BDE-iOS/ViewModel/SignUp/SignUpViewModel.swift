@@ -39,22 +39,22 @@ class SignUpViewModel: ObservableObject {
                             lastName: lastName,
                             formation: formation.rawValue,
                             promotion: promotion.rawValue)
-        signUpRequest.signUp(dto).sink(
-            receiveCompletion: {
-            
-                switch $0 {
-                case .failure(let error):
-                    print("ERROR : \(error)")
-                case .finished:
-                    print("succes")
-                }
-            },
-            receiveValue: { [weak self] user in
-                
-                print(user)
-                guard let strongSelf = self else {return}
-                strongSelf.user = user
-            }
-        ).store(in: &bag)
+//        signUpRequest.signUp(dto).sink(
+//            receiveCompletion: {
+//
+//                switch $0 {
+//                case .failure(let error):
+//                    print("ERROR : \(error)")
+//                case .finished:
+//                    print("succes")
+//                }
+//            },
+//            receiveValue: { [weak self] user in
+//
+//                print(user)
+//                guard let strongSelf = self else {return}
+//                strongSelf.user = user
+//            }
+//        ).store(in: &bag)
     }
 }
