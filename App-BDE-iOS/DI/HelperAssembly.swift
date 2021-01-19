@@ -17,15 +17,15 @@ class HelperAssembly: Assembly {
         container.autoregister(JSONEncoder.self, initializer: JSONEncoder.init)
         
         //  Views
-        container.autoregister(SignUpViewModel.self, initializer: SignUpViewModel.init)
-        container.register(SignUpView.self) { _ in SignUpView() }
+//        container.autoregister(SignUpViewModel.self, initializer: SignUpViewModel.init)
+//        container.register(SignUpView.self) { _ in SignUpView() }
                            
-        container.autoregister(SignInViewModel.self, initializer: SignInViewModel.init)
-        container.register(SignInView.self) { _ in SignInView() }
-        
+//        container.autoregister(SignInViewModel.self, initializer: SignInViewModel.init)
+//        container.register(SignInView.self) { _ in SignInView() }
+//
         //  Service
         container.autoregister(UserViewModel.self, initializer: UserViewModel.init)
-        container.autoregister(OnBoardingViewModel.self, initializer: OnBoardingViewModel.init)
+//        container.autoregister(OnBoardingViewModel.self, initializer: OnBoardingViewModel.init)
         container.autoregister(KeyChainService.self, initializer: KeyChainService.init)
         //  API
         container.autoregister(ApiRequestService.self, initializer: ApiRequestService.init)

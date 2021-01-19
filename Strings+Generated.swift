@@ -26,6 +26,13 @@ internal enum L10n {
     internal static let title3 = L10n.tr("Localizable", "onBoarding.title3")
   }
 
+  internal enum Profil {
+    /// MES BILLETS
+    internal static let ticketsTitle = L10n.tr("Localizable", "profil.ticketsTitle")
+    /// MES INFORMATIONS
+    internal static let userTitle = L10n.tr("Localizable", "profil.userTitle")
+  }
+
   internal enum SignInView {
     /// Identifiants
     internal static let section1header = L10n.tr("Localizable", "signInView.section1header")

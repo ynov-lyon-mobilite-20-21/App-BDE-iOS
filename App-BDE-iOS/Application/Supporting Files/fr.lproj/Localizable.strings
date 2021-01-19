@@ -16,3 +16,5 @@
 "onBoarding.content2" = "Grâce à cette app, tu peux stocker tous tes billets au même endroit, les retrouver rapidement et les faire scanner par l'équipe du BDE le jour J !";
 "onBoarding.content3" = "Des questions ? Des précisions ? Nous sommes à ta disposition pour t'éclairer et t'aider au mieux à passer des moments inoubliables avec nous !";
 
+"profil.userTitle" = "MES INFORMATIONS";
+"profil.ticketsTitle" = "MES BILLETS";

@@ -26,9 +26,7 @@ protocol WebService: Weakable {
     var url: URL? { get set };
     var httpMethod: HTTPMethod { get set };
     var headers: [String: String]? { get set };
-//    var dataType: WebServiceDataType { get set };
-    
-    func execute(_ parameters: Encodable) -> AnyPublisher<DecodedType, Error>
+//    var dataType: WebServiceDataType { get set };    
 }
 
 extension WebService {
@@ -45,7 +43,7 @@ extension WebService {
         return headersArray
     }
     
-    func call(_ parameters: Encodable) -> AnyPublisher<DecodedType, Error> {
+    func call(_ parameters: Encodable) -> AnyPublisher<GenericServerResponse<DecodedType>, Error> {
         do {
             guard let url = url else { return AnyPublisher.empty() }
             var request = URLRequest(url: url)
@@ -57,8 +55,14 @@ extension WebService {
             }
             
             return URLSession.shared.dataTaskPublisher(for: request)
-                .map { $0.data }
-                .decode(type: DecodedType.self, decoder: JSONDecoder())
+                .tryMap {(data, response) -> Data in
+                    if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+                        let errorData = try JSONDecoder().decode(GenericErrorResponse.self, from: data)
+                        throw CustomError(errorBody: errorData.error.code)
+                    }
+                    return data
+                }
+                .decode(type: GenericServerResponse<DecodedType>.self, decoder: JSONDecoder())
                 .eraseToAnyPublisher()
         } catch let error {
             return AnyPublisher(Fail(error: error))

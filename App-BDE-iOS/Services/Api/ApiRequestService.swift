@@ -32,10 +32,10 @@ final class ApiRequestService {
 }
 
 struct RegisterWebServiceParameters: Encodable {}
-struct RegisterWebServiceResponse: Decodable {}
 
 final class LoginWebService: WebService {
-    typealias DecodedType = RegisterWebServiceResponse
+    
+    typealias DecodedType = AuthToken
     typealias ServiceParameters = RegisterWebServiceParameters
     
     var url: URL? = URL(string: "https://lyon-ynov-bde-api.herokuapp.com/api/auth")
@@ -44,7 +44,4 @@ final class LoginWebService: WebService {
     
     var headers: [String : String]? = [:]
     
-    func execute(_ parameters: Encodable) -> AnyPublisher<DecodedType, Error> {
-        return call(parameters)
-    }
 }

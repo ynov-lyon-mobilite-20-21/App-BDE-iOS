@@ -7,26 +7,27 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
-class BaseViewModel: Weakable {
+class BaseViewModel: ObservableObject, Weakable {
     var bag = Set<AnyCancellable>()
-    var error: Error?
-    
+    var error: CustomError?
+    @State var errorAlertIsShown: Bool = false
+
     func executeRequest<T>(_ publisher: AnyPublisher<T, Error>, onSuccess: @escaping ((T) -> Void), onError: ((Error) -> Void)?) {
         publisher
             .sink(receiveCompletion: weakify { strongSelf, result in
                 switch result {
                 case .finished:
                     break;
-                case .failure(let error):
-                    guard let executeOnError = onError else {
-                        strongSelf.handleError(error: error)
-                        return
-                    }
-
-                    executeOnError(error)
+                case .failure(let error as CustomError):
+                    strongSelf.handleError(error: error)
+                case .failure( _):
+                    strongSelf.handleError(error: CustomError(errorBody: "UNKNOWN_ERROR"))
                 }
+                
             }, receiveValue: { value in
+                print("received Value : \(value)")
                 onSuccess(value)
             }).store(in: &bag)
     }
@@ -35,7 +36,8 @@ class BaseViewModel: Weakable {
         executeRequest(publisher, onSuccess: onSuccess, onError: nil)
     }
 
-    private func handleError(error: Error) {
+    private func handleError(error: CustomError) {
         self.error = error
+        errorAlertIsShown = true
     }
 }
