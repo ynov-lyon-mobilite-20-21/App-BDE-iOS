@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct TitleCustom: View {
+    let title: String
+    let font: Font
     let textColor: Color
     let shadowColor: Color
-    let size: CGFloat
-    let title: String
     var body: some View {
         ZStack {
             Text(title)
-                .font(.custom("TabacBigSans-SemiBoldIt", size: size))
+                .font(font)
                 .foregroundColor(shadowColor)
                 .offset(x: 2, y: 2)
             
             Text(title)
-                .font(.custom("TabacBigSans-SemiBoldIt", size: size))
+                .font(font)
                 .foregroundColor(textColor)
         }
     }
@@ -28,6 +28,6 @@ struct TitleCustom: View {
 
 struct TitleCustom_Previews: PreviewProvider {
     static var previews: some View {
-        TitleCustom(textColor: .black, shadowColor: .green, size: 50, title: "test")
+        TitleCustom(title: "Test", font: .custom("TabacBigSans-SemiBoldIt", size: 15), textColor: Color.black, shadowColor: Color.bdeGreen)
     }
 }

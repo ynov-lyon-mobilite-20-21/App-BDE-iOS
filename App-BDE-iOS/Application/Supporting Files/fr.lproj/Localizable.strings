@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  App-BDE-iOS
+
+  Created by Nicolas Barbosa on 05/01/2021.
+  
+*/
+
+"signInView.section1header" = "Identifiants";
+
+"onBoarding.title1" = "Parcours les évènements à venir de ton BDE";
+"onBoarding.title2" = "Achète ta place facilement et ne rate aucun évènement";
+"onBoarding.title3" = "Prends contact quand tu veux avec les membres de ton BDE";
+
+"onBoarding.content1" = "Tout au long de l'année tu trouveras des évènements variés pour nous retrouver et passer de bons moments.";
+"onBoarding.content2" = "Grâce à cette app, tu peux stocker tous tes billets au même endroit, les retrouver rapidement et les faire scanner par l'équipe du BDE le jour J !";
+"onBoarding.content3" = "Des questions ? Des précisions ? Nous sommes à ta disposition pour t'éclairer et t'aider au mieux à passer des moments inoubliables avec nous !";
+
+"profil.userTitle" = "MES INFORMATIONS";
+"profil.ticketsTitle" = "MES BILLETS";
+
+"error.alert.button.cancel" = "Annuler";
