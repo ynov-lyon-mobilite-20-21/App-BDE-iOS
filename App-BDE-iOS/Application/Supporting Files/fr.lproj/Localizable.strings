@@ -18,3 +18,5 @@
 
 "profil.userTitle" = "MES INFORMATIONS";
 "profil.ticketsTitle" = "MES BILLETS";
+
+"error.alert.button.cancel" = "Annuler";

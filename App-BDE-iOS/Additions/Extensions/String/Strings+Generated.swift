@@ -11,6 +11,15 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum Error {
+    internal enum Alert {
+      internal enum Button {
+        /// Annuler
+        internal static let cancel = L10n.tr("Localizable", "error.alert.button.cancel")
+      }
+    }
+  }
+
   internal enum OnBoarding {
     /// Tout au long de l'année tu trouveras des évènements variés pour nous retrouver et passer de bons moments.
     internal static let content1 = L10n.tr("Localizable", "onBoarding.content1")
