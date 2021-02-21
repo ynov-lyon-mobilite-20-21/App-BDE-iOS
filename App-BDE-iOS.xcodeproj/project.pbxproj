@@ -45,6 +45,10 @@
 		0376A3FF25445CA600A74D92 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A3FE25445CA600A74D92 /* HomeView.swift */; };
 		0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */; };
 		037C6FB72551F38500678CF2 /* TitleWithoutPaddingCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037C6FB62551F38500678CF2 /* TitleWithoutPaddingCustom.swift */; };
+		0381E4DC25E179C000AAD818 /* SettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381E4DB25E179C000AAD818 /* SettingsAssembly.swift */; };
+		0381E4E125E17A0800AAD818 /* ViewControllerProvider+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381E4E025E17A0800AAD818 /* ViewControllerProvider+Settings.swift */; };
+		0381E4E625E17A4B00AAD818 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381E4E525E17A4B00AAD818 /* SettingsViewModel.swift */; };
+		0381E4EB25E17A8500AAD818 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381E4EA25E17A8500AAD818 /* SettingsView.swift */; };
 		038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386369F253F361000CB2A05 /* onBoardingView.swift */; };
 		038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */; };
 		03894FF9259CFE6100AD9D41 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 03894FF8259CFE6100AD9D41 /* KeychainSwift */; };
@@ -147,6 +151,10 @@
 		0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarModalItem.swift; sourceTree = "<group>"; };
 		0376A42725447EB900A74D92 /* tabac big sans semibold italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tabac big sans semibold italic.ttf"; sourceTree = "<group>"; };
 		037C6FB62551F38500678CF2 /* TitleWithoutPaddingCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithoutPaddingCustom.swift; sourceTree = "<group>"; };
+		0381E4DB25E179C000AAD818 /* SettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembly.swift; sourceTree = "<group>"; };
+		0381E4E025E17A0800AAD818 /* ViewControllerProvider+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+Settings.swift"; sourceTree = "<group>"; };
+		0381E4E525E17A4B00AAD818 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		0381E4EA25E17A8500AAD818 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0386369F253F361000CB2A05 /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
 		038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		03894FFD259D001C00AD9D41 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
@@ -229,6 +237,7 @@
 		0308679D25BC591400D8D484 /* Epics */ = {
 			isa = PBXGroup;
 			children = (
+				0381E4D925E1785800AAD818 /* Settings */,
 				0308681825BC681C00D8D484 /* Home */,
 				030867C625BC607E00D8D484 /* EventDetail */,
 				03A8E3342541BA4100B02210 /* Events */,
@@ -450,6 +459,25 @@
 				036A2BE425503BCB0057B1C9 /* Colors.xcassets */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		0381E4D925E1785800AAD818 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0381E4DA25E1786100AAD818 /* #Navigation */,
+				0381E4E525E17A4B00AAD818 /* SettingsViewModel.swift */,
+				0381E4EA25E17A8500AAD818 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0381E4DA25E1786100AAD818 /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0381E4DB25E179C000AAD818 /* SettingsAssembly.swift */,
+				0381E4E025E17A0800AAD818 /* ViewControllerProvider+Settings.swift */,
+			);
+			path = "#Navigation";
 			sourceTree = "<group>";
 		};
 		038636AD253F3DE700CB2A05 /* OnBoarding */ = {
@@ -852,6 +880,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0381E4E125E17A0800AAD818 /* ViewControllerProvider+Settings.swift in Sources */,
 				030867FD25BC645F00D8D484 /* ViewControllerProvider+OnBoarding.swift in Sources */,
 				039A37BD25A50A6200E6B3AA /* WebService.swift in Sources */,
 				039A37D025A5148000E6B3AA /* BaseViewModel.swift in Sources */,
@@ -893,6 +922,7 @@
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
 				0308682925BC699F00D8D484 /* HomeAssembly.swift in Sources */,
 				03B230DD255859D6006EF0EA /* LoginDTO.swift in Sources */,
+				0381E4EB25E17A8500AAD818 /* SettingsView.swift in Sources */,
 				030867A125BC59CE00D8D484 /* SignInAssembly.swift in Sources */,
 				03B230F125585B59006EF0EA /* StringExtensions.swift in Sources */,
 				03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */,
@@ -904,6 +934,7 @@
 				03B230DE255859D6006EF0EA /* AnyEncodable.swift in Sources */,
 				0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */,
 				038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */,
+				0381E4DC25E179C000AAD818 /* SettingsAssembly.swift in Sources */,
 				0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */,
 				0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */,
 				0314D9722551EE1B0017F09C /* LineShape.swift in Sources */,
@@ -921,6 +952,7 @@
 				03B230FE255860BF006EF0EA /* User.swift in Sources */,
 				03BF8FE8258E90B100E13C4E /* LoadingState.swift in Sources */,
 				03012AA52547668100DD9D64 /* EventItem.swift in Sources */,
+				0381E4E625E17A4B00AAD818 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
