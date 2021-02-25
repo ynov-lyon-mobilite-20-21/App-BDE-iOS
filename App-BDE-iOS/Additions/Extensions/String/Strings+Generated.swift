@@ -42,6 +42,27 @@ internal enum L10n {
     internal static let userTitle = L10n.tr("Localizable", "profil.userTitle")
   }
 
+  internal enum Settings {
+    /// Comment utiliser l'application ?
+    internal static let onboarding = L10n.tr("Localizable", "settings.onboarding")
+    /// Réglage
+    internal static let title = L10n.tr("Localizable", "settings.title")
+    internal enum Account {
+      /// Supprimer le compte
+      internal static let delete = L10n.tr("Localizable", "settings.account.delete")
+      /// Déconnexion
+      internal static let logout = L10n.tr("Localizable", "settings.account.logout")
+    }
+    internal enum Payment {
+      /// Informations de paiement
+      internal static let info = L10n.tr("Localizable", "settings.payment.info")
+    }
+    internal enum UpdateInfo {
+      /// Nom, Prénom, Mot de passe, Classe
+      internal static let subTitle = L10n.tr("Localizable", "settings.updateInfo.subTitle")
+    }
+  }
+
   internal enum SignInView {
     /// Identifiants
     internal static let section1header = L10n.tr("Localizable", "signInView.section1header")
