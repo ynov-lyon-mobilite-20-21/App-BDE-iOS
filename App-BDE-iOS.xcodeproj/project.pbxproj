@@ -17,8 +17,6 @@
 		0306C298256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306C297256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift */; };
 		0306C29D256EBAB80048A5F5 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306C29C256EBAB80048A5F5 /* EventDetailView.swift */; };
 		0308678125BB2E7900D8D484 /* GenericErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308678025BB2E7900D8D484 /* GenericErrorResponse.swift */; };
-		030867A125BC59CE00D8D484 /* SignInAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030867A025BC59CE00D8D484 /* SignInAssembly.swift */; };
-		030867A625BC59E500D8D484 /* ViewControllerProvider+SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030867A525BC59E500D8D484 /* ViewControllerProvider+SignIn.swift */; };
 		030867B725BC5C2D00D8D484 /* EventAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030867B625BC5C2D00D8D484 /* EventAssembly.swift */; };
 		030867BC25BC5CB000D8D484 /* ViewControllerProvider+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030867BB25BC5CB000D8D484 /* ViewControllerProvider+Event.swift */; };
 		030867C925BC60A200D8D484 /* EventDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030867C825BC60A200D8D484 /* EventDetailAssembly.swift */; };
@@ -53,8 +51,6 @@
 		038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */; };
 		03894FF9259CFE6100AD9D41 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 03894FF8259CFE6100AD9D41 /* KeychainSwift */; };
 		03894FFE259D001C00AD9D41 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03894FFD259D001C00AD9D41 /* KeyChainService.swift */; };
-		038D797A2566F60C006FF950 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D79792566F60C006FF950 /* SignInView.swift */; };
-		038D79822566F668006FF950 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038D79812566F668006FF950 /* SignInViewModel.swift */; };
 		039A379925A4DBC800E6B3AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 039A379B25A4DBC800E6B3AA /* Localizable.strings */; };
 		039A37B825A50A4400E6B3AA /* Weakable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37B725A50A4400E6B3AA /* Weakable.swift */; };
 		039A37BD25A50A6200E6B3AA /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37BC25A50A6200E6B3AA /* WebService.swift */; };
@@ -84,6 +80,14 @@
 		03C3386025DD72CE00B5443C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3385F25DD72CE00B5443C /* ErrorHandler.swift */; };
 		03C3387425DD755500B5443C /* ViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3387325DD755500B5443C /* ViewError.swift */; };
 		03C3388825DD778C00B5443C /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3388725DD778C00B5443C /* Strings+Generated.swift */; };
+		03C3944325E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3943F25E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift */; };
+		03C3944425E8239C0037153D /* UpdateInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3944025E8239C0037153D /* UpdateInfoAssembly.swift */; };
+		03C3944525E8239C0037153D /* UpdateInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3944125E8239C0037153D /* UpdateInfoView.swift */; };
+		03C3944625E8239C0037153D /* UpdateInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3944225E8239C0037153D /* UpdateInfoViewModel.swift */; };
+		03C3945C25E824530037153D /* SignInVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3945B25E824530037153D /* SignInVIew.swift */; };
+		03C3946125E8246D0037153D /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3946025E8246D0037153D /* SignInViewModel.swift */; };
+		03C3946925E8251C0037153D /* ViewControllerProvider+SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3946825E8251C0037153D /* ViewControllerProvider+SignIn.swift */; };
+		03C3947125E825420037153D /* SignInAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3947025E825420037153D /* SignInAssembly.swift */; };
 		03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDC252F37D10014FF4E /* AppDelegate.swift */; };
 		03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDE252F37D10014FF4E /* SceneDelegate.swift */; };
 		03C54BE6252F37D30014FF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C54BE5252F37D30014FF4E /* Assets.xcassets */; };
@@ -120,8 +124,6 @@
 		0306C297256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeWithTopCorderRadius.swift; sourceTree = "<group>"; };
 		0306C29C256EBAB80048A5F5 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		0308678025BB2E7900D8D484 /* GenericErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorResponse.swift; sourceTree = "<group>"; };
-		030867A025BC59CE00D8D484 /* SignInAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAssembly.swift; sourceTree = "<group>"; };
-		030867A525BC59E500D8D484 /* ViewControllerProvider+SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+SignIn.swift"; sourceTree = "<group>"; };
 		030867B625BC5C2D00D8D484 /* EventAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAssembly.swift; sourceTree = "<group>"; };
 		030867BB25BC5CB000D8D484 /* ViewControllerProvider+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+Event.swift"; sourceTree = "<group>"; };
 		030867C825BC60A200D8D484 /* EventDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailAssembly.swift; sourceTree = "<group>"; };
@@ -158,8 +160,6 @@
 		0386369F253F361000CB2A05 /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
 		038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		03894FFD259D001C00AD9D41 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
-		038D79792566F60C006FF950 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		038D79812566F668006FF950 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		039A379A25A4DBC800E6B3AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		039A379F25A4DBCC00E6B3AA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		039A37A325A505FA00E6B3AA /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
@@ -190,6 +190,14 @@
 		03C3385F25DD72CE00B5443C /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		03C3387325DD755500B5443C /* ViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewError.swift; sourceTree = "<group>"; };
 		03C3388725DD778C00B5443C /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		03C3943F25E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+UpdateInfo.swift"; sourceTree = "<group>"; };
+		03C3944025E8239C0037153D /* UpdateInfoAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateInfoAssembly.swift; sourceTree = "<group>"; };
+		03C3944125E8239C0037153D /* UpdateInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateInfoView.swift; path = "App-BDE-iOS/Epics/SignIn/UpdateInfoView.swift"; sourceTree = SOURCE_ROOT; };
+		03C3944225E8239C0037153D /* UpdateInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateInfoViewModel.swift; path = "App-BDE-iOS/Epics/SignIn/UpdateInfoViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		03C3945B25E824530037153D /* SignInVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVIew.swift; sourceTree = "<group>"; };
+		03C3946025E8246D0037153D /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		03C3946825E8251C0037153D /* ViewControllerProvider+SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+SignIn.swift"; sourceTree = "<group>"; };
+		03C3947025E825420037153D /* SignInAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAssembly.swift; sourceTree = "<group>"; };
 		03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-BDE-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C54BDC252F37D10014FF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03C54BDE252F37D10014FF4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +245,7 @@
 		0308679D25BC591400D8D484 /* Epics */ = {
 			isa = PBXGroup;
 			children = (
+				03C3943C25E822ED0037153D /* UpdateInfo */,
 				0381E4D925E1785800AAD818 /* Settings */,
 				0308681825BC681C00D8D484 /* Home */,
 				030867C625BC607E00D8D484 /* EventDetail */,
@@ -253,8 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				0308679F25BC59B400D8D484 /* #Navigation */,
-				038D79812566F668006FF950 /* SignInViewModel.swift */,
-				038D79792566F60C006FF950 /* SignInView.swift */,
+				03C3945B25E824530037153D /* SignInVIew.swift */,
+				03C3946025E8246D0037153D /* SignInViewModel.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -262,8 +271,8 @@
 		0308679F25BC59B400D8D484 /* #Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				030867A025BC59CE00D8D484 /* SignInAssembly.swift */,
-				030867A525BC59E500D8D484 /* ViewControllerProvider+SignIn.swift */,
+				03C3946825E8251C0037153D /* ViewControllerProvider+SignIn.swift */,
+				03C3947025E825420037153D /* SignInAssembly.swift */,
 			);
 			path = "#Navigation";
 			sourceTree = "<group>";
@@ -624,6 +633,26 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		03C3943C25E822ED0037153D /* UpdateInfo */ = {
+			isa = PBXGroup;
+			children = (
+				03C3943E25E8239C0037153D /* #Navigation */,
+				03C3944125E8239C0037153D /* UpdateInfoView.swift */,
+				03C3944225E8239C0037153D /* UpdateInfoViewModel.swift */,
+			);
+			path = UpdateInfo;
+			sourceTree = "<group>";
+		};
+		03C3943E25E8239C0037153D /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				03C3943F25E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift */,
+				03C3944025E8239C0037153D /* UpdateInfoAssembly.swift */,
+			);
+			name = "#Navigation";
+			path = "App-BDE-iOS/Epics/SignIn/#Navigation";
+			sourceTree = SOURCE_ROOT;
+		};
 		03C54BD0252F37D10014FF4E = {
 			isa = PBXGroup;
 			children = (
@@ -888,9 +917,11 @@
 				03A8E33F2541BA8E00B02210 /* ProfileView.swift in Sources */,
 				0308680625BC672200D8D484 /* SignUpAssembly.swift in Sources */,
 				03C3384F25DD71D000B5443C /* ViewProvider.swift in Sources */,
+				03C3946125E8246D0037153D /* SignInViewModel.swift in Sources */,
+				03C3944625E8239C0037153D /* UpdateInfoViewModel.swift in Sources */,
 				037C6FB72551F38500678CF2 /* TitleWithoutPaddingCustom.swift in Sources */,
 				030867BC25BC5CB000D8D484 /* ViewControllerProvider+Event.swift in Sources */,
-				038D79822566F668006FF950 /* SignInViewModel.swift in Sources */,
+				03C3944525E8239C0037153D /* UpdateInfoView.swift in Sources */,
 				0308681D25BC692B00D8D484 /* HomeViewModel.swift in Sources */,
 				0308682E25BC69C400D8D484 /* ViewControllerProvider+Home.swift in Sources */,
 				0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */,
@@ -899,6 +930,7 @@
 				03012AAA254772C700DD9D64 /* Event.swift in Sources */,
 				03F0CFC525CC514D001A1B65 /* TicketCard.swift in Sources */,
 				03B230B92558583A006EF0EA /* SignUpViewModel.swift in Sources */,
+				03C3947125E825420037153D /* SignInAssembly.swift in Sources */,
 				0308680B25BC675700D8D484 /* ViewControllerProvider+SignUp.swift in Sources */,
 				03B230D32558599A006EF0EA /* Request.swift in Sources */,
 				03B230E3255859F6006EF0EA /* AuthToken.swift in Sources */,
@@ -911,19 +943,19 @@
 				030867F825BC642E00D8D484 /* OnBoardingAssembly.swift in Sources */,
 				03894FFE259D001C00AD9D41 /* KeyChainService.swift in Sources */,
 				0308678125BB2E7900D8D484 /* GenericErrorResponse.swift in Sources */,
-				038D797A2566F60C006FF950 /* SignInView.swift in Sources */,
 				030867B725BC5C2D00D8D484 /* EventAssembly.swift in Sources */,
 				03C3385425DD71EF00B5443C /* ErrorProvider.swift in Sources */,
 				03C3386025DD72CE00B5443C /* ErrorHandler.swift in Sources */,
+				03C3946925E8251C0037153D /* ViewControllerProvider+SignIn.swift in Sources */,
 				030867E125BC62A700D8D484 /* ProfileViewModel.swift in Sources */,
 				030867CE25BC60F300D8D484 /* ViewControllerProvider+EventDetail.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
+				03C3945C25E824530037153D /* SignInVIew.swift in Sources */,
 				036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */,
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
 				0308682925BC699F00D8D484 /* HomeAssembly.swift in Sources */,
 				03B230DD255859D6006EF0EA /* LoginDTO.swift in Sources */,
 				0381E4EB25E17A8500AAD818 /* SettingsView.swift in Sources */,
-				030867A125BC59CE00D8D484 /* SignInAssembly.swift in Sources */,
 				03B230F125585B59006EF0EA /* StringExtensions.swift in Sources */,
 				03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */,
 				03C3387425DD755500B5443C /* ViewError.swift in Sources */,
@@ -933,6 +965,7 @@
 				0350F48C25A128D2008059A6 /* UIApplication.swift in Sources */,
 				03B230DE255859D6006EF0EA /* AnyEncodable.swift in Sources */,
 				0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */,
+				03C3944325E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift in Sources */,
 				038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */,
 				0381E4DC25E179C000AAD818 /* SettingsAssembly.swift in Sources */,
 				0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */,
@@ -940,13 +973,13 @@
 				0314D9722551EE1B0017F09C /* LineShape.swift in Sources */,
 				03DB0F0B2556E6280019E87E /* SignUpView.swift in Sources */,
 				0306C29D256EBAB80048A5F5 /* EventDetailView.swift in Sources */,
-				030867A625BC59E500D8D484 /* ViewControllerProvider+SignIn.swift in Sources */,
 				030867E725BC62F600D8D484 /* ProfileAssembly.swift in Sources */,
 				03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */,
 				030867F225BC635200D8D484 /* ViewControllerProvider+Profil.swift in Sources */,
 				039A37C225A50B2300E6B3AA /* AnyPublisher+Extensions.swift in Sources */,
 				03B2310425586372006EF0EA /* SignUpDTO.swift in Sources */,
 				039A37B825A50A4400E6B3AA /* Weakable.swift in Sources */,
+				03C3944425E8239C0037153D /* UpdateInfoAssembly.swift in Sources */,
 				03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */,
 				03B230C725585977006EF0EA /* LoginWebService.swift in Sources */,
 				03B230FE255860BF006EF0EA /* User.swift in Sources */,

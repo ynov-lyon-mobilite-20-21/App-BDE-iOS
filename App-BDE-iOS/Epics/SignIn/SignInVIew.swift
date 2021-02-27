@@ -1,4 +1,11 @@
 //
+//  SignInVIew.swift
+//  App-BDE-iOS
+//
+//  Created by Nicolas Barbosa on 25/02/2021.
+//
+
+//
 //  SignInView.swift
 //  App-BDE-iOS
 //

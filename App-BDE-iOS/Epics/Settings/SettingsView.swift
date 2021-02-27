@@ -12,28 +12,40 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                NavigationLink(destination: ViewProvider.event()) {
-                    VStack(alignment: .leading) {
-                        Text("Nicolas Barbosa")
-                            .font(.title3)
-                        Text(L10n.Settings.UpdateInfo.subTitle)
-                            .font(.subheadline)
+            VStack {
+                List {
+                    Section(header: Text("")) {
+                        NavigationLink(destination: ViewProvider.UpdateInfo()) {
+                            VStack(alignment: .leading) {
+                                Text("Nicolas Barbosa")
+                                    .font(.title3)
+                                Text(L10n.Settings.UpdateInfo.subTitle)
+                                    .font(.subheadline)
+                            }
+                            .padding(.vertical)
+                        }
                     }
-                    .padding(.vertical)
+                    Section(header: Text("")) {
+                        Text(L10n.Settings.onboarding)
+                            .font(.title3)
+                            .padding(.vertical)
+                        NavigationLink(destination: ViewProvider.event()) {
+                            Text(L10n.Settings.Payment.info)
+                                .font(.title3)
+                                .padding(.vertical)
+                        }
+                        Text(L10n.Settings.Account.delete)
+                            .font(.title3)
+                            .padding(.vertical)
+                        Text(L10n.Settings.Account.logout)
+                            .font(.title3)
+                            .padding(.vertical)
+                            .foregroundColor(Color.bdePink)
+                    }
                 }
-                Spacer()
-                Text(L10n.Settings.onboarding)            .font(.title3)
-                    .padding(.vertical)
-                NavigationLink(destination: ViewProvider.event()) {
-                    Text(L10n.Settings.Payment.info)     .font(.title3)                    .padding(.vertical)
-                }
-                Text(L10n.Settings.Account.delete)        .font(.title3)                    .padding(.vertical)
-                Text(L10n.Settings.Account.logout)            .font(.title3)
-                    .padding(.vertical)
-                    .foregroundColor(Color.bdePink)
+                .listStyle(GroupedListStyle())
+                .navigationBarTitle(L10n.Settings.title, displayMode: .automatic)
             }
-            .navigationBarTitle(L10n.Settings.title, displayMode: .automatic)
         }
     }
 }
