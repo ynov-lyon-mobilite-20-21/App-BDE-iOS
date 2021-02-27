@@ -73,7 +73,7 @@ struct UpdateInfoView: View {
                 }
                 .listStyle(InsetGroupedListStyle())
             }
-            .navigationTitle("Update")
+            .navigationBarTitle("Update", displayMode: .inline)
     }
 }
 

@@ -43,7 +43,7 @@ struct SettingsView: View {
                             .foregroundColor(Color.bdePink)
                     }
                 }
-                .listStyle(GroupedListStyle())
+                .listStyle(InsetGroupedListStyle())
                 .navigationBarTitle(L10n.Settings.title, displayMode: .automatic)
             }
         }
