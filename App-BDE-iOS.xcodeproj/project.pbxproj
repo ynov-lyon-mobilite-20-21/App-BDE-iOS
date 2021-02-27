@@ -80,6 +80,10 @@
 		03C3386025DD72CE00B5443C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3385F25DD72CE00B5443C /* ErrorHandler.swift */; };
 		03C3387425DD755500B5443C /* ViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3387325DD755500B5443C /* ViewError.swift */; };
 		03C3388825DD778C00B5443C /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3388725DD778C00B5443C /* Strings+Generated.swift */; };
+		03C3947B25EA62820037153D /* QRCodeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3947A25EA62820037153D /* QRCodeAssembly.swift */; };
+		03C3948325EA62920037153D /* ViewControllerProvider+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */; };
+		03C3948825EA62A50037153D /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948725EA62A50037153D /* QRCodeView.swift */; };
+		03C3948D25EA62AF0037153D /* QRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */; };
 		03C3944325E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3943F25E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift */; };
 		03C3944425E8239C0037153D /* UpdateInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3944025E8239C0037153D /* UpdateInfoAssembly.swift */; };
 		03C3944525E8239C0037153D /* UpdateInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3944125E8239C0037153D /* UpdateInfoView.swift */; };
@@ -190,6 +194,10 @@
 		03C3385F25DD72CE00B5443C /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		03C3387325DD755500B5443C /* ViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewError.swift; sourceTree = "<group>"; };
 		03C3388725DD778C00B5443C /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		03C3947A25EA62820037153D /* QRCodeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeAssembly.swift; sourceTree = "<group>"; };
+		03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+QRCode.swift"; sourceTree = "<group>"; };
+		03C3948725EA62A50037153D /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
+		03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewModel.swift; sourceTree = "<group>"; };
 		03C3943F25E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+UpdateInfo.swift"; sourceTree = "<group>"; };
 		03C3944025E8239C0037153D /* UpdateInfoAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateInfoAssembly.swift; sourceTree = "<group>"; };
 		03C3944125E8239C0037153D /* UpdateInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateInfoView.swift; path = "App-BDE-iOS/Epics/SignIn/UpdateInfoView.swift"; sourceTree = SOURCE_ROOT; };
@@ -534,6 +542,7 @@
 				03A8E33E2541BA8E00B02210 /* ProfileView.swift */,
 				030867E025BC62A700D8D484 /* ProfileViewModel.swift */,
 				03F0CFC425CC514D001A1B65 /* TicketCard.swift */,
+				03C3947825EA624E0037153D /* QRCode */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -631,6 +640,25 @@
 				03C3385F25DD72CE00B5443C /* ErrorHandler.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		03C3947825EA624E0037153D /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				03C3947925EA62670037153D /* #Navigation */,
+				03C3948725EA62A50037153D /* QRCodeView.swift */,
+				03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		03C3947925EA62670037153D /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				03C3947A25EA62820037153D /* QRCodeAssembly.swift */,
+				03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */,
+			);
+			path = "#Navigation";
 			sourceTree = "<group>";
 		};
 		03C3943C25E822ED0037153D /* UpdateInfo */ = {
@@ -924,6 +952,7 @@
 				03C3944525E8239C0037153D /* UpdateInfoView.swift in Sources */,
 				0308681D25BC692B00D8D484 /* HomeViewModel.swift in Sources */,
 				0308682E25BC69C400D8D484 /* ViewControllerProvider+Home.swift in Sources */,
+				03C3948825EA62A50037153D /* QRCodeView.swift in Sources */,
 				0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */,
 				03B230D22558599A006EF0EA /* UserDefaultsPropertyWrapper.swift in Sources */,
 				0306C298256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift in Sources */,
@@ -949,6 +978,7 @@
 				03C3946925E8251C0037153D /* ViewControllerProvider+SignIn.swift in Sources */,
 				030867E125BC62A700D8D484 /* ProfileViewModel.swift in Sources */,
 				030867CE25BC60F300D8D484 /* ViewControllerProvider+EventDetail.swift in Sources */,
+				03C3948D25EA62AF0037153D /* QRCodeViewModel.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
 				03C3945C25E824530037153D /* SignInVIew.swift in Sources */,
 				036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */,
@@ -961,6 +991,8 @@
 				03C3387425DD755500B5443C /* ViewError.swift in Sources */,
 				030867C925BC60A200D8D484 /* EventDetailAssembly.swift in Sources */,
 				03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */,
+				03C3947B25EA62820037153D /* QRCodeAssembly.swift in Sources */,
+				03C3948325EA62920037153D /* ViewControllerProvider+QRCode.swift in Sources */,
 				0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */,
 				0350F48C25A128D2008059A6 /* UIApplication.swift in Sources */,
 				03B230DE255859D6006EF0EA /* AnyEncodable.swift in Sources */,

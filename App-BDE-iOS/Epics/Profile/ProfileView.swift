@@ -16,6 +16,7 @@ struct ProfileView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var isConnected = false
     @State private var showModal: Bool = false
+    @State private var showQrCode: Bool = false
     
     var body: some View {
         GeometryReader { gr in
@@ -114,6 +115,10 @@ struct ProfileView: View {
                                     TicketCard()
                                         .frame(width: gr.size.width * 0.6, height: gr.size.width * 0.6 * 1.4)
                                         .shadow(radius: 6)
+                                        .onTapGesture {
+                                            self.showQrCode = true
+                                        }
+                                        .sheet(isPresented: self.$showQrCode) { ViewProvider.QRCode() }
                                 }
                             }
                             .padding()
