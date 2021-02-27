@@ -11,26 +11,50 @@ struct QRCodeView: View {
     @ObservedObject var viewModel: QRCodeViewModel
     
     var body: some View {
-        ZStack {
-            Image("QR-FOOD")
-                .resizable()
-                .scaledToFill()
-            
-            VStack(alignment: .center) {
-                Image(uiImage: viewModel.generateQRCode(from: "test"))
-                    .interpolation(.none)
+        GeometryReader { gr in
+            ZStack {
+                Color.bdeBlue
+                Image("QR-FOOD")
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 250, height: 250)
-                    .cornerRadius(16)
-                    .padding(7)
+                    .aspectRatio(contentMode: .fill)
+                VStack {
+                    Text("Espit Chupitos")
+                        .font(.title2)
+                        .bold()
+                        .foregroundColor(.white)
+                    
+                    Text("Billet n°1")
+                        .font(.title3)
+                        .bold()
+                        .foregroundColor(.white)
+                    
+                    ZStack {
+                        Image(uiImage: viewModel.generateQRCode(from: "test"))
+                            .interpolation(.none)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: gr.size.width * 0.7, height: gr.size.width * 0.7)
+                            .cornerRadius(24)
+                            .padding(10)
+                    }
+                    .background(LinearGradient(gradient: Gradient(colors: [.bdePink, .bdeGreen]), startPoint: .leading, endPoint: .trailing))
+                    .cornerRadius(30)
+                    
+                    Text("Nicolas Barbosa")
+                        .font(.title3)
+                        .bold()
+                        .foregroundColor(.white)
+                        .padding(4)
+                    Text(L10n.QRCode.indication)
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                        .padding(.horizontal)
+                }
+                .frame(width: gr.size.width)
             }
-            .background(LinearGradient(gradient: Gradient(colors: [.bdePink, .bdeGreen]), startPoint: .leading, endPoint: .trailing))
-            .cornerRadius(20)
+            .frame(width: gr.size.width)
+            .edgesIgnoringSafeArea([.top, .bottom])
         }
-        .ignoresSafeArea()
-        .background(Color.bdeBlue)
-        .ignoresSafeArea()
     }
 }
 

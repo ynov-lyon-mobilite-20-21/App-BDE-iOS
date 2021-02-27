@@ -31,6 +31,7 @@
 		0308681D25BC692B00D8D484 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308681C25BC692B00D8D484 /* HomeViewModel.swift */; };
 		0308682925BC699F00D8D484 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308682825BC699F00D8D484 /* HomeAssembly.swift */; };
 		0308682E25BC69C400D8D484 /* ViewControllerProvider+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308682D25BC69C400D8D484 /* ViewControllerProvider+Home.swift */; };
+		030B19E025EAAEC200D572B0 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B19DF25EAAEC200D572B0 /* Ticket.swift */; };
 		0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D94425506DE90017F09C /* ProfilTopShape.swift */; };
 		0314D9592551C76D0017F09C /* FashionFetish-Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */; };
 		0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9612551C8B50017F09C /* TitleCustom.swift */; };
@@ -142,6 +143,7 @@
 		0308681C25BC692B00D8D484 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0308682825BC699F00D8D484 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
 		0308682D25BC69C400D8D484 /* ViewControllerProvider+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+Home.swift"; sourceTree = "<group>"; };
+		030B19DF25EAAEC200D572B0 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		0314D94425506DE90017F09C /* ProfilTopShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilTopShape.swift; sourceTree = "<group>"; };
 		0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Outline.ttf"; sourceTree = "<group>"; };
 		0314D9612551C8B50017F09C /* TitleCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCustom.swift; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 				03B230DA255859D6006EF0EA /* DTO */,
 				03B230FD255860BF006EF0EA /* User.swift */,
 				03012AA9254772C700DD9D64 /* Event.swift */,
+				030B19DF25EAAEC200D572B0 /* Ticket.swift */,
 				03B230E2255859F6006EF0EA /* AuthToken.swift */,
 				03B230E725585A0B006EF0EA /* GenericServerResponse.swift */,
 				0308678025BB2E7900D8D484 /* GenericErrorResponse.swift */,
@@ -981,6 +984,7 @@
 				03C3948D25EA62AF0037153D /* QRCodeViewModel.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
 				03C3945C25E824530037153D /* SignInVIew.swift in Sources */,
+				030B19E025EAAEC200D572B0 /* Ticket.swift in Sources */,
 				036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */,
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
 				0308682925BC699F00D8D484 /* HomeAssembly.swift in Sources */,

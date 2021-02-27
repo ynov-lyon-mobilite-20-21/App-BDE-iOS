@@ -27,3 +27,4 @@
 "settings.payment.info" = "Informations de paiement";
 "settings.account.delete" = "Supprimer le compte";
 "settings.account.logout" = "Déconnexion";
+"QRCode.indication" = "QR-code à présenter au membre du  BDE responsable à l’entrée le jour J";

@@ -11,6 +11,11 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum QRCode {
+    /// QR-code à présenter au membre du  BDE responsable à l’entrée le jour J
+    internal static let indication = L10n.tr("Localizable", "QRCode.indication")
+  }
+
   internal enum Error {
     internal enum Alert {
       internal enum Button {
