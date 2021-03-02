@@ -37,7 +37,7 @@ struct HomeView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             HomeView(viewModel: HomeViewModel())
