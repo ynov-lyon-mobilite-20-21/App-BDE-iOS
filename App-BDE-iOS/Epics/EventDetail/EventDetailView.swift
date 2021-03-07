@@ -82,7 +82,7 @@ struct EventDetailView: View {
                 }
             })
             .sheet(isPresented: $isShowingScanner) {
-                CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: self.handleScan)
+                ViewProvider.QRScanner()
             }
         }
         .scaleEffect(scale)

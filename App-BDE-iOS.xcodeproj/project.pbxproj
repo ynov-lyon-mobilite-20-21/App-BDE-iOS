@@ -36,6 +36,8 @@
 		0314D9592551C76D0017F09C /* FashionFetish-Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */; };
 		0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9612551C8B50017F09C /* TitleCustom.swift */; };
 		0314D9722551EE1B0017F09C /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9712551EE1B0017F09C /* LineShape.swift */; };
+		031AA94525F4F78600165D4C /* QRScannerWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA94425F4F78600165D4C /* QRScannerWebService.swift */; };
+		031AA94A25F4FA8F00165D4C /* QRScanDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA94925F4FA8F00165D4C /* QRScanDTO.swift */; };
 		0350F48C25A128D2008059A6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F48B25A128D1008059A6 /* UIApplication.swift */; };
 		0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */; };
 		0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357F1E6259CD77300C9A972 /* LoadingView.swift */; };
@@ -153,6 +155,8 @@
 		0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Outline.ttf"; sourceTree = "<group>"; };
 		0314D9612551C8B50017F09C /* TitleCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCustom.swift; sourceTree = "<group>"; };
 		0314D9712551EE1B0017F09C /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
+		031AA94425F4F78600165D4C /* QRScannerWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerWebService.swift; sourceTree = "<group>"; };
+		031AA94925F4FA8F00165D4C /* QRScanDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanDTO.swift; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
 		0350F48B25A128D1008059A6 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCardView.swift; sourceTree = "<group>"; };
@@ -600,6 +604,7 @@
 			isa = PBXGroup;
 			children = (
 				03B230C525585977006EF0EA /* LoginWebService.swift */,
+				031AA94425F4F78600165D4C /* QRScannerWebService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -628,6 +633,7 @@
 				03B2310325586372006EF0EA /* SignUpDTO.swift */,
 				03B230DB255859D6006EF0EA /* LoginDTO.swift */,
 				03B230DC255859D6006EF0EA /* AnyEncodable.swift */,
+				031AA94925F4FA8F00165D4C /* QRScanDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -999,6 +1005,7 @@
 				0308680B25BC675700D8D484 /* ViewControllerProvider+SignUp.swift in Sources */,
 				03B230D32558599A006EF0EA /* Request.swift in Sources */,
 				03B230E3255859F6006EF0EA /* AuthToken.swift in Sources */,
+				031AA94525F4F78600165D4C /* QRScannerWebService.swift in Sources */,
 				03B34EED259D606000E15BB3 /* UserViewModel.swift in Sources */,
 				03B230E825585A0B006EF0EA /* GenericServerResponse.swift in Sources */,
 				03B230AF25585816006EF0EA /* HelperAssembly.swift in Sources */,
@@ -1034,6 +1041,7 @@
 				03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */,
 				03C3947B25EA62820037153D /* QRCodeAssembly.swift in Sources */,
 				03C3948325EA62920037153D /* ViewControllerProvider+QRCode.swift in Sources */,
+				031AA94A25F4FA8F00165D4C /* QRScanDTO.swift in Sources */,
 				0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */,
 				0350F48C25A128D2008059A6 /* UIApplication.swift in Sources */,
 				03B230DE255859D6006EF0EA /* AnyEncodable.swift in Sources */,

@@ -28,3 +28,6 @@
 "settings.account.delete" = "Supprimer le compte";
 "settings.account.logout" = "Déconnexion";
 "QRCode.indication" = "QR-code à présenter au membre du  BDE responsable à l’entrée le jour J";
+
+"QRScanner.indication" = "Scanner le QR Code";
+"QRScanner.ticketId" = "Billet n°";

@@ -28,3 +28,7 @@
 "settings.account.logout" = "Logout";
 
 "QRCode.indication" = "QR-code to be presented to the responsible BDE member at the entrance on D-Day";
+
+"QRScanner.indication" = "Scan QR Code";
+"QRScanner.ticketId" = "Ticket n°";
+

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ticket {
+struct Ticket: Decodable {
     var id: String
     var eventId: String
     var eventName: String
