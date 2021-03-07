@@ -9,9 +9,9 @@ import Foundation
 import Swinject
 
 extension ViewProvider {
-    static func eventDetail() -> EventDetailView {
+    static func eventDetail(event: Event) -> EventDetailView {
         let assembler = generateAssembler(viewControllerAssembly: EventDetailAssembly())
         
-        return assembler.resolver.resolve(EventDetailView.self)!
+        return assembler.resolver.resolve(EventDetailView.self, argument: event)!
     }
 }

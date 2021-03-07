@@ -16,6 +16,7 @@ struct Event: Identifiable, Hashable, Decodable {
     var address: String
     var description: String
     var price: Int
+    
 }
 
 enum EventType: String, Decodable, CaseIterable {
@@ -29,9 +30,9 @@ enum EventType: String, Decodable, CaseIterable {
 
 enum ImageType: String, Decodable, CaseIterable {
     case defaultValue = "",
-         kolok = "KOLOK_card",
-         party = "KOLOK_Card_1920x1080",
-         lan = "LAN_card",
-         sport = "SPORT_card",
-         food = "FOOD_card"
+         kolok = "card_KOLOK",
+         party = "card_PARTY",
+         lan = "card_LAN",
+         sport = "card_SPORT",
+         food = "card_FOOD"
 }

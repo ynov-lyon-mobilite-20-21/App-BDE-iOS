@@ -10,13 +10,14 @@ import SwinjectAutoregistration
 
 final class EventDetailAssembly: Assembly {
     func assemble(container: Container) {
-//        container.autoregister(EventViewModel.self, initializer: EventViewModel.init)
-        container.register(EventViewModel.self) { r -> EventViewModel in
-            return EventViewModel()
+        container.register(EventViewModel.self) { (r: Resolver, event: Event) -> EventViewModel in
+            let viewModel = EventViewModel()
+            viewModel.setup(event: event)
+            return viewModel
         }
         
-        container.register(EventDetailView.self) { r -> EventDetailView in
-            let viewModel = r.resolve(EventViewModel.self)!
+        container.register(EventDetailView.self) { (r: Resolver, event: Event) -> EventDetailView in
+            let viewModel = r.resolve(EventViewModel.self, argument: event)!
             
             return EventDetailView(viewModel: viewModel)
         }

@@ -9,13 +9,13 @@ import Foundation
 
 class QRScannerViewModel: BaseViewModel {
     
+    var qrScannerWebService: QRScannerWebService!
     @Published var ticketOwner: String = ""
     @Published var ticketId: String = ""
     
     public func scanQRCode(_ qrCodeValue: String) {
         let qrCodeValue = QRScanDTO(qrCodeValue: qrCodeValue)
-        let qrScannerWebService = QRScannerWebService()
-        executeRequest(qrScannerWebService.call(qrCodeValue), onSuccess: { value in
+        executeRequest(qrScannerWebService.call(urlParameters: [qrCodeValue.qrCodeValue]), onSuccess: { value in
             print(value.data.buyerName)
         })
         

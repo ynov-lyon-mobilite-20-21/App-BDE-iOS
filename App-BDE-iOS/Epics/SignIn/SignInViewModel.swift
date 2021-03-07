@@ -14,7 +14,8 @@ class SignInViewModel: BaseViewModel {
 //    @Injected private var authentication: ApiRequestService
 //    @Injected private var keyChainService: KeyChainService
 //    @Injected private var userViewModel: UserViewModel
-    
+    var loginWebService: LoginWebService!
+
     @Published var mail: String = ""
     @Published var password: String = ""
     
@@ -37,9 +38,8 @@ class SignInViewModel: BaseViewModel {
         UIApplication.shared.endEditing() // Call to dismiss keyboard
         self.loadingStatus = .loading
         
-        let dto = LoginDTO(mail: mail, password: password)
-        let loginWebService = LoginWebService()
-        executeRequest(loginWebService.call(dto), onSuccess: { value in
+        let dto = RegisterWebServiceParameters(mail: mail, password: password)
+        executeRequest(loginWebService.call(dto, urlParameters: []), onSuccess: { value in
             print(value.data.token)
             onEnd(.loaded)
         }, onError: { error in

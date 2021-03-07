@@ -9,17 +9,20 @@
 import Foundation
 import Combine
 
-struct RegisterWebServiceParameters: Encodable {}
+struct RegisterWebServiceParameters: Encodable {
+    var mail: String
+    var password: String
+}
 
 final class LoginWebService: WebService {
     
     typealias DecodedType = AuthToken
     typealias ServiceParameters = RegisterWebServiceParameters
     
-    var url: URL? = URL(string: "https://lyon-ynov-bde-api.herokuapp.com/api/auth/login")
+    var url: String = "https://lyon-ynov-bde-api.herokuapp.com/api/auth/login"
     
     var httpMethod: HTTPMethod = .POST
     
-    var headers: [String : String]? = [:]
+    var headers: [String : String] = [:]
     
 }

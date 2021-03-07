@@ -27,7 +27,7 @@ struct TicketCard: View {
             .background(Color.whiteToBlack)
             
         }
-        .background(Image("KOLOK_card")
+        .background(Image("card_KOLOK")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .background(Color.blueToBlack)

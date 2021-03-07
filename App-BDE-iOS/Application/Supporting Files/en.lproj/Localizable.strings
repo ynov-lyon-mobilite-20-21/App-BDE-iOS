@@ -5,6 +5,8 @@
   Created by Nicolas Barbosa on 05/01/2021.
   
 */
+"tabBar.event" = "Events";
+"tabBar.profil" = "Profile";
 
 "signInView.section1header" = "Identifiants";
 
@@ -16,8 +18,11 @@
 "onBoarding.content2" = "Thanks to this app, you can store all your tickets in the same place, find them quickly and have them scanned by the BDE team on the D-day!";
 "onBoarding.content3" = "Any questions? Need more information? We are at your disposal to enlighten you and help you to spend unforgettable moments with us!";
 
+"EventDetail.button.payment" = "Buy a ticket";
+
 "profil.userTitle" = "MY INFORMATION";
 "profil.ticketsTitle" = "MY TICKETS";
+
 "error.alert.button.cancel" = "Cancel";
 
 "settings.title" = "Settings";

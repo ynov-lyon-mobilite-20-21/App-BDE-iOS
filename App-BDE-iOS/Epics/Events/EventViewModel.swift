@@ -9,10 +9,13 @@ import Foundation
 import SwiftUI
 
 class EventViewModel: BaseViewModel {
-    
-    @Published var selectedItem = Event(id: "", name: "", type: .defaultValue, image: .defaultValue, date: "", address: "", description: "", price: 0)
-    
+        
     @Published var show = false
+    var event: Event!
+    
+    func setup(event: Event) {
+        self.event = event
+    }
     
     
     enum eventType {

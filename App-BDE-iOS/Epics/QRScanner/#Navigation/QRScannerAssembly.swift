@@ -11,7 +11,9 @@ import SwinjectAutoregistration
 final class QRScannerAssembly: Assembly {
     func assemble(container: Container) {
         container.register(QRScannerViewModel.self) { r -> QRScannerViewModel in
-            return QRScannerViewModel()
+            let viewModel = QRScannerViewModel()
+            viewModel.qrScannerWebService = r.resolve(QRScannerWebService.self)
+            return viewModel
         }
         
         container.register(QRScannerView.self) { r -> QRScannerView in
