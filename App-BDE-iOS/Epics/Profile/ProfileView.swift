@@ -46,7 +46,7 @@ struct ProfileView: View {
                                 .onTapGesture {
                                     self.showModal = true
                                 }
-                                .sheet(isPresented: self.$showModal) { ViewProvider.signIn() }
+                                .sheet(isPresented: self.$showModal) { ViewProvider.settings() }
 
                             
                             Spacer()
