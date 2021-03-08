@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 class EventViewModel: BaseViewModel {
+        
+    var getEventWebService: GetEventWebService!
 
     @Published var show = false
     var event: Event!
@@ -16,10 +18,14 @@ class EventViewModel: BaseViewModel {
     func setup(event: Event) {
         self.event = event
     }
-
-    enum EventType {
-        case food
-        case party
-        case sport
-    }
+    
+    func requestEvents() {
+       let serviceParameters = ExecuteServiceSetup(service: getEventWebService, parameters: EmptyParameters())
+       
+       executeRequest(serviceParameters, onSuccess: { value in
+           print(value)
+       }, onError: { error in
+        print(error)
+    })
+   }
 }

@@ -19,5 +19,23 @@ extension String {
     var localized: String {
         return NSLocalizedString(self, comment: "")
     }
+    
+    func fromBase64() -> String? {
+        var string = self
+        
+        if string.count % 4 != 0 {
+            let padlen = 4 - string.count % 4
+            string.append(contentsOf: repeatElement("=", count: padlen))
+        }
 
+        guard let data = Data(base64Encoded: string) else {
+            return nil
+        }
+        
+        return String(data: data, encoding: .utf8)
+    }
+    
+    func toBase64() -> String {
+        return Data(self.utf8).base64EncodedString()
+    }
 }

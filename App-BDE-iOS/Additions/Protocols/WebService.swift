@@ -66,7 +66,7 @@ extension WebService {
                 .tryMap {(data, response) -> Data in
                     if let response = response as? HTTPURLResponse, response.statusCode != 200 {
                         let errorData = try JSONDecoder().decode(GenericErrorResponse.self, from: data)
-                        throw CustomError(errorBody: errorData.error.code)
+                        throw ViewError(errorCode: ViewError.ErrorCode(rawValue: errorData.error.code) ?? .UNKNOW_ERROR)
                     }
                     return data
                 }

@@ -10,10 +10,7 @@ import SwiftUI
 import Combine
 
 class SignInViewModel: BaseViewModel {
-
-//    @Injected private var authentication: ApiRequestService
-//    @Injected private var keyChainService: KeyChainService
-//    @Injected private var userViewModel: UserViewModel
+    
     var loginWebService: LoginWebService!
 
     @Published var mail: String = ""
@@ -39,8 +36,11 @@ class SignInViewModel: BaseViewModel {
         self.loadingStatus = .loading
 
         let dto = RegisterWebServiceParameters(mail: mail, password: password)
-        executeRequest(loginWebService.call(dto, urlParameters: []), onSuccess: { value in
+        let serviceParameters = ExecuteServiceSetup(service: loginWebService, parameters: dto)
+        
+        executeRequest(serviceParameters, onSuccess: { value in
             print(value.data.token)
+            KeyChainService.shared.addTokensInKeyChain(token: value.data.token, refreshToken: value.data.refreshToken)
             onEnd(.loaded)
         }, onError: { error in
             print(error)

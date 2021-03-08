@@ -14,7 +14,3 @@ struct GenericErrorResponse: Decodable {
 struct ServerError: Decodable {
     var code: String
 }
-
-struct CustomError: Error {
-    let errorBody: String
-}

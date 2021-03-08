@@ -15,9 +15,11 @@ class QRScannerViewModel: BaseViewModel {
 
     public func scanQRCode(_ qrCodeValue: String) {
         let qrCodeValue = QRScanDTO(qrCodeValue: qrCodeValue)
-        executeRequest(qrScannerWebService.call(urlParameters: [qrCodeValue.qrCodeValue]), onSuccess: { value in
+        
+        let serviceParameters = ExecuteServiceSetup(service: qrScannerWebService, parameters: EmptyParameters(), urlParameters: [qrCodeValue.qrCodeValue])
+
+        executeRequest(serviceParameters, onSuccess: { value in
             print(value.data.buyerName)
         })
-
     }
 }
