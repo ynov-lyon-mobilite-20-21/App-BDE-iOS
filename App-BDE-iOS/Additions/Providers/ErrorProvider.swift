@@ -14,7 +14,9 @@ class ErrorProvider: ObservableObject, Weakable {
     var error: ViewError? {
         didSet {
             hasError = (error != nil)
-            objectWillChange.send()
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
         }
     }
 

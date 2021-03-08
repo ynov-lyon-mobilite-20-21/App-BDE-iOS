@@ -25,6 +25,10 @@
 "profil.ticketsTitle" = "MES BILLETS";
 
 "error.alert.button.cancel" = "Annuler";
+"error.alert.PARTY_REFUSED.title" = "partie refusée";
+"error.alert.PARTY_REFUSED.description" = "Bah la partie est refusée hein";
+"error.alert.UNKNOW_ERROR.title" = "une erreur est survenue";
+"error.alert.UNKNOW_ERROR.description" = "une erreur inconnue est survenue";
 
 "settings.title" = "Réglage";
 "settings.updateInfo.subTitle" = "Nom, Prénom, Mot de passe, Classe";

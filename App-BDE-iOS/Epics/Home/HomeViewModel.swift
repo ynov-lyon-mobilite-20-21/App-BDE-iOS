@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 
 class HomeViewModel: BaseViewModel {
-
+     
+    @ObservedObject var tabViewProvider = TabViewProvider.shared
 }

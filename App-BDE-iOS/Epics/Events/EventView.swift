@@ -34,7 +34,8 @@ struct EventView: View {
                         .padding(.horizontal)
                         .shadow(radius: 5)
                         .onTapGesture {
-                            self.showModal = true
+                            viewModel.requestEvents()
+//                            self.showModal = true
                         }
                         .sheet(isPresented: self.$showModal) { ViewProvider.eventDetail(event: event) }
                 }

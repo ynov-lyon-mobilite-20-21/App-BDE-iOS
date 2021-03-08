@@ -14,7 +14,7 @@ struct HomeView: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            TabView {
+            TabView(selection: $viewModel.tabViewProvider.currentTab) {
                 ViewProvider.event()
                     .tabItem {
                         Image("ticket_noir")
@@ -22,7 +22,8 @@ struct HomeView: View {
                             .foregroundColor(Color.blackToWhite)
                         Text("Evennement")
                     }
-
+                    .tag(TabViewProvider.Tabs.event)
+                
                 ViewProvider.profile()
                     .tabItem {
                         Image("profil_noir")
@@ -30,6 +31,7 @@ struct HomeView: View {
                             .foregroundColor(Color.blackToWhite)
                         Text("Mon compte")
                     }
+                    .tag(TabViewProvider.Tabs.profil)
             }
             .accentColor(.blackToWhite)
 

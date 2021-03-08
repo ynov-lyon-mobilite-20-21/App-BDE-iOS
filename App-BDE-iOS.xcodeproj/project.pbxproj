@@ -39,11 +39,18 @@
 		031AA94525F4F78600165D4C /* QRScannerWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA94425F4F78600165D4C /* QRScannerWebService.swift */; };
 		031AA94A25F4FA8F00165D4C /* QRScanDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA94925F4FA8F00165D4C /* QRScanDTO.swift */; };
 		031AA95225F55E5400165D4C /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA95125F55E5400165D4C /* EventView.swift */; };
+		0324AF5025FE21AC00A880A4 /* GetEventWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0324AF4F25FE21AC00A880A4 /* GetEventWebService.swift */; };
+		034390DB25F6A0B60047F142 /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034390DA25F6A0B60047F142 /* Collection+.swift */; };
+		034390E425F6A7BD0047F142 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = 034390E325F6A7BD0047F142 /* JWTDecode */; };
+		034390E925F6AA2A0047F142 /* RefreshTokenWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034390E825F6AA2A0047F142 /* RefreshTokenWebService.swift */; };
 		0350F48C25A128D2008059A6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F48B25A128D1008059A6 /* UIApplication.swift */; };
 		0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */; };
 		0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357F1E6259CD77300C9A972 /* LoadingView.swift */; };
 		036A2BE525503BCB0057B1C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036A2BE425503BCB0057B1C9 /* Colors.xcassets */; };
 		036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A2BF025503D010057B1C9 /* ColorExtension.swift */; };
+		0370A40A25F7DF9D00A145C5 /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370A40925F7DF9D00A145C5 /* EntryPoint.swift */; };
+		0370A41825F7EADF00A145C5 /* TabViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370A41725F7EADF00A145C5 /* TabViewProvider.swift */; };
+		0370A41D25F7EE8800A145C5 /* GetUserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370A41C25F7EE8800A145C5 /* GetUserWebService.swift */; };
 		0376A3FF25445CA600A74D92 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A3FE25445CA600A74D92 /* HomeView.swift */; };
 		0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */; };
 		037C6FB72551F38500678CF2 /* TitleWithoutPaddingCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037C6FB62551F38500678CF2 /* TitleWithoutPaddingCustom.swift */; };
@@ -77,7 +84,7 @@
 		03B230DE255859D6006EF0EA /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230DC255859D6006EF0EA /* AnyEncodable.swift */; };
 		03B230E3255859F6006EF0EA /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230E2255859F6006EF0EA /* AuthToken.swift */; };
 		03B230E825585A0B006EF0EA /* GenericServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230E725585A0B006EF0EA /* GenericServerResponse.swift */; };
-		03B230F125585B59006EF0EA /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230F025585B59006EF0EA /* StringExtensions.swift */; };
+		03B230F125585B59006EF0EA /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230F025585B59006EF0EA /* String+.swift */; };
 		03B230FE255860BF006EF0EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230FD255860BF006EF0EA /* User.swift */; };
 		03B2310425586372006EF0EA /* SignUpDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B2310325586372006EF0EA /* SignUpDTO.swift */; };
 		03B34EED259D606000E15BB3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B34EEC259D606000E15BB3 /* UserViewModel.swift */; };
@@ -100,8 +107,6 @@
 		03C3948325EA62920037153D /* ViewControllerProvider+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */; };
 		03C3948825EA62A50037153D /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948725EA62A50037153D /* QRCodeView.swift */; };
 		03C3948D25EA62AF0037153D /* QRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */; };
-		03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDC252F37D10014FF4E /* AppDelegate.swift */; };
-		03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDE252F37D10014FF4E /* SceneDelegate.swift */; };
 		03C54BE6252F37D30014FF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C54BE5252F37D30014FF4E /* Assets.xcassets */; };
 		03C54BF4252F37D30014FF4E /* App_BDE_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BF3252F37D30014FF4E /* App_BDE_iOSTests.swift */; };
 		03C54BFF252F37D30014FF4E /* App_BDE_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BFE252F37D30014FF4E /* App_BDE_iOSUITests.swift */; };
@@ -158,13 +163,19 @@
 		031AA94425F4F78600165D4C /* QRScannerWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerWebService.swift; sourceTree = "<group>"; };
 		031AA94925F4FA8F00165D4C /* QRScanDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanDTO.swift; sourceTree = "<group>"; };
 		031AA95125F55E5400165D4C /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		0324AF4F25FE21AC00A880A4 /* GetEventWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventWebService.swift; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
+		034390DA25F6A0B60047F142 /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
+		034390E825F6AA2A0047F142 /* RefreshTokenWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenWebService.swift; sourceTree = "<group>"; };
 		0350F48B25A128D1008059A6 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCardView.swift; sourceTree = "<group>"; };
 		03538DBB2541CA1C00FCAD06 /* FashionFetish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Regular.ttf"; sourceTree = "<group>"; };
 		0357F1E6259CD77300C9A972 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		036A2BE425503BCB0057B1C9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		036A2BF025503D010057B1C9 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		0370A40925F7DF9D00A145C5 /* EntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
+		0370A41725F7EADF00A145C5 /* TabViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewProvider.swift; sourceTree = "<group>"; };
+		0370A41C25F7EE8800A145C5 /* GetUserWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserWebService.swift; sourceTree = "<group>"; };
 		0376A3FE25445CA600A74D92 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarModalItem.swift; sourceTree = "<group>"; };
 		0376A42725447EB900A74D92 /* tabac big sans semibold italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tabac big sans semibold italic.ttf"; sourceTree = "<group>"; };
@@ -198,7 +209,7 @@
 		03B230DC255859D6006EF0EA /* AnyEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
 		03B230E2255859F6006EF0EA /* AuthToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
 		03B230E725585A0B006EF0EA /* GenericServerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericServerResponse.swift; sourceTree = "<group>"; };
-		03B230F025585B59006EF0EA /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		03B230F025585B59006EF0EA /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		03B230FD255860BF006EF0EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		03B2310325586372006EF0EA /* SignUpDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDTO.swift; sourceTree = "<group>"; };
 		03B34EEC259D606000E15BB3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -222,8 +233,6 @@
 		03C3948725EA62A50037153D /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
 		03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewModel.swift; sourceTree = "<group>"; };
 		03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-BDE-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C54BDC252F37D10014FF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03C54BDE252F37D10014FF4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		03C54BE5252F37D30014FF4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03C54BEA252F37D30014FF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C54BEF252F37D30014FF4E /* App-BDE-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-BDE-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +255,7 @@
 				0384468025EEB69700D0D6A2 /* CodeScanner in Frameworks */,
 				03894FF9259CFE6100AD9D41 /* KeychainSwift in Frameworks */,
 				03DB0F14255825C90019E87E /* Swinject in Frameworks */,
+				034390E425F6A7BD0047F142 /* JWTDecode in Frameworks */,
 				03B230BF255858E6006EF0EA /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,9 +444,8 @@
 		03559E5D25373FE60059F1F0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				0370A40925F7DF9D00A145C5 /* EntryPoint.swift */,
 				03B230A92558580A006EF0EA /* DI */,
-				03C54BDC252F37D10014FF4E /* AppDelegate.swift */,
-				03C54BDE252F37D10014FF4E /* SceneDelegate.swift */,
 				03559E5E25373FF00059F1F0 /* Supporting Files */,
 			);
 			path = Application;
@@ -476,6 +485,7 @@
 				036A2BF025503D010057B1C9 /* ColorExtension.swift */,
 				0350F48B25A128D1008059A6 /* UIApplication.swift */,
 				039A37C125A50B2300E6B3AA /* AnyPublisher+Extensions.swift */,
+				034390DA25F6A0B60047F142 /* Collection+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -484,7 +494,7 @@
 			isa = PBXGroup;
 			children = (
 				03C3388725DD778C00B5443C /* Strings+Generated.swift */,
-				03B230F025585B59006EF0EA /* StringExtensions.swift */,
+				03B230F025585B59006EF0EA /* String+.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -606,6 +616,9 @@
 			children = (
 				03B230C525585977006EF0EA /* LoginWebService.swift */,
 				031AA94425F4F78600165D4C /* QRScannerWebService.swift */,
+				034390E825F6AA2A0047F142 /* RefreshTokenWebService.swift */,
+				0370A41C25F7EE8800A145C5 /* GetUserWebService.swift */,
+				0324AF4F25FE21AC00A880A4 /* GetEventWebService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -670,6 +683,7 @@
 			children = (
 				03C3384E25DD71D000B5443C /* ViewProvider.swift */,
 				03C3385325DD71EF00B5443C /* ErrorProvider.swift */,
+				0370A41725F7EADF00A145C5 /* TabViewProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -827,6 +841,7 @@
 				03B230BE255858E6006EF0EA /* SwinjectAutoregistration */,
 				03894FF8259CFE6100AD9D41 /* KeychainSwift */,
 				0384467F25EEB69700D0D6A2 /* CodeScanner */,
+				034390E325F6A7BD0047F142 /* JWTDecode */,
 			);
 			productName = "App-BDE-iOS";
 			productReference = 03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */;
@@ -910,6 +925,7 @@
 				03B230BD255858E6006EF0EA /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 				03894FF7259CFE6100AD9D41 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				0384467E25EEB69700D0D6A2 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				034390E225F6A7BD0047F142 /* XCRemoteSwiftPackageReference "JWTDecode" */,
 			);
 			productRefGroup = 03C54BDA252F37D10014FF4E /* Products */;
 			projectDirPath = "";
@@ -1001,9 +1017,9 @@
 			files = (
 				0381E4E125E17A0800AAD818 /* ViewControllerProvider+Settings.swift in Sources */,
 				030867FD25BC645F00D8D484 /* ViewControllerProvider+OnBoarding.swift in Sources */,
+				034390DB25F6A0B60047F142 /* Collection+.swift in Sources */,
 				039A37BD25A50A6200E6B3AA /* WebService.swift in Sources */,
 				039A37D025A5148000E6B3AA /* BaseViewModel.swift in Sources */,
-				03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */,
 				0384469325EEB85100D0D6A2 /* QRScannerView.swift in Sources */,
 				03A8E33F2541BA8E00B02210 /* ProfileView.swift in Sources */,
 				0308680625BC672200D8D484 /* SignUpAssembly.swift in Sources */,
@@ -1014,6 +1030,7 @@
 				030867BC25BC5CB000D8D484 /* ViewControllerProvider+Event.swift in Sources */,
 				03C3944525E8239C0037153D /* UpdateInfoView.swift in Sources */,
 				0308681D25BC692B00D8D484 /* HomeViewModel.swift in Sources */,
+				034390E925F6AA2A0047F142 /* RefreshTokenWebService.swift in Sources */,
 				0308682E25BC69C400D8D484 /* ViewControllerProvider+Home.swift in Sources */,
 				03C3948825EA62A50037153D /* QRCodeView.swift in Sources */,
 				0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */,
@@ -1030,6 +1047,7 @@
 				031AA94525F4F78600165D4C /* QRScannerWebService.swift in Sources */,
 				03B34EED259D606000E15BB3 /* UserViewModel.swift in Sources */,
 				03B230E825585A0B006EF0EA /* GenericServerResponse.swift in Sources */,
+				0370A40A25F7DF9D00A145C5 /* EntryPoint.swift in Sources */,
 				03B230AF25585816006EF0EA /* HelperAssembly.swift in Sources */,
 				03BF900525900E7000E13C4E /* ErrorView.swift in Sources */,
 				038446A525EEB94700D0D6A2 /* ViewControllerProvider+QRScanner.swift in Sources */,
@@ -1051,12 +1069,12 @@
 				03C3945C25E824530037153D /* SignInVIew.swift in Sources */,
 				030B19E025EAAEC200D572B0 /* Ticket.swift in Sources */,
 				036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */,
-				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
 				0308682925BC699F00D8D484 /* HomeAssembly.swift in Sources */,
 				03B230DD255859D6006EF0EA /* LoginDTO.swift in Sources */,
+				0324AF5025FE21AC00A880A4 /* GetEventWebService.swift in Sources */,
 				0381E4EB25E17A8500AAD818 /* SettingsView.swift in Sources */,
 				038446A025EEB91F00D0D6A2 /* QRScannerViewModel.swift in Sources */,
-				03B230F125585B59006EF0EA /* StringExtensions.swift in Sources */,
+				03B230F125585B59006EF0EA /* String+.swift in Sources */,
 				03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */,
 				03C3387425DD755500B5443C /* ViewError.swift in Sources */,
 				030867C925BC60A200D8D484 /* EventDetailAssembly.swift in Sources */,
@@ -1067,12 +1085,14 @@
 				0350F48C25A128D2008059A6 /* UIApplication.swift in Sources */,
 				03B230DE255859D6006EF0EA /* AnyEncodable.swift in Sources */,
 				0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */,
+				0370A41825F7EADF00A145C5 /* TabViewProvider.swift in Sources */,
 				03C3944325E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift in Sources */,
 				038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */,
 				0381E4DC25E179C000AAD818 /* SettingsAssembly.swift in Sources */,
 				0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */,
 				0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */,
 				0314D9722551EE1B0017F09C /* LineShape.swift in Sources */,
+				0370A41D25F7EE8800A145C5 /* GetUserWebService.swift in Sources */,
 				03DB0F0B2556E6280019E87E /* SignUpView.swift in Sources */,
 				030867E725BC62F600D8D484 /* ProfileAssembly.swift in Sources */,
 				03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */,
@@ -1422,6 +1442,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		034390E225F6A7BD0047F142 /* XCRemoteSwiftPackageReference "JWTDecode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/JWTDecode.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
 		037C6FBE2552214400678CF2 /* XCRemoteSwiftPackageReference "SwiftFX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hexagons/SwiftFX.git";
@@ -1473,6 +1501,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		034390E325F6A7BD0047F142 /* JWTDecode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 034390E225F6A7BD0047F142 /* XCRemoteSwiftPackageReference "JWTDecode" */;
+			productName = JWTDecode;
+		};
 		0384467F25EEB69700D0D6A2 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0384467E25EEB69700D0D6A2 /* XCRemoteSwiftPackageReference "CodeScanner" */;

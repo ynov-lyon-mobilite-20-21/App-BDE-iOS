@@ -21,6 +21,8 @@ class HelperAssembly: Assembly {
         container.autoregister(KeyChainService.self, initializer: KeyChainService.init)
         container.autoregister(LoginWebService.self, initializer: LoginWebService.init)
         container.autoregister(QRScannerWebService.self, initializer: QRScannerWebService.init)
+        container.autoregister(GetUserWebService.self, initializer: GetUserWebService.init)
+        container.autoregister(GetEventWebService.self, initializer: GetEventWebService.init)
     }
 
 }
