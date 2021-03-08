@@ -11,7 +11,9 @@ import SwinjectAutoregistration
 final class SignInAssembly: Assembly {
     func assemble(container: Container) {
         container.register(SignInViewModel.self) { r -> SignInViewModel in
-            return SignInViewModel()
+            let viewModel = SignInViewModel()
+            viewModel.loginWebService = r.resolve(LoginWebService.self)
+            return viewModel
         }
         
         container.register(SignInView.self) { r -> SignInView in

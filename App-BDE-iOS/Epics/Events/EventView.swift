@@ -2,19 +2,17 @@
 //  EventView.swift
 //  App-BDE-iOS
 //
-//  Created by Nicolas Barbosa on 22/10/2020.
+//  Created by Nicolas Barbosa on 07/03/2021.
 //
 
 import SwiftUI
 
 struct EventView: View {
-    let eventList: [Event] = [Event(id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5)]
+    let eventList: [Event] = [Event(id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5), Event(id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5)]
     
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel : EventViewModel
     @State private var showModal: Bool = false
-
-
 
     var body: some View {
         
@@ -30,17 +28,16 @@ struct EventView: View {
                 
                 Spacer()
             }
-            
-            ForEach(eventList, id: \.self) { event in
-                
+            VStack(spacing: 10) {
+                ForEach(eventList) { event in
                     EventItem(event: event)
                         .padding(.horizontal)
-                        .padding(.top)
-                        .shadow(radius: 6)
+                        .shadow(radius: 5)
                         .onTapGesture {
                             self.showModal = true
                         }
-                        .sheet(isPresented: self.$showModal) { ViewProvider.eventDetail() }
+                        .sheet(isPresented: self.$showModal) { ViewProvider.eventDetail(event: event) }
+                }
             }
         }
         .background(
@@ -54,4 +51,14 @@ struct EventView: View {
             }.ignoresSafeArea())
     }
     
+}
+
+struct EventView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            ViewProvider.event()
+            ViewProvider.event()
+                .previewDevice("iPhone 12 Pro Max")
+        }
+    }
 }

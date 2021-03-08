@@ -11,6 +11,25 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum EventDetail {
+    internal enum Button {
+      /// Prendre ma place
+      internal static let payment = L10n.tr("Localizable", "EventDetail.button.payment")
+    }
+  }
+
+  internal enum QRCode {
+    /// QR-code à présenter au membre du  BDE responsable à l’entrée le jour J
+    internal static let indication = L10n.tr("Localizable", "QRCode.indication")
+  }
+
+  internal enum QRScanner {
+    /// Scanner le QR Code
+    internal static let indication = L10n.tr("Localizable", "QRScanner.indication")
+    /// Billet n°
+    internal static let ticketId = L10n.tr("Localizable", "QRScanner.ticketId")
+  }
+
   internal enum Error {
     internal enum Alert {
       internal enum Button {
@@ -66,6 +85,13 @@ internal enum L10n {
   internal enum SignInView {
     /// Identifiants
     internal static let section1header = L10n.tr("Localizable", "signInView.section1header")
+  }
+
+  internal enum TabBar {
+    /// Évènements
+    internal static let event = L10n.tr("Localizable", "tabBar.event")
+    /// Profil
+    internal static let profil = L10n.tr("Localizable", "tabBar.profil")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

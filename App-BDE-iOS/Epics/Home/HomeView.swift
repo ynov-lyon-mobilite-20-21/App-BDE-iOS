@@ -17,13 +17,17 @@ struct HomeView: View {
             TabView {
                 ViewProvider.event()
                     .tabItem {
-                        Image(systemName: "house")
+                        Image("ticket_noir")
+                            .renderingMode(.template)
+                            .foregroundColor(Color.blackToWhite)
                         Text("Evennement")
                     }
                 
                 ViewProvider.profile()
                     .tabItem {
-                        Image(systemName: "house")
+                        Image("profil_noir")
+                            .renderingMode(.template)
+                            .foregroundColor(Color.blackToWhite)
                         Text("Mon compte")
                     }
             }
@@ -37,10 +41,11 @@ struct HomeView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             HomeView(viewModel: HomeViewModel())
+                .preferredColorScheme(.dark)
                 .previewDevice("iPhone 11")
             HomeView(viewModel: HomeViewModel())
                 .previewDevice("iPhone SE (2nd generation)")

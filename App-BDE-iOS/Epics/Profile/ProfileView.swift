@@ -16,16 +16,13 @@ struct ProfileView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var isConnected = false
     @State private var showModal: Bool = false
+    @State private var showQrCode: Bool = false
     
     var body: some View {
         GeometryReader { gr in
             ScrollView(showsIndicators: false) {
                 VStack {
-                    VStack(alignment: .trailing) {
-                        Image("ynovCampus")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(maxWidth:70 ,maxHeight: 50)
+                    VStack {
                         HStack {
                             ZStack {
                                 TitleShape(radius: 20)
@@ -37,20 +34,14 @@ struct ProfileView: View {
                                     Spacer()
                                 }
                             }
-                            .frame(width: gr.size.width * 0.7, height: 35)
-                            
-                            Image("profilMenu")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth:30 ,maxHeight: 30)
-                                .onTapGesture {
-                                    self.showModal = true
-                                }
-                                .sheet(isPresented: self.$showModal) { ViewProvider.settings() }
+                            .frame(width: gr.size.width * 0.7, height: 40)
 
-                            
                             Spacer()
                             
+                            Image("ynovCampus")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth:70 ,maxHeight: 50)
                         }
                     }
                     
@@ -59,7 +50,17 @@ struct ProfileView: View {
                         HStack {
                             //User Info
                             VStack(alignment: .leading, spacing: 10) {
-                                TitleCustom(title: "NICOLAS BARBOSA", font: Font.title3.weight(.bold), textColor: Color.blackToWhite, shadowColor: Color.bdeGreen)
+                                HStack {
+                                    TitleCustom(title: "NICOLAS BARBOSA", font: Font.title3.weight(.bold), textColor: Color.blackToWhite, shadowColor: Color.bdeGreen)
+                                    Image("profilMenu")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(maxWidth:30 ,maxHeight: 30)
+                                        .onTapGesture {
+                                            self.showModal = true
+                                        }
+                                        .sheet(isPresented: self.$showModal) { ViewProvider.signIn() }
+                                }
                                 Text("M1 Expert Développement Web")
                                 Text("nicolas.barbosa@ynov.com")
                             }
@@ -114,6 +115,10 @@ struct ProfileView: View {
                                     TicketCard()
                                         .frame(width: gr.size.width * 0.6, height: gr.size.width * 0.6 * 1.4)
                                         .shadow(radius: 6)
+                                        .onTapGesture {
+                                            self.showQrCode = true
+                                        }
+                                        .sheet(isPresented: self.$showQrCode) { ViewProvider.QRCode() }
                                 }
                             }
                             .padding()
@@ -129,7 +134,9 @@ struct ProfileView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .opacity(colorScheme == .dark ? 0.2 : 1)
-            })
+            }
+            .ignoresSafeArea()
+        )
     }
 }
 

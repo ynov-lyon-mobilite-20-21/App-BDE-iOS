@@ -6,6 +6,9 @@
   
 */
 
+"tabBar.event" = "Évènements";
+"tabBar.profil" = "Profil";
+
 "signInView.section1header" = "Identifiants";
 
 "onBoarding.title1" = "Parcours les évènements à venir de ton BDE";
@@ -15,6 +18,8 @@
 "onBoarding.content1" = "Tout au long de l'année tu trouveras des évènements variés pour nous retrouver et passer de bons moments.";
 "onBoarding.content2" = "Grâce à cette app, tu peux stocker tous tes billets au même endroit, les retrouver rapidement et les faire scanner par l'équipe du BDE le jour J !";
 "onBoarding.content3" = "Des questions ? Des précisions ? Nous sommes à ta disposition pour t'éclairer et t'aider au mieux à passer des moments inoubliables avec nous !";
+
+"EventDetail.button.payment" = "Prendre ma place";
 
 "profil.userTitle" = "MES INFORMATIONS";
 "profil.ticketsTitle" = "MES BILLETS";
@@ -27,3 +32,7 @@
 "settings.payment.info" = "Informations de paiement";
 "settings.account.delete" = "Supprimer le compte";
 "settings.account.logout" = "Déconnexion";
+"QRCode.indication" = "QR-code à présenter au membre du  BDE responsable à l’entrée le jour J";
+
+"QRScanner.indication" = "Scanner le QR Code";
+"QRScanner.ticketId" = "Billet n°";

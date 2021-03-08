@@ -32,11 +32,13 @@ struct onBoardingView: View {
                         Button("Retour", action: {
                             viewModel.Previous()
                         })
+                        .foregroundColor(Color.bdeGreen)
                     }
                     Spacer()
                     Button("Suivant", action: {
                         viewModel.Next()
                     })
+                    .foregroundColor(Color.bdeGreen)
                 }
                 .padding(.horizontal, 25)
                 .padding(.bottom, 15)

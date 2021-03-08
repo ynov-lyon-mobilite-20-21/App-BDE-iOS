@@ -13,9 +13,9 @@
 		03012AA52547668100DD9D64 /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AA42547668100DD9D64 /* EventItem.swift */; };
 		03012AAA254772C700DD9D64 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AA9254772C700DD9D64 /* Event.swift */; };
 		03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03012AAE254888B900DD9D64 /* EventViewModel.swift */; };
+		03015C2C25F59043002E9F2A /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03015C2B25F59043002E9F2A /* EventDetailView.swift */; };
 		0302A196253AF008005F48AD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0302A195253AF008005F48AD /* Launch Screen.storyboard */; };
 		0306C298256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306C297256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift */; };
-		0306C29D256EBAB80048A5F5 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306C29C256EBAB80048A5F5 /* EventDetailView.swift */; };
 		0308678125BB2E7900D8D484 /* GenericErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308678025BB2E7900D8D484 /* GenericErrorResponse.swift */; };
 		030867B725BC5C2D00D8D484 /* EventAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030867B625BC5C2D00D8D484 /* EventAssembly.swift */; };
 		030867BC25BC5CB000D8D484 /* ViewControllerProvider+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030867BB25BC5CB000D8D484 /* ViewControllerProvider+Event.swift */; };
@@ -31,10 +31,14 @@
 		0308681D25BC692B00D8D484 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308681C25BC692B00D8D484 /* HomeViewModel.swift */; };
 		0308682925BC699F00D8D484 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308682825BC699F00D8D484 /* HomeAssembly.swift */; };
 		0308682E25BC69C400D8D484 /* ViewControllerProvider+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308682D25BC69C400D8D484 /* ViewControllerProvider+Home.swift */; };
+		030B19E025EAAEC200D572B0 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B19DF25EAAEC200D572B0 /* Ticket.swift */; };
 		0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D94425506DE90017F09C /* ProfilTopShape.swift */; };
 		0314D9592551C76D0017F09C /* FashionFetish-Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */; };
 		0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9612551C8B50017F09C /* TitleCustom.swift */; };
 		0314D9722551EE1B0017F09C /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314D9712551EE1B0017F09C /* LineShape.swift */; };
+		031AA94525F4F78600165D4C /* QRScannerWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA94425F4F78600165D4C /* QRScannerWebService.swift */; };
+		031AA94A25F4FA8F00165D4C /* QRScanDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA94925F4FA8F00165D4C /* QRScanDTO.swift */; };
+		031AA95225F55E5400165D4C /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA95125F55E5400165D4C /* EventView.swift */; };
 		0350F48C25A128D2008059A6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F48B25A128D1008059A6 /* UIApplication.swift */; };
 		0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */; };
 		0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357F1E6259CD77300C9A972 /* LoadingView.swift */; };
@@ -47,6 +51,11 @@
 		0381E4E125E17A0800AAD818 /* ViewControllerProvider+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381E4E025E17A0800AAD818 /* ViewControllerProvider+Settings.swift */; };
 		0381E4E625E17A4B00AAD818 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381E4E525E17A4B00AAD818 /* SettingsViewModel.swift */; };
 		0381E4EB25E17A8500AAD818 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381E4EA25E17A8500AAD818 /* SettingsView.swift */; };
+		0384468025EEB69700D0D6A2 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 0384467F25EEB69700D0D6A2 /* CodeScanner */; };
+		0384469325EEB85100D0D6A2 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0384469225EEB85100D0D6A2 /* QRScannerView.swift */; };
+		0384469B25EEB8E200D0D6A2 /* QRScannerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0384469A25EEB8E200D0D6A2 /* QRScannerAssembly.swift */; };
+		038446A025EEB91F00D0D6A2 /* QRScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0384469F25EEB91F00D0D6A2 /* QRScannerViewModel.swift */; };
+		038446A525EEB94700D0D6A2 /* ViewControllerProvider+QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038446A425EEB94700D0D6A2 /* ViewControllerProvider+QRScanner.swift */; };
 		038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386369F253F361000CB2A05 /* onBoardingView.swift */; };
 		038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */; };
 		03894FF9259CFE6100AD9D41 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 03894FF8259CFE6100AD9D41 /* KeychainSwift */; };
@@ -56,7 +65,6 @@
 		039A37BD25A50A6200E6B3AA /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37BC25A50A6200E6B3AA /* WebService.swift */; };
 		039A37C225A50B2300E6B3AA /* AnyPublisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37C125A50B2300E6B3AA /* AnyPublisher+Extensions.swift */; };
 		039A37D025A5148000E6B3AA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37CF25A5148000E6B3AA /* BaseViewModel.swift */; };
-		03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E3392541BA7C00B02210 /* EventView.swift */; };
 		03A8E33F2541BA8E00B02210 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E33E2541BA8E00B02210 /* ProfileView.swift */; };
 		03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E3442541BAD300B02210 /* ContactsView.swift */; };
 		03B230AF25585816006EF0EA /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230AB25585816006EF0EA /* HelperAssembly.swift */; };
@@ -80,6 +88,10 @@
 		03C3386025DD72CE00B5443C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3385F25DD72CE00B5443C /* ErrorHandler.swift */; };
 		03C3387425DD755500B5443C /* ViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3387325DD755500B5443C /* ViewError.swift */; };
 		03C3388825DD778C00B5443C /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3388725DD778C00B5443C /* Strings+Generated.swift */; };
+		03C3947B25EA62820037153D /* QRCodeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3947A25EA62820037153D /* QRCodeAssembly.swift */; };
+		03C3948325EA62920037153D /* ViewControllerProvider+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */; };
+		03C3948825EA62A50037153D /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948725EA62A50037153D /* QRCodeView.swift */; };
+		03C3948D25EA62AF0037153D /* QRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */; };
 		03C3944325E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3943F25E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift */; };
 		03C3944425E8239C0037153D /* UpdateInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3944025E8239C0037153D /* UpdateInfoAssembly.swift */; };
 		03C3944525E8239C0037153D /* UpdateInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3944125E8239C0037153D /* UpdateInfoView.swift */; };
@@ -120,9 +132,9 @@
 		03012AA42547668100DD9D64 /* EventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItem.swift; sourceTree = "<group>"; };
 		03012AA9254772C700DD9D64 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		03012AAE254888B900DD9D64 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		03015C2B25F59043002E9F2A /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		0302A195253AF008005F48AD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		0306C297256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeWithTopCorderRadius.swift; sourceTree = "<group>"; };
-		0306C29C256EBAB80048A5F5 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		0308678025BB2E7900D8D484 /* GenericErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorResponse.swift; sourceTree = "<group>"; };
 		030867B625BC5C2D00D8D484 /* EventAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAssembly.swift; sourceTree = "<group>"; };
 		030867BB25BC5CB000D8D484 /* ViewControllerProvider+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+Event.swift"; sourceTree = "<group>"; };
@@ -138,10 +150,14 @@
 		0308681C25BC692B00D8D484 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0308682825BC699F00D8D484 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
 		0308682D25BC69C400D8D484 /* ViewControllerProvider+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+Home.swift"; sourceTree = "<group>"; };
+		030B19DF25EAAEC200D572B0 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		0314D94425506DE90017F09C /* ProfilTopShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilTopShape.swift; sourceTree = "<group>"; };
 		0314D9582551C76D0017F09C /* FashionFetish-Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Outline.ttf"; sourceTree = "<group>"; };
 		0314D9612551C8B50017F09C /* TitleCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCustom.swift; sourceTree = "<group>"; };
 		0314D9712551EE1B0017F09C /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
+		031AA94425F4F78600165D4C /* QRScannerWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerWebService.swift; sourceTree = "<group>"; };
+		031AA94925F4FA8F00165D4C /* QRScanDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanDTO.swift; sourceTree = "<group>"; };
+		031AA95125F55E5400165D4C /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
 		0350F48B25A128D1008059A6 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCardView.swift; sourceTree = "<group>"; };
@@ -157,6 +173,10 @@
 		0381E4E025E17A0800AAD818 /* ViewControllerProvider+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+Settings.swift"; sourceTree = "<group>"; };
 		0381E4E525E17A4B00AAD818 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		0381E4EA25E17A8500AAD818 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0384469225EEB85100D0D6A2 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		0384469A25EEB8E200D0D6A2 /* QRScannerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerAssembly.swift; sourceTree = "<group>"; };
+		0384469F25EEB91F00D0D6A2 /* QRScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewModel.swift; sourceTree = "<group>"; };
+		038446A425EEB94700D0D6A2 /* ViewControllerProvider+QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+QRScanner.swift"; sourceTree = "<group>"; };
 		0386369F253F361000CB2A05 /* onBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingView.swift; sourceTree = "<group>"; };
 		038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		03894FFD259D001C00AD9D41 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
@@ -167,7 +187,6 @@
 		039A37BC25A50A6200E6B3AA /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		039A37C125A50B2300E6B3AA /* AnyPublisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Extensions.swift"; sourceTree = "<group>"; };
 		039A37CF25A5148000E6B3AA /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		03A8E3392541BA7C00B02210 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		03A8E33E2541BA8E00B02210 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		03A8E3442541BAD300B02210 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		03B230AB25585816006EF0EA /* HelperAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
@@ -190,6 +209,10 @@
 		03C3385F25DD72CE00B5443C /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		03C3387325DD755500B5443C /* ViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewError.swift; sourceTree = "<group>"; };
 		03C3388725DD778C00B5443C /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		03C3947A25EA62820037153D /* QRCodeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeAssembly.swift; sourceTree = "<group>"; };
+		03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+QRCode.swift"; sourceTree = "<group>"; };
+		03C3948725EA62A50037153D /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
+		03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewModel.swift; sourceTree = "<group>"; };
 		03C3943F25E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+UpdateInfo.swift"; sourceTree = "<group>"; };
 		03C3944025E8239C0037153D /* UpdateInfoAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateInfoAssembly.swift; sourceTree = "<group>"; };
 		03C3944125E8239C0037153D /* UpdateInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateInfoView.swift; path = "App-BDE-iOS/Epics/SignIn/UpdateInfoView.swift"; sourceTree = SOURCE_ROOT; };
@@ -219,6 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0384468025EEB69700D0D6A2 /* CodeScanner in Frameworks */,
 				03894FF9259CFE6100AD9D41 /* KeychainSwift in Frameworks */,
 				03DB0F14255825C90019E87E /* Swinject in Frameworks */,
 				03B230BF255858E6006EF0EA /* SwinjectAutoregistration in Frameworks */,
@@ -247,6 +271,7 @@
 			children = (
 				03C3943C25E822ED0037153D /* UpdateInfo */,
 				0381E4D925E1785800AAD818 /* Settings */,
+				0384468425EEB81600D0D6A2 /* QRScanner */,
 				0308681825BC681C00D8D484 /* Home */,
 				030867C625BC607E00D8D484 /* EventDetail */,
 				03A8E3342541BA4100B02210 /* Events */,
@@ -290,7 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				030867C725BC608D00D8D484 /* #Navigation */,
-				0306C29C256EBAB80048A5F5 /* EventDetailView.swift */,
+				03015C2B25F59043002E9F2A /* EventDetailView.swift */,
 			);
 			path = EventDetail;
 			sourceTree = "<group>";
@@ -387,6 +412,7 @@
 				03B230DA255859D6006EF0EA /* DTO */,
 				03B230FD255860BF006EF0EA /* User.swift */,
 				03012AA9254772C700DD9D64 /* Event.swift */,
+				030B19DF25EAAEC200D572B0 /* Ticket.swift */,
 				03B230E2255859F6006EF0EA /* AuthToken.swift */,
 				03B230E725585A0B006EF0EA /* GenericServerResponse.swift */,
 				0308678025BB2E7900D8D484 /* GenericErrorResponse.swift */,
@@ -489,6 +515,25 @@
 			path = "#Navigation";
 			sourceTree = "<group>";
 		};
+		0384468425EEB81600D0D6A2 /* QRScanner */ = {
+			isa = PBXGroup;
+			children = (
+				0384468525EEB82200D0D6A2 /* #Navigation */,
+				0384469225EEB85100D0D6A2 /* QRScannerView.swift */,
+				0384469F25EEB91F00D0D6A2 /* QRScannerViewModel.swift */,
+			);
+			path = QRScanner;
+			sourceTree = "<group>";
+		};
+		0384468525EEB82200D0D6A2 /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0384469A25EEB8E200D0D6A2 /* QRScannerAssembly.swift */,
+				038446A425EEB94700D0D6A2 /* ViewControllerProvider+QRScanner.swift */,
+			);
+			path = "#Navigation";
+			sourceTree = "<group>";
+		};
 		038636AD253F3DE700CB2A05 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,9 +565,9 @@
 			isa = PBXGroup;
 			children = (
 				030867B525BC5BF800D8D484 /* #Navigation */,
-				03A8E3392541BA7C00B02210 /* EventView.swift */,
 				03012AA42547668100DD9D64 /* EventItem.swift */,
 				03012AAE254888B900DD9D64 /* EventViewModel.swift */,
+				031AA95125F55E5400165D4C /* EventView.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -534,6 +579,7 @@
 				03A8E33E2541BA8E00B02210 /* ProfileView.swift */,
 				030867E025BC62A700D8D484 /* ProfileViewModel.swift */,
 				03F0CFC425CC514D001A1B65 /* TicketCard.swift */,
+				03C3947825EA624E0037153D /* QRCode */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -558,6 +604,7 @@
 			isa = PBXGroup;
 			children = (
 				03B230C525585977006EF0EA /* LoginWebService.swift */,
+				031AA94425F4F78600165D4C /* QRScannerWebService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -586,6 +633,7 @@
 				03B2310325586372006EF0EA /* SignUpDTO.swift */,
 				03B230DB255859D6006EF0EA /* LoginDTO.swift */,
 				03B230DC255859D6006EF0EA /* AnyEncodable.swift */,
+				031AA94925F4FA8F00165D4C /* QRScanDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -631,6 +679,25 @@
 				03C3385F25DD72CE00B5443C /* ErrorHandler.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		03C3947825EA624E0037153D /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				03C3947925EA62670037153D /* #Navigation */,
+				03C3948725EA62A50037153D /* QRCodeView.swift */,
+				03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		03C3947925EA62670037153D /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				03C3947A25EA62820037153D /* QRCodeAssembly.swift */,
+				03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */,
+			);
+			path = "#Navigation";
 			sourceTree = "<group>";
 		};
 		03C3943C25E822ED0037153D /* UpdateInfo */ = {
@@ -756,6 +823,7 @@
 				03DB0F13255825C90019E87E /* Swinject */,
 				03B230BE255858E6006EF0EA /* SwinjectAutoregistration */,
 				03894FF8259CFE6100AD9D41 /* KeychainSwift */,
+				0384467F25EEB69700D0D6A2 /* CodeScanner */,
 			);
 			productName = "App-BDE-iOS";
 			productReference = 03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */;
@@ -838,6 +906,7 @@
 				03DB0F12255825C90019E87E /* XCRemoteSwiftPackageReference "Swinject" */,
 				03B230BD255858E6006EF0EA /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 				03894FF7259CFE6100AD9D41 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				0384467E25EEB69700D0D6A2 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = 03C54BDA252F37D10014FF4E /* Products */;
 			projectDirPath = "";
@@ -914,6 +983,7 @@
 				039A37BD25A50A6200E6B3AA /* WebService.swift in Sources */,
 				039A37D025A5148000E6B3AA /* BaseViewModel.swift in Sources */,
 				03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */,
+				0384469325EEB85100D0D6A2 /* QRScannerView.swift in Sources */,
 				03A8E33F2541BA8E00B02210 /* ProfileView.swift in Sources */,
 				0308680625BC672200D8D484 /* SignUpAssembly.swift in Sources */,
 				03C3384F25DD71D000B5443C /* ViewProvider.swift in Sources */,
@@ -924,8 +994,10 @@
 				03C3944525E8239C0037153D /* UpdateInfoView.swift in Sources */,
 				0308681D25BC692B00D8D484 /* HomeViewModel.swift in Sources */,
 				0308682E25BC69C400D8D484 /* ViewControllerProvider+Home.swift in Sources */,
+				03C3948825EA62A50037153D /* QRCodeView.swift in Sources */,
 				0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */,
 				03B230D22558599A006EF0EA /* UserDefaultsPropertyWrapper.swift in Sources */,
+				03015C2C25F59043002E9F2A /* EventDetailView.swift in Sources */,
 				0306C298256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift in Sources */,
 				03012AAA254772C700DD9D64 /* Event.swift in Sources */,
 				03F0CFC525CC514D001A1B65 /* TicketCard.swift in Sources */,
@@ -934,10 +1006,12 @@
 				0308680B25BC675700D8D484 /* ViewControllerProvider+SignUp.swift in Sources */,
 				03B230D32558599A006EF0EA /* Request.swift in Sources */,
 				03B230E3255859F6006EF0EA /* AuthToken.swift in Sources */,
+				031AA94525F4F78600165D4C /* QRScannerWebService.swift in Sources */,
 				03B34EED259D606000E15BB3 /* UserViewModel.swift in Sources */,
 				03B230E825585A0B006EF0EA /* GenericServerResponse.swift in Sources */,
 				03B230AF25585816006EF0EA /* HelperAssembly.swift in Sources */,
 				03BF900525900E7000E13C4E /* ErrorView.swift in Sources */,
+				038446A525EEB94700D0D6A2 /* ViewControllerProvider+QRScanner.swift in Sources */,
 				0376A3FF25445CA600A74D92 /* HomeView.swift in Sources */,
 				03C3388825DD778C00B5443C /* Strings+Generated.swift in Sources */,
 				030867F825BC642E00D8D484 /* OnBoardingAssembly.swift in Sources */,
@@ -945,22 +1019,30 @@
 				0308678125BB2E7900D8D484 /* GenericErrorResponse.swift in Sources */,
 				030867B725BC5C2D00D8D484 /* EventAssembly.swift in Sources */,
 				03C3385425DD71EF00B5443C /* ErrorProvider.swift in Sources */,
+				0384469B25EEB8E200D0D6A2 /* QRScannerAssembly.swift in Sources */,
 				03C3386025DD72CE00B5443C /* ErrorHandler.swift in Sources */,
 				03C3946925E8251C0037153D /* ViewControllerProvider+SignIn.swift in Sources */,
+				031AA95225F55E5400165D4C /* EventView.swift in Sources */,
 				030867E125BC62A700D8D484 /* ProfileViewModel.swift in Sources */,
 				030867CE25BC60F300D8D484 /* ViewControllerProvider+EventDetail.swift in Sources */,
+				03C3948D25EA62AF0037153D /* QRCodeViewModel.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
 				03C3945C25E824530037153D /* SignInVIew.swift in Sources */,
+				030B19E025EAAEC200D572B0 /* Ticket.swift in Sources */,
 				036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */,
 				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
 				0308682925BC699F00D8D484 /* HomeAssembly.swift in Sources */,
 				03B230DD255859D6006EF0EA /* LoginDTO.swift in Sources */,
 				0381E4EB25E17A8500AAD818 /* SettingsView.swift in Sources */,
+				030867A125BC59CE00D8D484 /* SignInAssembly.swift in Sources */,
+				038446A025EEB91F00D0D6A2 /* QRScannerViewModel.swift in Sources */,
 				03B230F125585B59006EF0EA /* StringExtensions.swift in Sources */,
 				03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */,
 				03C3387425DD755500B5443C /* ViewError.swift in Sources */,
 				030867C925BC60A200D8D484 /* EventDetailAssembly.swift in Sources */,
-				03A8E33A2541BA7C00B02210 /* EventView.swift in Sources */,
+				03C3947B25EA62820037153D /* QRCodeAssembly.swift in Sources */,
+				03C3948325EA62920037153D /* ViewControllerProvider+QRCode.swift in Sources */,
+				031AA94A25F4FA8F00165D4C /* QRScanDTO.swift in Sources */,
 				0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */,
 				0350F48C25A128D2008059A6 /* UIApplication.swift in Sources */,
 				03B230DE255859D6006EF0EA /* AnyEncodable.swift in Sources */,
@@ -973,6 +1055,7 @@
 				0314D9722551EE1B0017F09C /* LineShape.swift in Sources */,
 				03DB0F0B2556E6280019E87E /* SignUpView.swift in Sources */,
 				0306C29D256EBAB80048A5F5 /* EventDetailView.swift in Sources */,
+				030867A625BC59E500D8D484 /* ViewControllerProvider+SignIn.swift in Sources */,
 				030867E725BC62F600D8D484 /* ProfileAssembly.swift in Sources */,
 				03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */,
 				030867F225BC635200D8D484 /* ViewControllerProvider+Profil.swift in Sources */,
@@ -1329,6 +1412,14 @@
 				minimumVersion = 0.1.1;
 			};
 		};
+		0384467E25EEB69700D0D6A2 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
 		03894FF7259CFE6100AD9D41 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
@@ -1364,6 +1455,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0384467F25EEB69700D0D6A2 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0384467E25EEB69700D0D6A2 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
 		03894FF8259CFE6100AD9D41 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 03894FF7259CFE6100AD9D41 /* XCRemoteSwiftPackageReference "keychain-swift" */;
