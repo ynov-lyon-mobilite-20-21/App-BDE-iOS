@@ -7,6 +7,7 @@ excluded:
     - "*.generated.swift"
     - vendor/
     - Carthage
+    - App-BDE-iOS/netfox
 
 disabled_rules:
     - function_parameter_count

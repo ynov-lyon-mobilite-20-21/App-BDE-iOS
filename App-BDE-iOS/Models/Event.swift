@@ -6,9 +6,9 @@
 //
 
 import Foundation
-
-struct Event: Identifiable, Hashable, Decodable {
-    var id: String
+ 
+struct Event: Hashable, Decodable {
+    var _id: String
     var name: String
     var type: EventType
     var image: ImageType

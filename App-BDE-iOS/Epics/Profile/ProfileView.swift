@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ProfileView: View {
     @ObservedObject var viewModel: ProfileViewModel
-
-    let eventList: [Event] = [Event(id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5),
-                              Event(id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5)]
-
+    
+    let eventList: [Event] = [Event(_id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5),
+                              Event(_id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5)]
+    
     @Environment(\.colorScheme) var colorScheme
     @State private var isConnected = false
     @State private var showModal: Bool = false
@@ -59,7 +59,7 @@ struct ProfileView: View {
                                         .onTapGesture {
                                             self.showModal = true
                                         }
-                                        .sheet(isPresented: self.$showModal) { ViewProvider.signIn() }
+                                        .sheet(isPresented: self.$showModal) { ViewProvider.settings() }
                                 }
                                 Text("M1 Expert Développement Web")
                                 Text("nicolas.barbosa@ynov.com")
@@ -137,6 +137,9 @@ struct ProfileView: View {
             }
             .ignoresSafeArea()
         )
+        .onAppear() {
+            viewModel.checkIfUserAuth()
+        }
     }
 }
 
