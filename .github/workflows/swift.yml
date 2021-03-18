@@ -12,6 +12,6 @@ jobs:
     - uses: sersoft-gmbh/xcodebuild-action@v1
       with:
         project: App-BDE-iOS.xcodeproj
-        scheme: App-BDE-iOSTests
+        scheme: App-BDE-iOS
         destination: platform=macOS
         action: test
