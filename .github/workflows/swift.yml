@@ -13,5 +13,5 @@ jobs:
       with:
         project: App-BDE-iOS.xcodeproj
         scheme: App-BDE-iOS
-        destination: platform=macOS
+        destination: platform:iOS Simulator,id:65462205-7FE0-4584-BD84-2008A069D240,OS:14.4,name:iPhone 12
         action: test
