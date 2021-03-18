@@ -13,4 +13,5 @@ jobs:
       with:
         project: App-BDE-iOS.xcodeproj
         scheme: App-BDE-iOSTests
+        destination: platform=macOS
         action: test
