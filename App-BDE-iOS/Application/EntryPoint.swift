@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import Combine
 
 @main
 struct EntryPoint: App {
-    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
         WindowGroup {
             ErrorHandler {
