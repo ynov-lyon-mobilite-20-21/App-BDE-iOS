@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: sersoft-gmbh/xcodebuild-action@v1
       with:
-        project: App-BDE-IOS.xcodeproj
-        scheme: App-BDE-IOS
+        project: App-BDE-iOS.xcodeproj
+        scheme: App-BDE-iOSTests
         destination: platform=iOS
         action: test
