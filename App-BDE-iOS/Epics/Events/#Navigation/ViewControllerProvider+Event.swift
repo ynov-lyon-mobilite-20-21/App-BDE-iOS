@@ -11,7 +11,7 @@ import Swinject
 extension ViewProvider {
     static func event() -> EventView {
         let assembler = generateAssembler(viewControllerAssembly: EventAssembly())
-        
+
         return assembler.resolver.resolve(EventView.self)!
     }
 }

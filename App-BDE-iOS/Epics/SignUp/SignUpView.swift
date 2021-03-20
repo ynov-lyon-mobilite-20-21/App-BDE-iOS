@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct SignUpView: View {
-        
+
     @ObservedObject var viewModel: SignUpViewModel
     @Environment(\.presentationMode) var presentation
-    
+
     var body: some View {
         NavigationView {
             Form {
@@ -21,27 +21,27 @@ struct SignUpView: View {
                         .keyboardType(.emailAddress)
                         .border(Color.red,
                                 width: viewModel.mailIsValid ? 1 : 0)
-                    
+
                     SecureField("Mot de passe", text: $viewModel.password)
                         .textContentType(.password)
                         .border(Color.red,
                                 width: viewModel.passwordIsValid ? 1 : 0)
                 }
-                
+
                 Section(header: Text("Informations personnelles")) {
                     TextField("Prenom", text: $viewModel.firstName)
                         .textContentType(.name)
                         .disableAutocorrection(true)
                         .border(Color.red,
                                 width: viewModel.mailIsValid ? 1 : 0)
-                    
+
                     TextField("Nom", text: $viewModel.lastName)
                         .textContentType(.familyName)
                         .disableAutocorrection(true)
                         .border(Color.red,
                                 width: viewModel.mailIsValid ? 1 : 0)
                 }
-                
+
                 Section(header: Text("Informations étudiant")) {
 
                         Picker("Promotion", selection: $viewModel.promotion) {

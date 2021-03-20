@@ -9,22 +9,22 @@ import SwiftUI
 import CodeScanner
 
 struct EventDetailView: View {
- 
+
     @Environment(\.presentationMode) var presentation
-    @ObservedObject var viewModel : EventViewModel
+    @ObservedObject var viewModel: EventViewModel
     @State private var isShowingScanner = false
 
     var body: some View {
         ScrollView {
             VStack {
-                GeometryReader { reader in
+                GeometryReader { _ in
                     ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
                         Image(/*viewModel.selectedItem.image.rawValue*/ "card_KOLOK")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
                             .background(Color.blueToBlack)
-                        HStack{
+                        HStack {
                             Spacer()
                             Button(action: {
                                 self.presentation.wrappedValue.dismiss()
@@ -43,7 +43,7 @@ struct EventDetailView: View {
                     }
                 }
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
-                
+
                 HStack {
                     VStack(alignment: .leading, spacing: 2) {
                         Text(viewModel.event.type.rawValue)
@@ -72,13 +72,13 @@ struct EventDetailView: View {
                     }
                 }
                 .padding(.horizontal)
-                
+
                 Text(viewModel.event.description)
                     .padding()
             }
-            
+
             Button(action: {
-                
+
             }, label: {
                 HStack {
                     Text(L10n.EventDetail.Button.payment)
@@ -89,7 +89,7 @@ struct EventDetailView: View {
                 .background(Color.bdeBlue)
                 .cornerRadius(30)
             })
-            
+
             Button(action: {
                 self.isShowingScanner = true
             }, label: {
@@ -104,7 +104,7 @@ struct EventDetailView: View {
             }
         }
         .ignoresSafeArea(.all, edges: .top)
-        
+
     }
 }
 

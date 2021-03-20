@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ErrorHandler<A: View>: View {
-    
+
     @ObservedObject var errorProvider = ErrorProvider.shared
     let childView: A
-    
+
     init(_ childView: () -> (A)) {
         self.childView = childView()
     }
-    
+
     var body: some View {
         childView
             .alert(item: $errorProvider.error, content: { (error: ViewError) -> Alert in

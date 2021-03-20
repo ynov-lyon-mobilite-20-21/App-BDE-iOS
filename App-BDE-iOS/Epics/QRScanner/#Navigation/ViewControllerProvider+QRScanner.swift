@@ -11,7 +11,7 @@ import Swinject
 extension ViewProvider {
     static func QRScanner() -> QRScannerView {
         let assembler = generateAssembler(viewControllerAssembly: QRScannerAssembly())
-        
+
         return assembler.resolver.resolve(QRScannerView.self)!
     }
 }

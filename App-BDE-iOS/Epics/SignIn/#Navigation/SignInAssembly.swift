@@ -15,10 +15,10 @@ final class SignInAssembly: Assembly {
             viewModel.loginWebService = r.resolve(LoginWebService.self)
             return viewModel
         }
-        
+
         container.register(SignInView.self) { r -> SignInView in
             let viewModel = r.resolve(SignInViewModel.self)!
-            
+
             return SignInView(viewModel: viewModel)
         }
     }

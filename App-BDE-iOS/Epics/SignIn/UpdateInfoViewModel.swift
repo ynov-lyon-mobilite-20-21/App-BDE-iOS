@@ -10,15 +10,15 @@ import SwiftUI
 import Combine
 
 class UpdateInfoViewModel: BaseViewModel {
-    
+
     @Published var mail: String = ""
     @Published var password: String = ""
     @Published var lastName: String = ""
     @Published var firstName: String = ""
     @Published var formation: Formation = Formation.defaultValue
     @Published var promotion: Promotion = Promotion.defaultValue
-    
+
     @Published var mailIsValid: Bool = false
     @Published var passwordIsValid: Bool = false
-    
+
 }

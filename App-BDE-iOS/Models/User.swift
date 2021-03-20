@@ -8,7 +8,7 @@
 import Foundation
 
 struct User: Decodable {
-    
+
     var mail: String
     var firstName: String
     var lastName: String
@@ -17,14 +17,14 @@ struct User: Decodable {
     var isAdmin: Bool
     var isAdherent: Bool
     var isActive: Bool
-    
+
 }
 
 enum Promotion: String, Decodable, CaseIterable, Equatable {
     static var allCases: [Promotion] {
         return [.B1, .B2, .B3, .M1, M2]
     }
-    
+
     case defaultValue = "Promotion",
          B1 = "B1",
          B2 = "B2",
@@ -38,7 +38,7 @@ enum Formation: String, Decodable, CaseIterable {
         return [.informatique, .audiovisuel, .anim3D, .creaDesign, .dataScientist, .expertReseau, .expertWeb, .expertLogicielMobile, .strat360, .dirArtistique, .entreprenariatStartup,
                 .marketManaBigData]
     }
-    
+
     case defaultValue = "Formation",
          informatique = "Informatique",
          audiovisuel = "Audiovisuel",

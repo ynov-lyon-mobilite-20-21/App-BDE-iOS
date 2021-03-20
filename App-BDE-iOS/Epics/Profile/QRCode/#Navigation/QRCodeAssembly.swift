@@ -10,13 +10,13 @@ import SwinjectAutoregistration
 
 final class QRCodeAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(QRCodeViewModel.self) { r -> QRCodeViewModel in
+        container.register(QRCodeViewModel.self) { _ -> QRCodeViewModel in
             return QRCodeViewModel()
         }
-        
+
         container.register(QRCodeView.self) { r -> QRCodeView in
             let viewModel = r.resolve(QRCodeViewModel.self)!
-            
+
             return QRCodeView(viewModel: viewModel)
         }
     }

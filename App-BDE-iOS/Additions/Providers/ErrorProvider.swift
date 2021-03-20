@@ -10,7 +10,7 @@ import SwiftUI
 class ErrorProvider: ObservableObject, Weakable {
 
     static var shared = ErrorProvider()
-    
+
     var error: ViewError? {
         didSet {
             hasError = (error != nil)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QRCodeView: View {
     @ObservedObject var viewModel: QRCodeViewModel
-    
+
     var body: some View {
         GeometryReader { gr in
             ZStack {
@@ -22,12 +22,12 @@ struct QRCodeView: View {
                         .font(.title2)
                         .bold()
                         .foregroundColor(.white)
-                    
+
                     Text("Billet n°1")
                         .font(.title3)
                         .bold()
                         .foregroundColor(.white)
-                    
+
                     ZStack {
                         Image(uiImage: viewModel.generateQRCode(from: "test"))
                             .interpolation(.none)
@@ -39,7 +39,7 @@ struct QRCodeView: View {
                     }
                     .background(LinearGradient(gradient: Gradient(colors: [.bdePink, .bdeGreen]), startPoint: .leading, endPoint: .trailing))
                     .cornerRadius(30)
-                    
+
                     Text("Nicolas Barbosa")
                         .font(.title3)
                         .bold()

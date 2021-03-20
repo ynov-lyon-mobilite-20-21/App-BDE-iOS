@@ -9,9 +9,9 @@ import Foundation
 import Swinject
 
 extension ViewProvider {
-    static func onBoarding() -> onBoardingView {
+    static func onBoarding() -> OnBoardingView {
         let assembler = generateAssembler(viewControllerAssembly: OnBoardingAssembly())
-        
-        return assembler.resolver.resolve(onBoardingView.self)!
+
+        return assembler.resolver.resolve(OnBoardingView.self)!
     }
 }

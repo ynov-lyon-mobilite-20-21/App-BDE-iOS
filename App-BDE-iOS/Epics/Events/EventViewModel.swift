@@ -9,16 +9,15 @@ import Foundation
 import SwiftUI
 
 class EventViewModel: BaseViewModel {
-        
+
     @Published var show = false
     var event: Event!
-    
+
     func setup(event: Event) {
         self.event = event
     }
-    
-    
-    enum eventType {
+
+    enum EventType {
         case food
         case party
         case sport

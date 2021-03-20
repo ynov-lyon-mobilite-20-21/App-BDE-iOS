@@ -8,9 +8,7 @@
 import Combine
 
 extension AnyPublisher {
-    
     static func empty() -> AnyPublisher {
         return AnyPublisher(Empty())
     }
-    
 }

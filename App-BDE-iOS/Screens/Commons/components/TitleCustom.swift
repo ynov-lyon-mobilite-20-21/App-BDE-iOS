@@ -18,7 +18,7 @@ struct TitleCustom: View {
                 .font(font)
                 .foregroundColor(shadowColor)
                 .offset(x: 2, y: 2)
-            
+
             Text(title)
                 .font(font)
                 .foregroundColor(textColor)

@@ -9,10 +9,10 @@ import SwiftUI
 
 struct TitleShape: Shape {
     let radius: CGFloat
-    
+
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        
+
         let tl = CGPoint(x: rect.minX, y: rect.minY)
         let trs = CGPoint(x: rect.maxX - radius, y: rect.minY)
         let trc = CGPoint(x: rect.maxX - radius, y: rect.minY + radius)
@@ -28,8 +28,7 @@ struct TitleShape: Shape {
         path.addRelativeArc(center: brc, radius: radius,
           startAngle: Angle.degrees(0), delta: Angle.degrees(90))
         path.addLine(to: bl)
-        
-        
+
         return path
     }
 }
@@ -39,4 +38,3 @@ struct TitleShape_Previews: PreviewProvider {
         TitleShape(radius: 30)
     }
 }
-

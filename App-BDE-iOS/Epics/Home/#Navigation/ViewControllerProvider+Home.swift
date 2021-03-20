@@ -11,7 +11,7 @@ import Swinject
 extension ViewProvider {
     static func home() -> HomeView {
         let assembler = generateAssembler(viewControllerAssembly: HomeAssembly())
-        
+
         return assembler.resolver.resolve(HomeView.self)!
     }
 }

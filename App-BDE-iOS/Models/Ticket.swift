@@ -14,5 +14,5 @@ struct Ticket: Decodable {
     var ownerId: String
     var buyerFirstName: String
     var buyerName: String
-    
+
 }

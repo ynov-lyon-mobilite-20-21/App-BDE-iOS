@@ -9,13 +9,13 @@ import Foundation
 import SwiftUI
 
 final class OnBoardingViewModel: BaseViewModel {
-    
+
     @AppStorage("needsAppOnboarding") private var needsAppOnboarding: Bool = true
-    
+
     var selected = 0 { didSet {
         objectWillChange.send()
     }}
-    
+
     func Next() {
         if selected < 2 {
             selected+=1
@@ -23,7 +23,7 @@ final class OnBoardingViewModel: BaseViewModel {
             needsAppOnboarding = false
         }
     }
-    
+
     func Previous() {
         if selected > 0 {
             selected-=1

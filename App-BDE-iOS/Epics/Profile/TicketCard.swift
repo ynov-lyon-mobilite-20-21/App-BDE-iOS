@@ -25,7 +25,7 @@ struct TicketCard: View {
             .padding(.horizontal)
             .padding(.vertical, 6)
             .background(Color.whiteToBlack)
-            
+
         }
         .background(Image("card_KOLOK")
                         .resizable()

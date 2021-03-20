@@ -15,14 +15,14 @@ struct RegisterWebServiceParameters: Encodable {
 }
 
 final class LoginWebService: WebService {
-    
+
     typealias DecodedType = AuthToken
     typealias ServiceParameters = RegisterWebServiceParameters
-    
+
     var url: String = "https://lyon-ynov-bde-api.herokuapp.com/api/auth/login"
-    
+
     var httpMethod: HTTPMethod = .POST
-    
-    var headers: [String : String] = [:]
-    
+
+    var headers: [String: String] = [:]
+
 }

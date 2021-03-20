@@ -15,17 +15,16 @@
 import SwiftUI
 
 struct SignInView: View {
-        
+
     @ObservedObject var viewModel: SignInViewModel
-    
+
     @Environment(\.presentationMode) var presentation
-    //TODO : Delete after DI refactoring
+    // TODO : Delete after DI refactoring
     @State private var showModal: Bool = false
     @State private var showAlert: Bool = false
-    
-    
+
     var body: some View {
-        
+
         ZStack {
                 NavigationView {
                     Form {
@@ -35,14 +34,14 @@ struct SignInView: View {
                                 .keyboardType(.emailAddress)
                                 .border(Color.red,
                                         width: viewModel.mailIsValid ? 1 : 0)
-                            
+
                             SecureField("Mot de passe", text: $viewModel.password)
                                 .textContentType(.password)
                                 .border(Color.red,
                                         width: viewModel.passwordIsValid ? 1 : 0)
                         }
                         Button(action: {
-                            viewModel.handleSignIn() {
+                            viewModel.handleSignIn {
                                 if $0 == .loaded {
                                     self.presentation.wrappedValue.dismiss()
                                 }
@@ -54,7 +53,7 @@ struct SignInView: View {
                                 Spacer()
                             }
                         }).foregroundColor(Color.bdeGreen)
-                        
+
                         Button(action: {
                             showModal.toggle()
                         }, label: {
@@ -68,7 +67,7 @@ struct SignInView: View {
                     .navigationTitle("Connexion")
                 }
                 .sheet(isPresented: self.$showModal) { ViewProvider.signUp() }
-                
+
                 if viewModel.loadingStatus == .loading {
                     LoadingView()
                 }
@@ -89,5 +88,3 @@ struct SignInView_Previews: PreviewProvider {
         }
     }
 }
-
-

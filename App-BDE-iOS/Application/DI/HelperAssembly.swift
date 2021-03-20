@@ -22,5 +22,5 @@ class HelperAssembly: Assembly {
         container.autoregister(LoginWebService.self, initializer: LoginWebService.init)
         container.autoregister(QRScannerWebService.self, initializer: QRScannerWebService.init)
     }
-    
+
 }

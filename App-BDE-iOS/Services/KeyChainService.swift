@@ -9,13 +9,13 @@ import Foundation
 import KeychainSwift
 
 class KeyChainService: ObservableObject {
-    
+
     private let keychain = KeychainSwift()
-    
+
     func addStringInKeyChain(value: String, as name: String) {
         keychain.set(value, forKey: name)
     }
-    
+
     func getStringInKeyChain(name: String) -> String {
         return keychain.get(name)!
     }

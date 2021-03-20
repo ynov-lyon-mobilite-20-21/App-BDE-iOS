@@ -12,7 +12,7 @@ struct EventItem: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .background(Color.blueToBlack)
-                
+
                 HStack {
                     VStack {
                         Image("LAN_manette")
@@ -35,7 +35,7 @@ struct EventItem: View {
                             .bold()
                     }
                     .padding(.leading, 10)
-                    
+
                     Spacer()
                 }
                 .padding(.horizontal)
@@ -54,7 +54,7 @@ struct EventItem_Previews: PreviewProvider {
     }
 }
 
-//VStack {
+// VStack {
 //            Image("card_KOLOK")
 //                .resizable()
 //                .aspectRatio(contentMode: .fill)

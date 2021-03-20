@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+
     @ObservedObject var viewModel: HomeViewModel
     @State private var showModal: Bool = false
-    
+
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView {
@@ -22,7 +22,7 @@ struct HomeView: View {
                             .foregroundColor(Color.blackToWhite)
                         Text("Evennement")
                     }
-                
+
                 ViewProvider.profile()
                     .tabItem {
                         Image("profil_noir")
@@ -32,8 +32,8 @@ struct HomeView: View {
                     }
             }
             .accentColor(.blackToWhite)
-            
-            BottomTabBarModalItem() {
+
+            BottomTabBarModalItem {
                 self.showModal.toggle()
             }.offset(y: -8)
         }

@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ContactsView: View {
-    
+
     @Environment(\.presentationMode) var presentation
-    
+
     var body: some View {
         VStack {
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            
+
             Button("Dismiss") {
                 self.presentation.wrappedValue.dismiss()
             }

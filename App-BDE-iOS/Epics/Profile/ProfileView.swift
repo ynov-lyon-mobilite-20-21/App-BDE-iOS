@@ -9,15 +9,15 @@ import SwiftUI
 
 struct ProfileView: View {
     @ObservedObject var viewModel: ProfileViewModel
-    
+
     let eventList: [Event] = [Event(id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5),
                               Event(id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5)]
-    
+
     @Environment(\.colorScheme) var colorScheme
     @State private var isConnected = false
     @State private var showModal: Bool = false
     @State private var showQrCode: Bool = false
-    
+
     var body: some View {
         GeometryReader { gr in
             ScrollView(showsIndicators: false) {
@@ -37,25 +37,25 @@ struct ProfileView: View {
                             .frame(width: gr.size.width * 0.7, height: 40)
 
                             Spacer()
-                            
+
                             Image("ynovCampus")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth:70 ,maxHeight: 50)
+                                .frame(maxWidth: 70, maxHeight: 50)
                         }
                     }
-                    
+
                     ZStack {
-                        //User info block
+                        // User info block
                         HStack {
-                            //User Info
+                            // User Info
                             VStack(alignment: .leading, spacing: 10) {
                                 HStack {
                                     TitleCustom(title: "NICOLAS BARBOSA", font: Font.title3.weight(.bold), textColor: Color.blackToWhite, shadowColor: Color.bdeGreen)
                                     Image("profilMenu")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(maxWidth:30 ,maxHeight: 30)
+                                        .frame(maxWidth: 30, maxHeight: 30)
                                         .onTapGesture {
                                             self.showModal = true
                                         }
@@ -66,9 +66,9 @@ struct ProfileView: View {
                             }
                             .padding(.leading)
                             .padding(.vertical, 25)
-                            
+
                             Spacer()
-                            //User logo
+                            // User logo
                             VStack {
                                 Spacer()
                                 Image("logoInfo")
@@ -87,7 +87,7 @@ struct ProfileView: View {
                     .background(LinearGradient(gradient: Gradient(colors: [.bdePink, .bdeGreen]), startPoint: .leading, endPoint: .trailing))
                     .cornerRadius(20)
                     .padding([.horizontal, .top])
-                    
+
                     VStack {
                         HStack {
                             ZStack {
@@ -102,16 +102,16 @@ struct ProfileView: View {
                             }
                             .frame(width: gr.size.width * 0.7, height: 35)
                             .padding(.top, 20)
-                            
+
                             Spacer()
                         }
-                        
+
                         Spacer()
-                        
+
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 20) {
-                                ForEach(eventList, id: \.self) { item in
-                                    
+                                ForEach(eventList, id: \.self) { _ in
+
                                     TicketCard()
                                         .frame(width: gr.size.width * 0.6, height: gr.size.width * 0.6 * 1.4)
                                         .shadow(radius: 6)
@@ -145,8 +145,7 @@ struct ProfilView_Previews: PreviewProvider {
         Group {
             ProfileView(viewModel: ProfileViewModel())
                 .preferredColorScheme(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
-            
-            
+
             ProfileView(viewModel: ProfileViewModel())
                 .previewDevice("iPhone 8")
         }

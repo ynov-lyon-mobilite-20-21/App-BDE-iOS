@@ -11,7 +11,7 @@ import Swinject
 extension ViewProvider {
     static func signUp() -> SignUpView {
         let assembler = generateAssembler(viewControllerAssembly: SignUpAssembly())
-        
+
         return assembler.resolver.resolve(SignUpView.self)!
     }
 }

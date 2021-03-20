@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct UpdateInfoView: View {
-    
+
     @ObservedObject var viewModel: UpdateInfoViewModel
-    
+
     var body: some View {
             VStack {
                 List {
@@ -20,29 +20,29 @@ struct UpdateInfoView: View {
                             .disableAutocorrection(true)
                             .border(Color.red,
                                     width: viewModel.mailIsValid ? 1 : 0)
-                        
+
                         TextField("Nom", text: $viewModel.lastName)
                             .textContentType(.familyName)
                             .disableAutocorrection(true)
                             .border(Color.red,
                                     width: viewModel.mailIsValid ? 1 : 0)
                     }
-                    
+
                     Section(header: Text("Identifiants")) {
 
                         SecureField("Ancien mot de passe", text: $viewModel.password)
                             .textContentType(.password)
                             .border(Color.red,
                                     width: viewModel.passwordIsValid ? 1 : 0)
-                        
+
                         SecureField("Mot de passe", text: $viewModel.password)
                             .textContentType(.password)
                             .border(Color.red,
                                     width: viewModel.passwordIsValid ? 1 : 0)
                     }
-                    
+
                     Section(header: Text("Informations étudiant")) {
-                        
+
                         Picker("Promotion", selection: $viewModel.promotion) {
                             ForEach(Promotion.allCases, id: \.self) { promotion in
                                 Text(promotion.rawValue)
@@ -51,7 +51,7 @@ struct UpdateInfoView: View {
                         }
                         .foregroundColor(Color.bdeGreen)
                         .pickerStyle(DefaultPickerStyle())
-                        
+
                         Picker("Formation", selection: $viewModel.formation) {
                             ForEach(Formation.allCases, id: \.self) { promotion in
                                 Text(promotion.rawValue)
@@ -60,7 +60,7 @@ struct UpdateInfoView: View {
                         }
                         .foregroundColor(Color.bdeGreen)
                         .pickerStyle(DefaultPickerStyle())
-                        
+
                     }
                     Button(action: {
                     }, label: {
@@ -86,5 +86,3 @@ struct UpdateInfoView_Previews: PreviewProvider {
         }
     }
 }
-
-

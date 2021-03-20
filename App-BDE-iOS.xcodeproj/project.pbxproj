@@ -88,10 +88,6 @@
 		03C3386025DD72CE00B5443C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3385F25DD72CE00B5443C /* ErrorHandler.swift */; };
 		03C3387425DD755500B5443C /* ViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3387325DD755500B5443C /* ViewError.swift */; };
 		03C3388825DD778C00B5443C /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3388725DD778C00B5443C /* Strings+Generated.swift */; };
-		03C3947B25EA62820037153D /* QRCodeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3947A25EA62820037153D /* QRCodeAssembly.swift */; };
-		03C3948325EA62920037153D /* ViewControllerProvider+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */; };
-		03C3948825EA62A50037153D /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948725EA62A50037153D /* QRCodeView.swift */; };
-		03C3948D25EA62AF0037153D /* QRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */; };
 		03C3944325E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3943F25E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift */; };
 		03C3944425E8239C0037153D /* UpdateInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3944025E8239C0037153D /* UpdateInfoAssembly.swift */; };
 		03C3944525E8239C0037153D /* UpdateInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3944125E8239C0037153D /* UpdateInfoView.swift */; };
@@ -100,6 +96,10 @@
 		03C3946125E8246D0037153D /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3946025E8246D0037153D /* SignInViewModel.swift */; };
 		03C3946925E8251C0037153D /* ViewControllerProvider+SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3946825E8251C0037153D /* ViewControllerProvider+SignIn.swift */; };
 		03C3947125E825420037153D /* SignInAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3947025E825420037153D /* SignInAssembly.swift */; };
+		03C3947B25EA62820037153D /* QRCodeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3947A25EA62820037153D /* QRCodeAssembly.swift */; };
+		03C3948325EA62920037153D /* ViewControllerProvider+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */; };
+		03C3948825EA62A50037153D /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948725EA62A50037153D /* QRCodeView.swift */; };
+		03C3948D25EA62AF0037153D /* QRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */; };
 		03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDC252F37D10014FF4E /* AppDelegate.swift */; };
 		03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDE252F37D10014FF4E /* SceneDelegate.swift */; };
 		03C54BE6252F37D30014FF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C54BE5252F37D30014FF4E /* Assets.xcassets */; };
@@ -209,10 +209,6 @@
 		03C3385F25DD72CE00B5443C /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		03C3387325DD755500B5443C /* ViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewError.swift; sourceTree = "<group>"; };
 		03C3388725DD778C00B5443C /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
-		03C3947A25EA62820037153D /* QRCodeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeAssembly.swift; sourceTree = "<group>"; };
-		03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+QRCode.swift"; sourceTree = "<group>"; };
-		03C3948725EA62A50037153D /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
-		03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewModel.swift; sourceTree = "<group>"; };
 		03C3943F25E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+UpdateInfo.swift"; sourceTree = "<group>"; };
 		03C3944025E8239C0037153D /* UpdateInfoAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateInfoAssembly.swift; sourceTree = "<group>"; };
 		03C3944125E8239C0037153D /* UpdateInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateInfoView.swift; path = "App-BDE-iOS/Epics/SignIn/UpdateInfoView.swift"; sourceTree = SOURCE_ROOT; };
@@ -221,6 +217,10 @@
 		03C3946025E8246D0037153D /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		03C3946825E8251C0037153D /* ViewControllerProvider+SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+SignIn.swift"; sourceTree = "<group>"; };
 		03C3947025E825420037153D /* SignInAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAssembly.swift; sourceTree = "<group>"; };
+		03C3947A25EA62820037153D /* QRCodeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeAssembly.swift; sourceTree = "<group>"; };
+		03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerProvider+QRCode.swift"; sourceTree = "<group>"; };
+		03C3948725EA62A50037153D /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
+		03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewModel.swift; sourceTree = "<group>"; };
 		03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-BDE-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C54BDC252F37D10014FF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03C54BDE252F37D10014FF4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +232,7 @@
 		03C54BFA252F37D30014FF4E /* App-BDE-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-BDE-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C54BFE252F37D30014FF4E /* App_BDE_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_BDE_iOSUITests.swift; sourceTree = "<group>"; };
 		03C54C00252F37D30014FF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03DACF0626060539005BE3F7 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		03DB0F0A2556E6280019E87E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		03F0CFC425CC514D001A1B65 /* TicketCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCard.swift; sourceTree = "<group>"; };
 		03FC5FA2254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardInformationsContainerShape.swift; sourceTree = "<group>"; };
@@ -681,25 +682,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		03C3947825EA624E0037153D /* QRCode */ = {
-			isa = PBXGroup;
-			children = (
-				03C3947925EA62670037153D /* #Navigation */,
-				03C3948725EA62A50037153D /* QRCodeView.swift */,
-				03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */,
-			);
-			path = QRCode;
-			sourceTree = "<group>";
-		};
-		03C3947925EA62670037153D /* #Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				03C3947A25EA62820037153D /* QRCodeAssembly.swift */,
-				03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */,
-			);
-			path = "#Navigation";
-			sourceTree = "<group>";
-		};
 		03C3943C25E822ED0037153D /* UpdateInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -720,9 +702,29 @@
 			path = "App-BDE-iOS/Epics/SignIn/#Navigation";
 			sourceTree = SOURCE_ROOT;
 		};
+		03C3947825EA624E0037153D /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				03C3947925EA62670037153D /* #Navigation */,
+				03C3948725EA62A50037153D /* QRCodeView.swift */,
+				03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		03C3947925EA62670037153D /* #Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				03C3947A25EA62820037153D /* QRCodeAssembly.swift */,
+				03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */,
+			);
+			path = "#Navigation";
+			sourceTree = "<group>";
+		};
 		03C54BD0252F37D10014FF4E = {
 			isa = PBXGroup;
 			children = (
+				03DACF0626060539005BE3F7 /* .swiftlint.yml */,
 				039A37A325A505FA00E6B3AA /* swiftgen.yml */,
 				03C54BDB252F37D10014FF4E /* App-BDE-iOS */,
 				03C54BF2252F37D30014FF4E /* App-BDE-iOSTests */,
@@ -810,6 +812,7 @@
 			buildConfigurationList = 03C54C03252F37D30014FF4E /* Build configuration list for PBXNativeTarget "App-BDE-iOS" */;
 			buildPhases = (
 				039A37AB25A5063500E6B3AA /* Swiftgen String */,
+				03DACEF7260602CD005BE3F7 /* ShellScript */,
 				03C54BD5252F37D10014FF4E /* Sources */,
 				03C54BD6252F37D10014FF4E /* Frameworks */,
 				03C54BD7252F37D10014FF4E /* Resources */,
@@ -971,6 +974,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
 		};
+		03DACEF7260602CD005BE3F7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				$PROJECT_DIR/$TARGET_NAME/.swiftlint.yml,
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1034,7 +1055,6 @@
 				0308682925BC699F00D8D484 /* HomeAssembly.swift in Sources */,
 				03B230DD255859D6006EF0EA /* LoginDTO.swift in Sources */,
 				0381E4EB25E17A8500AAD818 /* SettingsView.swift in Sources */,
-				030867A125BC59CE00D8D484 /* SignInAssembly.swift in Sources */,
 				038446A025EEB91F00D0D6A2 /* QRScannerViewModel.swift in Sources */,
 				03B230F125585B59006EF0EA /* StringExtensions.swift in Sources */,
 				03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */,
@@ -1054,8 +1074,6 @@
 				0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */,
 				0314D9722551EE1B0017F09C /* LineShape.swift in Sources */,
 				03DB0F0B2556E6280019E87E /* SignUpView.swift in Sources */,
-				0306C29D256EBAB80048A5F5 /* EventDetailView.swift in Sources */,
-				030867A625BC59E500D8D484 /* ViewControllerProvider+SignIn.swift in Sources */,
 				030867E725BC62F600D8D484 /* ProfileAssembly.swift in Sources */,
 				03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */,
 				030867F225BC635200D8D484 /* ViewControllerProvider+Profil.swift in Sources */,

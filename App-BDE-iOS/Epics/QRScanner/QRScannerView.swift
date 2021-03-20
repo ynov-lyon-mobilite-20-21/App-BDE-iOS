@@ -11,7 +11,7 @@ import CodeScanner
 struct QRScannerView: View {
     @ObservedObject var viewModel: QRScannerViewModel
     @Environment(\.presentationMode) var presentation
-    
+
     var body: some View {
         GeometryReader { gr in
             ZStack {
@@ -19,13 +19,13 @@ struct QRScannerView: View {
                 Image("QR-SOIREE")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                
+
                 VStack {
                     Text("Espit Chupitos")
                         .font(.title2)
                         .bold()
                         .foregroundColor(.white)
-                    
+
                     Text(L10n.QRScanner.indication)
                         .font(.title3)
                         .bold()
@@ -45,7 +45,7 @@ struct QRScannerView: View {
                     }
                     .background(LinearGradient(gradient: Gradient(colors: [.bdePink, .bdeGreen]), startPoint: .leading, endPoint: .trailing))
                     .cornerRadius(30)
-                    
+
                     Text(viewModel.ticketOwner)
                         .font(.title3)
                         .bold()

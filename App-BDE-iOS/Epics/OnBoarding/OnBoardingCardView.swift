@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct OnBoardingCardView: View {
-    
+
     var imageName: String
     var imageSupp: String
     var title: String
     var content: String
-        
+
     var body: some View {
         VStack(alignment: .leading) {
             ZStack {
@@ -27,10 +27,10 @@ struct OnBoardingCardView: View {
                         .aspectRatio(contentMode: .fit)
                         .padding()
                         .colorInvert().colorMultiply(.blueToWhite)
-                        .offset(x: 4.5 ,y: -45)
+                        .offset(x: 4.5, y: -45)
                 }
             }
-            
+
             VStack(alignment: .leading, spacing: 20) {
                 Text(title)
                     .font(.system(size: 35)).bold()
@@ -52,6 +52,6 @@ struct OnBoardingCardView: View {
 
 struct OnBoardingCardView_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingCardView(imageName: "onboarding_2", imageSupp: "logos_illustration2",title: "Achète ta place facilement et ne rate aucun évènement", content: "Grâce à cette app, tu peux stocker tous tes billets au même endroit, les retrouver rapidement et les faire scanner par l'équipe du BDE le jour J !")
+        OnBoardingCardView(imageName: "onboarding_2", imageSupp: "logos_illustration2", title: "Achète ta place facilement et ne rate aucun évènement", content: "Grâce à cette app, tu peux stocker tous tes billets au même endroit, les retrouver rapidement et les faire scanner par l'équipe du BDE le jour J !")
     }
 }

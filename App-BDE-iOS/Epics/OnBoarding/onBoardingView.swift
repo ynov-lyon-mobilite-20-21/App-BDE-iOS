@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct onBoardingView: View {
+struct OnBoardingView: View {
     @ObservedObject var viewModel: OnBoardingViewModel
     @AppStorage("needsAppOnboarding") private var needsAppOnboarding: Bool = true
-    
+
     var body: some View {
         if needsAppOnboarding == true {
             ZStack(alignment: .bottom) {
@@ -47,13 +47,13 @@ struct onBoardingView: View {
             ViewProvider.home()
         }
     }
-    
-    struct onBoardingView_Previews: PreviewProvider {
+
+    struct OnBoardingView_Previews: PreviewProvider {
         static var previews: some View {
             Group {
-                onBoardingView(viewModel: OnBoardingViewModel())
+                OnBoardingView(viewModel: OnBoardingViewModel())
                     .previewDevice("iPhone 8")
-                onBoardingView(viewModel: OnBoardingViewModel())
+                OnBoardingView(viewModel: OnBoardingViewModel())
                     .preferredColorScheme(.dark)
             }
         }

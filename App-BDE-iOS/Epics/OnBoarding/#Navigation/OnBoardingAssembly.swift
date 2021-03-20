@@ -10,14 +10,14 @@ import SwinjectAutoregistration
 
 final class OnBoardingAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(OnBoardingViewModel.self) { r -> OnBoardingViewModel in
+        container.register(OnBoardingViewModel.self) { _ -> OnBoardingViewModel in
             return OnBoardingViewModel()
         }
-        
-        container.register(onBoardingView.self) { r -> onBoardingView in
+
+        container.register(OnBoardingView.self) { r -> OnBoardingView in
             let viewModel = r.resolve(OnBoardingViewModel.self)!
-            
-            return onBoardingView(viewModel: viewModel)
+
+            return OnBoardingView(viewModel: viewModel)
         }
     }
 }

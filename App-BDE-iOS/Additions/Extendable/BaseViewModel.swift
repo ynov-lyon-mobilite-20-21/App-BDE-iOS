@@ -19,13 +19,13 @@ class BaseViewModel: ObservableObject, Weakable {
             .sink(receiveCompletion: weakify { strongSelf, result in
                 switch result {
                 case .finished:
-                    break;
+                    break
                 case .failure(let error as CustomError):
                     strongSelf.handleError(error: error)
-                case .failure( _):
+                case .failure:
                     strongSelf.handleError(error: CustomError(errorBody: "UNKNOWN_ERROR"))
                 }
-                
+
             }, receiveValue: { value in
                 print("received Value : \(value)")
                 onSuccess(value)

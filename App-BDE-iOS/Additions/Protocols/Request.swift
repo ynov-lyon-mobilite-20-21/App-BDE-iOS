@@ -9,18 +9,16 @@
 import Foundation
 import Combine
 
-
-
-//enum HTTPMethod: String {
+// enum HTTPMethod: String {
 //    case POST = "POST"
 //    case GET = "GET"
 //    case PUT = "PUT"
 //    case DELETE = "DELETE"
-//}
+// }
 //
-//protocol Request {}
+// protocol Request {}
 //
-//extension Request {
+// extension Request {
 //
 //    func request<T: Decodable>(
 //        _ url: URL,
@@ -60,11 +58,11 @@ import Combine
 //            return AnyPublisher(Fail(error: error))
 //        }
 //    }
-//}
+// }
 
 enum ApiRequestError: String, Error {
     typealias RawValue = String
-    
+
     case unknowError = "Une erreur est apparue"
     case badCredentials = "Votre mail ou votre mot de passe est incorrect"
 }

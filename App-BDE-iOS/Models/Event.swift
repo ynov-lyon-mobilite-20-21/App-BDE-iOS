@@ -6,7 +6,7 @@
 //
 
 import Foundation
- 
+
 struct Event: Identifiable, Hashable, Decodable {
     var id: String
     var name: String
@@ -16,7 +16,7 @@ struct Event: Identifiable, Hashable, Decodable {
     var address: String
     var description: String
     var price: Int
-    
+
 }
 
 enum EventType: String, Decodable, CaseIterable {

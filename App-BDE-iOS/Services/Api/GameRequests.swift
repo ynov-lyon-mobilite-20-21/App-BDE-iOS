@@ -10,12 +10,12 @@ import Foundation
 import Combine
 
 final class GameRequests: Request {
-    
+
     func getGames() -> AnyPublisher<[Game], Error> {
         guard let url = URL(string: "https://api.fyd.maxencemottard.com/api/v1/games") else {
             return AnyPublisher(Empty())
         }
-        
+
         return request(url, decodeType: [Game].self)
     }
 }

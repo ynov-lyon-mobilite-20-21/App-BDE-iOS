@@ -9,23 +9,23 @@ import SwiftUI
 
 struct EventView: View {
     let eventList: [Event] = [Event(id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5), Event(id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5)]
-    
+
     @Environment(\.colorScheme) var colorScheme
-    @ObservedObject var viewModel : EventViewModel
+    @ObservedObject var viewModel: EventViewModel
     @State private var showModal: Bool = false
 
     var body: some View {
-        
+
         ScrollView {
             HStack(alignment: .bottom) {
                 ZStack {
                     TitleShape(radius: 20)
                         .fill(Color.blueToBlack)
-                    TitleCustom(title: "EVENEMENT",  font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
+                    TitleCustom(title: "EVENEMENT", font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
                 }
                 .frame(width: 250, height: 40)
                 .shadow(radius: 6)
-                
+
                 Spacer()
             }
             VStack(spacing: 10) {
@@ -50,7 +50,7 @@ struct EventView: View {
 
             }.ignoresSafeArea())
     }
-    
+
 }
 
 struct EventView_Previews: PreviewProvider {

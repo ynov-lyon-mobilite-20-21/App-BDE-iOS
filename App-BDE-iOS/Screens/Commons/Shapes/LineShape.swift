@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct LineShape: Shape {
-    
+
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        
+
         let tl = CGPoint(x: rect.minX, y: rect.minY)
         let tr = CGPoint(x: rect.maxX, y: rect.minY)
-        
-        
+
         path.move(to: tl)
         path.addLine(to: tr)
-        
+
         return path
     }
 }

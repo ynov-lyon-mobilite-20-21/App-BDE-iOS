@@ -13,7 +13,7 @@ struct BottomTabBarModalItem: View {
     public init(action: @escaping () -> Void) {
         self.action = action
     }
-    
+
     public var body: some View {
         ZStack {
             Circle()
@@ -31,7 +31,7 @@ struct BottomTabBarModalItem: View {
 
 struct BottomTabBarModalItem_Previews: PreviewProvider {
     static var previews: some View {
-        BottomTabBarModalItem() {}
-            
+        BottomTabBarModalItem {}
+
     }
 }

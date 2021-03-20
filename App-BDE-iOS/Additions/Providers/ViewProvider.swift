@@ -5,7 +5,6 @@
 //  Created by Nicolas Barbosa on 17/02/2021.
 //
 
-
 import Swinject
 import SwiftUI
 
@@ -17,8 +16,7 @@ class ViewProvider: ObservableObject {
     }
 
     static var shared = ViewProvider()
-    
-    
+
     static func generateAssembler(viewControllerAssembly: Assembly) -> Assembler {
         return Assembler([viewControllerAssembly, HelperAssembly()])
     }
@@ -26,7 +24,7 @@ class ViewProvider: ObservableObject {
     func setEntrypoint(_ entrypoint: Entrypoint) {
         self.entrypoint = entrypoint
     }
-    
+
     enum Entrypoint {
         case party(partyId: String),
              home

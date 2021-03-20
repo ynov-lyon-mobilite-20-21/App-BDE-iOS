@@ -19,7 +19,7 @@ struct TitleWithoutPaddingCustom: View {
                     .font(.custom("TabacBigSans-SemiBoldIt", size: size))
                     .foregroundColor(shadowColor)
                     .offset(x: 2, y: 2)
-                
+
                 Text("\n" + title)
                     .font(.custom("TabacBigSans-SemiBoldIt", size: size))
                     .foregroundColor(textColor)

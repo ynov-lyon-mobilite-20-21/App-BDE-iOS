@@ -11,7 +11,7 @@ import Swinject
 extension ViewProvider {
     static func settings() -> SettingsView {
         let assembler = generateAssembler(viewControllerAssembly: SettingsAssembly())
-        
+
         return assembler.resolver.resolve(SettingsView.self)!
     }
 }

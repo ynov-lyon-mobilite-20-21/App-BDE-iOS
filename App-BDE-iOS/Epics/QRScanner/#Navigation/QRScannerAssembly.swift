@@ -15,10 +15,10 @@ final class QRScannerAssembly: Assembly {
             viewModel.qrScannerWebService = r.resolve(QRScannerWebService.self)
             return viewModel
         }
-        
+
         container.register(QRScannerView.self) { r -> QRScannerView in
             let viewModel = r.resolve(QRScannerViewModel.self)!
-            
+
             return QRScannerView(viewModel: viewModel)
         }
     }
