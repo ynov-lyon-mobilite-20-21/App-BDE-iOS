@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct EventView: View {
-    let eventList: [Event] = [Event(_id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5), Event(_id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5)]
-    
+
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: EventViewModel
     @State private var showModal: Bool = false
@@ -25,17 +24,19 @@ struct EventView: View {
                 }
                 .frame(width: 250, height: 40)
                 .shadow(radius: 6)
+                .onTapGesture {
+                    viewModel.requestEvents()
+                }
 
                 Spacer()
             }
             VStack(spacing: 10) {
-                ForEach(eventList, id: \._id) { event in
+                ForEach(viewModel.eventList, id: \._id) { event in
                     EventItem(event: event)
                         .padding(.horizontal)
                         .shadow(radius: 5)
                         .onTapGesture {
-                            viewModel.requestEvents()
-//                            self.showModal = true
+                            self.showModal = true
                         }
                         .sheet(isPresented: self.$showModal) { ViewProvider.eventDetail(event: event) }
                 }

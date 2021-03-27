@@ -90,6 +90,7 @@
 		03B34EED259D606000E15BB3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B34EEC259D606000E15BB3 /* UserViewModel.swift */; };
 		03BF8FE8258E90B100E13C4E /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF8FE7258E90B100E13C4E /* LoadingState.swift */; };
 		03BF900525900E7000E13C4E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF900425900E7000E13C4E /* ErrorView.swift */; };
+		03C1DAD5260E72570039E16D /* EventViewModel_spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1DAD4260E72570039E16D /* EventViewModel_spec.swift */; };
 		03C3384F25DD71D000B5443C /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3384E25DD71D000B5443C /* ViewProvider.swift */; };
 		03C3385425DD71EF00B5443C /* ErrorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3385325DD71EF00B5443C /* ErrorProvider.swift */; };
 		03C3386025DD72CE00B5443C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3385F25DD72CE00B5443C /* ErrorHandler.swift */; };
@@ -243,6 +244,7 @@
 		03B34EEC259D606000E15BB3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		03BF8FE7258E90B100E13C4E /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		03BF900425900E7000E13C4E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		03C1DAD4260E72570039E16D /* EventViewModel_spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel_spec.swift; sourceTree = "<group>"; };
 		03C3384E25DD71D000B5443C /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 		03C3385325DD71EF00B5443C /* ErrorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProvider.swift; sourceTree = "<group>"; };
 		03C3385F25DD72CE00B5443C /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
@@ -835,6 +837,7 @@
 			children = (
 				03C54BF3252F37D30014FF4E /* App_BDE_iOSTests.swift */,
 				03C54BF5252F37D30014FF4E /* Info.plist */,
+				03C1DAD4260E72570039E16D /* EventViewModel_spec.swift */,
 			);
 			path = "App-BDE-iOSTests";
 			sourceTree = "<group>";
@@ -1252,6 +1255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C1DAD5260E72570039E16D /* EventViewModel_spec.swift in Sources */,
 				03C54BF4252F37D30014FF4E /* App_BDE_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
