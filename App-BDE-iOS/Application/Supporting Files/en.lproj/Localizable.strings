@@ -8,8 +8,6 @@
 "tabBar.event" = "Events";
 "tabBar.profil" = "Profile";
 
-"signInView.section1header" = "Identifiants";
-
 "onBoarding.title1" = "Browse the upcoming events of your BDE";
 "onBoarding.title2" = "Buy your ticket easily and don't miss any events.";
 "onBoarding.title3" = "Contact the members of your BDE whenever you want.";
@@ -19,7 +17,10 @@
 "onBoarding.button.next" = "Next";
 "onBoarding.button.previous" = "Previous";
 
+"event.title" = "EVENTS";
+
 "EventDetail.button.payment" = "Buy a ticket";
+"eventDetail.button.scanner" = "Scan QRCode";
 
 "profil.userTitle" = "MY INFORMATION";
 "profil.ticketsTitle" = "MY TICKETS";
@@ -37,8 +38,39 @@
 "settings.account.delete" = "Delete account";
 "settings.account.logout" = "Logout";
 
+"updateInfoView.title" = "Update";
+"updateInfoView.section.personalInfos" = "Personal informations";
+"updateInfoView.section.personalInfos.name" = "Name";
+"updateInfoView.section.personalInfos.firstName" = "FirstName";
+"updateInfoView.section.identifiers" = "Identifiers";
+"updateInfoView.section.identifiers.oldpassword" = "Old password";
+"updateInfoView.section.identifiers.password" = "Password";
+"updateInfoView.section.studentInfos" = "Student informations";
+"updateInfoView.section.studentInfos.promotion" = "Promotion";
+"updateInfoView.section.studentInfos.formation" = "Formation";
+"updateInfoView.button.updateInfos" = "Update my infos";
+
+"signInView.section.identifiers" = "Identifiers";
+"signInView.textField.mail" = "Mail";
+"signInView.textField.password" = "Password";
+"signInView.button.signIn" = "Login";
+"signInView.button.signUp" = "Create an account";
+
+"signUpView.section.identifiers" = "Identifiers";
+"signUpView.textField.identifiers.mail" = "Mail";
+"signUpView.textField.identifiers.password" = "Password";
+"signUpView.section.personalInfos" = "Personal informations";
+"signUpView.textField.personalInfos.name" = "Name";
+"signUpView.textField.personalInfos.firstName" = "FirstName";
+"signUpView.section.studentInfos" = "Student informations";
+"signUpView.textField.studentInfos.promotion" = "Promotion";
+"signUpView.textField.studentInfos.formation" = "Formation";
+"signUpView.button.signUp" = "Create an account";
+
+
 "QRCode.indication" = "QR-code to be presented to the responsible BDE member at the entrance on D-Day";
 
 "QRScanner.indication" = "Scan QR Code";
 "QRScanner.ticketId" = "Ticket n°";
+
 

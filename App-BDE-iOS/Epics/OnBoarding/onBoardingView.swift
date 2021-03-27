@@ -29,13 +29,13 @@ struct OnBoardingView: View {
 
                 HStack {
                     if viewModel.selected != 0 {
-                        Button("Retour", action: {
+                        Button(L10n.OnBoarding.Button.previous, action: {
                             viewModel.previous()
                         })
                         .foregroundColor(Color.bdeGreen)
                     }
                     Spacer()
-                    Button("Suivant", action: {
+                    Button(L10n.OnBoarding.Button.next, action: {
                         viewModel.next()
                     })
                     .foregroundColor(Color.bdeGreen)

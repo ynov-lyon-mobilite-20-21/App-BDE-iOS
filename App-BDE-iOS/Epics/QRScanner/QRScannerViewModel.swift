@@ -9,9 +9,14 @@ import Foundation
 
 class QRScannerViewModel: BaseViewModel {
 
+    func setup(event: Event) {
+        self.event = event
+    }
+    
     var qrScannerWebService: QRScannerWebService!
     @Published var ticketOwner: String = ""
     @Published var ticketId: String = ""
+    var event: Event!
 
     public func scanQRCode(_ qrCodeValue: String) {
         let qrCodeValue = QRScanDTO(qrCodeValue: qrCodeValue)

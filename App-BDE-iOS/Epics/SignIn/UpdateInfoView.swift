@@ -14,36 +14,36 @@ struct UpdateInfoView: View {
     var body: some View {
             VStack {
                 List {
-                    Section(header: Text("Informations personnelles")) {
-                        TextField("Prenom", text: $viewModel.firstName)
+                    Section(header: Text(L10n.UpdateInfoView.Section.personalInfos)) {
+                        TextField(L10n.UpdateInfoView.TextField.PersonalInfos.firstName, text: $viewModel.firstName)
                             .textContentType(.name)
                             .disableAutocorrection(true)
                             .border(Color.red,
                                     width: viewModel.mailIsValid ? 1 : 0)
 
-                        TextField("Nom", text: $viewModel.lastName)
+                        TextField(L10n.UpdateInfoView.TextField.PersonalInfos.name, text: $viewModel.lastName)
                             .textContentType(.familyName)
                             .disableAutocorrection(true)
                             .border(Color.red,
                                     width: viewModel.mailIsValid ? 1 : 0)
                     }
 
-                    Section(header: Text("Identifiants")) {
+                    Section(header: Text(L10n.UpdateInfoView.Section.identifiers)) {
 
-                        SecureField("Ancien mot de passe", text: $viewModel.password)
+                        SecureField(L10n.UpdateInfoView.TextField.Identifiers.oldpassword, text: $viewModel.password)
                             .textContentType(.password)
                             .border(Color.red,
                                     width: viewModel.passwordIsValid ? 1 : 0)
 
-                        SecureField("Mot de passe", text: $viewModel.password)
+                        SecureField(L10n.UpdateInfoView.TextField.Identifiers.password, text: $viewModel.password)
                             .textContentType(.password)
                             .border(Color.red,
                                     width: viewModel.passwordIsValid ? 1 : 0)
                     }
 
-                    Section(header: Text("Informations étudiant")) {
+                    Section(header: Text(L10n.UpdateInfoView.Section.studentInfos)) {
 
-                        Picker("Promotion", selection: $viewModel.promotion) {
+                        Picker(L10n.UpdateInfoView.TextField.StudentInfos.promotion, selection: $viewModel.promotion) {
                             ForEach(Promotion.allCases, id: \.self) { promotion in
                                 Text(promotion.rawValue)
                                     .tag(promotion)
@@ -52,7 +52,7 @@ struct UpdateInfoView: View {
                         .foregroundColor(Color.bdeGreen)
                         .pickerStyle(DefaultPickerStyle())
 
-                        Picker("Formation", selection: $viewModel.formation) {
+                        Picker(L10n.UpdateInfoView.TextField.StudentInfos.formation, selection: $viewModel.formation) {
                             ForEach(Formation.allCases, id: \.self) { promotion in
                                 Text(promotion.rawValue)
                                     .tag(promotion)
@@ -66,14 +66,14 @@ struct UpdateInfoView: View {
                     }, label: {
                         HStack {
                             Spacer()
-                            Text("Mettre à jour mes données")
+                            Text(L10n.UpdateInfoView.Button.updateInfos)
                             Spacer()
                         }
                     }).foregroundColor(Color.bdeGreen)
                 }
                 .listStyle(InsetGroupedListStyle())
             }
-            .navigationBarTitle("Update", displayMode: .inline)
+            .navigationBarTitle(L10n.UpdateInfoView.title, displayMode: .inline)
     }
 }
 

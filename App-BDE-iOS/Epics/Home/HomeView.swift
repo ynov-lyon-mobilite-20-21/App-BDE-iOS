@@ -17,19 +17,19 @@ struct HomeView: View {
             TabView(selection: $viewModel.tabViewProvider.currentTab) {
                 ViewProvider.event()
                     .tabItem {
-                        Image("ticket_noir")
+                        Image(Asset.TabBar.ticketNoir.name)
                             .renderingMode(.template)
                             .foregroundColor(Color.blackToWhite)
-                        Text("Evennement")
+                        Text(L10n.TabBar.event)
                     }
                     .tag(TabViewProvider.Tabs.event)
                 
                 ViewProvider.profile()
                     .tabItem {
-                        Image("profil_noir")
+                        Image(Asset.TabBar.profilNoir.name)
                             .renderingMode(.template)
                             .foregroundColor(Color.blackToWhite)
-                        Text("Mon compte")
+                        Text(L10n.TabBar.profil)
                     }
                     .tag(TabViewProvider.Tabs.profil)
             }

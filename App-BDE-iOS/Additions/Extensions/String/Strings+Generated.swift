@@ -11,13 +11,6 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
-  internal enum EventDetail {
-    internal enum Button {
-      /// Prendre ma place
-      internal static let payment = L10n.tr("Localizable", "EventDetail.button.payment")
-    }
-  }
-
   internal enum QRCode {
     /// QR-code à présenter au membre du  BDE responsable à l’entrée le jour J
     internal static let indication = L10n.tr("Localizable", "QRCode.indication")
@@ -48,6 +41,20 @@ internal enum L10n {
         /// Annuler
         internal static let cancel = L10n.tr("Localizable", "error.alert.button.cancel")
       }
+    }
+  }
+
+  internal enum Event {
+    /// ÉVÈNEMENTS
+    internal static let title = L10n.tr("Localizable", "event.title")
+  }
+
+  internal enum EventDetail {
+    internal enum Button {
+      /// Prendre ma place
+      internal static let payment = L10n.tr("Localizable", "eventDetail.button.payment")
+      /// Scanner un QRCode
+      internal static let scanner = L10n.tr("Localizable", "eventDetail.button.scanner")
     }
   }
 
@@ -101,8 +108,57 @@ internal enum L10n {
   }
 
   internal enum SignInView {
-    /// Identifiants
-    internal static let section1header = L10n.tr("Localizable", "signInView.section1header")
+    internal enum Button {
+      /// Se connecter
+      internal static let login = L10n.tr("Localizable", "signInView.button.login")
+      /// Créer un compte
+      internal static let signIn = L10n.tr("Localizable", "signInView.button.signIn")
+    }
+    internal enum Section {
+      /// Identifiants
+      internal static let identifiers = L10n.tr("Localizable", "signInView.section.identifiers")
+    }
+    internal enum TextField {
+      /// Email
+      internal static let mail = L10n.tr("Localizable", "signInView.textField.mail")
+      /// Mot de passe
+      internal static let password = L10n.tr("Localizable", "signInView.textField.password")
+    }
+  }
+
+  internal enum SignUpView {
+    internal enum Button {
+      /// Créer un compte
+      internal static let signUp = L10n.tr("Localizable", "signUpView.button.signUp")
+    }
+    internal enum Section {
+      /// Identifiants
+      internal static let identifiers = L10n.tr("Localizable", "signUpView.section.identifiers")
+      /// Informations personnelles
+      internal static let personalInfos = L10n.tr("Localizable", "signUpView.section.personalInfos")
+      /// Identifiants
+      internal static let studentInfos = L10n.tr("Localizable", "signUpView.section.studentInfos")
+    }
+    internal enum TextField {
+      internal enum Identifiers {
+        /// Email
+        internal static let mail = L10n.tr("Localizable", "signUpView.textField.identifiers.mail")
+        /// Mot de passe
+        internal static let password = L10n.tr("Localizable", "signUpView.textField.identifiers.password")
+      }
+      internal enum PersonalInfos {
+        /// Prénom
+        internal static let firstName = L10n.tr("Localizable", "signUpView.textField.personalInfos.firstName")
+        /// Nom
+        internal static let name = L10n.tr("Localizable", "signUpView.textField.personalInfos.name")
+      }
+      internal enum StudentInfos {
+        /// Mot de passe
+        internal static let formation = L10n.tr("Localizable", "signUpView.textField.studentInfos.formation")
+        /// Ancien mot de passe
+        internal static let promotion = L10n.tr("Localizable", "signUpView.textField.studentInfos.promotion")
+      }
+    }
   }
 
   internal enum TabBar {
@@ -110,6 +166,43 @@ internal enum L10n {
     internal static let event = L10n.tr("Localizable", "tabBar.event")
     /// Profil
     internal static let profil = L10n.tr("Localizable", "tabBar.profil")
+  }
+
+  internal enum UpdateInfoView {
+    /// Update
+    internal static let title = L10n.tr("Localizable", "updateInfoView.title")
+    internal enum Button {
+      /// Mettre à jour mes données
+      internal static let updateInfos = L10n.tr("Localizable", "updateInfoView.button.updateInfos")
+    }
+    internal enum Section {
+      /// Identifiants
+      internal static let identifiers = L10n.tr("Localizable", "updateInfoView.section.identifiers")
+      /// Informations personnelles
+      internal static let personalInfos = L10n.tr("Localizable", "updateInfoView.section.personalInfos")
+      /// Informations étudiant
+      internal static let studentInfos = L10n.tr("Localizable", "updateInfoView.section.studentInfos")
+    }
+    internal enum TextField {
+      internal enum Identifiers {
+        /// Ancien mot de passe
+        internal static let oldpassword = L10n.tr("Localizable", "updateInfoView.textField.identifiers.oldpassword")
+        /// Mot de passe
+        internal static let password = L10n.tr("Localizable", "updateInfoView.textField.identifiers.password")
+      }
+      internal enum PersonalInfos {
+        /// Prénom
+        internal static let firstName = L10n.tr("Localizable", "updateInfoView.textField.personalInfos.firstName")
+        /// Nom
+        internal static let name = L10n.tr("Localizable", "updateInfoView.textField.personalInfos.name")
+      }
+      internal enum StudentInfos {
+        /// Formation
+        internal static let formation = L10n.tr("Localizable", "updateInfoView.textField.studentInfos.formation")
+        /// Promotion
+        internal static let promotion = L10n.tr("Localizable", "updateInfoView.textField.studentInfos.promotion")
+      }
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
