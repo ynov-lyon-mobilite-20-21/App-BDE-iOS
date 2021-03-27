@@ -339,16 +339,17 @@
 		0308679D25BC591400D8D484 /* Epics */ = {
 			isa = PBXGroup;
 			children = (
+				038636AD253F3DE700CB2A05 /* OnBoarding */,
+				0308681825BC681C00D8D484 /* Home */,
+				03A8E3342541BA4100B02210 /* Events */,
+				030867C625BC607E00D8D484 /* EventDetail */,
+				0384468425EEB81600D0D6A2 /* QRScanner */,
+				03A8E3352541BA5400B02210 /* Profile */,
 				03C3943C25E822ED0037153D /* UpdateInfo */,
 				0381E4D925E1785800AAD818 /* Settings */,
-				0384468425EEB81600D0D6A2 /* QRScanner */,
-				0308681825BC681C00D8D484 /* Home */,
-				030867C625BC607E00D8D484 /* EventDetail */,
-				03A8E3342541BA4100B02210 /* Events */,
-				03A8E3352541BA5400B02210 /* Profile */,
 				0308679E25BC593200D8D484 /* SignIn */,
 				03DB0F092556E6060019E87E /* SignUp */,
-				038636AD253F3DE700CB2A05 /* OnBoarding */,
+				03589497260FB8BA00D8AF3D /* Contact */,
 			);
 			path = Epics;
 			sourceTree = "<group>";
@@ -432,6 +433,7 @@
 				0308682725BC698E00D8D484 /* #Navigation */,
 				0376A3FE25445CA600A74D92 /* HomeView.swift */,
 				0308681C25BC692B00D8D484 /* HomeViewModel.swift */,
+				0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -445,16 +447,6 @@
 			path = "#Navigation";
 			sourceTree = "<group>";
 		};
-		0314D9602551C89F0017F09C /* Commons */ = {
-			isa = PBXGroup;
-			children = (
-				03BF900025900E5200E13C4E /* components */,
-				03BF8FFF25900E4D00E13C4E /* views */,
-				03FC5FA1254DFF4600F8BF94 /* Shapes */,
-			);
-			path = Commons;
-			sourceTree = "<group>";
-		};
 		03538DBA2541CA0F00FCAD06 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,16 +456,6 @@
 				03538DBB2541CA1C00FCAD06 /* FashionFetish-Regular.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		03559E57253735DE0059F1F0 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				03A8E3432541BAB400B02210 /* Contacts */,
-				03A8E32E2541B95000B02210 /* BottomTabBar */,
-				0314D9602551C89F0017F09C /* Commons */,
-			);
-			path = Screens;
 			sourceTree = "<group>";
 		};
 		03559E58253735E80059F1F0 /* Models */ = {
@@ -550,6 +532,26 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		03589497260FB8BA00D8AF3D /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				03A8E3442541BAD300B02210 /* ContactsView.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		03589498260FB90400D8AF3D /* ComponentsView */ = {
+			isa = PBXGroup;
+			children = (
+				03FC5FA1254DFF4600F8BF94 /* Shapes */,
+				03BF900425900E7000E13C4E /* ErrorView.swift */,
+				0357F1E6259CD77300C9A972 /* LoadingView.swift */,
+				0314D9612551C8B50017F09C /* TitleCustom.swift */,
+				037C6FB62551F38500678CF2 /* TitleWithoutPaddingCustom.swift */,
+			);
+			path = ComponentsView;
+			sourceTree = "<group>";
+		};
 		035AC07525AB46FD00746A8D /* String */ = {
 			isa = PBXGroup;
 			children = (
@@ -624,14 +626,6 @@
 			path = Extendable;
 			sourceTree = "<group>";
 		};
-		03A8E32E2541B95000B02210 /* BottomTabBar */ = {
-			isa = PBXGroup;
-			children = (
-				0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */,
-			);
-			path = BottomTabBar;
-			sourceTree = "<group>";
-		};
 		03A8E3342541BA4100B02210 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -653,14 +647,6 @@
 				03C3947825EA624E0037153D /* QRCode */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		03A8E3432541BAB400B02210 /* Contacts */ = {
-			isa = PBXGroup;
-			children = (
-				03A8E3442541BAD300B02210 /* ContactsView.swift */,
-			);
-			path = Contacts;
 			sourceTree = "<group>";
 		};
 		03B230A92558580A006EF0EA /* DI */ = {
@@ -720,24 +706,6 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		03BF8FFF25900E4D00E13C4E /* views */ = {
-			isa = PBXGroup;
-			children = (
-				03BF900425900E7000E13C4E /* ErrorView.swift */,
-				0357F1E6259CD77300C9A972 /* LoadingView.swift */,
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
-		03BF900025900E5200E13C4E /* components */ = {
-			isa = PBXGroup;
-			children = (
-				0314D9612551C8B50017F09C /* TitleCustom.swift */,
-				037C6FB62551F38500678CF2 /* TitleWithoutPaddingCustom.swift */,
-			);
-			path = components;
-			sourceTree = "<group>";
-		};
 		03C3384D25DD71AB00B5443C /* Providers */ = {
 			isa = PBXGroup;
 			children = (
@@ -751,6 +719,7 @@
 		03C3385E25DD72B900B5443C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				03589498260FB90400D8AF3D /* ComponentsView */,
 				03C3385F25DD72CE00B5443C /* ErrorHandler.swift */,
 			);
 			path = Components;
@@ -827,7 +796,6 @@
 				03559E58253735E80059F1F0 /* Models */,
 				03FAF65A257BDD9E0014EE6D /* ViewModel */,
 				0308679D25BC591400D8D484 /* Epics */,
-				03559E57253735DE0059F1F0 /* Screens */,
 			);
 			path = "App-BDE-iOS";
 			sourceTree = "<group>";
