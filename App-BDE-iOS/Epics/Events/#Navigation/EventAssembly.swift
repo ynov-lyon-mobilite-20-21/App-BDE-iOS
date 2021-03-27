@@ -10,9 +10,10 @@ import SwinjectAutoregistration
 
 final class EventAssembly: Assembly {
     func assemble(container: Container) {
-//        container.autoregister(EventViewModel.self, initializer: EventViewModel.init)
-        container.register(EventViewModel.self) { _ -> EventViewModel in
-            return EventViewModel()
+        container.register(EventViewModel.self) { r -> EventViewModel in
+            let viewModel = EventViewModel()
+            viewModel.getEventWebService = r.resolve(GetEventWebService.self)
+            return viewModel
         }
 
         container.register(EventView.self) { r -> EventView in

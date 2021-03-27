@@ -17,6 +17,6 @@ final class QRScannerWebService: WebService {
 
     var url: String = "https://lyon-ynov-bde-api.herokuapp.com/api/ticket/%@"
     var httpMethod: HTTPMethod = .GET
-    var headers: [String: String] = ["Authorization": "Bearer \(KeyChainService().getStringInKeyChain(name: "UserToken"))"]
-
+    var headers: [String : String] = [:]
+    
 }

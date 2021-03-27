@@ -7,6 +7,7 @@ excluded:
     - "*.generated.swift"
     - vendor/
     - Carthage
+    - App-BDE-iOS/netfox
 
 disabled_rules:
     - function_parameter_count
@@ -14,6 +15,7 @@ disabled_rules:
     - identifier_name
     - type_name
     - force_unwrapping
+    - trailing_whitespace
 
 opt_in_rules:
     - anyobject_protocol

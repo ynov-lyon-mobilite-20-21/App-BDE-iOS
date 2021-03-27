@@ -10,8 +10,10 @@ import SwinjectAutoregistration
 
 final class ProfileAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(ProfileViewModel.self) { _ -> ProfileViewModel in
-            return ProfileViewModel()
+        container.register(ProfileViewModel.self) { r -> ProfileViewModel in
+            let viewModel = ProfileViewModel()
+            viewModel.getUserWebService = r.resolve(GetUserWebService.self)
+            return viewModel
         }
 
         container.register(ProfileView.self) { r -> ProfileView in

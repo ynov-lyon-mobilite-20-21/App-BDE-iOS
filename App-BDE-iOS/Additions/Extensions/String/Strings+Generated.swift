@@ -32,6 +32,18 @@ internal enum L10n {
 
   internal enum Error {
     internal enum Alert {
+      internal enum PartyRefused {
+        /// Bah la partie est refusée hein
+        internal static let description = L10n.tr("Localizable", "error.alert.PARTY_REFUSED.description")
+        /// partie refusée
+        internal static let title = L10n.tr("Localizable", "error.alert.PARTY_REFUSED.title")
+      }
+      internal enum UnknowError {
+        /// une erreur inconnue est survenue
+        internal static let description = L10n.tr("Localizable", "error.alert.UNKNOW_ERROR.description")
+        /// une erreur est survenue
+        internal static let title = L10n.tr("Localizable", "error.alert.UNKNOW_ERROR.title")
+      }
       internal enum Button {
         /// Annuler
         internal static let cancel = L10n.tr("Localizable", "error.alert.button.cancel")

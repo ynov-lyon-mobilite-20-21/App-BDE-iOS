@@ -39,11 +39,18 @@
 		031AA94525F4F78600165D4C /* QRScannerWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA94425F4F78600165D4C /* QRScannerWebService.swift */; };
 		031AA94A25F4FA8F00165D4C /* QRScanDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA94925F4FA8F00165D4C /* QRScanDTO.swift */; };
 		031AA95225F55E5400165D4C /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA95125F55E5400165D4C /* EventView.swift */; };
+		0324AF5025FE21AC00A880A4 /* GetEventWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0324AF4F25FE21AC00A880A4 /* GetEventWebService.swift */; };
+		034390DB25F6A0B60047F142 /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034390DA25F6A0B60047F142 /* Collection+.swift */; };
+		034390E425F6A7BD0047F142 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = 034390E325F6A7BD0047F142 /* JWTDecode */; };
+		034390E925F6AA2A0047F142 /* RefreshTokenWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034390E825F6AA2A0047F142 /* RefreshTokenWebService.swift */; };
 		0350F48C25A128D2008059A6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F48B25A128D1008059A6 /* UIApplication.swift */; };
 		0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */; };
 		0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357F1E6259CD77300C9A972 /* LoadingView.swift */; };
 		036A2BE525503BCB0057B1C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036A2BE425503BCB0057B1C9 /* Colors.xcassets */; };
 		036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A2BF025503D010057B1C9 /* ColorExtension.swift */; };
+		0370A40A25F7DF9D00A145C5 /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370A40925F7DF9D00A145C5 /* EntryPoint.swift */; };
+		0370A41825F7EADF00A145C5 /* TabViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370A41725F7EADF00A145C5 /* TabViewProvider.swift */; };
+		0370A41D25F7EE8800A145C5 /* GetUserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370A41C25F7EE8800A145C5 /* GetUserWebService.swift */; };
 		0376A3FF25445CA600A74D92 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A3FE25445CA600A74D92 /* HomeView.swift */; };
 		0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */; };
 		037C6FB72551F38500678CF2 /* TitleWithoutPaddingCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037C6FB62551F38500678CF2 /* TitleWithoutPaddingCustom.swift */; };
@@ -77,12 +84,13 @@
 		03B230DE255859D6006EF0EA /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230DC255859D6006EF0EA /* AnyEncodable.swift */; };
 		03B230E3255859F6006EF0EA /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230E2255859F6006EF0EA /* AuthToken.swift */; };
 		03B230E825585A0B006EF0EA /* GenericServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230E725585A0B006EF0EA /* GenericServerResponse.swift */; };
-		03B230F125585B59006EF0EA /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230F025585B59006EF0EA /* StringExtensions.swift */; };
+		03B230F125585B59006EF0EA /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230F025585B59006EF0EA /* String+.swift */; };
 		03B230FE255860BF006EF0EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230FD255860BF006EF0EA /* User.swift */; };
 		03B2310425586372006EF0EA /* SignUpDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B2310325586372006EF0EA /* SignUpDTO.swift */; };
 		03B34EED259D606000E15BB3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B34EEC259D606000E15BB3 /* UserViewModel.swift */; };
 		03BF8FE8258E90B100E13C4E /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF8FE7258E90B100E13C4E /* LoadingState.swift */; };
 		03BF900525900E7000E13C4E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF900425900E7000E13C4E /* ErrorView.swift */; };
+		03C1DAD5260E72570039E16D /* EventViewModel_spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1DAD4260E72570039E16D /* EventViewModel_spec.swift */; };
 		03C3384F25DD71D000B5443C /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3384E25DD71D000B5443C /* ViewProvider.swift */; };
 		03C3385425DD71EF00B5443C /* ErrorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3385325DD71EF00B5443C /* ErrorProvider.swift */; };
 		03C3386025DD72CE00B5443C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3385F25DD72CE00B5443C /* ErrorHandler.swift */; };
@@ -100,11 +108,37 @@
 		03C3948325EA62920037153D /* ViewControllerProvider+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948225EA62920037153D /* ViewControllerProvider+QRCode.swift */; };
 		03C3948825EA62A50037153D /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948725EA62A50037153D /* QRCodeView.swift */; };
 		03C3948D25EA62AF0037153D /* QRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */; };
-		03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDC252F37D10014FF4E /* AppDelegate.swift */; };
-		03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BDE252F37D10014FF4E /* SceneDelegate.swift */; };
 		03C54BE6252F37D30014FF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C54BE5252F37D30014FF4E /* Assets.xcassets */; };
 		03C54BF4252F37D30014FF4E /* App_BDE_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BF3252F37D30014FF4E /* App_BDE_iOSTests.swift */; };
 		03C54BFF252F37D30014FF4E /* App_BDE_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BFE252F37D30014FF4E /* App_BDE_iOSUITests.swift */; };
+		03DACEB8260129B8005BE3F7 /* NFXAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE90260129B8005BE3F7 /* NFXAssets.swift */; };
+		03DACEB9260129B8005BE3F7 /* NFXWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE91260129B8005BE3F7 /* NFXWindowController.swift */; };
+		03DACEBA260129B8005BE3F7 /* NFXInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE92260129B8005BE3F7 /* NFXInfoController.swift */; };
+		03DACEBB260129B8005BE3F7 /* NFXGenericController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE94260129B8005BE3F7 /* NFXGenericController.swift */; };
+		03DACEBC260129B8005BE3F7 /* NFXSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE95260129B8005BE3F7 /* NFXSettingsController.swift */; };
+		03DACEBD260129B8005BE3F7 /* NFXListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE96260129B8005BE3F7 /* NFXListController.swift */; };
+		03DACEBE260129B8005BE3F7 /* NFXHTTPModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE97260129B8005BE3F7 /* NFXHTTPModelManager.swift */; };
+		03DACEBF260129B8005BE3F7 /* NFXConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE98260129B8005BE3F7 /* NFXConstants.swift */; };
+		03DACEC0260129B8005BE3F7 /* NFXGenericBodyDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE99260129B8005BE3F7 /* NFXGenericBodyDetailsController.swift */; };
+		03DACEC1260129B8005BE3F7 /* NFXLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE9A260129B8005BE3F7 /* NFXLoader.m */; };
+		03DACEC2260129B8005BE3F7 /* NFXAuthenticationChallengeSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE9B260129B8005BE3F7 /* NFXAuthenticationChallengeSender.swift */; };
+		03DACEC3260129B8005BE3F7 /* NFX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE9C260129B8005BE3F7 /* NFX.swift */; };
+		03DACEC4260129B8005BE3F7 /* NFXProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE9D260129B8005BE3F7 /* NFXProtocol.swift */; };
+		03DACEC5260129B8005BE3F7 /* NFXRawBodyDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE9E260129B8005BE3F7 /* NFXRawBodyDetailsController.swift */; };
+		03DACEC6260129B8005BE3F7 /* NFXStatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE9F260129B8005BE3F7 /* NFXStatisticsController.swift */; };
+		03DACEC7260129B8005BE3F7 /* NFXHTTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEA0260129B8005BE3F7 /* NFXHTTPModel.swift */; };
+		03DACEC8260129B8005BE3F7 /* NFXHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEA1260129B8005BE3F7 /* NFXHelper.swift */; };
+		03DACEC9260129B8005BE3F7 /* NFXDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEA2260129B8005BE3F7 /* NFXDetailsController.swift */; };
+		03DACECA260129B8005BE3F7 /* NFXImageBodyDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEA3260129B8005BE3F7 /* NFXImageBodyDetailsController.swift */; };
+		03DACED5260129B8005BE3F7 /* NFXDetailsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEB0260129B8005BE3F7 /* NFXDetailsController_iOS.swift */; };
+		03DACED6260129B8005BE3F7 /* NFXListController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEB1260129B8005BE3F7 /* NFXListController_iOS.swift */; };
+		03DACED7260129B8005BE3F7 /* NFXURLDetailsControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEB2260129B8005BE3F7 /* NFXURLDetailsControllerViewController.swift */; };
+		03DACED8260129B8005BE3F7 /* NFXHelper_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEB3260129B8005BE3F7 /* NFXHelper_iOS.swift */; };
+		03DACED9260129B9005BE3F7 /* NFXInfoController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEB4260129B8005BE3F7 /* NFXInfoController_iOS.swift */; };
+		03DACEDA260129B9005BE3F7 /* NFXStatisticsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEB5260129B8005BE3F7 /* NFXStatisticsController_iOS.swift */; };
+		03DACEDB260129B9005BE3F7 /* NFXSettingsController_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEB6260129B8005BE3F7 /* NFXSettingsController_iOS.swift */; };
+		03DACEDC260129B9005BE3F7 /* NFXListCell_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEB7260129B8005BE3F7 /* NFXListCell_iOS.swift */; };
+		03DACEE1260129E5005BE3F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEE0260129E5005BE3F7 /* AppDelegate.swift */; };
 		03DB0F0B2556E6280019E87E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB0F0A2556E6280019E87E /* SignUpView.swift */; };
 		03DB0F14255825C90019E87E /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 03DB0F13255825C90019E87E /* Swinject */; };
 		03F0CFC525CC514D001A1B65 /* TicketCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0CFC425CC514D001A1B65 /* TicketCard.swift */; };
@@ -158,13 +192,19 @@
 		031AA94425F4F78600165D4C /* QRScannerWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerWebService.swift; sourceTree = "<group>"; };
 		031AA94925F4FA8F00165D4C /* QRScanDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanDTO.swift; sourceTree = "<group>"; };
 		031AA95125F55E5400165D4C /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		0324AF4F25FE21AC00A880A4 /* GetEventWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventWebService.swift; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
+		034390DA25F6A0B60047F142 /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
+		034390E825F6AA2A0047F142 /* RefreshTokenWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenWebService.swift; sourceTree = "<group>"; };
 		0350F48B25A128D1008059A6 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCardView.swift; sourceTree = "<group>"; };
 		03538DBB2541CA1C00FCAD06 /* FashionFetish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Regular.ttf"; sourceTree = "<group>"; };
 		0357F1E6259CD77300C9A972 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		036A2BE425503BCB0057B1C9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		036A2BF025503D010057B1C9 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		0370A40925F7DF9D00A145C5 /* EntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
+		0370A41725F7EADF00A145C5 /* TabViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewProvider.swift; sourceTree = "<group>"; };
+		0370A41C25F7EE8800A145C5 /* GetUserWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserWebService.swift; sourceTree = "<group>"; };
 		0376A3FE25445CA600A74D92 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0376A4222544688300A74D92 /* BottomTabBarModalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarModalItem.swift; sourceTree = "<group>"; };
 		0376A42725447EB900A74D92 /* tabac big sans semibold italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tabac big sans semibold italic.ttf"; sourceTree = "<group>"; };
@@ -198,12 +238,13 @@
 		03B230DC255859D6006EF0EA /* AnyEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
 		03B230E2255859F6006EF0EA /* AuthToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
 		03B230E725585A0B006EF0EA /* GenericServerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericServerResponse.swift; sourceTree = "<group>"; };
-		03B230F025585B59006EF0EA /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		03B230F025585B59006EF0EA /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		03B230FD255860BF006EF0EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		03B2310325586372006EF0EA /* SignUpDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDTO.swift; sourceTree = "<group>"; };
 		03B34EEC259D606000E15BB3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		03BF8FE7258E90B100E13C4E /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		03BF900425900E7000E13C4E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		03C1DAD4260E72570039E16D /* EventViewModel_spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel_spec.swift; sourceTree = "<group>"; };
 		03C3384E25DD71D000B5443C /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 		03C3385325DD71EF00B5443C /* ErrorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProvider.swift; sourceTree = "<group>"; };
 		03C3385F25DD72CE00B5443C /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
@@ -222,8 +263,6 @@
 		03C3948725EA62A50037153D /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
 		03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewModel.swift; sourceTree = "<group>"; };
 		03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-BDE-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C54BDC252F37D10014FF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03C54BDE252F37D10014FF4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		03C54BE5252F37D30014FF4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03C54BEA252F37D30014FF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C54BEF252F37D30014FF4E /* App-BDE-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-BDE-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,6 +271,35 @@
 		03C54BFA252F37D30014FF4E /* App-BDE-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-BDE-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C54BFE252F37D30014FF4E /* App_BDE_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_BDE_iOSUITests.swift; sourceTree = "<group>"; };
 		03C54C00252F37D30014FF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03DACE90260129B8005BE3F7 /* NFXAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXAssets.swift; sourceTree = "<group>"; };
+		03DACE91260129B8005BE3F7 /* NFXWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXWindowController.swift; sourceTree = "<group>"; };
+		03DACE92260129B8005BE3F7 /* NFXInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXInfoController.swift; sourceTree = "<group>"; };
+		03DACE93260129B8005BE3F7 /* NFXLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFXLoader.h; sourceTree = "<group>"; };
+		03DACE94260129B8005BE3F7 /* NFXGenericController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXGenericController.swift; sourceTree = "<group>"; };
+		03DACE95260129B8005BE3F7 /* NFXSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXSettingsController.swift; sourceTree = "<group>"; };
+		03DACE96260129B8005BE3F7 /* NFXListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXListController.swift; sourceTree = "<group>"; };
+		03DACE97260129B8005BE3F7 /* NFXHTTPModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXHTTPModelManager.swift; sourceTree = "<group>"; };
+		03DACE98260129B8005BE3F7 /* NFXConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXConstants.swift; sourceTree = "<group>"; };
+		03DACE99260129B8005BE3F7 /* NFXGenericBodyDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXGenericBodyDetailsController.swift; sourceTree = "<group>"; };
+		03DACE9A260129B8005BE3F7 /* NFXLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFXLoader.m; sourceTree = "<group>"; };
+		03DACE9B260129B8005BE3F7 /* NFXAuthenticationChallengeSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXAuthenticationChallengeSender.swift; sourceTree = "<group>"; };
+		03DACE9C260129B8005BE3F7 /* NFX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFX.swift; sourceTree = "<group>"; };
+		03DACE9D260129B8005BE3F7 /* NFXProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXProtocol.swift; sourceTree = "<group>"; };
+		03DACE9E260129B8005BE3F7 /* NFXRawBodyDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXRawBodyDetailsController.swift; sourceTree = "<group>"; };
+		03DACE9F260129B8005BE3F7 /* NFXStatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXStatisticsController.swift; sourceTree = "<group>"; };
+		03DACEA0260129B8005BE3F7 /* NFXHTTPModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXHTTPModel.swift; sourceTree = "<group>"; };
+		03DACEA1260129B8005BE3F7 /* NFXHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXHelper.swift; sourceTree = "<group>"; };
+		03DACEA2260129B8005BE3F7 /* NFXDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXDetailsController.swift; sourceTree = "<group>"; };
+		03DACEA3260129B8005BE3F7 /* NFXImageBodyDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXImageBodyDetailsController.swift; sourceTree = "<group>"; };
+		03DACEB0260129B8005BE3F7 /* NFXDetailsController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXDetailsController_iOS.swift; sourceTree = "<group>"; };
+		03DACEB1260129B8005BE3F7 /* NFXListController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXListController_iOS.swift; sourceTree = "<group>"; };
+		03DACEB2260129B8005BE3F7 /* NFXURLDetailsControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXURLDetailsControllerViewController.swift; sourceTree = "<group>"; };
+		03DACEB3260129B8005BE3F7 /* NFXHelper_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXHelper_iOS.swift; sourceTree = "<group>"; };
+		03DACEB4260129B8005BE3F7 /* NFXInfoController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXInfoController_iOS.swift; sourceTree = "<group>"; };
+		03DACEB5260129B8005BE3F7 /* NFXStatisticsController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXStatisticsController_iOS.swift; sourceTree = "<group>"; };
+		03DACEB6260129B8005BE3F7 /* NFXSettingsController_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXSettingsController_iOS.swift; sourceTree = "<group>"; };
+		03DACEB7260129B8005BE3F7 /* NFXListCell_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXListCell_iOS.swift; sourceTree = "<group>"; };
+		03DACEE0260129E5005BE3F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03DACF0626060539005BE3F7 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		03DB0F0A2556E6280019E87E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		03F0CFC425CC514D001A1B65 /* TicketCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCard.swift; sourceTree = "<group>"; };
@@ -246,6 +314,7 @@
 				0384468025EEB69700D0D6A2 /* CodeScanner in Frameworks */,
 				03894FF9259CFE6100AD9D41 /* KeychainSwift in Frameworks */,
 				03DB0F14255825C90019E87E /* Swinject in Frameworks */,
+				034390E425F6A7BD0047F142 /* JWTDecode in Frameworks */,
 				03B230BF255858E6006EF0EA /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,9 +503,9 @@
 		03559E5D25373FE60059F1F0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				03DACEE0260129E5005BE3F7 /* AppDelegate.swift */,
+				0370A40925F7DF9D00A145C5 /* EntryPoint.swift */,
 				03B230A92558580A006EF0EA /* DI */,
-				03C54BDC252F37D10014FF4E /* AppDelegate.swift */,
-				03C54BDE252F37D10014FF4E /* SceneDelegate.swift */,
 				03559E5E25373FF00059F1F0 /* Supporting Files */,
 			);
 			path = Application;
@@ -476,6 +545,7 @@
 				036A2BF025503D010057B1C9 /* ColorExtension.swift */,
 				0350F48B25A128D1008059A6 /* UIApplication.swift */,
 				039A37C125A50B2300E6B3AA /* AnyPublisher+Extensions.swift */,
+				034390DA25F6A0B60047F142 /* Collection+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -484,7 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				03C3388725DD778C00B5443C /* Strings+Generated.swift */,
-				03B230F025585B59006EF0EA /* StringExtensions.swift */,
+				03B230F025585B59006EF0EA /* String+.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -606,6 +676,9 @@
 			children = (
 				03B230C525585977006EF0EA /* LoginWebService.swift */,
 				031AA94425F4F78600165D4C /* QRScannerWebService.swift */,
+				034390E825F6AA2A0047F142 /* RefreshTokenWebService.swift */,
+				0370A41C25F7EE8800A145C5 /* GetUserWebService.swift */,
+				0324AF4F25FE21AC00A880A4 /* GetEventWebService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -670,6 +743,7 @@
 			children = (
 				03C3384E25DD71D000B5443C /* ViewProvider.swift */,
 				03C3385325DD71EF00B5443C /* ErrorProvider.swift */,
+				0370A41725F7EADF00A145C5 /* TabViewProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -746,6 +820,7 @@
 		03C54BDB252F37D10014FF4E /* App-BDE-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				03DACE8E260129B8005BE3F7 /* netfox */,
 				03559E5D25373FE60059F1F0 /* Application */,
 				03559E5F253740360059F1F0 /* Additions */,
 				03559E59253735EE0059F1F0 /* Services */,
@@ -762,6 +837,7 @@
 			children = (
 				03C54BF3252F37D30014FF4E /* App_BDE_iOSTests.swift */,
 				03C54BF5252F37D30014FF4E /* Info.plist */,
+				03C1DAD4260E72570039E16D /* EventViewModel_spec.swift */,
 			);
 			path = "App-BDE-iOSTests";
 			sourceTree = "<group>";
@@ -773,6 +849,57 @@
 				03C54C00252F37D30014FF4E /* Info.plist */,
 			);
 			path = "App-BDE-iOSUITests";
+			sourceTree = "<group>";
+		};
+		03DACE8E260129B8005BE3F7 /* netfox */ = {
+			isa = PBXGroup;
+			children = (
+				03DACE8F260129B8005BE3F7 /* Core */,
+				03DACEAF260129B8005BE3F7 /* iOS */,
+			);
+			path = netfox;
+			sourceTree = "<group>";
+		};
+		03DACE8F260129B8005BE3F7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				03DACE90260129B8005BE3F7 /* NFXAssets.swift */,
+				03DACE91260129B8005BE3F7 /* NFXWindowController.swift */,
+				03DACE92260129B8005BE3F7 /* NFXInfoController.swift */,
+				03DACE93260129B8005BE3F7 /* NFXLoader.h */,
+				03DACE94260129B8005BE3F7 /* NFXGenericController.swift */,
+				03DACE95260129B8005BE3F7 /* NFXSettingsController.swift */,
+				03DACE96260129B8005BE3F7 /* NFXListController.swift */,
+				03DACE97260129B8005BE3F7 /* NFXHTTPModelManager.swift */,
+				03DACE98260129B8005BE3F7 /* NFXConstants.swift */,
+				03DACE99260129B8005BE3F7 /* NFXGenericBodyDetailsController.swift */,
+				03DACE9A260129B8005BE3F7 /* NFXLoader.m */,
+				03DACE9B260129B8005BE3F7 /* NFXAuthenticationChallengeSender.swift */,
+				03DACE9C260129B8005BE3F7 /* NFX.swift */,
+				03DACE9D260129B8005BE3F7 /* NFXProtocol.swift */,
+				03DACE9E260129B8005BE3F7 /* NFXRawBodyDetailsController.swift */,
+				03DACE9F260129B8005BE3F7 /* NFXStatisticsController.swift */,
+				03DACEA0260129B8005BE3F7 /* NFXHTTPModel.swift */,
+				03DACEA1260129B8005BE3F7 /* NFXHelper.swift */,
+				03DACEA2260129B8005BE3F7 /* NFXDetailsController.swift */,
+				03DACEA3260129B8005BE3F7 /* NFXImageBodyDetailsController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		03DACEAF260129B8005BE3F7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				03DACEB0260129B8005BE3F7 /* NFXDetailsController_iOS.swift */,
+				03DACEB1260129B8005BE3F7 /* NFXListController_iOS.swift */,
+				03DACEB2260129B8005BE3F7 /* NFXURLDetailsControllerViewController.swift */,
+				03DACEB3260129B8005BE3F7 /* NFXHelper_iOS.swift */,
+				03DACEB4260129B8005BE3F7 /* NFXInfoController_iOS.swift */,
+				03DACEB5260129B8005BE3F7 /* NFXStatisticsController_iOS.swift */,
+				03DACEB6260129B8005BE3F7 /* NFXSettingsController_iOS.swift */,
+				03DACEB7260129B8005BE3F7 /* NFXListCell_iOS.swift */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		03DB0F092556E6060019E87E /* SignUp */ = {
@@ -827,6 +954,7 @@
 				03B230BE255858E6006EF0EA /* SwinjectAutoregistration */,
 				03894FF8259CFE6100AD9D41 /* KeychainSwift */,
 				0384467F25EEB69700D0D6A2 /* CodeScanner */,
+				034390E325F6A7BD0047F142 /* JWTDecode */,
 			);
 			productName = "App-BDE-iOS";
 			productReference = 03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */;
@@ -910,6 +1038,7 @@
 				03B230BD255858E6006EF0EA /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 				03894FF7259CFE6100AD9D41 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				0384467E25EEB69700D0D6A2 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				034390E225F6A7BD0047F142 /* XCRemoteSwiftPackageReference "JWTDecode" */,
 			);
 			productRefGroup = 03C54BDA252F37D10014FF4E /* Products */;
 			projectDirPath = "";
@@ -1001,11 +1130,12 @@
 			files = (
 				0381E4E125E17A0800AAD818 /* ViewControllerProvider+Settings.swift in Sources */,
 				030867FD25BC645F00D8D484 /* ViewControllerProvider+OnBoarding.swift in Sources */,
+				034390DB25F6A0B60047F142 /* Collection+.swift in Sources */,
 				039A37BD25A50A6200E6B3AA /* WebService.swift in Sources */,
 				039A37D025A5148000E6B3AA /* BaseViewModel.swift in Sources */,
-				03C54BDD252F37D10014FF4E /* AppDelegate.swift in Sources */,
 				0384469325EEB85100D0D6A2 /* QRScannerView.swift in Sources */,
 				03A8E33F2541BA8E00B02210 /* ProfileView.swift in Sources */,
+				03DACEC0260129B8005BE3F7 /* NFXGenericBodyDetailsController.swift in Sources */,
 				0308680625BC672200D8D484 /* SignUpAssembly.swift in Sources */,
 				03C3384F25DD71D000B5443C /* ViewProvider.swift in Sources */,
 				03C3946125E8246D0037153D /* SignInViewModel.swift in Sources */,
@@ -1014,6 +1144,9 @@
 				030867BC25BC5CB000D8D484 /* ViewControllerProvider+Event.swift in Sources */,
 				03C3944525E8239C0037153D /* UpdateInfoView.swift in Sources */,
 				0308681D25BC692B00D8D484 /* HomeViewModel.swift in Sources */,
+				03DACED5260129B8005BE3F7 /* NFXDetailsController_iOS.swift in Sources */,
+				034390E925F6AA2A0047F142 /* RefreshTokenWebService.swift in Sources */,
+				03DACED6260129B8005BE3F7 /* NFXListController_iOS.swift in Sources */,
 				0308682E25BC69C400D8D484 /* ViewControllerProvider+Home.swift in Sources */,
 				03C3948825EA62A50037153D /* QRCodeView.swift in Sources */,
 				0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */,
@@ -1022,70 +1155,98 @@
 				0306C298256E8BBE0048A5F5 /* ShapeWithTopCorderRadius.swift in Sources */,
 				03012AAA254772C700DD9D64 /* Event.swift in Sources */,
 				03F0CFC525CC514D001A1B65 /* TicketCard.swift in Sources */,
+				03DACEC4260129B8005BE3F7 /* NFXProtocol.swift in Sources */,
 				03B230B92558583A006EF0EA /* SignUpViewModel.swift in Sources */,
 				03C3947125E825420037153D /* SignInAssembly.swift in Sources */,
 				0308680B25BC675700D8D484 /* ViewControllerProvider+SignUp.swift in Sources */,
 				03B230D32558599A006EF0EA /* Request.swift in Sources */,
+				03DACECA260129B8005BE3F7 /* NFXImageBodyDetailsController.swift in Sources */,
 				03B230E3255859F6006EF0EA /* AuthToken.swift in Sources */,
 				031AA94525F4F78600165D4C /* QRScannerWebService.swift in Sources */,
 				03B34EED259D606000E15BB3 /* UserViewModel.swift in Sources */,
 				03B230E825585A0B006EF0EA /* GenericServerResponse.swift in Sources */,
+				03DACEB9260129B8005BE3F7 /* NFXWindowController.swift in Sources */,
+				0370A40A25F7DF9D00A145C5 /* EntryPoint.swift in Sources */,
+				03DACEBE260129B8005BE3F7 /* NFXHTTPModelManager.swift in Sources */,
+				03DACEBB260129B8005BE3F7 /* NFXGenericController.swift in Sources */,
 				03B230AF25585816006EF0EA /* HelperAssembly.swift in Sources */,
 				03BF900525900E7000E13C4E /* ErrorView.swift in Sources */,
 				038446A525EEB94700D0D6A2 /* ViewControllerProvider+QRScanner.swift in Sources */,
 				0376A3FF25445CA600A74D92 /* HomeView.swift in Sources */,
 				03C3388825DD778C00B5443C /* Strings+Generated.swift in Sources */,
+				03DACED7260129B8005BE3F7 /* NFXURLDetailsControllerViewController.swift in Sources */,
 				030867F825BC642E00D8D484 /* OnBoardingAssembly.swift in Sources */,
 				03894FFE259D001C00AD9D41 /* KeyChainService.swift in Sources */,
 				0308678125BB2E7900D8D484 /* GenericErrorResponse.swift in Sources */,
+				03DACED9260129B9005BE3F7 /* NFXInfoController_iOS.swift in Sources */,
+				03DACEC1260129B8005BE3F7 /* NFXLoader.m in Sources */,
 				030867B725BC5C2D00D8D484 /* EventAssembly.swift in Sources */,
 				03C3385425DD71EF00B5443C /* ErrorProvider.swift in Sources */,
 				0384469B25EEB8E200D0D6A2 /* QRScannerAssembly.swift in Sources */,
 				03C3386025DD72CE00B5443C /* ErrorHandler.swift in Sources */,
 				03C3946925E8251C0037153D /* ViewControllerProvider+SignIn.swift in Sources */,
 				031AA95225F55E5400165D4C /* EventView.swift in Sources */,
+				03DACEBA260129B8005BE3F7 /* NFXInfoController.swift in Sources */,
 				030867E125BC62A700D8D484 /* ProfileViewModel.swift in Sources */,
 				030867CE25BC60F300D8D484 /* ViewControllerProvider+EventDetail.swift in Sources */,
 				03C3948D25EA62AF0037153D /* QRCodeViewModel.swift in Sources */,
+				03DACEE1260129E5005BE3F7 /* AppDelegate.swift in Sources */,
 				038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */,
 				03C3945C25E824530037153D /* SignInVIew.swift in Sources */,
 				030B19E025EAAEC200D572B0 /* Ticket.swift in Sources */,
 				036A2BF125503D010057B1C9 /* ColorExtension.swift in Sources */,
-				03C54BDF252F37D10014FF4E /* SceneDelegate.swift in Sources */,
 				0308682925BC699F00D8D484 /* HomeAssembly.swift in Sources */,
 				03B230DD255859D6006EF0EA /* LoginDTO.swift in Sources */,
+				0324AF5025FE21AC00A880A4 /* GetEventWebService.swift in Sources */,
 				0381E4EB25E17A8500AAD818 /* SettingsView.swift in Sources */,
 				038446A025EEB91F00D0D6A2 /* QRScannerViewModel.swift in Sources */,
-				03B230F125585B59006EF0EA /* StringExtensions.swift in Sources */,
+				03B230F125585B59006EF0EA /* String+.swift in Sources */,
 				03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */,
 				03C3387425DD755500B5443C /* ViewError.swift in Sources */,
 				030867C925BC60A200D8D484 /* EventDetailAssembly.swift in Sources */,
 				03C3947B25EA62820037153D /* QRCodeAssembly.swift in Sources */,
 				03C3948325EA62920037153D /* ViewControllerProvider+QRCode.swift in Sources */,
+				03DACEC6260129B8005BE3F7 /* NFXStatisticsController.swift in Sources */,
 				031AA94A25F4FA8F00165D4C /* QRScanDTO.swift in Sources */,
 				0314D9622551C8B50017F09C /* TitleCustom.swift in Sources */,
+				03DACEC9260129B8005BE3F7 /* NFXDetailsController.swift in Sources */,
 				0350F48C25A128D2008059A6 /* UIApplication.swift in Sources */,
 				03B230DE255859D6006EF0EA /* AnyEncodable.swift in Sources */,
 				0376A4232544688300A74D92 /* BottomTabBarModalItem.swift in Sources */,
+				0370A41825F7EADF00A145C5 /* TabViewProvider.swift in Sources */,
 				03C3944325E8239C0037153D /* ViewControllerProvider+UpdateInfo.swift in Sources */,
 				038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */,
 				0381E4DC25E179C000AAD818 /* SettingsAssembly.swift in Sources */,
+				03DACEBF260129B8005BE3F7 /* NFXConstants.swift in Sources */,
+				03DACEB8260129B8005BE3F7 /* NFXAssets.swift in Sources */,
 				0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */,
 				0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */,
 				0314D9722551EE1B0017F09C /* LineShape.swift in Sources */,
+				03DACED8260129B8005BE3F7 /* NFXHelper_iOS.swift in Sources */,
+				0370A41D25F7EE8800A145C5 /* GetUserWebService.swift in Sources */,
 				03DB0F0B2556E6280019E87E /* SignUpView.swift in Sources */,
+				03DACEDC260129B9005BE3F7 /* NFXListCell_iOS.swift in Sources */,
 				030867E725BC62F600D8D484 /* ProfileAssembly.swift in Sources */,
+				03DACEC7260129B8005BE3F7 /* NFXHTTPModel.swift in Sources */,
 				03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */,
 				030867F225BC635200D8D484 /* ViewControllerProvider+Profil.swift in Sources */,
 				039A37C225A50B2300E6B3AA /* AnyPublisher+Extensions.swift in Sources */,
 				03B2310425586372006EF0EA /* SignUpDTO.swift in Sources */,
 				039A37B825A50A4400E6B3AA /* Weakable.swift in Sources */,
 				03C3944425E8239C0037153D /* UpdateInfoAssembly.swift in Sources */,
+				03DACEC8260129B8005BE3F7 /* NFXHelper.swift in Sources */,
 				03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */,
 				03B230C725585977006EF0EA /* LoginWebService.swift in Sources */,
+				03DACEC3260129B8005BE3F7 /* NFX.swift in Sources */,
+				03DACEDA260129B9005BE3F7 /* NFXStatisticsController_iOS.swift in Sources */,
+				03DACEBD260129B8005BE3F7 /* NFXListController.swift in Sources */,
+				03DACEC2260129B8005BE3F7 /* NFXAuthenticationChallengeSender.swift in Sources */,
 				03B230FE255860BF006EF0EA /* User.swift in Sources */,
+				03DACEBC260129B8005BE3F7 /* NFXSettingsController.swift in Sources */,
 				03BF8FE8258E90B100E13C4E /* LoadingState.swift in Sources */,
+				03DACEDB260129B9005BE3F7 /* NFXSettingsController_iOS.swift in Sources */,
 				03012AA52547668100DD9D64 /* EventItem.swift in Sources */,
+				03DACEC5260129B8005BE3F7 /* NFXRawBodyDetailsController.swift in Sources */,
 				0381E4E625E17A4B00AAD818 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1094,6 +1255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C1DAD5260E72570039E16D /* EventViewModel_spec.swift in Sources */,
 				03C54BF4252F37D30014FF4E /* App_BDE_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1422,6 +1584,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		034390E225F6A7BD0047F142 /* XCRemoteSwiftPackageReference "JWTDecode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/JWTDecode.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
 		037C6FBE2552214400678CF2 /* XCRemoteSwiftPackageReference "SwiftFX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hexagons/SwiftFX.git";
@@ -1473,6 +1643,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		034390E325F6A7BD0047F142 /* JWTDecode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 034390E225F6A7BD0047F142 /* XCRemoteSwiftPackageReference "JWTDecode" */;
+			productName = JWTDecode;
+		};
 		0384467F25EEB69700D0D6A2 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0384467E25EEB69700D0D6A2 /* XCRemoteSwiftPackageReference "CodeScanner" */;

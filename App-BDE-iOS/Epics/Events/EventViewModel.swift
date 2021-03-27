@@ -9,17 +9,24 @@ import Foundation
 import SwiftUI
 
 class EventViewModel: BaseViewModel {
-
-    @Published var show = false
+    
+    var getEventWebService: GetEventWebService!
     var event: Event!
+    
+    @Published var show = false
+    var eventList: [Event] = []
 
     func setup(event: Event) {
         self.event = event
     }
-
-    enum EventType {
-        case food
-        case party
-        case sport
-    }
+    
+    func requestEvents() {
+       let serviceParameters = ExecuteServiceSetup(service: getEventWebService, parameters: EmptyParameters())
+       
+       executeRequest(serviceParameters, onSuccess: { value in
+        self.eventList.append(contentsOf: value.data)
+       }, onError: { error in
+        print(error)
+    })
+   }
 }

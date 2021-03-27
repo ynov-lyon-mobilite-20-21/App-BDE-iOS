@@ -48,7 +48,7 @@ struct EventItem: View {
 
 struct EventItem_Previews: PreviewProvider {
     static var previews: some View {
-        EventItem(event: Event(id: "1", name: "Espit Chupitos", type: .studentParty, image: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5))
+        EventItem(event: Event(_id: "1", name: "Espit Chupitos", type: .studentParty, imgType: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5))
             .preferredColorScheme(.dark)
             .frame(height: 320)
     }

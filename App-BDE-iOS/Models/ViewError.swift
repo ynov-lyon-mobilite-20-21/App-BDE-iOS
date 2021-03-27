@@ -15,6 +15,7 @@ struct ViewError: Error, Identifiable {
     var description: String {  NSLocalizedString("error.alert.\(errorCode).description", comment: "") }
 
     enum ErrorCode: String {
+        case UNKNOW_ERROR
         case PARTY_REFUSED
     }
 }
