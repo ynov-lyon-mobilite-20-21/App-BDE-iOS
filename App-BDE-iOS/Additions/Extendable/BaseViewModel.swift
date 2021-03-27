@@ -49,7 +49,9 @@ class BaseViewModel: ObservableObject, Weakable {
             onTokenSuccess(value.data.token)
         })
     }
-    func executeRequest<T: WebService>(_ serviceSetup: ExecuteServiceSetup<T>, onSuccess: @escaping ((GenericServerResponse<T.DecodedType>) -> Void), onError: ((ViewError) -> Void)? = nil) {
+    func executeRequest<T: WebService>(_ serviceSetup: ExecuteServiceSetup<T>,
+                                       onSuccess: @escaping ((GenericServerResponse<T.DecodedType>) -> Void),
+                                       onError: ((ViewError) -> Void)? = nil) {
         let serviceExecution = weakify { strongSelf in
             serviceSetup.service
                 .call(serviceSetup.parameters, urlParameters: serviceSetup.urlParameters)
@@ -86,6 +88,7 @@ class BaseViewModel: ObservableObject, Weakable {
             handleError(error: error)
             onError?(error)
         case .failure(let error):
+            print(error)
             let customError = ViewError(errorCode: .UNKNOW_ERROR)
             handleError(error: customError)
             onError?(customError)
@@ -124,4 +127,3 @@ class BaseViewModel: ObservableObject, Weakable {
         }
     }
 }
-

@@ -35,7 +35,16 @@ enum Promotion: String, Decodable, CaseIterable, Equatable {
 
 enum Formation: String, Decodable, CaseIterable {
     static var allCases: [Formation] {
-        return [.informatique, .audiovisuel, .anim3D, .creaDesign, .dataScientist, .expertReseau, .expertWeb, .expertLogicielMobile, .strat360, .dirArtistique, .entreprenariatStartup,
+        return [.informatique,
+                .audiovisuel,
+                .anim3D, .creaDesign,
+                .dataScientist,
+                .expertReseau,
+                .expertWeb,
+                .expertLogicielMobile,
+                .strat360,
+                .dirArtistique,
+                .entreprenariatStartup,
                 .marketManaBigData]
     }
 

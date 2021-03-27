@@ -109,8 +109,6 @@
 		03C3948825EA62A50037153D /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948725EA62A50037153D /* QRCodeView.swift */; };
 		03C3948D25EA62AF0037153D /* QRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C3948C25EA62AF0037153D /* QRCodeViewModel.swift */; };
 		03C54BE6252F37D30014FF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C54BE5252F37D30014FF4E /* Assets.xcassets */; };
-		03C54BF4252F37D30014FF4E /* App_BDE_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BF3252F37D30014FF4E /* App_BDE_iOSTests.swift */; };
-		03C54BFF252F37D30014FF4E /* App_BDE_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C54BFE252F37D30014FF4E /* App_BDE_iOSUITests.swift */; };
 		03DACEB8260129B8005BE3F7 /* NFXAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE90260129B8005BE3F7 /* NFXAssets.swift */; };
 		03DACEB9260129B8005BE3F7 /* NFXWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE91260129B8005BE3F7 /* NFXWindowController.swift */; };
 		03DACEBA260129B8005BE3F7 /* NFXInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACE92260129B8005BE3F7 /* NFXInfoController.swift */; };
@@ -266,10 +264,8 @@
 		03C54BE5252F37D30014FF4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03C54BEA252F37D30014FF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C54BEF252F37D30014FF4E /* App-BDE-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-BDE-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C54BF3252F37D30014FF4E /* App_BDE_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_BDE_iOSTests.swift; sourceTree = "<group>"; };
 		03C54BF5252F37D30014FF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C54BFA252F37D30014FF4E /* App-BDE-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App-BDE-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C54BFE252F37D30014FF4E /* App_BDE_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_BDE_iOSUITests.swift; sourceTree = "<group>"; };
 		03C54C00252F37D30014FF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03DACE90260129B8005BE3F7 /* NFXAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXAssets.swift; sourceTree = "<group>"; };
 		03DACE91260129B8005BE3F7 /* NFXWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFXWindowController.swift; sourceTree = "<group>"; };
@@ -795,7 +791,6 @@
 		03C54BF2252F37D30014FF4E /* App-BDE-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				03C54BF3252F37D30014FF4E /* App_BDE_iOSTests.swift */,
 				03C54BF5252F37D30014FF4E /* Info.plist */,
 				03C1DAD4260E72570039E16D /* EventViewModel_spec.swift */,
 			);
@@ -805,7 +800,6 @@
 		03C54BFD252F37D30014FF4E /* App-BDE-iOSUITests */ = {
 			isa = PBXGroup;
 			children = (
-				03C54BFE252F37D30014FF4E /* App_BDE_iOSUITests.swift */,
 				03C54C00252F37D30014FF4E /* Info.plist */,
 			);
 			path = "App-BDE-iOSUITests";
@@ -1216,7 +1210,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C1DAD5260E72570039E16D /* EventViewModel_spec.swift in Sources */,
-				03C54BF4252F37D30014FF4E /* App_BDE_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1224,7 +1217,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C54BFF252F37D30014FF4E /* App_BDE_iOSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

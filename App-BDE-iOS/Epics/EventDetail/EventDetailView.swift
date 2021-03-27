@@ -110,6 +110,13 @@ struct EventDetailView: View {
 
 struct EventDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ViewProvider.eventDetail(event: Event(_id: "1", name: "Espit Chupitos", type: .studentParty, imgType: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5))
+        ViewProvider.eventDetail(event: Event(_id: "1",
+                                              name: "Espit Chupitos",
+                                              type: .studentParty,
+                                              imgType: .party,
+                                              date: "21/12/2020",
+                                              address: "22 rue du Test",
+                                              description: "C'est une sacré description",
+                                              price: 5))
     }
 }

@@ -52,6 +52,9 @@ struct OnBoardingCardView: View {
 
 struct OnBoardingCardView_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingCardView(imageName: "onboarding_2", imageSupp: "logos_illustration2", title: "Achète ta place facilement et ne rate aucun évènement", content: "Grâce à cette app, tu peux stocker tous tes billets au même endroit, les retrouver rapidement et les faire scanner par l'équipe du BDE le jour J !")
+        OnBoardingCardView(imageName: "onboarding_2",
+                           imageSupp: "logos_illustration2",
+                           title: "Achète ta place facilement et ne rate aucun évènement",
+                           content: "Grâce à cette app, tu peux stocker tous tes billets au même endroit, les retrouver rapidement et les faire scanner par l'équipe du BDE le jour J !")
     }
 }

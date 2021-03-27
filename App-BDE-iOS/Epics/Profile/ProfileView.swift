@@ -10,8 +10,22 @@ import SwiftUI
 struct ProfileView: View {
     @ObservedObject var viewModel: ProfileViewModel
     
-    let eventList: [Event] = [Event(_id: "1", name: "Espit Chupitos", type: .studentParty, imgType: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5),
-                              Event(_id: "1", name: "Espit Chupitos", type: .studentParty, imgType: .party, date: "21/12/2020", address: "22 rue du Test", description: "C'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré descriptionC'est une sacré description", price: 5)]
+    let eventList: [Event] = [Event(_id: "1",
+                                    name: "Espit Chupitos",
+                                    type: .studentParty,
+                                    imgType: .party,
+                                    date: "21/12/2020",
+                                    address: "22 rue du Test",
+                                    description: "C'est une sacré description",
+                                    price: 5),
+                              Event(_id: "1",
+                                    name: "Espit Chupitos",
+                                    type: .studentParty,
+                                    imgType: .party,
+                                    date: "21/12/2020",
+                                    address: "22 rue du Test",
+                                    description: "C'est une sacré description",
+                                    price: 5)]
     
     @Environment(\.colorScheme) var colorScheme
     @State private var isConnected = false
