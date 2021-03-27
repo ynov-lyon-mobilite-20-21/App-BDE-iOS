@@ -15,7 +15,7 @@ class RefreshTokenWebService: WebService {
     typealias DecodedType = AuthToken
     typealias ServiceParameters = RefreshTokenServiceParameter
     
-    var url: String = "https://lyon-ynov-bde-api.herokuapp.com/api/auth/refresh"
+    var url: String = "https://lyon-ynov-bde-api.herokuapp.com/api/auth/refreshToken"
     var httpMethod: HTTPMethod = .POST
     var headers: [String : String] = [:]
 }

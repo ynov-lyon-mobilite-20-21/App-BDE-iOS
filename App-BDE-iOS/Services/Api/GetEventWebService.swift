@@ -9,7 +9,7 @@ import Foundation
 
 final class GetEventWebService: WebService {
     
-    typealias DecodedType = Event
+    typealias DecodedType = [Event]
     typealias ServiceParameters = EmptyParameters
     
     var url: String = "https://lyon-ynov-bde-api.herokuapp.com/api/events"

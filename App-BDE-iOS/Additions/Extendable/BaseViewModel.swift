@@ -38,7 +38,7 @@ class BaseViewModel: ObservableObject, Weakable {
         } catch { return true }
     }
     
-    func getNewToken(onTokenSuccess: @escaping () -> Void) {
+    func getNewToken(onTokenSuccess: @escaping (String) -> Void) {
         let refreshTokenWebService = RefreshTokenWebService()
         
         guard let refreshToken = refreshToken else { return }
@@ -46,10 +46,9 @@ class BaseViewModel: ObservableObject, Weakable {
         let serviceParameter = ExecuteServiceSetup(service: refreshTokenWebService, parameters: RefreshTokenServiceParameter(refreshToken: refreshToken))
         executeRequest(serviceParameter, onSuccess: { value in
             KeyChainService.shared.addTokensInKeyChain(token: value.data.token, refreshToken: value.data.refreshToken)
-            onTokenSuccess()
+            onTokenSuccess(value.data.token)
         })
     }
-    
     func executeRequest<T: WebService>(_ serviceSetup: ExecuteServiceSetup<T>, onSuccess: @escaping ((GenericServerResponse<T.DecodedType>) -> Void), onError: ((ViewError) -> Void)? = nil) {
         let serviceExecution = weakify { strongSelf in
             serviceSetup.service
@@ -61,9 +60,7 @@ class BaseViewModel: ObservableObject, Weakable {
                 }).store(in: &strongSelf.bag)
         }
         executeTheRequest(serviceSetupParameter: serviceSetup, serviceExecution: serviceExecution)
-        
     }
-    
     func executeRequestWithoutDecode<T: WebService>(_ serviceSetup: ExecuteServiceSetup<T>, onSuccess: @escaping (() -> Void), onError: ((ViewError) -> Void)? = nil) {
         let serviceExecution = weakify { strongSelf in
             serviceSetup.service
@@ -88,7 +85,7 @@ class BaseViewModel: ObservableObject, Weakable {
         case .failure(let error as ViewError):
             handleError(error: error)
             onError?(error)
-        case .failure( _):
+        case .failure(let error):
             let customError = ViewError(errorCode: .UNKNOW_ERROR)
             handleError(error: customError)
             onError?(customError)
@@ -100,7 +97,7 @@ class BaseViewModel: ObservableObject, Weakable {
             guard let token = token else { return }
             
             if isExpired {
-                getNewToken(onTokenSuccess: {
+                getNewToken(onTokenSuccess: { token in
                     serviceSetupParameter.service.addHeader(key: "Authorization", value: "Bearer \(token)")
                     serviceExecution()
                 })
