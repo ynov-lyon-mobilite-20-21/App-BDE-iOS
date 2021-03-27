@@ -16,7 +16,7 @@ final class OnBoardingViewModel: BaseViewModel {
         objectWillChange.send()
     }}
 
-    func Next() {
+    func next() {
         if selected < 2 {
             selected+=1
         } else if selected == 2 {
@@ -24,7 +24,7 @@ final class OnBoardingViewModel: BaseViewModel {
         }
     }
 
-    func Previous() {
+    func previous() {
         if selected > 0 {
             selected-=1
         } else { return }
