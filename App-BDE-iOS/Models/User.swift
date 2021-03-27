@@ -22,15 +22,15 @@ struct User: Decodable {
 
 enum Promotion: String, Decodable, CaseIterable, Equatable {
     static var allCases: [Promotion] {
-        return [.B1, .B2, .B3, .M1, M2]
+        return [.b1, .b2, .b3, .m1, m2]
     }
 
     case defaultValue = "Promotion",
-         B1 = "B1",
-         B2 = "B2",
-         B3 = "B3",
-         M1 = "M1",
-         M2 = "M2"
+         b1 = "B1",
+         b2 = "B2",
+         b3 = "B3",
+         m1 = "M1",
+         m2 = "M2"
 }
 
 enum Formation: String, Decodable, CaseIterable {

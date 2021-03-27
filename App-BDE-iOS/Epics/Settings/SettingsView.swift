@@ -15,7 +15,7 @@ struct SettingsView: View {
             VStack {
                 List {
                     Section(header: Text("")) {
-                        NavigationLink(destination: ViewProvider.UpdateInfo()) {
+                        NavigationLink(destination: ViewProvider.updateInfo()) {
                             VStack(alignment: .leading) {
                                 Text("Nicolas Barbosa")
                                     .font(.title3)

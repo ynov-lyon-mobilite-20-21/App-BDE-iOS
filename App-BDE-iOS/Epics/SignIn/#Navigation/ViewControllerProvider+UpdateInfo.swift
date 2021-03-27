@@ -9,7 +9,7 @@ import Foundation
 import Swinject
 
 extension ViewProvider {
-    static func UpdateInfo() -> UpdateInfoView {
+    static func updateInfo() -> UpdateInfoView {
         let assembler = generateAssembler(viewControllerAssembly: UpdateInfoAssembly())
 
         return assembler.resolver.resolve(UpdateInfoView.self)!

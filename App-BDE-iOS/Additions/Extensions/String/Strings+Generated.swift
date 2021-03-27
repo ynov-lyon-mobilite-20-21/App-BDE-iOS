@@ -64,6 +64,12 @@ internal enum L10n {
     internal static let title2 = L10n.tr("Localizable", "onBoarding.title2")
     /// Prends contact quand tu veux avec les membres de ton BDE
     internal static let title3 = L10n.tr("Localizable", "onBoarding.title3")
+    internal enum Button {
+      /// Suivant
+      internal static let next = L10n.tr("Localizable", "onBoarding.button.next")
+      /// Précédent
+      internal static let previous = L10n.tr("Localizable", "onBoarding.button.previous")
+    }
   }
 
   internal enum Profil {
