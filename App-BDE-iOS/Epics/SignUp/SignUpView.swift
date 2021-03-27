@@ -15,36 +15,35 @@ struct SignUpView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Identifiants")) {
-                    TextField("Email", text: $viewModel.mail)
+                Section(header: Text(L10n.SignUpView.Section.identifiers)) {
+                    TextField(L10n.SignUpView.TextField.Identifiers.mail, text: $viewModel.mail)
                         .textContentType(.emailAddress)
                         .keyboardType(.emailAddress)
                         .border(Color.red,
                                 width: viewModel.mailIsValid ? 1 : 0)
 
-                    SecureField("Mot de passe", text: $viewModel.password)
+                    SecureField(L10n.SignUpView.TextField.Identifiers.password, text: $viewModel.password)
                         .textContentType(.password)
                         .border(Color.red,
                                 width: viewModel.passwordIsValid ? 1 : 0)
                 }
 
-                Section(header: Text("Informations personnelles")) {
-                    TextField("Prenom", text: $viewModel.firstName)
+                Section(header: Text(L10n.SignUpView.Section.personalInfos)) {
+                    TextField(L10n.SignUpView.TextField.PersonalInfos.firstName, text: $viewModel.firstName)
                         .textContentType(.name)
                         .disableAutocorrection(true)
                         .border(Color.red,
                                 width: viewModel.mailIsValid ? 1 : 0)
 
-                    TextField("Nom", text: $viewModel.lastName)
+                    TextField(L10n.SignUpView.TextField.PersonalInfos.name, text: $viewModel.lastName)
                         .textContentType(.familyName)
                         .disableAutocorrection(true)
                         .border(Color.red,
                                 width: viewModel.mailIsValid ? 1 : 0)
                 }
 
-                Section(header: Text("Informations étudiant")) {
-
-                        Picker("Promotion", selection: $viewModel.promotion) {
+                Section(header: Text(L10n.SignUpView.Section.studentInfos)) {
+                    Picker(L10n.SignUpView.TextField.StudentInfos.promotion, selection: $viewModel.promotion) {
                             ForEach(Promotion.allCases, id: \.self) { promotion in
                                 Text(promotion.rawValue)
                                     .tag(promotion)
@@ -53,7 +52,7 @@ struct SignUpView: View {
                         .foregroundColor(Color.bdeGreen)
                         .pickerStyle(DefaultPickerStyle())
 
-                        Picker("Formation", selection: $viewModel.formation) {
+                    Picker(L10n.SignUpView.TextField.StudentInfos.formation, selection: $viewModel.formation) {
                             ForEach(Formation.allCases, id: \.self) { promotion in
                                 Text(promotion.rawValue)
                                     .tag(promotion)
@@ -69,12 +68,12 @@ struct SignUpView: View {
                 }, label: {
                             HStack {
                                 Spacer()
-                                Text("Créer un compte")
+                                Text(L10n.SignUpView.Button.signUp)
                                 Spacer()
                             }
                         }).foregroundColor(Color.bdeGreen)
             }
-            .navigationTitle("Créer un compte")
+            .navigationTitle(L10n.SignUpView.Button.signUp)
         }
     }
 }

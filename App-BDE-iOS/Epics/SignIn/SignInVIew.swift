@@ -28,14 +28,14 @@ struct SignInView: View {
         ZStack {
                 NavigationView {
                     Form {
-                        Section(header: Text("signInView.section1header".localized)) {
-                            TextField("Email", text: $viewModel.mail)
+                        Section(header: Text(L10n.SignInView.Section.identifiers)) {
+                            TextField(L10n.SignInView.TextField.mail, text: $viewModel.mail)
                                 .textContentType(.emailAddress)
                                 .keyboardType(.emailAddress)
                                 .border(Color.red,
                                         width: viewModel.mailIsValid ? 1 : 0)
 
-                            SecureField("Mot de passe", text: $viewModel.password)
+                            SecureField(L10n.SignInView.TextField.password, text: $viewModel.password)
                                 .textContentType(.password)
                                 .border(Color.red,
                                         width: viewModel.passwordIsValid ? 1 : 0)
@@ -49,7 +49,7 @@ struct SignInView: View {
                         }, label: {
                             HStack {
                                 Spacer()
-                                Text("Connexion")
+                                Text(L10n.SignInView.Button.signIn)
                                 Spacer()
                             }
                         }).foregroundColor(Color.bdeGreen)
@@ -64,7 +64,7 @@ struct SignInView: View {
                             }
                         }).foregroundColor(Color.bdeGreen)
                     }
-                    .navigationTitle("Connexion")
+                    .navigationTitle(L10n.SignInView.Button.signIn)
                 }
                 .sheet(isPresented: self.$showModal) { ViewProvider.signUp() }
 

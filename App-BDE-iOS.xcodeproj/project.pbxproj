@@ -48,6 +48,7 @@
 		0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357F1E6259CD77300C9A972 /* LoadingView.swift */; };
 		036A2BE525503BCB0057B1C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036A2BE425503BCB0057B1C9 /* Colors.xcassets */; };
 		036A2BF125503D010057B1C9 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A2BF025503D010057B1C9 /* Color+Extensions.swift */; };
+		036B5957260FC19B006A3430 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B5956260FC19B006A3430 /* XCAssets+Generated.swift */; };
 		0370A40A25F7DF9D00A145C5 /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370A40925F7DF9D00A145C5 /* EntryPoint.swift */; };
 		0370A41825F7EADF00A145C5 /* TabViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370A41725F7EADF00A145C5 /* TabViewProvider.swift */; };
 		0370A41D25F7EE8800A145C5 /* GetUserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370A41C25F7EE8800A145C5 /* GetUserWebService.swift */; };
@@ -201,6 +202,7 @@
 		0357F1E6259CD77300C9A972 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		036A2BE425503BCB0057B1C9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		036A2BF025503D010057B1C9 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		036B5956260FC19B006A3430 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		0370A40925F7DF9D00A145C5 /* EntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
 		0370A41725F7EADF00A145C5 /* TabViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewProvider.swift; sourceTree = "<group>"; };
 		0370A41C25F7EE8800A145C5 /* GetUserWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserWebService.swift; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 		035AC07525AB46FD00746A8D /* String */ = {
 			isa = PBXGroup;
 			children = (
+				036B5956260FC19B006A3430 /* XCAssets+Generated.swift */,
 				03C3388725DD778C00B5443C /* Strings+Generated.swift */,
 				03B230F025585B59006EF0EA /* String+Extensions.swift */,
 			);
@@ -863,8 +866,8 @@
 			isa = PBXGroup;
 			children = (
 				0308680425BC671000D8D484 /* #Navigation */,
-				03B230B82558583A006EF0EA /* SignUpViewModel.swift */,
 				03DB0F0A2556E6280019E87E /* SignUpView.swift */,
+				03B230B82558583A006EF0EA /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -1160,6 +1163,7 @@
 				03B230F125585B59006EF0EA /* String+Extensions.swift in Sources */,
 				03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */,
 				03C3387425DD755500B5443C /* ViewError.swift in Sources */,
+				036B5957260FC19B006A3430 /* XCAssets+Generated.swift in Sources */,
 				030867C925BC60A200D8D484 /* EventDetailAssembly.swift in Sources */,
 				03C3947B25EA62820037153D /* QRCodeAssembly.swift in Sources */,
 				03C3948325EA62920037153D /* ViewControllerProvider+QRCode.swift in Sources */,

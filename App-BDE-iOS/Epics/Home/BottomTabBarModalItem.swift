@@ -20,7 +20,7 @@ struct BottomTabBarModalItem: View {
                 .foregroundColor(Color.whiteToBlack)
                 .frame(width: 85, height: 85)
                 .shadow(radius: 6 )
-            Image("logo_bde")
+            Image(Asset.logoBde.name)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 75, height: 75)

@@ -9,8 +9,6 @@
 "tabBar.event" = "Évènements";
 "tabBar.profil" = "Profil";
 
-"signInView.section1header" = "Identifiants";
-
 "onBoarding.title1" = "Parcours les évènements à venir de ton BDE";
 "onBoarding.title2" = "Achète ta place facilement et ne rate aucun évènement";
 "onBoarding.title3" = "Prends contact quand tu veux avec les membres de ton BDE";
@@ -20,7 +18,10 @@
 "onBoarding.button.next" = "Suivant";
 "onBoarding.button.previous" = "Précédent";
 
-"EventDetail.button.payment" = "Prendre ma place";
+"event.title" = "ÉVÈNEMENTS";
+
+"eventDetail.button.payment" = "Prendre ma place";
+"eventDetail.button.scanner" = "Scanner un QRCode";
 
 "profil.userTitle" = "MES INFORMATIONS";
 "profil.ticketsTitle" = "MES BILLETS";
@@ -37,6 +38,36 @@
 "settings.payment.info" = "Informations de paiement";
 "settings.account.delete" = "Supprimer le compte";
 "settings.account.logout" = "Déconnexion";
+
+"updateInfoView.title" = "Update";
+"updateInfoView.section.personalInfos" = "Informations personnelles";
+"updateInfoView.textField.personalInfos.name" = "Nom";
+"updateInfoView.textField.personalInfos.firstName" = "Prénom";
+"updateInfoView.section.identifiers" = "Identifiants";
+"updateInfoView.textField.identifiers.oldpassword" = "Ancien mot de passe";
+"updateInfoView.textField.identifiers.password" = "Mot de passe";
+"updateInfoView.section.studentInfos" = "Informations étudiant";
+"updateInfoView.textField.studentInfos.promotion" = "Promotion";
+"updateInfoView.textField.studentInfos.formation" = "Formation";
+"updateInfoView.button.updateInfos" = "Mettre à jour mes données";
+
+"signInView.section.identifiers" = "Identifiants";
+"signInView.textField.mail" = "Email";
+"signInView.textField.password" = "Mot de passe";
+"signInView.button.login" = "Se connecter";
+"signInView.button.signIn" = "Créer un compte";
+
+"signUpView.section.identifiers" = "Identifiants";
+"signUpView.textField.identifiers.mail" = "Email";
+"signUpView.textField.identifiers.password" = "Mot de passe";
+"signUpView.section.personalInfos" = "Informations personnelles";
+"signUpView.textField.personalInfos.name" = "Nom";
+"signUpView.textField.personalInfos.firstName" = "Prénom";
+"signUpView.section.studentInfos" = "Identifiants";
+"signUpView.textField.studentInfos.promotion" = "Ancien mot de passe";
+"signUpView.textField.studentInfos.formation" = "Mot de passe";
+"signUpView.button.signUp" = "Créer un compte";
+
 "QRCode.indication" = "QR-code à présenter au membre du  BDE responsable à l’entrée le jour J";
 
 "QRScanner.indication" = "Scanner le QR Code";

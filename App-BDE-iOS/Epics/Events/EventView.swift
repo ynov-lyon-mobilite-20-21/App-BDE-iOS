@@ -20,7 +20,7 @@ struct EventView: View {
                 ZStack {
                     TitleShape(radius: 20)
                         .fill(Color.blueToBlack)
-                    TitleCustom(title: "EVENEMENT", font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
+                    TitleCustom(title: L10n.Event.title, font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
                 }
                 .frame(width: 250, height: 40)
                 .shadow(radius: 6)
@@ -45,7 +45,7 @@ struct EventView: View {
         .background(
             ZStack {
                 Color.whiteToBlue
-                Image("background_event")
+                Image(Asset.backgroundEvent.name)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .opacity(colorScheme == .dark ? 0.2 : 1)

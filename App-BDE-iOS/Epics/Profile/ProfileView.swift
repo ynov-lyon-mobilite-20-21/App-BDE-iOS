@@ -29,7 +29,7 @@ struct ProfileView: View {
                                     .fill(Color.blueToBlack)
                                 HStack {
                                     Spacer()
-                                    TitleCustom(title: "MES INFORMATIONS", font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
+                                    TitleCustom(title: L10n.Profil.userTitle, font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
                                         .padding(.leading)
                                     Spacer()
                                 }
@@ -38,7 +38,7 @@ struct ProfileView: View {
 
                             Spacer()
 
-                            Image("ynovCampus")
+                            Image(Asset.ynovCampus.name)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(maxWidth: 70, maxHeight: 50)
@@ -52,7 +52,7 @@ struct ProfileView: View {
                             VStack(alignment: .leading, spacing: 10) {
                                 HStack {
                                     TitleCustom(title: "NICOLAS BARBOSA", font: Font.title3.weight(.bold), textColor: Color.blackToWhite, shadowColor: Color.bdeGreen)
-                                    Image("profilMenu")
+                                    Image(Asset.profilMenu.name)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(maxWidth: 30, maxHeight: 30)
@@ -71,7 +71,8 @@ struct ProfileView: View {
                             // User logo
                             VStack {
                                 Spacer()
-                                Image("logoInfo")
+                                //TODO add dynamic gesture of icons
+                                Image(Asset.LogoFormation.logoInfo.name)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 70, height: 70)
@@ -95,7 +96,7 @@ struct ProfileView: View {
                                     .fill(Color.blueToBlack)
                                 HStack {
                                     Spacer()
-                                    TitleCustom(title: "MES BILLETS", font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
+                                    TitleCustom(title: L10n.Profil.ticketsTitle, font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
                                         .padding(.leading)
                                     Spacer()
                                 }
@@ -130,7 +131,7 @@ struct ProfileView: View {
         .background(
             ZStack {
                 Color.whiteToBlue
-                Image("background_event")
+                Image(Asset.backgroundEvent.name)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .opacity(colorScheme == .dark ? 0.2 : 1)

@@ -8,13 +8,14 @@ struct EventItem: View {
     let event: Event
     var body: some View {
         VStack(spacing: 0) {
-                Image("card_LAN")
+            Image(event.imgType.rawValue)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .background(Color.blueToBlack)
 
                 HStack {
                     VStack {
+                        //TODO ajouter gestion icone pastille de card
                         Image("LAN_manette")
                             .renderingMode(.template)
                             .resizable()
@@ -53,38 +54,3 @@ struct EventItem_Previews: PreviewProvider {
             .frame(height: 320)
     }
 }
-
-// VStack {
-//            Image("card_KOLOK")
-//                .resizable()
-//                .aspectRatio(contentMode: .fill)
-//                .frame(width: UIScreen.main.bounds.width - 30)
-//
-//            HStack {
-//                VStack(alignment: .center) {
-//                    Image("LAN_manette")
-//                        .renderingMode(.template)
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .padding(.all, 5)
-//                        .foregroundColor(.whiteToYellow)
-//                        .frame(width: 60, height: 60)
-//                }
-//                    .background(Color.blueToBlack)
-//                    .cornerRadius(10)
-//                VStack(alignment: .leading, spacing: 6) {
-//                    Text(event.name)
-//                        .font(.headline).foregroundColor(.gray)
-//                    Text(event.name)
-//                        .font(.title2).bold()
-//                        .foregroundColor(.blackToGreen)
-//                }
-//                Spacer()
-//            }
-//            .padding()
-//            .background(Color.whiteToBlack)
-//
-//        }
-//        .frame(height: 300)
-//        .background(Color.blueToBlack)
-//        .cornerRadius(15)

@@ -19,7 +19,7 @@ struct EventDetailView: View {
             VStack {
                 GeometryReader { _ in
                     ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
-                        Image(/*viewModel.selectedItem.image.rawValue*/ "card_KOLOK")
+                        Image(viewModel.event.imgType.rawValue)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
@@ -58,7 +58,7 @@ struct EventDetailView: View {
                 VStack {
                     HStack {
                         HStack {
-                            Image("horloge")
+                            Image(Asset.horloge.name)
                                 .renderingMode(.template)
                                 .foregroundColor(Color.blackToWhite)
                             Text(viewModel.event.date)
@@ -95,7 +95,7 @@ struct EventDetailView: View {
             }, label: {
                 HStack {
                     Spacer()
-                    Text("Scanner")
+                    Text(L10n.EventDetail.Button.scanner)
                     Spacer()
                 }
             })
