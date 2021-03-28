@@ -11,7 +11,7 @@ import CodeScanner
 struct EventDetailView: View {
 
     @Environment(\.presentationMode) var presentation
-    @ObservedObject var viewModel: EventViewModel
+    @ObservedObject var viewModel: EventDetailViewModel
     @State private var isShowingScanner = false
 
     var body: some View {
@@ -28,7 +28,6 @@ struct EventDetailView: View {
                             Spacer()
                             Button(action: {
                                 self.presentation.wrappedValue.dismiss()
-                                viewModel.show.toggle()
                             }) {
                                 Image(systemName: "xmark")
                                     .frame(width: 10, height: 10)

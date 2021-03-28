@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct EventView: View {
-
+    
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: EventViewModel
     @State private var showModal: Bool = false
-
+    
     var body: some View {
-
+        
         ScrollView {
             HStack(alignment: .bottom) {
                 ZStack {
@@ -24,22 +24,19 @@ struct EventView: View {
                 }
                 .frame(width: 250, height: 40)
                 .shadow(radius: 6)
-                .onTapGesture {
-                    viewModel.requestEvents()
-                }
-
                 Spacer()
             }
             VStack(spacing: 10) {
-                ForEach(viewModel.eventList, id: \._id) { event in
-                    EventItem(event: event)
-                        .padding(.horizontal)
+                ForEach(viewModel.eventList, id: \._id) { eventItem in
+                    EventItem(event: eventItem)
                         .shadow(radius: 5)
                         .onTapGesture {
                             self.showModal = true
                         }
-                        .sheet(isPresented: self.$showModal) { ViewProvider.eventDetail(event: event) }
+                        .sheet(isPresented: self.$showModal) { ViewProvider.eventDetail(event: eventItem) }
                 }
+                .padding(.horizontal)
+
             }
         }
         .background(
@@ -49,10 +46,11 @@ struct EventView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .opacity(colorScheme == .dark ? 0.2 : 1)
-
+                
             }.ignoresSafeArea())
+        .onAppear(perform: viewModel.requestEvents)
     }
-
+    
 }
 
 struct EventView_Previews: PreviewProvider {

@@ -17,17 +17,6 @@ struct Event: Decodable {
     var price: Int
 }
 
-struct EventTest: Decodable {
-    var _id: String
-//    var name: String
-//    var type: EventType
-//    var image: ImageType
-//    var date: String
-//    var address: String
-//    var description: String
-//    var price: Int
-}
-
 enum EventType: String, Decodable, CaseIterable {
     case defaultValue = "",
          kolok = "Call Kolok",

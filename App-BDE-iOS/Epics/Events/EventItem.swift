@@ -32,7 +32,7 @@ struct EventItem: View {
                             .bold()
                             .foregroundColor(.gray)
                         Text(event.name)
-                            .font(.title3)
+                            .font(.headline)
                             .bold()
                     }
                     .padding(.leading, 10)

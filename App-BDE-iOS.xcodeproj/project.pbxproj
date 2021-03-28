@@ -40,6 +40,7 @@
 		031AA94A25F4FA8F00165D4C /* QRScanDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA94925F4FA8F00165D4C /* QRScanDTO.swift */; };
 		031AA95225F55E5400165D4C /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031AA95125F55E5400165D4C /* EventView.swift */; };
 		0324AF5025FE21AC00A880A4 /* GetEventWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0324AF4F25FE21AC00A880A4 /* GetEventWebService.swift */; };
+		0334388A2610B9CB005E64C2 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033438892610B9CB005E64C2 /* EventDetailViewModel.swift */; };
 		034390DB25F6A0B60047F142 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034390DA25F6A0B60047F142 /* Collection+Extensions.swift */; };
 		034390E425F6A7BD0047F142 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = 034390E325F6A7BD0047F142 /* JWTDecode */; };
 		034390E925F6AA2A0047F142 /* RefreshTokenWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034390E825F6AA2A0047F142 /* RefreshTokenWebService.swift */; };
@@ -192,6 +193,7 @@
 		031AA95125F55E5400165D4C /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		0324AF4F25FE21AC00A880A4 /* GetEventWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventWebService.swift; sourceTree = "<group>"; };
 		032FC03025423D3C006596A6 /* Fashion Fetish Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fashion Fetish Bold.ttf"; sourceTree = "<group>"; };
+		033438892610B9CB005E64C2 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
 		034390DA25F6A0B60047F142 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		034390E825F6AA2A0047F142 /* RefreshTokenWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenWebService.swift; sourceTree = "<group>"; };
 		0350F48B25A128D1008059A6 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 			children = (
 				030867C725BC608D00D8D484 /* #Navigation */,
 				03015C2B25F59043002E9F2A /* EventDetailView.swift */,
+				033438892610B9CB005E64C2 /* EventDetailViewModel.swift */,
 			);
 			path = EventDetail;
 			sourceTree = "<group>";
@@ -1176,6 +1179,7 @@
 				03DACEB8260129B8005BE3F7 /* NFXAssets.swift in Sources */,
 				0314D94525506DE90017F09C /* ProfilTopShape.swift in Sources */,
 				0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */,
+				0334388A2610B9CB005E64C2 /* EventDetailViewModel.swift in Sources */,
 				0314D9722551EE1B0017F09C /* LineShape.swift in Sources */,
 				03DACED8260129B8005BE3F7 /* NFXHelper_iOS.swift in Sources */,
 				0370A41D25F7EE8800A145C5 /* GetUserWebService.swift in Sources */,

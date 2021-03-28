@@ -13,6 +13,7 @@ import JWTDecode
 class BaseViewModel: ObservableObject, Weakable {
     @State var errorAlertIsShown: Bool = false
     
+    let objectWillChange = ObservableObjectPublisher()
     var bag = Set<AnyCancellable>()
     var error: ViewError?
     private let keyChainService = KeyChainService.shared

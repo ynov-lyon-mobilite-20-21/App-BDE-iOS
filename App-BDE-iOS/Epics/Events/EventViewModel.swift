@@ -10,21 +10,22 @@ import SwiftUI
 
 class EventViewModel: BaseViewModel {
     
-    var getEventWebService: GetEventWebService!
-    var event: Event!
-    
     @Published var show = false
-    var eventList: [Event] = []
-
-    func setup(event: Event) {
-        self.event = event
+    var getEventWebService: GetEventWebService!
+    var eventList: [Event] = [] {
+        didSet {
+            objectWillChange.send()
+        }
     }
     
     func requestEvents() {
        let serviceParameters = ExecuteServiceSetup(service: getEventWebService, parameters: EmptyParameters())
        
-       executeRequest(serviceParameters, onSuccess: { value in
-        self.eventList.append(contentsOf: value.data)
+       executeRequest(serviceParameters, onSuccess: weakify { strongSelf, events in
+        print(events.data)
+        DispatchQueue.main.async {
+            strongSelf.eventList = events.data
+        }
        }, onError: { error in
         print(error)
     })
