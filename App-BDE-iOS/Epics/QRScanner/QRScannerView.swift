@@ -31,7 +31,7 @@ struct QRScannerView: View {
                         .bold()
                         .foregroundColor(.white)
                     ZStack {
-                        CodeScannerView(codeTypes: [.qr]) { result in
+                        CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson") { result in
                             switch result {
                             case .success(let code):
                                 viewModel.scanQRCode(code)

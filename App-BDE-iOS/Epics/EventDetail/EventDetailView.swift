@@ -99,7 +99,7 @@ struct EventDetailView: View {
                 }
             })
             .sheet(isPresented: $isShowingScanner) {
-                ViewProvider.QRScanner()
+                ViewProvider.QRScanner(event: viewModel.event)
             }
         }
         .ignoresSafeArea(.all, edges: .top)

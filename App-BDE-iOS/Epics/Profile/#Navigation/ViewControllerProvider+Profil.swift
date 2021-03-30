@@ -11,7 +11,6 @@ import Swinject
 extension ViewProvider {
     static func profile() -> ProfileView {
         let assembler = generateAssembler(viewControllerAssembly: ProfileAssembly())
-
         return assembler.resolver.resolve(ProfileView.self)!
     }
 }
