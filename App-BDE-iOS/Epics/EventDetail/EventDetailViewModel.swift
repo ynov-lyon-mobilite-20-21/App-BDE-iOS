@@ -9,5 +9,9 @@ import Foundation
 
 class EventDetailViewModel: BaseViewModel {
     
+    func setup(event: Event) {
+        self.event = event
+    }
     var event: Event!
+    
 }

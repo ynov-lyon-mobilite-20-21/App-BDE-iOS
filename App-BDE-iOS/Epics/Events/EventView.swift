@@ -15,40 +15,38 @@ struct EventView: View {
     
     var body: some View {
         
-        ScrollView {
-            HStack(alignment: .bottom) {
-                ZStack {
-                    TitleShape(radius: 20)
-                        .fill(Color.blueToBlack)
-                    TitleCustom(title: L10n.Event.title, font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
+        GeometryReader { gr in
+            ScrollView {
+                HStack(alignment: .bottom) {
+                    ZStack {
+                        TitleShape(radius: 20)
+                            .fill(Color.blueToBlack)
+                        TitleCustom(title: L10n.Event.title, font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
+                    }
+                    .frame(width: 250, height: 40)
+                    .shadow(radius: 6)
+                    Spacer()
                 }
-                .frame(width: 250, height: 40)
-                .shadow(radius: 6)
-                Spacer()
-            }
-            VStack(spacing: 10) {
-                ForEach(viewModel.eventList, id: \._id) { eventItem in
-                    EventItem(event: eventItem)
-                        .shadow(radius: 5)
-                        .onTapGesture {
-                            self.showModal = true
-                        }
-                        .sheet(isPresented: self.$showModal) { ViewProvider.eventDetail(event: eventItem) }
+                VStack(spacing: 10) {
+                    ForEach(viewModel.eventList, id: \._id) { event in
+                        EventItem(event: event)
+                            .shadow(radius: 5)
+                    }
                 }
                 .padding(.horizontal)
-
+                .frame(width: gr.size.width)
             }
+            .background(
+                ZStack {
+                    Color.whiteToBlue
+                    Image(Asset.backgroundEvent.name)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .opacity(colorScheme == .dark ? 0.2 : 1)
+                    
+                })
+            .onAppear(perform: viewModel.requestEvents)
         }
-        .background(
-            ZStack {
-                Color.whiteToBlue
-                Image(Asset.backgroundEvent.name)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .opacity(colorScheme == .dark ? 0.2 : 1)
-                
-            }.ignoresSafeArea())
-        .onAppear(perform: viewModel.requestEvents)
     }
     
 }

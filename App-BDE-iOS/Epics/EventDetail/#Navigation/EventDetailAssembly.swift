@@ -12,7 +12,7 @@ final class EventDetailAssembly: Assembly {
     func assemble(container: Container) {
         container.register(EventDetailViewModel.self) { (_: Resolver, event: Event) -> EventDetailViewModel in
             let viewModel = EventDetailViewModel()
-            viewModel.event = event
+            viewModel.setup(event: event)
             return viewModel
         }
 

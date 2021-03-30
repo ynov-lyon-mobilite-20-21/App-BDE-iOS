@@ -22,7 +22,6 @@ class EventViewModel: BaseViewModel {
        let serviceParameters = ExecuteServiceSetup(service: getEventWebService, parameters: EmptyParameters())
        
        executeRequest(serviceParameters, onSuccess: weakify { strongSelf, events in
-        print(events.data)
         DispatchQueue.main.async {
             strongSelf.eventList = events.data
         }

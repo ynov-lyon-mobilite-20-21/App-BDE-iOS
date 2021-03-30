@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct Event: Decodable {
     var _id: String
     var name: String
