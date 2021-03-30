@@ -8,51 +8,47 @@
 import SwiftUI
 
 struct EventView: View {
-
+    
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: EventViewModel
     @State private var showModal: Bool = false
-
+    
     var body: some View {
-
-        ScrollView {
-            HStack(alignment: .bottom) {
+        
+        GeometryReader { gr in
+            ScrollView {
+                HStack(alignment: .bottom) {
+                    ZStack {
+                        TitleShape(radius: 20)
+                            .fill(Color.blueToBlack)
+                        TitleCustom(title: L10n.Event.title, font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
+                    }
+                    .frame(width: 250, height: 40)
+                    .shadow(radius: 6)
+                    Spacer()
+                }
+                VStack(spacing: 10) {
+                    ForEach(viewModel.eventList, id: \._id) { event in
+                        EventItem(event: event)
+                            .shadow(radius: 5)
+                    }
+                }
+                .padding(.horizontal)
+                .frame(width: gr.size.width)
+            }
+            .background(
                 ZStack {
-                    TitleShape(radius: 20)
-                        .fill(Color.blueToBlack)
-                    TitleCustom(title: L10n.Event.title, font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
-                }
-                .frame(width: 250, height: 40)
-                .shadow(radius: 6)
-                .onTapGesture {
-                    viewModel.requestEvents()
-                }
-
-                Spacer()
-            }
-            VStack(spacing: 10) {
-                ForEach(viewModel.eventList, id: \._id) { event in
-                    EventItem(event: event)
-                        .padding(.horizontal)
-                        .shadow(radius: 5)
-                        .onTapGesture {
-                            self.showModal = true
-                        }
-                        .sheet(isPresented: self.$showModal) { ViewProvider.eventDetail(event: event) }
-                }
-            }
+                    Color.whiteToBlue
+                    Image(Asset.backgroundEvent.name)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .opacity(colorScheme == .dark ? 0.2 : 1)
+                    
+                })
+            .onAppear(perform: viewModel.requestEvents)
         }
-        .background(
-            ZStack {
-                Color.whiteToBlue
-                Image(Asset.backgroundEvent.name)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .opacity(colorScheme == .dark ? 0.2 : 1)
-
-            }.ignoresSafeArea())
     }
-
+    
 }
 
 struct EventView_Previews: PreviewProvider {

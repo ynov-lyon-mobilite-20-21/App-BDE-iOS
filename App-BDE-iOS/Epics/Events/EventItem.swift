@@ -6,44 +6,52 @@ import SwiftUI
 
 struct EventItem: View {
     let event: Event
+    @State private var showModal: Bool = false
+    
     var body: some View {
         VStack(spacing: 0) {
             Image(event.imgType.rawValue)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .background(Color.blueToBlack)
-
-                HStack {
-                    VStack {
-                        //TODO ajouter gestion icone pastille de card
-                        Image("LAN_manette")
-                            .renderingMode(.template)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.bdeYellow)
-                            .padding(6)
-                            .background(Color.bdeBlue)
-                            .cornerRadius(10)
-                            .frame(width: 60, height: 60)
-                    }
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text(event.type.rawValue)
-                            .font(.subheadline)
-                            .bold()
-                            .foregroundColor(.gray)
-                        Text(event.name)
-                            .font(.title3)
-                            .bold()
-                    }
-                    .padding(.leading, 10)
-
-                    Spacer()
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .background(Color.blueToBlack)
+            
+            HStack {
+                VStack {
+                    //TODO ajouter gestion icone pastille de card
+                    Image("LAN_manette")
+                        .renderingMode(.template)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.bdeYellow)
+                        .padding(6)
+                        .background(Color.bdeBlue)
+                        .cornerRadius(10)
+                        .frame(width: 60, height: 60)
                 }
-                .padding(.horizontal)
-                .padding(.vertical, 6)
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(event.type.rawValue)
+                        .font(.subheadline)
+                        .bold()
+                        .foregroundColor(.gray)
+                    Text(event.name)
+                        .font(.headline)
+                        .bold()
+                }
+                .padding(.leading, 10)
+                
+                Spacer()
             }
-            .background(Color.whiteToBlue)
-            .cornerRadius(20)
+            .padding(.horizontal)
+            .padding(.vertical, 6)
+            .sheet(isPresented: self.$showModal) { ViewProvider.eventDetail(event: event) }
+        }
+        .background(Color.whiteToBlue)
+        .cornerRadius(20)
+        .onTapGesture {
+            print(event)
+            self.showModal = true
+        }
+        
     }
 }
 
