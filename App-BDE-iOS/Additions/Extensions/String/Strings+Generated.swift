@@ -153,9 +153,9 @@ internal enum L10n {
         internal static let name = L10n.tr("Localizable", "signUpView.textField.personalInfos.name")
       }
       internal enum StudentInfos {
-        /// Mot de passe
+        /// Formation
         internal static let formation = L10n.tr("Localizable", "signUpView.textField.studentInfos.formation")
-        /// Ancien mot de passe
+        /// Promotion
         internal static let promotion = L10n.tr("Localizable", "signUpView.textField.studentInfos.promotion")
       }
     }

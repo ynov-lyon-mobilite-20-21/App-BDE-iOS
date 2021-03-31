@@ -75,7 +75,7 @@ struct ProfileView: View {
                                         .onTapGesture {
                                             self.showModal = true
                                         }
-                                        .sheet(isPresented: self.$showModal) { ViewProvider.settings() }
+                                        .sheet(isPresented: self.$showModal) { ViewProvider.signIn() }
                                 }
                                 Text("M1 Expert Développement Web")
                                 Text("nicolas.barbosa@ynov.com")

@@ -15,7 +15,7 @@ final class QRScannerWebService: WebService {
     typealias DecodedType = Ticket
     typealias ServiceParameters = EmptyParameters
 
-    var url: String = "https://lyon-ynov-bde-api.herokuapp.com/api/ticket/%@"
+    var url: String = "https://lyon-ynov-bde-api.herokuapp.com/api/ticket/%@/check"
     var httpMethod: HTTPMethod = .GET
     var headers: [String : String] = [:]
     
