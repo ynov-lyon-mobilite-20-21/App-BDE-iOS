@@ -38,11 +38,11 @@ internal enum Asset {
     internal static let cardSPORT = ImageAsset(name: "card_SPORT")
   }
   internal enum EventTypeImage {
-    internal static let kolokBière = ImageAsset(name: "KOLOK_bière")
+    internal static let foodStand = ImageAsset(name: "FOOD_stand")
+    internal static let kolokBiere = ImageAsset(name: "KOLOK_biere")
     internal static let lanManette = ImageAsset(name: "LAN_manette")
-    internal static let nourritureStand = ImageAsset(name: "NOURRITURE_stand")
-    internal static let soireeCocktail = ImageAsset(name: "SOIREE_cocktail")
-    internal static let sportHaltère = ImageAsset(name: "SPORT_haltère")
+    internal static let partyCocktail = ImageAsset(name: "PARTY_cocktail")
+    internal static let sportHaltere = ImageAsset(name: "SPORT_haltere")
   }
   internal static let horloge = ImageAsset(name: "horloge")
   internal static let logoBde = ImageAsset(name: "logo_bde")

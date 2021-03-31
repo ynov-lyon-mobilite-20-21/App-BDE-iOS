@@ -17,16 +17,15 @@ struct EventItem: View {
             
             HStack {
                 VStack {
-                    //TODO ajouter gestion icone pastille de card
-                    Image("LAN_manette")
+                    Image(event.logoType.rawValue)
                         .renderingMode(.template)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                        .frame(width: 40, height: 40)
                         .foregroundColor(.bdeYellow)
                         .padding(6)
                         .background(Color.bdeBlue)
                         .cornerRadius(10)
-                        .frame(width: 60, height: 60)
                 }
                 VStack(alignment: .leading, spacing: 5) {
                     Text(event.type.rawValue)
@@ -48,7 +47,6 @@ struct EventItem: View {
         .background(Color.whiteToBlue)
         .cornerRadius(20)
         .onTapGesture {
-            print(event)
             self.showModal = true
         }
         
@@ -57,15 +55,28 @@ struct EventItem: View {
 
 struct EventItem_Previews: PreviewProvider {
     static var previews: some View {
-        EventItem(event: Event(_id: "1",
-                               name: "Espit Chupitos",
-                               type: .studentParty,
-                               imgType: .party,
-                               date: "21/12/2020",
-                               address: "22 rue du Test",
-                               description: "C'est une sacré description",
-                               price: 5))
-            .preferredColorScheme(.dark)
-            .frame(height: 320)
+        Group {
+            EventItem(event: Event(_id: "1",
+                                   name: "Espit Chupitos",
+                                   type: .studentParty,
+                                   imgType: .party,
+                                   logoType: .sport,
+                                   date: "21/12/2020", hour: "20h",
+                                   address: "22 rue du Test",
+                                   description: "C'est une sacré description",
+                                   price: 5))
+                .frame(height: 320)
+            EventItem(event: Event(_id: "1",
+                                   name: "Espit Chupitos",
+                                   type: .studentParty,
+                                   imgType: .party,
+                                   logoType: .party,
+                                   date: "21/12/2020", hour: "20h",
+                                   address: "22 rue du Test",
+                                   description: "C'est une sacré description",
+                                   price: 5))
+                .preferredColorScheme(.dark)
+                .frame(height: 320)
+        }
     }
 }

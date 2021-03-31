@@ -45,9 +45,9 @@ struct EventDetailView: View {
 
                 HStack {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(viewModel.event.type.rawValue)
+                        Text(viewModel.event.name)
                             .fontWeight(.bold)
-                        Text(viewModel.event.address)
+                        Text(viewModel.event.type.rawValue)
                             .font(.caption)
                             .foregroundColor(.gray)
                     }
@@ -60,7 +60,7 @@ struct EventDetailView: View {
                             Image(Asset.horloge.name)
                                 .renderingMode(.template)
                                 .foregroundColor(Color.blackToWhite)
-                            Text(viewModel.event.date)
+                            Text(viewModel.event.hour)
                         }
                         Spacer()
                         Text(viewModel.event.date)
@@ -69,6 +69,7 @@ struct EventDetailView: View {
                         Text(viewModel.event.address)
                         Spacer()
                     }
+                    .padding(.top)
                 }
                 .padding(.horizontal)
 
@@ -113,9 +114,10 @@ struct EventDetailView_Previews: PreviewProvider {
                                               name: "Espit Chupitos",
                                               type: .studentParty,
                                               imgType: .party,
-                                              date: "21/12/2020",
+                                              logoType: .party,
+                                              date: "21/12/2020", hour: "20h",
                                               address: "22 rue du Test",
-                                              description: "C'est une sacré description",
+                                              description: "C'est une sacré  description",
                                               price: 5))
     }
 }
