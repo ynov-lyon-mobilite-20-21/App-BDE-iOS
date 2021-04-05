@@ -73,3 +73,4 @@
 
 "QRScanner.indication" = "Scanner le QR Code";
 "QRScanner.ticketId" = "Billet n°";
+"QRScanner.button.scanAgain" = "Scanner à nouveau";

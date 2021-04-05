@@ -21,6 +21,10 @@ internal enum L10n {
     internal static let indication = L10n.tr("Localizable", "QRScanner.indication")
     /// Billet n°
     internal static let ticketId = L10n.tr("Localizable", "QRScanner.ticketId")
+    internal enum Button {
+      /// Scanner à nouveau
+      internal static let scanAgain = L10n.tr("Localizable", "QRScanner.button.scanAgain")
+    }
   }
 
   internal enum Error {

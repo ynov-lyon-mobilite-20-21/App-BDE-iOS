@@ -8,11 +8,11 @@
 import Foundation
 
 struct Ticket: Decodable {
-    var id: String
+    var _id: String
     var eventId: String
-    var eventName: String
-    var ownerId: String
-    var buyerFirstName: String
-    var buyerName: String
+    var userId: String
+    var isValid: Bool
+    var validationCount: Int
+    var paymentId: String?
 
 }

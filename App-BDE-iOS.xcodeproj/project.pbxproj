@@ -76,6 +76,7 @@
 		039A37BD25A50A6200E6B3AA /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37BC25A50A6200E6B3AA /* WebService.swift */; };
 		039A37C225A50B2300E6B3AA /* AnyPublisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37C125A50B2300E6B3AA /* AnyPublisher+Extensions.swift */; };
 		039A37D025A5148000E6B3AA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37CF25A5148000E6B3AA /* BaseViewModel.swift */; };
+		03A740F6261BA74B0029BDB8 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A740F5261BA74B0029BDB8 /* Payment.swift */; };
 		03A8E33F2541BA8E00B02210 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E33E2541BA8E00B02210 /* ProfileView.swift */; };
 		03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E3442541BAD300B02210 /* ContactsView.swift */; };
 		03B230AF25585816006EF0EA /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230AB25585816006EF0EA /* HelperAssembly.swift */; };
@@ -225,6 +226,7 @@
 		039A37BC25A50A6200E6B3AA /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		039A37C125A50B2300E6B3AA /* AnyPublisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Extensions.swift"; sourceTree = "<group>"; };
 		039A37CF25A5148000E6B3AA /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		03A740F5261BA74B0029BDB8 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		03A8E33E2541BA8E00B02210 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		03A8E3442541BAD300B02210 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		03B230AB25585816006EF0EA /* HelperAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 				03B230E725585A0B006EF0EA /* GenericServerResponse.swift */,
 				0308678025BB2E7900D8D484 /* GenericErrorResponse.swift */,
 				03C3387325DD755500B5443C /* ViewError.swift */,
+				03A740F5261BA74B0029BDB8 /* Payment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1099,6 +1102,7 @@
 				03DACED9260129B9005BE3F7 /* NFXInfoController_iOS.swift in Sources */,
 				03DACEC1260129B8005BE3F7 /* NFXLoader.m in Sources */,
 				030867B725BC5C2D00D8D484 /* EventAssembly.swift in Sources */,
+				03A740F6261BA74B0029BDB8 /* Payment.swift in Sources */,
 				03C3385425DD71EF00B5443C /* ErrorProvider.swift in Sources */,
 				0364951A2614999A006738BD /* SignUpWebService.swift in Sources */,
 				0384469B25EEB8E200D0D6A2 /* QRScannerAssembly.swift in Sources */,
