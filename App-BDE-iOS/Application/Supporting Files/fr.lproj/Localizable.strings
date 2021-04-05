@@ -7,6 +7,7 @@
 */
 
 "tabBar.event" = "Évènements";
+"tabBar.contact" = "Contacts";
 "tabBar.profil" = "Profil";
 
 "onBoarding.title1" = "Parcours les évènements à venir de ton BDE";
@@ -64,11 +65,12 @@
 "signUpView.textField.personalInfos.name" = "Nom";
 "signUpView.textField.personalInfos.firstName" = "Prénom";
 "signUpView.section.studentInfos" = "Identifiants";
-"signUpView.textField.studentInfos.promotion" = "Ancien mot de passe";
-"signUpView.textField.studentInfos.formation" = "Mot de passe";
+"signUpView.textField.studentInfos.promotion" = "Promotion";
+"signUpView.textField.studentInfos.formation" = "Formation";
 "signUpView.button.signUp" = "Créer un compte";
 
 "QRCode.indication" = "QR-code à présenter au membre du  BDE responsable à l’entrée le jour J";
 
 "QRScanner.indication" = "Scanner le QR Code";
 "QRScanner.ticketId" = "Billet n°";
+"QRScanner.button.scanAgain" = "Scanner à nouveau";

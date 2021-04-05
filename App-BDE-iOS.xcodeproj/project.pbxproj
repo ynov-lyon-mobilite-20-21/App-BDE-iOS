@@ -47,6 +47,8 @@
 		0350F48C25A128D2008059A6 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F48B25A128D1008059A6 /* UIApplication+Extensions.swift */; };
 		0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */; };
 		0357F1E7259CD77300C9A972 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357F1E6259CD77300C9A972 /* LoadingView.swift */; };
+		0364951A2614999A006738BD /* SignUpWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036495192614999A006738BD /* SignUpWebService.swift */; };
+		036495202614CA09006738BD /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364951F2614CA09006738BD /* ApplicationState.swift */; };
 		036A2BE525503BCB0057B1C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036A2BE425503BCB0057B1C9 /* Colors.xcassets */; };
 		036A2BF125503D010057B1C9 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A2BF025503D010057B1C9 /* Color+Extensions.swift */; };
 		036B5957260FC19B006A3430 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B5956260FC19B006A3430 /* XCAssets+Generated.swift */; };
@@ -74,6 +76,7 @@
 		039A37BD25A50A6200E6B3AA /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37BC25A50A6200E6B3AA /* WebService.swift */; };
 		039A37C225A50B2300E6B3AA /* AnyPublisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37C125A50B2300E6B3AA /* AnyPublisher+Extensions.swift */; };
 		039A37D025A5148000E6B3AA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37CF25A5148000E6B3AA /* BaseViewModel.swift */; };
+		03A740F6261BA74B0029BDB8 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A740F5261BA74B0029BDB8 /* Payment.swift */; };
 		03A8E33F2541BA8E00B02210 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E33E2541BA8E00B02210 /* ProfileView.swift */; };
 		03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E3442541BAD300B02210 /* ContactsView.swift */; };
 		03B230AF25585816006EF0EA /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230AB25585816006EF0EA /* HelperAssembly.swift */; };
@@ -193,6 +196,8 @@
 		0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCardView.swift; sourceTree = "<group>"; };
 		03538DBB2541CA1C00FCAD06 /* FashionFetish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FashionFetish-Regular.ttf"; sourceTree = "<group>"; };
 		0357F1E6259CD77300C9A972 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		036495192614999A006738BD /* SignUpWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWebService.swift; sourceTree = "<group>"; };
+		0364951F2614CA09006738BD /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
 		036A2BE425503BCB0057B1C9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		036A2BF025503D010057B1C9 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		036B5956260FC19B006A3430 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
@@ -221,6 +226,7 @@
 		039A37BC25A50A6200E6B3AA /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		039A37C125A50B2300E6B3AA /* AnyPublisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Extensions.swift"; sourceTree = "<group>"; };
 		039A37CF25A5148000E6B3AA /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		03A740F5261BA74B0029BDB8 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		03A8E33E2541BA8E00B02210 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		03A8E3442541BAD300B02210 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		03B230AB25585816006EF0EA /* HelperAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
@@ -453,6 +459,7 @@
 				03B230E725585A0B006EF0EA /* GenericServerResponse.swift */,
 				0308678025BB2E7900D8D484 /* GenericErrorResponse.swift */,
 				03C3387325DD755500B5443C /* ViewError.swift */,
+				03A740F5261BA74B0029BDB8 /* Payment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -499,6 +506,7 @@
 				03B230CE2558599A006EF0EA /* PropertyWrappers */,
 				03B230D02558599A006EF0EA /* Protocols */,
 				03559E60253740420059F1F0 /* Extensions */,
+				0364951F2614CA09006738BD /* ApplicationState.swift */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -649,6 +657,7 @@
 				034390E825F6AA2A0047F142 /* RefreshTokenWebService.swift */,
 				0370A41C25F7EE8800A145C5 /* GetUserWebService.swift */,
 				0324AF4F25FE21AC00A880A4 /* GetEventWebService.swift */,
+				036495192614999A006738BD /* SignUpWebService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -1049,6 +1058,7 @@
 				03DACEC0260129B8005BE3F7 /* NFXGenericBodyDetailsController.swift in Sources */,
 				0308680625BC672200D8D484 /* SignUpAssembly.swift in Sources */,
 				03C3384F25DD71D000B5443C /* ViewProvider.swift in Sources */,
+				036495202614CA09006738BD /* ApplicationState.swift in Sources */,
 				03C3946125E8246D0037153D /* SignInViewModel.swift in Sources */,
 				03C3944625E8239C0037153D /* UpdateInfoViewModel.swift in Sources */,
 				037C6FB72551F38500678CF2 /* TitleWithoutPaddingCustom.swift in Sources */,
@@ -1092,7 +1102,9 @@
 				03DACED9260129B9005BE3F7 /* NFXInfoController_iOS.swift in Sources */,
 				03DACEC1260129B8005BE3F7 /* NFXLoader.m in Sources */,
 				030867B725BC5C2D00D8D484 /* EventAssembly.swift in Sources */,
+				03A740F6261BA74B0029BDB8 /* Payment.swift in Sources */,
 				03C3385425DD71EF00B5443C /* ErrorProvider.swift in Sources */,
+				0364951A2614999A006738BD /* SignUpWebService.swift in Sources */,
 				0384469B25EEB8E200D0D6A2 /* QRScannerAssembly.swift in Sources */,
 				03C3386025DD72CE00B5443C /* ErrorHandler.swift in Sources */,
 				03C3946925E8251C0037153D /* ViewControllerProvider+SignIn.swift in Sources */,
@@ -1319,7 +1331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOS/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1341,7 +1353,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOS/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

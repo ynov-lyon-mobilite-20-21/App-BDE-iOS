@@ -6,6 +6,7 @@
   
 */
 "tabBar.event" = "Events";
+"tabBar.contact" = "Contacts";
 "tabBar.profil" = "Profile";
 
 "onBoarding.title1" = "Browse the upcoming events of your BDE";
@@ -72,5 +73,4 @@
 
 "QRScanner.indication" = "Scan QR Code";
 "QRScanner.ticketId" = "Ticket n°";
-
-
+"QRScanner.button.scanAgain" = "Scanner again";

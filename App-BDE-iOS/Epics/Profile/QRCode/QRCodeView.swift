@@ -49,6 +49,7 @@ struct QRCodeView: View {
                         .font(.subheadline)
                         .foregroundColor(.gray)
                         .padding(.horizontal)
+                        .background(Color.bdeBlue)
                 }
                 .frame(width: gr.size.width)
             }

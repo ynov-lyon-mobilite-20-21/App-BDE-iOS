@@ -44,11 +44,11 @@ struct EventView: View {
                         .aspectRatio(contentMode: .fill)
                         .opacity(colorScheme == .dark ? 0.2 : 1)
                     
-                })
+                }
+                .ignoresSafeArea(edges: .top))
             .onAppear(perform: viewModel.requestEvents)
         }
     }
-    
 }
 
 struct EventView_Previews: PreviewProvider {

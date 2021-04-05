@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SignUpDTO: Encodable, Decodable {
+struct SignUpDTO: Codable {
     var mail: String
     var password: String
     var firstName: String

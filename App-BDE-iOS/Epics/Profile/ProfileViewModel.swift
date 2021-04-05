@@ -18,7 +18,7 @@ class ProfileViewModel: BaseViewModel {
         }
         let serviceParameters = ExecuteServiceSetup(service: getUserWebService, parameters: EmptyParameters(), isRequestAuthenticated: true)
         executeRequest(serviceParameters, onSuccess: { value in
-            print(value)
+            print(value.data)
         })
     }
 }

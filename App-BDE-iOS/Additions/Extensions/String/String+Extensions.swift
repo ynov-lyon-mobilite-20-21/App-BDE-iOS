@@ -9,6 +9,14 @@
 import Foundation
 
 extension String {
+    func deletingPrefix(_ prefix: String) -> String {
+        guard self.hasPrefix(prefix) else { return self }
+        let string = String(self.dropFirst(prefix.count + 1))
+        return string
+    }
+}
+
+extension String {
     func emailValidation() -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,64}"
 

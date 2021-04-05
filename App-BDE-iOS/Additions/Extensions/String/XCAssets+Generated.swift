@@ -57,8 +57,9 @@ internal enum Asset {
   }
   internal static let profilMenu = ImageAsset(name: "profilMenu")
   internal enum TabBar {
-    internal static let profilNoir = ImageAsset(name: "profil_noir")
-    internal static let ticketNoir = ImageAsset(name: "ticket_noir")
+    internal static let contactGris = ImageAsset(name: "contact_gris")
+    internal static let profilGris = ImageAsset(name: "profil_gris")
+    internal static let ticketGris = ImageAsset(name: "ticket_gris")
   }
   internal static let ynovCampus = ImageAsset(name: "ynovCampus")
 }

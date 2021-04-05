@@ -14,17 +14,46 @@ class QRScannerViewModel: BaseViewModel {
     }
     
     var qrScannerWebService: QRScannerWebService!
-    @Published var ticketOwner: String = ""
-    @Published var ticketId: String = ""
+    var ticketOwner: String = "" {
+        didSet {
+            objectWillChange.send()
+        }
+    }
+    var ticketId: String = "" {
+        didSet {
+            objectWillChange.send()
+        }
+    }
+    var isScanning: Bool = true {
+        didSet {
+            objectWillChange.send()
+        }
+    }
     var event: Event!
 
-    public func scanQRCode(_ qrCodeValue: String) {
-        let qrCodeValue = QRScanDTO(qrCodeValue: qrCodeValue)
+    func scanQRCode(_ qrCodeValue: String) {
+        isScanning.toggle()
+        guard qrCodeValue.contains("bde_") else {
+            return
+        }
+        var qrCodeValue = QRScanDTO(qrCodeValue: qrCodeValue)
+        qrCodeValue.qrCodeValue = qrCodeValue.qrCodeValue.deletingPrefix("bde_")
         
-        let serviceParameters = ExecuteServiceSetup(service: qrScannerWebService, parameters: EmptyParameters(), urlParameters: [qrCodeValue.qrCodeValue])
+        let serviceParameters = ExecuteServiceSetup(service: qrScannerWebService,
+                                                    parameters: EmptyParameters(),
+                                                    urlParameters: [qrCodeValue.qrCodeValue],
+                                                    isRequestAuthenticated: true)
 
         executeRequest(serviceParameters, onSuccess: { value in
-            print(value.data.buyerName)
+            self.ticketOwner = value.data.user.firstName
+            self.ticketId = value.data.ticket._id
+            print(value.data.user.mail)
+        }, onError: { error in
+            print(error)
         })
+    }
+    
+    func scanAgain() {
+        isScanning.toggle()
     }
 }

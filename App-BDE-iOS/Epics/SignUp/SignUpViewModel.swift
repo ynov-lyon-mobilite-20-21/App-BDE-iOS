@@ -10,6 +10,8 @@ import SwiftUI
 import Combine
 
 class SignUpViewModel: BaseViewModel {
+    
+    var signUpWebService: SignUpWebService!
 
     @Published var mail: String = ""
     @Published var password: String = ""
@@ -31,28 +33,18 @@ class SignUpViewModel: BaseViewModel {
             return
         }
 
-        _ = SignUpDTO(mail: mail,
+        UIApplication.shared.endEditing() // Call to dismiss keyboard
+
+        let dto = SignUpDTO(mail: mail,
                             password: password,
                             firstName: firstName,
                             lastName: lastName,
                             formation: formation.rawValue,
                             promotion: promotion.rawValue)
-//        signUpRequest.signUp(dto).sink(
-//            receiveCompletion: {
-//
-//                switch $0 {
-//                case .failure(let error):
-//                    print("ERROR : \(error)")
-//                case .finished:
-//                    print("succes")
-//                }
-//            },
-//            receiveValue: { [weak self] user in
-//
-//                print(user)
-//                guard let strongSelf = self else {return}
-//                strongSelf.user = user
-//            }
-//        ).store(in: &bag)
+        let serviceParameters = ExecuteServiceSetup(service: signUpWebService, parameters: dto)
+        
+        executeRequest(serviceParameters, onSuccess: { value in
+            print(value.data)
+        })
     }
 }

@@ -31,12 +31,28 @@ struct QRScannerView: View {
                         .bold()
                         .foregroundColor(.white)
                     ZStack {
-                        CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson") { result in
-                            switch result {
-                            case .success(let code):
-                                viewModel.scanQRCode(code)
-                            case .failure(let error):
-                                print(error.localizedDescription)
+                        
+                        VStack {
+                            if viewModel.isScanning == true {
+                                CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson") { result in
+                                    switch result {
+                                    case .success(let code):
+                                        viewModel.scanQRCode(code)
+                                    case .failure(let error):
+                                        print(error.localizedDescription)
+                                    }
+                                }
+                            } else {
+                                Button(action: {
+                                    viewModel.scanAgain()
+                                }, label: {
+                                    Text(L10n.QRScanner.Button.scanAgain)
+                                })
+                                .frame(width: gr.size.width * 0.9, height: gr.size.width * 0.9)
+                                .cornerRadius(24)
+                                .padding(10)
+                                .background(Color.white)
+
                             }
                         }
                         .frame(width: gr.size.width * 0.9, height: gr.size.width * 0.9)

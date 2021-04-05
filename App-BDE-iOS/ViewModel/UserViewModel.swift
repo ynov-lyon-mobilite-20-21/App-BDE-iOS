@@ -11,5 +11,5 @@ import Combine
 
 class UserViewModel: ObservableObject {
 
-    @Published var user = User(mail: "", firstName: "", lastName: "", promotion: .defaultValue, formation: .defaultValue, isAdmin: false, isAdherent: false, isActive: false)
+    @Published var user = User(_id: "", mail: "", firstName: "", lastName: "", promotion: .defaultValue, formation: .defaultValue, isAdmin: false, isAdherent: false, isActive: false)
 }

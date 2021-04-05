@@ -49,7 +49,7 @@ struct SignInView: View {
                         }, label: {
                             HStack {
                                 Spacer()
-                                Text(L10n.SignInView.Button.signIn)
+                                Text(L10n.SignInView.Button.login)
                                 Spacer()
                             }
                         }).foregroundColor(Color.bdeGreen)
@@ -59,12 +59,12 @@ struct SignInView: View {
                         }, label: {
                             HStack {
                                 Spacer()
-                                Text("Créer un compte")
+                                Text(L10n.SignInView.Button.signIn)
                                 Spacer()
                             }
                         }).foregroundColor(Color.bdeGreen)
                     }
-                    .navigationTitle(L10n.SignInView.Button.signIn)
+                    .navigationTitle(L10n.SignInView.Button.login)
                 }
                 .sheet(isPresented: self.$showModal) { ViewProvider.signUp() }
 

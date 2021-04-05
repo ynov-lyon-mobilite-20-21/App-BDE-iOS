@@ -21,6 +21,10 @@ internal enum L10n {
     internal static let indication = L10n.tr("Localizable", "QRScanner.indication")
     /// Billet n°
     internal static let ticketId = L10n.tr("Localizable", "QRScanner.ticketId")
+    internal enum Button {
+      /// Scanner à nouveau
+      internal static let scanAgain = L10n.tr("Localizable", "QRScanner.button.scanAgain")
+    }
   }
 
   internal enum Error {
@@ -153,15 +157,17 @@ internal enum L10n {
         internal static let name = L10n.tr("Localizable", "signUpView.textField.personalInfos.name")
       }
       internal enum StudentInfos {
-        /// Mot de passe
+        /// Formation
         internal static let formation = L10n.tr("Localizable", "signUpView.textField.studentInfos.formation")
-        /// Ancien mot de passe
+        /// Promotion
         internal static let promotion = L10n.tr("Localizable", "signUpView.textField.studentInfos.promotion")
       }
     }
   }
 
   internal enum TabBar {
+    /// Contacts
+    internal static let contact = L10n.tr("Localizable", "tabBar.contact")
     /// Évènements
     internal static let event = L10n.tr("Localizable", "tabBar.event")
     /// Profil
