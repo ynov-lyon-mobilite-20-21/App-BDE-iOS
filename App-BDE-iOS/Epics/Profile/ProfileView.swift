@@ -55,9 +55,11 @@ struct ProfileView: View {
                             Spacer()
 
                             Image(Asset.ynovCampus.name)
+                                .renderingMode(.template)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(maxWidth: 70, maxHeight: 50)
+                                .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                         }
                     }
 
@@ -69,9 +71,11 @@ struct ProfileView: View {
                                 HStack {
                                     TitleCustom(title: "NICOLAS BARBOSA", font: Font.title3.weight(.bold), textColor: Color.blackToWhite, shadowColor: Color.bdeGreen)
                                     Image(Asset.profilMenu.name)
+                                        .renderingMode(.template)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(maxWidth: 30, maxHeight: 30)
+                                        .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                                         .onTapGesture {
                                             self.showModal = true
                                         }
@@ -152,8 +156,11 @@ struct ProfileView: View {
                     .aspectRatio(contentMode: .fill)
                     .opacity(colorScheme == .dark ? 0.2 : 1)
             }
-            .ignoresSafeArea()
+            .ignoresSafeArea(edges: .top)
         )
+        .onAppear {
+            viewModel.checkIfUserAuth()
+        }
     }
 }
 

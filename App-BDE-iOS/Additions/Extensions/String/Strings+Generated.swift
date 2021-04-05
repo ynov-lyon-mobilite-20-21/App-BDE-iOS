@@ -162,6 +162,8 @@ internal enum L10n {
   }
 
   internal enum TabBar {
+    /// Contacts
+    internal static let contact = L10n.tr("Localizable", "tabBar.contact")
     /// Évènements
     internal static let event = L10n.tr("Localizable", "tabBar.event")
     /// Profil

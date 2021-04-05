@@ -12,7 +12,7 @@ class GetUserWebService: WebService {
     typealias DecodedType = User
     typealias ServiceParameters = EmptyParameters
     
-    var url: String = "https://lyon-ynov-bde-api.herokuapp.com/api/me"
+    var url: String = "https://lyon-ynov-bde-api.herokuapp.com/api/users/me"
     
     var httpMethod: HTTPMethod = .GET
     

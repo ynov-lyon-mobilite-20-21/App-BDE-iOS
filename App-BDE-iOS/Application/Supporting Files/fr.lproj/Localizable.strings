@@ -7,6 +7,7 @@
 */
 
 "tabBar.event" = "Évènements";
+"tabBar.contact" = "Contacts";
 "tabBar.profil" = "Profil";
 
 "onBoarding.title1" = "Parcours les évènements à venir de ton BDE";

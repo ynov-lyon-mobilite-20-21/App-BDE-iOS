@@ -8,38 +8,79 @@
 import SwiftUI
 
 struct HomeView: View {
-
+    
+//       override init() {
+//            UITabBar.appearance().barTintColor = .systemBackground
+//            UINavigationBar.appearance().barTintColor = .systemBackground
+//        }
+    
     @ObservedObject var viewModel: HomeViewModel
-    @State private var showModal: Bool = false
-
+    @State private var showModal:Bool = false
+    @State var selectedIndex = 0
+    @State var shouldShowModal = false
+    
     var body: some View {
-        ZStack(alignment: .bottom) {
-            TabView(selection: $viewModel.tabViewProvider.currentTab) {
-                ViewProvider.event()
-                    .tabItem {
-                        Image(Asset.TabBar.ticketNoir.name)
-                            .renderingMode(.template)
-                            .foregroundColor(Color.blackToWhite)
-                        Text(L10n.TabBar.event)
+        VStack(spacing: 0) {
+            ZStack {
+                Spacer()
+                    .fullScreenCover(isPresented: $shouldShowModal, content: {
+                        ContactsView()
+                    })
+                switch selectedIndex {
+                case 0:
+                    ViewProvider.event()
+                    
+                case 2:
+                    ViewProvider.profile()
+                    
+                default:
+                    NavigationView {
+                        Text("Remaining tabs")
                     }
-                    .tag(TabViewProvider.Tabs.event)
+                }
                 
-                ViewProvider.profile()
-                    .tabItem {
-                        Image(Asset.TabBar.profilNoir.name)
-                            .renderingMode(.template)
-                            .foregroundColor(Color.blackToWhite)
-                        Text(L10n.TabBar.profil)
-                    }
-                    .tag(TabViewProvider.Tabs.profil)
             }
-            .accentColor(.blackToWhite)
-
-            BottomTabBarModalItem {
-                self.showModal.toggle()
-            }.offset(y: -8)
+            Divider()
+                .padding(.bottom, 8)
+            
+            HStack {
+                ForEach(0..<3) { num in
+                    Button(action: {
+                        if num == 1 {
+                            shouldShowModal.toggle()
+                            return
+                        }
+                        selectedIndex = num
+                    }, label: {
+                        Spacer()
+                        
+                        if num == 1 {
+                            VStack {
+                                Image(viewModel.tabBarImageNames[num].tabImage)
+                                    .renderingMode(.template)
+                                    .font(.system(size: 24, weight: .bold))
+                                    .foregroundColor(selectedIndex == num ? Color.bdePink : Color(.gray))
+                                Text(viewModel.tabBarImageNames[num].tabName)
+                                    .font(.system(size: 12))
+                                    .foregroundColor(selectedIndex == num ? Color.bdePink : Color(.gray))
+                            }
+                        } else {
+                            VStack {
+                                Image(viewModel.tabBarImageNames[num].tabImage)
+                                    .renderingMode(.template)
+                                    .font(.system(size: 24, weight: .bold))
+                                    .foregroundColor(selectedIndex == num ? Color.bdePink : Color(.gray))
+                                Text(viewModel.tabBarImageNames[num].tabName)
+                                    .font(.system(size: 12))
+                                    .foregroundColor(selectedIndex == num ? Color.bdePink : Color(.gray))
+                            }
+                        }
+                        Spacer()
+                    })
+                    
+                }
+            }
         }
-        .sheet(isPresented: self.$showModal) { ContactsView() }
     }
 }
 

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "profil_noir.png",
+      "filename" : "profil_gris.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "profil_noir@2x.png",
+      "filename" : "profil_gris@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "profil_noir@3x.png",
+      "filename" : "profil_gris@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
