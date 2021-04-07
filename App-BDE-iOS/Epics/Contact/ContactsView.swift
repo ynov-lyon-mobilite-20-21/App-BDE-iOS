@@ -8,17 +8,36 @@
 import SwiftUI
 
 struct ContactsView: View {
-
+    
     @Environment(\.presentationMode) var presentation
-
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
-        VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-
-            Button("Dismiss") {
-                self.presentation.wrappedValue.dismiss()
+        GeometryReader { gr in
+            
+            ScrollView {
+                VStack {
+                    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                    
+                    Button("Dismiss") {
+                        self.presentation.wrappedValue.dismiss()
+                    }
+                }
+                .frame(width: gr.size.width)
+                
             }
         }
+        
+        .background(
+            ZStack {
+                Color.whiteToBlue
+                Image(Asset.backgroundEvent.name)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .opacity(colorScheme == .dark ? 0.2 : 1)
+            }
+            .ignoresSafeArea(edges: .top)
+        )
     }
 }
 

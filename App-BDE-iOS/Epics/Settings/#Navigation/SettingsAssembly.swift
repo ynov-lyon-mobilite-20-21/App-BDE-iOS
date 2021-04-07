@@ -10,8 +10,10 @@ import SwinjectAutoregistration
 
 final class SettingsAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(SettingsViewModel.self) { _ -> SettingsViewModel in
-            return SettingsViewModel()
+        container.register(SettingsViewModel.self) { r -> SettingsViewModel in
+            let viewModel = SettingsViewModel()
+            viewModel.deleteUserWebService = r.resolve(DeleteUserWebService.self)
+            return viewModel
         }
 
         container.register(SettingsView.self) { r -> SettingsView in

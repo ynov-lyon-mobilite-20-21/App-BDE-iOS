@@ -26,7 +26,7 @@ enum Promotion: String, Decodable, CaseIterable, Equatable {
         return [.b1, .b2, .b3, .m1, m2]
     }
 
-    case defaultValue = "Promotion",
+    case defaultValue = "",
          b1 = "B1",
          b2 = "B2",
          b3 = "B3",
@@ -49,7 +49,7 @@ enum Formation: String, Decodable, CaseIterable {
                 .marketManaBigData]
     }
 
-    case defaultValue = "Formation",
+    case defaultValue = "",
          informatique = "Informatique",
          audiovisuel = "Audiovisuel",
          anim3D = "Animation 3D Jeux-Vidéo",

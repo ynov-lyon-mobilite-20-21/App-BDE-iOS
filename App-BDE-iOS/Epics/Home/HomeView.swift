@@ -14,70 +14,43 @@ struct HomeView: View {
 //            UINavigationBar.appearance().barTintColor = .systemBackground
 //        }
     
+    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: HomeViewModel
-    @State private var showModal:Bool = false
-    @State var selectedIndex = 0
-    @State var shouldShowModal = false
+    @ObservedObject var tabViewProvider: TabViewProvider = TabViewProvider.shared
     
     var body: some View {
         VStack(spacing: 0) {
-            ZStack {
-                Spacer()
-                    .fullScreenCover(isPresented: $shouldShowModal, content: {
-                        ContactsView()
-                    })
-                switch selectedIndex {
-                case 0:
-                    ViewProvider.event()
-                    
-                case 2:
-                    ViewProvider.profile()
-                    
-                default:
-                    NavigationView {
-                        Text("Remaining tabs")
-                    }
-                }
+            switch tabViewProvider.currentTab {
+            case .event:
+                ViewProvider.event()
+                
+            case .contact:
+                ContactsView()
+                
+            case .profil:
+                ViewProvider.profile()
                 
             }
             Divider()
                 .padding(.bottom, 8)
             
             HStack {
-                ForEach(0..<3) { num in
+                ForEach(TabViewProvider.Tabs.allCases, id: \.rawValue) { tab in
                     Button(action: {
-                        if num == 1 {
-                            shouldShowModal.toggle()
-                            return
-                        }
-                        selectedIndex = num
+                            tabViewProvider.changeTab(to: tab)
                     }, label: {
                         Spacer()
-                        
-                        if num == 1 {
-                            VStack {
-                                Image(viewModel.tabBarImageNames[num].tabImage)
-                                    .renderingMode(.template)
-                                    .font(.system(size: 24, weight: .bold))
-                                    .foregroundColor(selectedIndex == num ? Color.bdePink : Color(.gray))
-                                Text(viewModel.tabBarImageNames[num].tabName)
-                                    .font(.system(size: 12))
-                                    .foregroundColor(selectedIndex == num ? Color.bdePink : Color(.gray))
-                            }
-                        } else {
-                            VStack {
-                                Image(viewModel.tabBarImageNames[num].tabImage)
-                                    .renderingMode(.template)
-                                    .font(.system(size: 24, weight: .bold))
-                                    .foregroundColor(selectedIndex == num ? Color.bdePink : Color(.gray))
-                                Text(viewModel.tabBarImageNames[num].tabName)
-                                    .font(.system(size: 12))
-                                    .foregroundColor(selectedIndex == num ? Color.bdePink : Color(.gray))
-                            }
+                        VStack {
+                            Image(viewModel.tabBarImageNames[tab.rawValue].tabImage)
+                                .renderingMode(.template)
+                                .font(.system(size: 24, weight: .bold))
+                                .foregroundColor(tabViewProvider.currentTab == tab ? Color.bdePink : Color(.gray))
+                            Text(viewModel.tabBarImageNames[tab.rawValue].tabName)
+                                .font(.system(size: 12))
+                                .foregroundColor(tabViewProvider.currentTab == tab ? Color.bdePink : Color(.gray))
                         }
                         Spacer()
                     })
-                    
                 }
             }
         }

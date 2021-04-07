@@ -11,33 +11,34 @@ import JWTDecode
 
 class ApplicationState: ObservableObject {
     static let shared = ApplicationState()
-    private let keychain = KeychainSwift()
-    
+    private let keyChainService = KeyChainService.shared
+
     enum State {
         case loading
         case authenticated
+        case loginNotRequired
         case requireLogin
     }
     
-    var state: State = .loading {
+    var state: State = .loginNotRequired {
         didSet {
             objectWillChange.send()
         }
     }
     
     var jwtToken: String? {
-        get { return keychain.get("bearer-token") }
+        get { return keyChainService.getStringInKeyChain(name:"UserToken") }
         set(value) {
             guard let value = value else { return }
-            keychain.set(value, forKey: "bearer-token")
+            keyChainService.addStringInKeyChain(value: value, as: "UserToken")
         }
     }
     
     var jwtRefreshToken: String? {
-        get { return keychain.get("bearer-refresh-token") }
+        get { return keyChainService.getStringInKeyChain(name:"UserRefreshToken") }
         set(value) {
             guard let value = value else { return }
-            keychain.set(value, forKey: "bearer-refresh-token")
+            keyChainService.addStringInKeyChain(value: value, as: "UserRefreshToken")
         }
     }
     

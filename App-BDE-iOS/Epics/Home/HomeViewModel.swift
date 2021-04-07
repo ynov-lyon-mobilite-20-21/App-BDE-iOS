@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 
 class HomeViewModel: BaseViewModel {
-     
-    @ObservedObject var tabViewProvider = TabViewProvider.shared
+         
     let tabBarImageNames = [TabBarIcon(tabImage: Asset.TabBar.ticketGris.name,
                                        tabName: L10n.TabBar.event),
                             TabBarIcon(tabImage: Asset.TabBar.contactGris.name,
