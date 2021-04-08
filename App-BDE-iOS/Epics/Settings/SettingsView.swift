@@ -38,6 +38,11 @@ struct SettingsView: View {
                         Text(L10n.Settings.Account.delete)
                             .font(.title3)
                             .padding(.vertical)
+                            .onTapGesture {
+                                viewModel.deleteUser()
+                                viewModel.logout()
+                                self.presentation.wrappedValue.dismiss()
+                            }
                         Text(L10n.Settings.Account.logout)
                             .onTapGesture {
                                 viewModel.logout()

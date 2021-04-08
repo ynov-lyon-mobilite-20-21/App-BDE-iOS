@@ -12,7 +12,7 @@ class SettingsViewModel: BaseViewModel {
     var deleteUserWebService: DeleteUserWebService!
     
     func deleteUser() {
-        let serviceParameters = ExecuteServiceSetup(service: deleteUserWebService, parameters: EmptyParameters())
+        let serviceParameters = ExecuteServiceSetup(service: deleteUserWebService, parameters: EmptyParameters(), isRequestAuthenticated: true)
         
         executeRequestWithoutDecode(serviceParameters, onSuccess: {
             KeyChainService.shared.deleteAllElement()
