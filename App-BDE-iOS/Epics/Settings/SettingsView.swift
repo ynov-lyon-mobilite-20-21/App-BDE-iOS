@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(\.presentationMode) var presentation
     @ObservedObject var viewModel: SettingsViewModel
 
     var body: some View {
@@ -37,10 +38,20 @@ struct SettingsView: View {
                         Text(L10n.Settings.Account.delete)
                             .font(.title3)
                             .padding(.vertical)
+                            .onTapGesture {
+                                viewModel.deleteUser()
+                                viewModel.logout()
+                                self.presentation.wrappedValue.dismiss()
+                            }
                         Text(L10n.Settings.Account.logout)
+                            .onTapGesture {
+                                viewModel.logout()
+                                self.presentation.wrappedValue.dismiss()
+                            }
                             .font(.title3)
                             .padding(.vertical)
                             .foregroundColor(Color.bdePink)
+
                     }
                 }
                 .listStyle(InsetGroupedListStyle())

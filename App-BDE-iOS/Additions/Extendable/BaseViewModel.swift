@@ -11,7 +11,6 @@ import SwiftUI
 import JWTDecode
 
 class BaseViewModel: ObservableObject, Weakable {
-    @State var errorAlertIsShown: Bool = false
     
     let objectWillChange = ObservableObjectPublisher()
     var bag = Set<AnyCancellable>()
@@ -19,7 +18,8 @@ class BaseViewModel: ObservableObject, Weakable {
     private let keyChainService = KeyChainService.shared
     
     var token: String? {
-        return keyChainService.getStringInKeyChain(name: "UserToken")
+        let token = keyChainService.getStringInKeyChain(name: "UserToken")
+        return token
     }
     
     var refreshToken: String? {
@@ -37,6 +37,12 @@ class BaseViewModel: ObservableObject, Weakable {
             
             return jwt.expired
         } catch { return true }
+    }
+    
+    func disconnect() {
+        keyChainService.removeStringInKeyChain(name: "UserToken")
+        keyChainService.removeStringInKeyChain(name: "UserRefreshToken")
+        print(keyChainService.getStringInKeyChain(name: "UserToken"))
     }
     
     func getNewToken(onTokenSuccess: @escaping (String) -> Void) {
@@ -98,7 +104,10 @@ class BaseViewModel: ObservableObject, Weakable {
     
     private func executeTheRequest<T: WebService>(serviceSetupParameter: ExecuteServiceSetup<T>, serviceExecution: @escaping () -> Void) {
         if serviceSetupParameter.isRequestAuthenticated {
-            guard let token = token else { return }
+            guard let token = token else {
+                handleError(error: ViewError(errorCode: .TOKEN_NOT_FOUND))
+                return
+            }
             
             if isExpired {
                 getNewToken(onTokenSuccess: { token in

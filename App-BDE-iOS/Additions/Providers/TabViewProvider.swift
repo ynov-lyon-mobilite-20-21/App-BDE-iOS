@@ -10,12 +10,14 @@ import SwiftUI
 
 class TabViewProvider: ObservableObject {
     
-    enum Tabs: Int {
+    enum Tabs: Int, CaseIterable {
         case event = 0
-        case profil = 1
+        case contact = 1
+        case profil = 2
     }
     
     static let shared: TabViewProvider = TabViewProvider()
+    
     var currentTab = Tabs.event {
         didSet {
             objectWillChange.send()

@@ -35,6 +35,12 @@ internal enum L10n {
         /// partie refusée
         internal static let title = L10n.tr("Localizable", "error.alert.PARTY_REFUSED.title")
       }
+      internal enum TokenNotFound {
+        /// Vous n'êtes pas connecté
+        internal static let description = L10n.tr("Localizable", "error.alert.TOKEN_NOT_FOUND.description")
+        /// Attention
+        internal static let title = L10n.tr("Localizable", "error.alert.TOKEN_NOT_FOUND.title")
+      }
       internal enum UnknowError {
         /// une erreur inconnue est survenue
         internal static let description = L10n.tr("Localizable", "error.alert.UNKNOW_ERROR.description")

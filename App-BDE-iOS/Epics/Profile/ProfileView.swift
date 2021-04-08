@@ -31,7 +31,6 @@ struct ProfileView: View {
     
     @Environment(\.colorScheme) var colorScheme
     @State private var isConnected = false
-    @State private var showModal: Bool = false
     @State private var showQrCode: Bool = false
 
     var body: some View {
@@ -60,6 +59,7 @@ struct ProfileView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(maxWidth: 70, maxHeight: 50)
                                 .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                            
                         }
                     }
 
@@ -69,29 +69,35 @@ struct ProfileView: View {
                             // User Info
                             VStack(alignment: .leading, spacing: 10) {
                                 HStack {
-                                    TitleCustom(title: "NICOLAS BARBOSA", font: Font.title3.weight(.bold), textColor: Color.blackToWhite, shadowColor: Color.bdeGreen)
-                                    Image(Asset.profilMenu.name)
-                                        .renderingMode(.template)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(maxWidth: 30, maxHeight: 30)
-                                        .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-                                        .onTapGesture {
-                                            self.showModal = true
-                                        }
-                                        .sheet(isPresented: self.$showModal) { ViewProvider.signIn() }
+                                    TitleCustom(title: "\(viewModel.user?.firstName ?? "") \(viewModel.user?.lastName ?? "")",
+                                                font: Font.title3.weight(.bold),
+                                                textColor: Color.blackToWhite,
+                                                shadowColor: Color.bdeGreen)
+                                    if viewModel.user != nil {
+                                        Image(Asset.profilMenu.name)
+                                            .renderingMode(.template)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .onTapGesture {
+                                                viewModel.showSettings()
+                                            }
+                                            .frame(maxWidth: 30, maxHeight: 30)
+                                            .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+
+                                    }
+                                    
                                 }
-                                Text("M1 Expert Développement Web")
-                                Text("nicolas.barbosa@ynov.com")
+
+                                Text("\(viewModel.user?.promotion.rawValue ?? "") \(viewModel.user?.formation.rawValue ?? "")")
+                                Text(viewModel.user?.mail ?? "")
                             }
                             .padding(.leading)
                             .padding(.vertical, 25)
 
                             Spacer()
-                            // User logo
                             VStack {
                                 Spacer()
-                                //TODO add dynamic gesture of icons
+                                // TODO add dynamic gesture of icons
                                 Image(Asset.LogoFormation.logoInfo.name)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
@@ -137,9 +143,8 @@ struct ProfileView: View {
                                         .frame(width: gr.size.width * 0.6, height: gr.size.width * 0.6 * 1.4)
                                         .shadow(radius: 6)
                                         .onTapGesture {
-                                            self.showQrCode = true
+                                            viewModel.showModal = .qrCode
                                         }
-                                        .sheet(isPresented: self.$showQrCode) { ViewProvider.QRCode() }
                                 }
                             }
                             .padding()
@@ -158,6 +163,18 @@ struct ProfileView: View {
             }
             .ignoresSafeArea(edges: .top)
         )
+        .sheet(item: $viewModel.showModal, onDismiss: { viewModel.redirectToEvent() }) { sheet in
+            switch sheet {
+            case .login:
+                ViewProvider.signIn()
+            case .settings:
+                ViewProvider.settings()
+            case .qrCode:
+                ViewProvider.QRCode()
+            }
+
+        }
+        
         .onAppear {
             viewModel.checkIfUserAuth()
         }

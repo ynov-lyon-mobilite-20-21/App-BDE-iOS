@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct ViewError: Error, Identifiable {
     let errorCode: ErrorCode
@@ -17,5 +18,6 @@ struct ViewError: Error, Identifiable {
     enum ErrorCode: String {
         case UNKNOW_ERROR
         case PARTY_REFUSED
+        case TOKEN_NOT_FOUND
     }
 }

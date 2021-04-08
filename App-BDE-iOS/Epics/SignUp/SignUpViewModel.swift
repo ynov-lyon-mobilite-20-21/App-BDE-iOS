@@ -13,15 +13,62 @@ class SignUpViewModel: BaseViewModel {
     
     var signUpWebService: SignUpWebService!
 
-    @Published var mail: String = ""
-    @Published var password: String = ""
-    @Published var lastName: String = ""
-    @Published var firstName: String = ""
-    @Published var formation: Formation = Formation.defaultValue
-    @Published var promotion: Promotion = Promotion.defaultValue
-
-    @Published var mailIsValid: Bool = false
-    @Published var passwordIsValid: Bool = false
+    var mail: String = "" {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    var password: String = "" {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    var lastName: String = "" {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    var firstName: String = "" {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    var formation: Formation = Formation.defaultValue {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    var promotion: Promotion = Promotion.defaultValue {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    var mailIsValid: Bool = false {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    var passwordIsValid: Bool = false {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
 
     var user: SignUpDTO?
 
