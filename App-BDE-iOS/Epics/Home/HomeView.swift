@@ -37,7 +37,11 @@ struct HomeView: View {
             HStack {
                 ForEach(TabViewProvider.Tabs.allCases, id: \.rawValue) { tab in
                     Button(action: {
+                        if tabViewProvider.currentTab == tab {
+                            return
+                        } else {
                             tabViewProvider.changeTab(to: tab)
+                        }
                     }, label: {
                         Spacer()
                         VStack {
