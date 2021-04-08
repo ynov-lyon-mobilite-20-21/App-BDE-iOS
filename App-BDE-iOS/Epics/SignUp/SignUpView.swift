@@ -43,6 +43,7 @@ struct SignUpView: View {
                 }
 
                 Section(header: Text(L10n.SignUpView.Section.studentInfos)) {
+                    
                     Picker(L10n.SignUpView.TextField.StudentInfos.promotion, selection: $viewModel.promotion) {
                             ForEach(Promotion.allCases, id: \.self) { promotion in
                                 Text(promotion.rawValue)
@@ -53,9 +54,9 @@ struct SignUpView: View {
                         .pickerStyle(DefaultPickerStyle())
 
                     Picker(L10n.SignUpView.TextField.StudentInfos.formation, selection: $viewModel.formation) {
-                            ForEach(Formation.allCases, id: \.self) { promotion in
-                                Text(promotion.rawValue)
-                                    .tag(promotion)
+                            ForEach(Formation.allCases, id: \.self) { formation in
+                                Text(formation.rawValue)
+                                    .tag(formation)
                             }
                         }
                         .foregroundColor(Color.bdeGreen)
@@ -64,7 +65,6 @@ struct SignUpView: View {
                 }
                 Button(action: {
                     viewModel.handleSignUp()
-                        self.presentation.wrappedValue.dismiss()
                 }, label: {
                             HStack {
                                 Spacer()
