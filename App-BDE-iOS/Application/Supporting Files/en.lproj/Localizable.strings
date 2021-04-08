@@ -36,6 +36,8 @@
 
 "settings.title" = "Settings";
 "settings.updateInfo.subTitle" = "Name, First Name, Password, Class";
+"settings.updateInfo.firstName" = "First Name";
+"settings.updateInfo.lastName" = "Name";
 "settings.onboarding" = "How to use app ?";
 "settings.payment.info" = "Payment informations";
 "settings.account.delete" = "Delete account";

@@ -37,6 +37,8 @@
 
 "settings.title" = "Réglage";
 "settings.updateInfo.subTitle" = "Nom, Prénom, Mot de passe, Classe";
+"settings.updateInfo.firstName" = "Prénom";
+"settings.updateInfo.lastName" = "Nom";
 "settings.onboarding" = "Comment utiliser l'application ?";
 "settings.payment.info" = "Informations de paiement";
 "settings.account.delete" = "Supprimer le compte";

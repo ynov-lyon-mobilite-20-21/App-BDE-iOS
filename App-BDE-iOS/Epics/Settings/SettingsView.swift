@@ -18,7 +18,7 @@ struct SettingsView: View {
                     Section(header: Text("")) {
                         NavigationLink(destination: ViewProvider.updateInfo()) {
                             VStack(alignment: .leading) {
-                                Text("Nicolas Barbosa")
+                                Text("\(UserProvider.shared.user?.firstName ?? L10n.Settings.UpdateInfo.firstName) \(UserProvider.shared.user?.lastName ?? L10n.Settings.UpdateInfo.lastName)")
                                     .font(.title3)
                                 Text(L10n.Settings.UpdateInfo.subTitle)
                                     .font(.subheadline)

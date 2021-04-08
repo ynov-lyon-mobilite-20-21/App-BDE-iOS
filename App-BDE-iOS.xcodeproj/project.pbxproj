@@ -82,6 +82,7 @@
 		03A740F6261BA74B0029BDB8 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A740F5261BA74B0029BDB8 /* Payment.swift */; };
 		03A8E33F2541BA8E00B02210 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E33E2541BA8E00B02210 /* ProfileView.swift */; };
 		03A8E3452541BAD300B02210 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8E3442541BAD300B02210 /* ContactsView.swift */; };
+		03A97C6E261F869D0095614F /* UpdateUserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A97C6D261F869D0095614F /* UpdateUserWebService.swift */; };
 		03B230AF25585816006EF0EA /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230AB25585816006EF0EA /* HelperAssembly.swift */; };
 		03B230B92558583A006EF0EA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230B82558583A006EF0EA /* SignUpViewModel.swift */; };
 		03B230BF255858E6006EF0EA /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 03B230BE255858E6006EF0EA /* SwinjectAutoregistration */; };
@@ -206,6 +207,7 @@
 		03A740F5261BA74B0029BDB8 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		03A8E33E2541BA8E00B02210 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		03A8E3442541BAD300B02210 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		03A97C6D261F869D0095614F /* UpdateUserWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserWebService.swift; sourceTree = "<group>"; };
 		03B230AB25585816006EF0EA /* HelperAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperAssembly.swift; sourceTree = "<group>"; };
 		03B230B82558583A006EF0EA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		03B230C525585977006EF0EA /* LoginWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWebService.swift; sourceTree = "<group>"; };
@@ -608,6 +610,7 @@
 				0324AF4F25FE21AC00A880A4 /* GetEventWebService.swift */,
 				036495192614999A006738BD /* SignUpWebService.swift */,
 				03118E21261CCE0D00BAC44A /* DeleteUserWebService.swift */,
+				03A97C6D261F869D0095614F /* UpdateUserWebService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -943,6 +946,7 @@
 				030867FD25BC645F00D8D484 /* ViewControllerProvider+OnBoarding.swift in Sources */,
 				034390DB25F6A0B60047F142 /* Collection+Extensions.swift in Sources */,
 				039A37BD25A50A6200E6B3AA /* WebService.swift in Sources */,
+				03A97C6E261F869D0095614F /* UpdateUserWebService.swift in Sources */,
 				039A37D025A5148000E6B3AA /* BaseViewModel.swift in Sources */,
 				0384469325EEB85100D0D6A2 /* QRScannerView.swift in Sources */,
 				03A8E33F2541BA8E00B02210 /* ProfileView.swift in Sources */,

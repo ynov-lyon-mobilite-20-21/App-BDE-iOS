@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: Decodable {
+struct User: Codable {
 
     var _id: String
     var mail: String
@@ -21,7 +21,7 @@ struct User: Decodable {
 
 }
 
-enum Promotion: String, Decodable, CaseIterable, Equatable {
+enum Promotion: String, Codable, CaseIterable, Equatable {
     static var allCases: [Promotion] {
         return [.b1, .b2, .b3, .m1, m2]
     }
@@ -34,7 +34,7 @@ enum Promotion: String, Decodable, CaseIterable, Equatable {
          m2 = "M2"
 }
 
-enum Formation: String, Decodable, CaseIterable {
+enum Formation: String, Codable, CaseIterable {
     static var allCases: [Formation] {
         return [.informatique,
                 .audiovisuel,
