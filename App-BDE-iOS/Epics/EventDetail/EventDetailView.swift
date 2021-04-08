@@ -9,11 +9,11 @@ import SwiftUI
 import CodeScanner
 
 struct EventDetailView: View {
-
+    
     @Environment(\.presentationMode) var presentation
     @ObservedObject var viewModel: EventDetailViewModel
     @State private var isShowingScanner = false
-
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -42,7 +42,7 @@ struct EventDetailView: View {
                     }
                 }
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
-
+                
                 HStack {
                     VStack(alignment: .leading, spacing: 2) {
                         Text(viewModel.event.name)
@@ -72,13 +72,13 @@ struct EventDetailView: View {
                     .padding(.top)
                 }
                 .padding(.horizontal)
-
+                
                 Text(viewModel.event.description)
                     .padding()
             }
-
+            
             Button(action: {
-
+                
             }, label: {
                 HStack {
                     Text(L10n.EventDetail.Button.payment)
@@ -89,22 +89,24 @@ struct EventDetailView: View {
                 .background(Color.bdeBlue)
                 .cornerRadius(30)
             })
-
-            Button(action: {
-                self.isShowingScanner = true
-            }, label: {
-                HStack {
-                    Spacer()
-                    Text(L10n.EventDetail.Button.scanner)
-                    Spacer()
+            
+            if UserProvider.shared.user?.isAdmin == true {
+                Button(action: {
+                    self.isShowingScanner = true
+                }, label: {
+                    HStack {
+                        Spacer()
+                        Text(L10n.EventDetail.Button.scanner)
+                        Spacer()
+                    }
+                })
+                .padding(.vertical)
+                .sheet(isPresented: $isShowingScanner) {
+                    ViewProvider.QRScanner(event: viewModel.event)
                 }
-            })
-            .sheet(isPresented: $isShowingScanner) {
-                ViewProvider.QRScanner(event: viewModel.event)
             }
         }
         .ignoresSafeArea(.all, edges: .top)
-
     }
 }
 

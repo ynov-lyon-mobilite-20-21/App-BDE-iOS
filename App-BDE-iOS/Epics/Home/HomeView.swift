@@ -9,11 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     
-//       override init() {
-//            UITabBar.appearance().barTintColor = .systemBackground
-//            UINavigationBar.appearance().barTintColor = .systemBackground
-//        }
-    
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: HomeViewModel
     @ObservedObject var tabViewProvider: TabViewProvider = TabViewProvider.shared

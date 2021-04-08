@@ -65,6 +65,7 @@ struct SignUpView: View {
                 }
                 Button(action: {
                     viewModel.handleSignUp()
+                    self.presentation.wrappedValue.dismiss()
                 }, label: {
                             HStack {
                                 Spacer()
