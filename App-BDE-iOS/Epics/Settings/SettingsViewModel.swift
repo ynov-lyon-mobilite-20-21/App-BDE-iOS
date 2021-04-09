@@ -16,6 +16,7 @@ class SettingsViewModel: BaseViewModel {
         
         executeRequestWithoutDecode(serviceParameters, onSuccess: {
             KeyChainService.shared.deleteAllElement()
+            UserProvider.shared.user = nil
         }, onError: { error in
             print(error)
         })
@@ -23,5 +24,6 @@ class SettingsViewModel: BaseViewModel {
     
     func logout() {
         disconnect()
+        UserProvider.shared.user = nil
     }
 }

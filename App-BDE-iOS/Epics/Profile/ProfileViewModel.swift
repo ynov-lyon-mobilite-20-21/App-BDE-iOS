@@ -58,7 +58,9 @@ class ProfileViewModel: BaseViewModel {
     private func getUser() {
         let serviceParameters = ExecuteServiceSetup(service: getUserWebService, parameters: EmptyParameters(), isRequestAuthenticated: true)
         executeRequest(serviceParameters, onSuccess: { value in
+            print(value.data)
             self.user = value.data
+            UserProvider.shared.user = value.data
         })
     }
 }

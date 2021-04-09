@@ -10,8 +10,10 @@ import SwinjectAutoregistration
 
 final class UpdateInfoAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(UpdateInfoViewModel.self) { _ -> UpdateInfoViewModel in
-            return UpdateInfoViewModel()
+        container.register(UpdateInfoViewModel.self) { r -> UpdateInfoViewModel in
+            let viewModel = UpdateInfoViewModel()
+            viewModel.updateUserWebService = r.resolve(UpdateUserWebService.self)
+            return viewModel
         }
 
         container.register(UpdateInfoView.self) { r -> UpdateInfoView in

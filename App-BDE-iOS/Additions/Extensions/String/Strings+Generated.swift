@@ -112,6 +112,10 @@ internal enum L10n {
       internal static let info = L10n.tr("Localizable", "settings.payment.info")
     }
     internal enum UpdateInfo {
+      /// Prénom
+      internal static let firstName = L10n.tr("Localizable", "settings.updateInfo.firstName")
+      /// Nom
+      internal static let lastName = L10n.tr("Localizable", "settings.updateInfo.lastName")
       /// Nom, Prénom, Mot de passe, Classe
       internal static let subTitle = L10n.tr("Localizable", "settings.updateInfo.subTitle")
     }
@@ -197,8 +201,6 @@ internal enum L10n {
     }
     internal enum TextField {
       internal enum Identifiers {
-        /// Ancien mot de passe
-        internal static let oldpassword = L10n.tr("Localizable", "updateInfoView.textField.identifiers.oldpassword")
         /// Mot de passe
         internal static let password = L10n.tr("Localizable", "updateInfoView.textField.identifiers.password")
       }

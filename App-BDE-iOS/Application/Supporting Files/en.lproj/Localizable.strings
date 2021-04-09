@@ -36,6 +36,8 @@
 
 "settings.title" = "Settings";
 "settings.updateInfo.subTitle" = "Name, First Name, Password, Class";
+"settings.updateInfo.firstName" = "First Name";
+"settings.updateInfo.lastName" = "Name";
 "settings.onboarding" = "How to use app ?";
 "settings.payment.info" = "Payment informations";
 "settings.account.delete" = "Delete account";
@@ -46,7 +48,6 @@
 "updateInfoView.section.personalInfos.name" = "Name";
 "updateInfoView.section.personalInfos.firstName" = "FirstName";
 "updateInfoView.section.identifiers" = "Identifiers";
-"updateInfoView.section.identifiers.oldpassword" = "Old password";
 "updateInfoView.section.identifiers.password" = "Password";
 "updateInfoView.section.studentInfos" = "Student informations";
 "updateInfoView.section.studentInfos.promotion" = "Promotion";
