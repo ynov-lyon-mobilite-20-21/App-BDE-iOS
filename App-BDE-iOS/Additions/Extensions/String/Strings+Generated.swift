@@ -201,8 +201,6 @@ internal enum L10n {
     }
     internal enum TextField {
       internal enum Identifiers {
-        /// Ancien mot de passe
-        internal static let oldpassword = L10n.tr("Localizable", "updateInfoView.textField.identifiers.oldpassword")
         /// Mot de passe
         internal static let password = L10n.tr("Localizable", "updateInfoView.textField.identifiers.password")
       }

@@ -8,12 +8,12 @@
 import Foundation
 
 struct UpdateUserWebServiceParameters: Encodable {
-    var mail: String
-    var password: String
-    var firstName: String
-    var lastName: String
-    var promotion: Promotion
-    var formation: Formation
+    var mail: String?
+    var password: String?
+    var firstName: String?
+    var lastName: String?
+    var promotion: Promotion?
+    var formation: Formation?
 }
 
 class UpdateUserWebService: WebService {

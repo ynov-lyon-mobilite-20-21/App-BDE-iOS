@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct UpdateInfoView: View {
-
+    
+    @Environment(\.presentationMode) var presentation
     @ObservedObject var viewModel: UpdateInfoViewModel
 
     var body: some View {
@@ -29,11 +30,6 @@ struct UpdateInfoView: View {
                     }
 
                     Section(header: Text(L10n.UpdateInfoView.Section.identifiers)) {
-
-                        SecureField(L10n.UpdateInfoView.TextField.Identifiers.oldpassword, text: $viewModel.password)
-                            .textContentType(.password)
-                            .border(Color.red,
-                                    width: viewModel.passwordIsValid ? 1 : 0)
 
                         SecureField(L10n.UpdateInfoView.TextField.Identifiers.password, text: $viewModel.password)
                             .textContentType(.password)
@@ -63,6 +59,8 @@ struct UpdateInfoView: View {
 
                     }
                     Button(action: {
+                        viewModel.updateUserInformations()
+                        self.presentation.wrappedValue.dismiss()
                     }, label: {
                         HStack {
                             Spacer()

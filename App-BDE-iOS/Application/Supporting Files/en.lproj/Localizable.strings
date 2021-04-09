@@ -48,7 +48,6 @@
 "updateInfoView.section.personalInfos.name" = "Name";
 "updateInfoView.section.personalInfos.firstName" = "FirstName";
 "updateInfoView.section.identifiers" = "Identifiers";
-"updateInfoView.section.identifiers.oldpassword" = "Old password";
 "updateInfoView.section.identifiers.password" = "Password";
 "updateInfoView.section.studentInfos" = "Student informations";
 "updateInfoView.section.studentInfos.promotion" = "Promotion";

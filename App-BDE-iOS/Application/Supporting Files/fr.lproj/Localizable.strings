@@ -49,7 +49,6 @@
 "updateInfoView.textField.personalInfos.name" = "Nom";
 "updateInfoView.textField.personalInfos.firstName" = "Prénom";
 "updateInfoView.section.identifiers" = "Identifiants";
-"updateInfoView.textField.identifiers.oldpassword" = "Ancien mot de passe";
 "updateInfoView.textField.identifiers.password" = "Mot de passe";
 "updateInfoView.section.studentInfos" = "Informations étudiant";
 "updateInfoView.textField.studentInfos.promotion" = "Promotion";

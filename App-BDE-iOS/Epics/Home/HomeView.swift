@@ -43,16 +43,27 @@ struct HomeView: View {
                             Image(viewModel.tabBarImageNames[tab.rawValue].tabImage)
                                 .renderingMode(.template)
                                 .font(.system(size: 24, weight: .bold))
-                                .foregroundColor(tabViewProvider.currentTab == tab ? Color.bdePink : Color(.gray))
+                                .foregroundColor(darkOrLight(for: tab))
                             Text(viewModel.tabBarImageNames[tab.rawValue].tabName)
                                 .font(.system(size: 12))
-                                .foregroundColor(tabViewProvider.currentTab == tab ? Color.bdePink : Color(.gray))
+                                .foregroundColor(darkOrLight(for: tab))
                         }
                         Spacer()
                     })
                 }
             }
         }
+    }
+    
+    private func darkOrLight(for tab: TabViewProvider.Tabs) -> Color {
+        if tabViewProvider.currentTab == tab {
+            if colorScheme == .light {
+                return Color.bdePink
+            } else {
+                return Color.bdeGreen
+            }
+        }
+        return Color.gray
     }
 }
 
