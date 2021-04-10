@@ -92,13 +92,10 @@ struct ProfileView: View {
                                 Text(viewModel.user?.mail ?? "")
                             }
                             .padding()
-                            
-
                             Spacer()
                             VStack {
                                 Spacer()
-                                // TODO add dynamic gesture of icons
-                                Image(Asset.LogoFormation.logoInfo.name)
+                                Image(viewModel.user?.formationImage ?? "")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 70, height: 70)

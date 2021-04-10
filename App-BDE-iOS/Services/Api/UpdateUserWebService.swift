@@ -12,8 +12,8 @@ struct UpdateUserWebServiceParameters: Encodable {
     var password: String?
     var firstName: String?
     var lastName: String?
-    var promotion: Promotion?
-    var formation: Formation?
+    var promotion: User.Promotion?
+    var formation: User.Formation?
 }
 
 class UpdateUserWebService: WebService {
