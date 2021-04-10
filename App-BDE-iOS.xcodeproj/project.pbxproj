@@ -43,7 +43,7 @@
 		0324AF5025FE21AC00A880A4 /* GetEventWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0324AF4F25FE21AC00A880A4 /* GetEventWebService.swift */; };
 		0334388A2610B9CB005E64C2 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033438892610B9CB005E64C2 /* EventDetailViewModel.swift */; };
 		034390DB25F6A0B60047F142 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034390DA25F6A0B60047F142 /* Collection+Extensions.swift */; };
-		034390E425F6A7BD0047F142 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = 034390E325F6A7BD0047F142 /* JWTDecode */; };
+		034390E425F6A7BD0047F142 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 034390E325F6A7BD0047F142 /* SwiftPackageProductDependency */; };
 		034390E925F6AA2A0047F142 /* RefreshTokenWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034390E825F6AA2A0047F142 /* RefreshTokenWebService.swift */; };
 		03503F20261F7EBB002838A3 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03503F1F261F7EBB002838A3 /* UserProvider.swift */; };
 		0350F48C25A128D2008059A6 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F48B25A128D1008059A6 /* UIApplication+Extensions.swift */; };
@@ -64,16 +64,16 @@
 		0381E4E125E17A0800AAD818 /* ViewControllerProvider+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381E4E025E17A0800AAD818 /* ViewControllerProvider+Settings.swift */; };
 		0381E4E625E17A4B00AAD818 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381E4E525E17A4B00AAD818 /* SettingsViewModel.swift */; };
 		0381E4EB25E17A8500AAD818 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381E4EA25E17A8500AAD818 /* SettingsView.swift */; };
-		0384468025EEB69700D0D6A2 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 0384467F25EEB69700D0D6A2 /* CodeScanner */; };
+		0384468025EEB69700D0D6A2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 0384467F25EEB69700D0D6A2 /* SwiftPackageProductDependency */; };
 		0384469325EEB85100D0D6A2 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0384469225EEB85100D0D6A2 /* QRScannerView.swift */; };
 		0384469B25EEB8E200D0D6A2 /* QRScannerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0384469A25EEB8E200D0D6A2 /* QRScannerAssembly.swift */; };
 		038446A025EEB91F00D0D6A2 /* QRScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0384469F25EEB91F00D0D6A2 /* QRScannerViewModel.swift */; };
 		038446A525EEB94700D0D6A2 /* ViewControllerProvider+QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038446A425EEB94700D0D6A2 /* ViewControllerProvider+QRScanner.swift */; };
 		038636A0253F361000CB2A05 /* onBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386369F253F361000CB2A05 /* onBoardingView.swift */; };
 		038636B2253F3E8400CB2A05 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038636B1253F3E8400CB2A05 /* OnBoardingViewModel.swift */; };
-		03894FF9259CFE6100AD9D41 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 03894FF8259CFE6100AD9D41 /* KeychainSwift */; };
+		03894FF9259CFE6100AD9D41 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 03894FF8259CFE6100AD9D41 /* SwiftPackageProductDependency */; };
 		03894FFE259D001C00AD9D41 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03894FFD259D001C00AD9D41 /* KeyChainService.swift */; };
-		0395FF3C261E53EB0032A9DF /* NetFox in Frameworks */ = {isa = PBXBuildFile; productRef = 0395FF3B261E53EB0032A9DF /* NetFox */; };
+		0395FF3C261E53EB0032A9DF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 0395FF3B261E53EB0032A9DF /* SwiftPackageProductDependency */; };
 		039A379925A4DBC800E6B3AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 039A379B25A4DBC800E6B3AA /* Localizable.strings */; };
 		039A37B825A50A4400E6B3AA /* Weakable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37B725A50A4400E6B3AA /* Weakable.swift */; };
 		039A37BD25A50A6200E6B3AA /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A37BC25A50A6200E6B3AA /* WebService.swift */; };
@@ -85,7 +85,7 @@
 		03A97C6E261F869D0095614F /* UpdateUserWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A97C6D261F869D0095614F /* UpdateUserWebService.swift */; };
 		03B230AF25585816006EF0EA /* HelperAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230AB25585816006EF0EA /* HelperAssembly.swift */; };
 		03B230B92558583A006EF0EA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230B82558583A006EF0EA /* SignUpViewModel.swift */; };
-		03B230BF255858E6006EF0EA /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 03B230BE255858E6006EF0EA /* SwinjectAutoregistration */; };
+		03B230BF255858E6006EF0EA /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 03B230BE255858E6006EF0EA /* SwiftPackageProductDependency */; };
 		03B230C725585977006EF0EA /* LoginWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230C525585977006EF0EA /* LoginWebService.swift */; };
 		03B230D22558599A006EF0EA /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230CF2558599A006EF0EA /* UserDefaultsPropertyWrapper.swift */; };
 		03B230D32558599A006EF0EA /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B230D12558599A006EF0EA /* Request.swift */; };
@@ -118,7 +118,7 @@
 		03C54BE6252F37D30014FF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C54BE5252F37D30014FF4E /* Assets.xcassets */; };
 		03DACEE1260129E5005BE3F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DACEE0260129E5005BE3F7 /* AppDelegate.swift */; };
 		03DB0F0B2556E6280019E87E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB0F0A2556E6280019E87E /* SignUpView.swift */; };
-		03DB0F14255825C90019E87E /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 03DB0F13255825C90019E87E /* Swinject */; };
+		03DB0F14255825C90019E87E /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 03DB0F13255825C90019E87E /* SwiftPackageProductDependency */; };
 		03F0CFC525CC514D001A1B65 /* TicketCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0CFC425CC514D001A1B65 /* TicketCard.swift */; };
 		03FC5FA3254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC5FA2254DFF6D00F8BF94 /* EventCardInformationsContainerShape.swift */; };
 /* End PBXBuildFile section */
@@ -257,12 +257,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0384468025EEB69700D0D6A2 /* CodeScanner in Frameworks */,
-				03894FF9259CFE6100AD9D41 /* KeychainSwift in Frameworks */,
-				0395FF3C261E53EB0032A9DF /* NetFox in Frameworks */,
-				03DB0F14255825C90019E87E /* Swinject in Frameworks */,
-				034390E425F6A7BD0047F142 /* JWTDecode in Frameworks */,
-				03B230BF255858E6006EF0EA /* SwinjectAutoregistration in Frameworks */,
+				0384468025EEB69700D0D6A2 /* BuildFile in Frameworks */,
+				03894FF9259CFE6100AD9D41 /* BuildFile in Frameworks */,
+				0395FF3C261E53EB0032A9DF /* BuildFile in Frameworks */,
+				03DB0F14255825C90019E87E /* BuildFile in Frameworks */,
+				034390E425F6A7BD0047F142 /* BuildFile in Frameworks */,
+				03B230BF255858E6006EF0EA /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,12 +793,12 @@
 			);
 			name = "App-BDE-iOS";
 			packageProductDependencies = (
-				03DB0F13255825C90019E87E /* Swinject */,
-				03B230BE255858E6006EF0EA /* SwinjectAutoregistration */,
-				03894FF8259CFE6100AD9D41 /* KeychainSwift */,
-				0384467F25EEB69700D0D6A2 /* CodeScanner */,
-				034390E325F6A7BD0047F142 /* JWTDecode */,
-				0395FF3B261E53EB0032A9DF /* NetFox */,
+				03DB0F13255825C90019E87E /* SwiftPackageProductDependency */,
+				03B230BE255858E6006EF0EA /* SwiftPackageProductDependency */,
+				03894FF8259CFE6100AD9D41 /* SwiftPackageProductDependency */,
+				0384467F25EEB69700D0D6A2 /* SwiftPackageProductDependency */,
+				034390E325F6A7BD0047F142 /* SwiftPackageProductDependency */,
+				0395FF3B261E53EB0032A9DF /* SwiftPackageProductDependency */,
 			);
 			productName = "App-BDE-iOS";
 			productReference = 03C54BD9252F37D10014FF4E /* App-BDE-iOS.app */;
@@ -854,13 +854,13 @@
 			);
 			mainGroup = 03C54BD0252F37D10014FF4E;
 			packageReferences = (
-				037C6FBE2552214400678CF2 /* XCRemoteSwiftPackageReference "SwiftFX" */,
-				03DB0F12255825C90019E87E /* XCRemoteSwiftPackageReference "Swinject" */,
-				03B230BD255858E6006EF0EA /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
-				03894FF7259CFE6100AD9D41 /* XCRemoteSwiftPackageReference "keychain-swift" */,
-				0384467E25EEB69700D0D6A2 /* XCRemoteSwiftPackageReference "CodeScanner" */,
-				034390E225F6A7BD0047F142 /* XCRemoteSwiftPackageReference "JWTDecode" */,
-				0395FF3A261E53EB0032A9DF /* XCRemoteSwiftPackageReference "netfox" */,
+				037C6FBE2552214400678CF2 /* RemoteSwiftPackageReference */,
+				03DB0F12255825C90019E87E /* RemoteSwiftPackageReference */,
+				03B230BD255858E6006EF0EA /* RemoteSwiftPackageReference */,
+				03894FF7259CFE6100AD9D41 /* RemoteSwiftPackageReference */,
+				0384467E25EEB69700D0D6A2 /* RemoteSwiftPackageReference */,
+				034390E225F6A7BD0047F142 /* RemoteSwiftPackageReference */,
+				0395FF3A261E53EB0032A9DF /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 03C54BDA252F37D10014FF4E /* Products */;
 			projectDirPath = "";
@@ -906,7 +906,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				$PROJECT_DIR/$TARGET_NAME/swiftgen.yml,
+				"$PROJECT_DIR/$TARGET_NAME/swiftgen.yml",
 			);
 			name = "Swiftgen String";
 			outputFileListPaths = (
@@ -925,7 +925,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				$PROJECT_DIR/$TARGET_NAME/.swiftlint.yml,
+				"$PROJECT_DIR/$TARGET_NAME/.swiftlint.yml",
 			);
 			outputFileListPaths = (
 			);
@@ -1200,7 +1200,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOS/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1222,7 +1222,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = 94FLWD5X32;
 				INFOPLIST_FILE = "App-BDE-iOS/Application/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1314,7 +1314,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		034390E225F6A7BD0047F142 /* XCRemoteSwiftPackageReference "JWTDecode" */ = {
+		034390E225F6A7BD0047F142 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/auth0/JWTDecode.swift";
 			requirement = {
@@ -1322,7 +1322,7 @@
 				minimumVersion = 2.6.0;
 			};
 		};
-		037C6FBE2552214400678CF2 /* XCRemoteSwiftPackageReference "SwiftFX" */ = {
+		037C6FBE2552214400678CF2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hexagons/SwiftFX.git";
 			requirement = {
@@ -1330,7 +1330,7 @@
 				minimumVersion = 0.1.1;
 			};
 		};
-		0384467E25EEB69700D0D6A2 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+		0384467E25EEB69700D0D6A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner.git";
 			requirement = {
@@ -1338,7 +1338,7 @@
 				minimumVersion = 1.0.7;
 			};
 		};
-		03894FF7259CFE6100AD9D41 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+		03894FF7259CFE6100AD9D41 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
 			requirement = {
@@ -1346,7 +1346,7 @@
 				minimumVersion = 19.0.0;
 			};
 		};
-		0395FF3A261E53EB0032A9DF /* XCRemoteSwiftPackageReference "netfox" */ = {
+		0395FF3A261E53EB0032A9DF /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MaxenceMottard/netfox.git";
 			requirement = {
@@ -1354,7 +1354,7 @@
 				minimumVersion = 1.20.0;
 			};
 		};
-		03B230BD255858E6006EF0EA /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+		03B230BD255858E6006EF0EA /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
 			requirement = {
@@ -1362,7 +1362,7 @@
 				minimumVersion = 2.7.0;
 			};
 		};
-		03DB0F12255825C90019E87E /* XCRemoteSwiftPackageReference "Swinject" */ = {
+		03DB0F12255825C90019E87E /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
@@ -1373,34 +1373,34 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		034390E325F6A7BD0047F142 /* JWTDecode */ = {
+		034390E325F6A7BD0047F142 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 034390E225F6A7BD0047F142 /* XCRemoteSwiftPackageReference "JWTDecode" */;
+			package = 034390E225F6A7BD0047F142 /* RemoteSwiftPackageReference */;
 			productName = JWTDecode;
 		};
-		0384467F25EEB69700D0D6A2 /* CodeScanner */ = {
+		0384467F25EEB69700D0D6A2 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0384467E25EEB69700D0D6A2 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			package = 0384467E25EEB69700D0D6A2 /* RemoteSwiftPackageReference */;
 			productName = CodeScanner;
 		};
-		03894FF8259CFE6100AD9D41 /* KeychainSwift */ = {
+		03894FF8259CFE6100AD9D41 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03894FF7259CFE6100AD9D41 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			package = 03894FF7259CFE6100AD9D41 /* RemoteSwiftPackageReference */;
 			productName = KeychainSwift;
 		};
-		0395FF3B261E53EB0032A9DF /* NetFox */ = {
+		0395FF3B261E53EB0032A9DF /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0395FF3A261E53EB0032A9DF /* XCRemoteSwiftPackageReference "netfox" */;
+			package = 0395FF3A261E53EB0032A9DF /* RemoteSwiftPackageReference */;
 			productName = NetFox;
 		};
-		03B230BE255858E6006EF0EA /* SwinjectAutoregistration */ = {
+		03B230BE255858E6006EF0EA /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03B230BD255858E6006EF0EA /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			package = 03B230BD255858E6006EF0EA /* RemoteSwiftPackageReference */;
 			productName = SwinjectAutoregistration;
 		};
-		03DB0F13255825C90019E87E /* Swinject */ = {
+		03DB0F13255825C90019E87E /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03DB0F12255825C90019E87E /* XCRemoteSwiftPackageReference "Swinject" */;
+			package = 03DB0F12255825C90019E87E /* RemoteSwiftPackageReference */;
 			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
