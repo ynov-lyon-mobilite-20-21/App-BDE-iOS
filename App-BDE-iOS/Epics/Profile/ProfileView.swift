@@ -67,9 +67,9 @@ struct ProfileView: View {
                         // User info block
                         HStack {
                             // User Info
-                            VStack(alignment: .leading, spacing: 10) {
+                            VStack(alignment: .leading, spacing: 15) {
                                 HStack {
-                                    TitleCustom(title: "\(viewModel.user?.firstName ?? "") \(viewModel.user?.lastName ?? "")",
+                                    TitleCustom(title: "\(viewModel.user?.firstName ?? "") \(viewModel.user?.lastName.uppercased() ?? "")",
                                                 font: Font.title3.weight(.bold),
                                                 textColor: Color.blackToWhite,
                                                 shadowColor: Color.bdeGreen)
@@ -91,14 +91,11 @@ struct ProfileView: View {
                                 Text("\(viewModel.user?.promotion.rawValue ?? "") \(viewModel.user?.formation.rawValue ?? "")")
                                 Text(viewModel.user?.mail ?? "")
                             }
-                            .padding(.leading)
-                            .padding(.vertical, 25)
-
+                            .padding()
                             Spacer()
                             VStack {
                                 Spacer()
-                                // TODO add dynamic gesture of icons
-                                Image(Asset.LogoFormation.logoInfo.name)
+                                Image(viewModel.user?.formationImage ?? "")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 70, height: 70)

@@ -45,7 +45,7 @@ struct SignUpView: View {
                 Section(header: Text(L10n.SignUpView.Section.studentInfos)) {
                     
                     Picker(L10n.SignUpView.TextField.StudentInfos.promotion, selection: $viewModel.promotion) {
-                            ForEach(Promotion.allCases, id: \.self) { promotion in
+                        ForEach(User.Promotion.allCases, id: \.self) { promotion in
                                 Text(promotion.rawValue)
                                     .tag(promotion)
                             }
@@ -54,7 +54,7 @@ struct SignUpView: View {
                         .pickerStyle(DefaultPickerStyle())
 
                     Picker(L10n.SignUpView.TextField.StudentInfos.formation, selection: $viewModel.formation) {
-                            ForEach(Formation.allCases, id: \.self) { formation in
+                        ForEach(User.Formation.allCases, id: \.self) { formation in
                                 Text(formation.rawValue)
                                     .tag(formation)
                             }

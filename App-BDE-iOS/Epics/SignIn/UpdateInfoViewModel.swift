@@ -41,14 +41,14 @@ class UpdateInfoViewModel: BaseViewModel {
             }
         }
     }
-    var formation: Formation = Formation.defaultValue {
+    var formation: User.Formation = User.Formation.defaultValue {
         didSet {
             DispatchQueue.main.async {
                 self.objectWillChange.send()
             }
         }
     }
-    var promotion: Promotion = Promotion.defaultValue {
+    var promotion: User.Promotion = User.Promotion.defaultValue {
         didSet {
             DispatchQueue.main.async {
                 self.objectWillChange.send()

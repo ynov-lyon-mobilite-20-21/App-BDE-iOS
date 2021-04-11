@@ -40,7 +40,7 @@ struct UpdateInfoView: View {
                     Section(header: Text(L10n.UpdateInfoView.Section.studentInfos)) {
 
                         Picker(L10n.UpdateInfoView.TextField.StudentInfos.promotion, selection: $viewModel.promotion) {
-                            ForEach(Promotion.allCases, id: \.self) { promotion in
+                            ForEach(User.Promotion.allCases, id: \.self) { promotion in
                                 Text(promotion.rawValue)
                                     .tag(promotion)
                             }
@@ -49,7 +49,7 @@ struct UpdateInfoView: View {
                         .pickerStyle(DefaultPickerStyle())
 
                         Picker(L10n.UpdateInfoView.TextField.StudentInfos.formation, selection: $viewModel.formation) {
-                            ForEach(Formation.allCases, id: \.self) { promotion in
+                            ForEach(User.Formation.allCases, id: \.self) { promotion in
                                 Text(promotion.rawValue)
                                     .tag(promotion)
                             }

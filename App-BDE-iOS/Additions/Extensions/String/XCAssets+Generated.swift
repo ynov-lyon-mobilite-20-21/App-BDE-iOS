@@ -47,7 +47,12 @@ internal enum Asset {
   internal static let horloge = ImageAsset(name: "horloge")
   internal static let logoBde = ImageAsset(name: "logo_bde")
   internal enum LogoFormation {
+    internal static let logoAudio = ImageAsset(name: "logoAudio")
+    internal static let logoCom = ImageAsset(name: "logoCom")
+    internal static let logoCrea = ImageAsset(name: "logoCrea")
     internal static let logoInfo = ImageAsset(name: "logoInfo")
+    internal static let logoJeuVideo = ImageAsset(name: "logoJeuVideo")
+    internal static let logoRobot = ImageAsset(name: "logoRobot")
   }
   internal enum OnBoarding {
     internal static let logosIllustration2 = ImageAsset(name: "logos_illustration2")

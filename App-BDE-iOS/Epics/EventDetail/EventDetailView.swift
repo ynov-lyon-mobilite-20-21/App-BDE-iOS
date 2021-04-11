@@ -10,6 +10,7 @@ import CodeScanner
 
 struct EventDetailView: View {
     
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentation
     @ObservedObject var viewModel: EventDetailViewModel
     @State private var isShowingScanner = false
@@ -61,9 +62,11 @@ struct EventDetailView: View {
                                 .renderingMode(.template)
                                 .foregroundColor(Color.blackToWhite)
                             Text(viewModel.event.hour)
+                                .bold()
                         }
                         Spacer()
                         Text(viewModel.event.date)
+                            .bold()
                     }
                     HStack {
                         Text(viewModel.event.address)
@@ -86,7 +89,7 @@ struct EventDetailView: View {
                         .padding(.vertical, 15)
                         .padding(.horizontal, 70)
                 }
-                .background(Color.bdeBlue)
+                .background(LinearGradient(gradient: Gradient(colors: [Color.blueToGreenGradiantStartingPoint, Color.blueToGreenGradiantEndingPoint]), startPoint: .leading, endPoint: .trailing))
                 .cornerRadius(30)
             })
             
@@ -112,14 +115,26 @@ struct EventDetailView: View {
 
 struct EventDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ViewProvider.eventDetail(event: Event(_id: "1",
-                                              name: "Espit Chupitos",
-                                              type: .studentParty,
-                                              imgType: .party,
-                                              logoType: .party,
-                                              date: "21/12/2020", hour: "20h",
-                                              address: "22 rue du Test",
-                                              description: "C'est une sacré  description",
+        Group {
+            ViewProvider.eventDetail(event: Event(_id: "1",
+                                                  name: "Espit Chupitos",
+                                                  type: .studentParty,
+                                                  imgType: .party,
+                                                  logoType: .party,
+                                                  date: "21/12/2020", hour: "20h",
+                                                  address: "22 rue du Test",
+                                                  description: "C'est une sacré  description",
                                               price: 5))
+            ViewProvider.eventDetail(event: Event(_id: "1",
+                                                  name: "Espit Chupitos",
+                                                  type: .studentParty,
+                                                  imgType: .party,
+                                                  logoType: .party,
+                                                  date: "21/12/2020", hour: "20h",
+                                                  address: "22 rue du Test",
+                                                  description: "C'est une sacré  description",
+                                                  price: 5))
+                .preferredColorScheme(.dark)
+        }
     }
 }
