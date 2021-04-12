@@ -45,6 +45,8 @@
 		034390DB25F6A0B60047F142 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034390DA25F6A0B60047F142 /* Collection+Extensions.swift */; };
 		034390E425F6A7BD0047F142 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = 034390E325F6A7BD0047F142 /* JWTDecode */; };
 		034390E925F6AA2A0047F142 /* RefreshTokenWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034390E825F6AA2A0047F142 /* RefreshTokenWebService.swift */; };
+		034B63AB2624E75400AA9831 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034B63AA2624E75400AA9831 /* UserRepository.swift */; };
+		034B63B12624E81F00AA9831 /* CreateNewStripeCreditCardWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034B63B02624E81F00AA9831 /* CreateNewStripeCreditCardWebService.swift */; };
 		03503F20261F7EBB002838A3 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03503F1F261F7EBB002838A3 /* UserProvider.swift */; };
 		0350F48C25A128D2008059A6 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F48B25A128D1008059A6 /* UIApplication+Extensions.swift */; };
 		0350F49125A12DB0008059A6 /* OnBoardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */; };
@@ -178,6 +180,8 @@
 		033438892610B9CB005E64C2 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
 		034390DA25F6A0B60047F142 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		034390E825F6AA2A0047F142 /* RefreshTokenWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenWebService.swift; sourceTree = "<group>"; };
+		034B63AA2624E75400AA9831 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		034B63B02624E81F00AA9831 /* CreateNewStripeCreditCardWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewStripeCreditCardWebService.swift; sourceTree = "<group>"; };
 		03503F1F261F7EBB002838A3 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		0350F48B25A128D1008059A6 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		0350F49025A12DB0008059A6 /* OnBoardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCardView.swift; sourceTree = "<group>"; };
@@ -431,6 +435,7 @@
 				03C3387325DD755500B5443C /* ViewError.swift */,
 				03A740F5261BA74B0029BDB8 /* Payment.swift */,
 				03A97C9C2623365C0095614F /* CreditCard.swift */,
+				034B63AA2624E75400AA9831 /* UserRepository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -637,6 +642,7 @@
 				03A97C96262328640095614F /* StripeWebService.swift */,
 				03A97CA1262337AF0095614F /* GetCreditsCardsWebService.swift */,
 				03A97CA9262355AE0095614F /* RegisterStripeNewCreditCard.swift */,
+				034B63B02624E81F00AA9831 /* CreateNewStripeCreditCardWebService.swift */,
 			);
 			path = Stripe;
 			sourceTree = "<group>";
@@ -1002,6 +1008,7 @@
 				039A37D025A5148000E6B3AA /* BaseViewModel.swift in Sources */,
 				0384469325EEB85100D0D6A2 /* QRScannerView.swift in Sources */,
 				03A8E33F2541BA8E00B02210 /* ProfileView.swift in Sources */,
+				034B63B12624E81F00AA9831 /* CreateNewStripeCreditCardWebService.swift in Sources */,
 				0308680625BC672200D8D484 /* SignUpAssembly.swift in Sources */,
 				03C3384F25DD71D000B5443C /* ViewProvider.swift in Sources */,
 				036495202614CA09006738BD /* ApplicationState.swift in Sources */,
@@ -1091,6 +1098,7 @@
 				030867E725BC62F600D8D484 /* ProfileAssembly.swift in Sources */,
 				03012AAF254888B900DD9D64 /* EventViewModel.swift in Sources */,
 				030867F225BC635200D8D484 /* ViewControllerProvider+Profil.swift in Sources */,
+				034B63AB2624E75400AA9831 /* UserRepository.swift in Sources */,
 				039A37C225A50B2300E6B3AA /* AnyPublisher+Extensions.swift in Sources */,
 				03B2310425586372006EF0EA /* SignUpDTO.swift in Sources */,
 				039A37B825A50A4400E6B3AA /* Weakable.swift in Sources */,

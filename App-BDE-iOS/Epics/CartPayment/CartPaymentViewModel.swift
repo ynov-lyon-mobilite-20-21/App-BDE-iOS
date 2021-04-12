@@ -18,6 +18,7 @@ class CartPaymentViewModel: BaseViewModel {
     var stripePaymentWebService: StripePaymentWebService!
     var getCreditsCardsWebService: GetCreditsCardsWebService!
     var registerStripeNewCreditCard: RegisterStripeNewCreditCard!
+    var createNewStripeCreditCardWebService: CreateNewStripeCreditCardWebService!
     
     var number: String = "" {
         didSet {
@@ -78,11 +79,10 @@ class CartPaymentViewModel: BaseViewModel {
     }
     
     func isUserHavingCards() {
-        if getCreditsCards().isEmpty {
-            userHasCards = false
-        } else {
-            userHasCards = true
-        }
+        getCreditsCards(onCardsFound: { cards in
+            self.userHasCards = true
+        })
+        
     }
     
     func preparePaymentSheet() {
@@ -91,27 +91,6 @@ class CartPaymentViewModel: BaseViewModel {
     
     func onPaymentCompletion(result: PaymentResult) {
         self.paymentResult = result
-    }
-    
-    private func getCreditsCards() -> [CreditCard] {
-        var creditsCards: [CreditCard] = []
-        let serviceParameters = ExecuteServiceSetup(service: getCreditsCardsWebService, parameters: EmptyParameters(), isRequestAuthenticated: true)
-        executeRequest(serviceParameters, onSuccess: { value in
-            creditsCards = value.data
-        }, onError: { error in
-            print(error)
-        })
-        return creditsCards
-    }
-    
-    private func makeStripePaymentRequest() {
-        let serviceParameters = ExecuteServiceSetup(service: stripePaymentWebService, parameters: EmptyParameters(), urlParameters: [event._id], isRequestAuthenticated: true)
-        
-        executeRequest(serviceParameters, onSuccess: { value in
-            print(value.data)
-        }, onError: { error in
-            print(error)
-        })
     }
     
     func createStripeCreditCard() {
@@ -124,9 +103,40 @@ class CartPaymentViewModel: BaseViewModel {
         let serviceParameters = ExecuteServiceSetup(service: registerStripeNewCreditCard,
                                                     parameters: registerStripeNewCreditCardParameters)
         executeRequestWithURLEncoded(serviceParameters, onSuccess: { value in
-            print(value)
+            self.createStripeCreditCardOnServer(with: value.id)
+            self.isUserHavingCards()
         }, onError: { error in
             print("VOILA L'ERREUR \(error)")
         })
     }
+    
+    private func createStripeCreditCardOnServer(with stripeIdCard: String) {
+        let stripeIDServiceParameters = StripeIDServiceParameters(stripeId: stripeIdCard)
+        let serviceParameters = ExecuteServiceSetup(service: createNewStripeCreditCardWebService, parameters: stripeIDServiceParameters, isRequestAuthenticated: true)
+        executeRequest(serviceParameters, onSuccess: { value in
+            print(value.data)
+        }, onError: { error in
+            print(error)
+        })
+    }
+    
+    private func getCreditsCards(onCardsFound: @escaping ([CreditCard]) -> Void) {
+        let serviceParameters = ExecuteServiceSetup(service: getCreditsCardsWebService, parameters: EmptyParameters(), isRequestAuthenticated: true)
+        executeRequest(serviceParameters, onSuccess: { value in
+            onCardsFound(value.data)
+        }, onError: { error in
+            print(error)
+        })
+    }
+    
+    private func makeStripePaymentRequest() {
+        let serviceParameters = ExecuteServiceSetup(service: stripePaymentWebService, parameters: EmptyParameters(), urlParameters: [event._id], isRequestAuthenticated: true)
+        
+        executeRequest(serviceParameters, onSuccess: { value in
+            print(value.data)
+        }, onError: { error in
+            print(error)
+        })
+    }
+    
 }

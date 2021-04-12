@@ -16,6 +16,7 @@ final class CartPaymentAssembly: Assembly {
             viewModel.stripePaymentWebService = r.resolve(StripePaymentWebService.self)
             viewModel.getCreditsCardsWebService = r.resolve(GetCreditsCardsWebService.self)
             viewModel.registerStripeNewCreditCard = r.resolve(RegisterStripeNewCreditCard.self)
+            viewModel.createNewStripeCreditCardWebService = r.resolve(CreateNewStripeCreditCardWebService.self)
             return viewModel
         }
 
