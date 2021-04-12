@@ -11,6 +11,27 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum CardPayment {
+    /// Ajouter une carte de crédit
+    internal static let title = L10n.tr("Localizable", "CardPayment.title")
+    internal enum Button {
+      /// Ajouter cette carte
+      internal static let addCard = L10n.tr("Localizable", "CardPayment.button.addCard")
+    }
+    internal enum CreditCard {
+      /// Cryptogramme
+      internal static let cvc = L10n.tr("Localizable", "CardPayment.creditCard.cvc")
+      /// Mois
+      internal static let expirationMonth = L10n.tr("Localizable", "CardPayment.creditCard.expirationMonth")
+      /// Année
+      internal static let expirationYear = L10n.tr("Localizable", "CardPayment.creditCard.expirationYear")
+      /// Numéro de la carte
+      internal static let number = L10n.tr("Localizable", "CardPayment.creditCard.number")
+      /// Titulaire de la carte
+      internal static let owner = L10n.tr("Localizable", "CardPayment.creditCard.owner")
+    }
+  }
+
   internal enum QRCode {
     /// QR-code à présenter au membre du  BDE responsable à l’entrée le jour J
     internal static let indication = L10n.tr("Localizable", "QRCode.indication")

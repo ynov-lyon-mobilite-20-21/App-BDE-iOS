@@ -77,3 +77,12 @@
 "QRScanner.indication" = "Scanner le QR Code";
 "QRScanner.ticketId" = "Billet n°";
 "QRScanner.button.scanAgain" = "Scanner à nouveau";
+
+"CardPayment.title" = "Ajouter une carte de crédit";
+"CardPayment.creditCard.number" = "Numéro de la carte";
+"CardPayment.creditCard.owner" = "Titulaire de la carte";
+"CardPayment.creditCard.expirationMonth" = "Mois";
+"CardPayment.creditCard.expirationYear" = "Année";
+"CardPayment.creditCard.cvc" = "Cryptogramme";
+"CardPayment.button.addCard" = "Ajouter cette carte";
+

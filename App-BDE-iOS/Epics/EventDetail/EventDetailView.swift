@@ -13,7 +13,6 @@ struct EventDetailView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentation
     @ObservedObject var viewModel: EventDetailViewModel
-    @State private var isShowingScanner = false
     
     var body: some View {
         ScrollView {
@@ -81,7 +80,7 @@ struct EventDetailView: View {
             }
             
             Button(action: {
-                
+                viewModel.showCartPayment()
             }, label: {
                 HStack {
                     Text(L10n.EventDetail.Button.payment)
@@ -95,7 +94,7 @@ struct EventDetailView: View {
             
             if UserProvider.shared.user?.isAdmin == true {
                 Button(action: {
-                    self.isShowingScanner = true
+                    viewModel.showQrCodeScanner()
                 }, label: {
                     HStack {
                         Spacer()
@@ -104,12 +103,17 @@ struct EventDetailView: View {
                     }
                 })
                 .padding(.vertical)
-                .sheet(isPresented: $isShowingScanner) {
-                    ViewProvider.QRScanner(event: viewModel.event)
-                }
             }
         }
         .ignoresSafeArea(.all, edges: .top)
+        .sheet(item: $viewModel.showModal) { sheet in
+            switch sheet {
+            case .qrCodeScanner:
+                ViewProvider.QRScanner(event: viewModel.event)
+            case .cartPayment:
+                ViewProvider.cartPayment(event: viewModel.event)
+            }
+        }
     }
 }
 
@@ -124,7 +128,7 @@ struct EventDetailView_Previews: PreviewProvider {
                                                   date: "21/12/2020", hour: "20h",
                                                   address: "22 rue du Test",
                                                   description: "C'est une sacré  description",
-                                              price: 5))
+                                                  price: 5))
             ViewProvider.eventDetail(event: Event(_id: "1",
                                                   name: "Espit Chupitos",
                                                   type: .studentParty,

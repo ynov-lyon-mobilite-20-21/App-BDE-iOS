@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Stripe
 import NetFox
 
 class AppDelegate: NSObject, UIApplicationDelegate {

@@ -30,8 +30,6 @@ struct ProfileView: View {
                                     price: 5)]
     
     @Environment(\.colorScheme) var colorScheme
-    @State private var isConnected = false
-    @State private var showQrCode: Bool = false
 
     var body: some View {
         GeometryReader { gr in
