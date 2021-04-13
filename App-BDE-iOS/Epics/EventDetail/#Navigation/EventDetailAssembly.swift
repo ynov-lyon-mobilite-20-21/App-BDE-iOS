@@ -10,9 +10,12 @@ import SwinjectAutoregistration
 
 final class EventDetailAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(EventDetailViewModel.self) { (_: Resolver, event: Event) -> EventDetailViewModel in
+        container.register(EventDetailViewModel.self) { (r: Resolver, event: Event) -> EventDetailViewModel in
             let viewModel = EventDetailViewModel()
             viewModel.setup(event: event)
+            viewModel.getCreditsCardsWebService = r.resolve(GetCreditsCardsWebService.self)
+            viewModel.stripePaymentWebService = r.resolve(StripePaymentWebService.self)
+
             return viewModel
         }
 

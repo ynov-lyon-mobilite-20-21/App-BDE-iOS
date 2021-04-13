@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Stripe
 import CodeScanner
 
 struct EventDetailView: View {
@@ -80,7 +81,7 @@ struct EventDetailView: View {
             }
             
             Button(action: {
-                viewModel.showCartPayment()
+                viewModel.isUserHavingCards()
             }, label: {
                 HStack {
                     Text(L10n.EventDetail.Button.payment)
@@ -91,6 +92,15 @@ struct EventDetailView: View {
                 .background(LinearGradient(gradient: Gradient(colors: [Color.blueToGreenGradiantStartingPoint, Color.blueToGreenGradiantEndingPoint]), startPoint: .leading, endPoint: .trailing))
                 .cornerRadius(30)
             })
+            
+            if let paymentSheet = viewModel.paymentSheet {
+                PaymentSheet.PaymentButton(
+                    paymentSheet: paymentSheet,
+                    onCompletion: viewModel.onPaymentCompletion,
+                    content: {
+                        Text("Il va falloir payer")
+                    })
+            }
             
             if UserProvider.shared.user?.isAdmin == true {
                 Button(action: {
@@ -110,9 +120,14 @@ struct EventDetailView: View {
             switch sheet {
             case .qrCodeScanner:
                 ViewProvider.QRScanner(event: viewModel.event)
-            case .cartPayment:
-                ViewProvider.cartPayment(event: viewModel.event)
+            case .cardRegistration:
+                ViewProvider.cardRegistration(event: viewModel.event, onCardRegistered: {
+                    viewModel.preparePaymentSheet()
+                })
             }
+        }
+        .onAppear {
+            viewModel.preparePaymentIfUserHasCard()
         }
     }
 }
