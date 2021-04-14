@@ -19,9 +19,6 @@ struct SignInView: View {
     @ObservedObject var viewModel: SignInViewModel
 
     @Environment(\.presentationMode) var presentation
-    // TODO : Delete after DI refactoring
-    @State private var showModal: Bool = false
-    @State private var showAlert: Bool = false
 
     var body: some View {
 
@@ -42,9 +39,8 @@ struct SignInView: View {
                         }
                         Button(action: {
                             viewModel.handleSignIn {
-                                if $0 == .loaded {
+                                
                                     self.presentation.wrappedValue.dismiss()
-                                }
                             }
                         }, label: {
                             HStack {
@@ -55,7 +51,7 @@ struct SignInView: View {
                         }).foregroundColor(Color.bdeGreen)
 
                         Button(action: {
-                            showModal.toggle()
+                            viewModel.showSignUpView()
                         }, label: {
                             HStack {
                                 Spacer()
@@ -66,16 +62,12 @@ struct SignInView: View {
                     }
                     .navigationTitle(L10n.SignInView.Button.login)
                 }
-                .sheet(isPresented: self.$showModal) { ViewProvider.signUp() }
-
-                if viewModel.loadingStatus == .loading {
-                    LoadingView()
-                }
-
+                .sheet(isPresented: $viewModel.showSignUp) { ViewProvider.signUp() }
+                .alert(isPresented: $viewModel.showAlert) {
+                    Alert(title: Text(viewModel.alertTitle), message: Text(viewModel.alertDescription), dismissButton: .default(Text("Ok")))
+                        }
         }
-        .alert(isPresented: $viewModel.showAlert) {
-            Alert(title: Text(viewModel.requestStatus), dismissButton: .default(Text("Ok")))
-                }
+        
     }
 }
 

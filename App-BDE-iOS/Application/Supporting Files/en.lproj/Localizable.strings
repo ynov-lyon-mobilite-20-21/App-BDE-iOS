@@ -23,16 +23,14 @@
 "EventDetail.button.payment" = "Buy a ticket";
 "eventDetail.button.scanner" = "Scan QRCode";
 
+"checkoutPayment.title" = "Checkout cart";
+"checkoutDone.title" = "Purchase successful !";
+"checkoutDone.thanks.ticket" = "Nous avons bien reçu ton paiement, merci et à très bientôt !";
+"checkoutDone.thanks.food" = "Nous avons bien reçu ton paiement, merci et bon appétit !";
+"checkoutDone.signature" = "Ton BDE 🦁";
+
 "profil.userTitle" = "MY INFORMATION";
 "profil.ticketsTitle" = "MY TICKETS";
-
-"error.alert.button.cancel" = "Cancel";
-"error.alert.PARTY_REFUSED.title" = "partie refusée";
-"error.alert.PARTY_REFUSED.description" = "Bah la partie est refusée hein";
-"error.alert.UNKNOW_ERROR.title" = "une erreur est survenue";
-"error.alert.UNKNOW_ERROR.description" = "une erreur inconnue est survenue";
-"error.alert.NOTLOGGED.title" = "Attention";
-"error.alert.NOTLOGGED.title" = "Vous n'êtes pas connecté";
 
 "settings.title" = "Settings";
 "settings.updateInfo.subTitle" = "Name, First Name, Password, Class";
@@ -71,7 +69,6 @@
 "signUpView.textField.studentInfos.formation" = "Formation";
 "signUpView.button.signUp" = "Create an account";
 
-
 "QRCode.indication" = "QR-code to be presented to the responsible BDE member at the entrance on D-Day";
 
 "QRScanner.indication" = "Scan QR Code";
@@ -81,7 +78,19 @@
 "CardPayment.title" = "Add credit card";
 "CardPayment.creditCard.number" = "Card number";
 "CardPayment.creditCard.owner" = "Card owner";
-"CardPayment.creditCard.expirationMonth" = "Month";
-"CardPayment.creditCard.expirationYear" = "Year";
+"CardPayment.creditCard.expirationDate" = "Expiration date";
 "CardPayment.creditCard.cvc" = "Cryptograme";
 "CardPayment.button.addCard" = "Add this credit card";
+"CardPayment.creditCard.indications" = "MasterCard / Visa / CB";
+
+"error.alert.button.cancel" = "Annuler";
+"error.alert.PARTY_REFUSED.title" = "partie refusée";
+"error.alert.PARTY_REFUSED.description" = "Bah la partie est refusée hein";
+"error.alert.UNKNOW_ERROR.title" = "une erreur est survenue";
+"error.alert.UNKNOW_ERROR.description" = "une erreur inconnue est survenue";
+"error.alert.TOKEN_NOT_FOUND.title" = "Attention";
+"error.alert.TOKEN_NOT_FOUND.description" = "Vous n'êtes pas connecté";
+"error.alert.USER_INACTIVE.title" = "Attention";
+"error.alert.USER_INACTIVE.description" = "Votre compte n'a pas encore été activé !\n Rendez-vous dans vos mails";
+"error.alert.BAD_CREDENTIALS.title" = "Attention";
+"error.alert.BAD_CREDENTIALS.description" = "Votre adresse mail ou votre mot de passe sont incorrects";

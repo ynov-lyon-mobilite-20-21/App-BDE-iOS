@@ -19,21 +19,28 @@ class SignInViewModel: BaseViewModel {
     @Published var mailIsValid: Bool = false
     @Published var passwordIsValid: Bool = false
 
-    @Published var loadingStatus: LoadingStatus = .idle
     @Published var requestStatus: String = ""
-    @Published var showAlert: Bool = false
-
-    public func handleSignIn(onEnd: @escaping (LoadingStatus) -> Void) {
+    @Published var showSignUp: Bool = false
+    var showAlert: Bool = false {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    
+    @Published var alertTitle: String = ""
+    @Published var alertDescription: String = ""
+    
+    func handleSignIn(onSigned: @escaping () -> Void) {
 
         mailIsValid = !mail.emailValidation()
         self.passwordIsValid = self.password.isEmpty
 
         if passwordIsValid || mailIsValid {
-            self.loadingStatus = .idle
             return
         }
         UIApplication.shared.endEditing() // Call to dismiss keyboard
-        self.loadingStatus = .loading
 
         let dto = RegisterWebServiceParameters(mail: mail, password: password)
         let serviceParameters = ExecuteServiceSetup(service: loginWebService, parameters: dto)
@@ -41,16 +48,16 @@ class SignInViewModel: BaseViewModel {
         executeRequest(serviceParameters, onSuccess: { value in
             print(value.data.token)
             KeyChainService.shared.addTokensInKeyChain(token: value.data.token, refreshToken: value.data.refreshToken)
-            onEnd(.loaded)
+            onSigned()
         }, onError: { error in
             print(error)
+            self.alertTitle = error.title
+            self.alertDescription = error.description
+            self.showAlert = true
         })
     }
-}
-
-enum LoadingStatus {
-    case idle
-    case loading
-    case failed
-    case loaded
+    
+    func showSignUpView() {
+        showSignUp = true
+    }
 }
