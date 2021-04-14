@@ -9,6 +9,7 @@ import Foundation
 
 class ProfileViewModel: BaseViewModel {
     
+    var userRepository: UserRepository!
     var getUserWebService: GetUserWebService!
     
     enum Sheet: String, Identifiable {
@@ -58,9 +59,9 @@ class ProfileViewModel: BaseViewModel {
     private func getUser() {
         let serviceParameters = ExecuteServiceSetup(service: getUserWebService, parameters: EmptyParameters(), isRequestAuthenticated: true)
         executeRequest(serviceParameters, onSuccess: { value in
-            print(value.data)
             self.user = value.data
-            UserProvider.shared.user = value.data
+            self.userRepository.setUser(with: value.data)
+            print(self.userRepository.getUser())
         })
     }
 }

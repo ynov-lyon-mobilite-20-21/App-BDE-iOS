@@ -13,6 +13,7 @@ final class SettingsAssembly: Assembly {
         container.register(SettingsViewModel.self) { r -> SettingsViewModel in
             let viewModel = SettingsViewModel()
             viewModel.deleteUserWebService = r.resolve(DeleteUserWebService.self)
+            viewModel.userRepository = r.resolve(UserRepository.self)
             return viewModel
         }
 

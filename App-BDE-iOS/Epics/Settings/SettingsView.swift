@@ -18,7 +18,7 @@ struct SettingsView: View {
                     Section(header: Text("")) {
                         NavigationLink(destination: ViewProvider.updateInfo()) {
                             VStack(alignment: .leading) {
-                                Text("\(UserProvider.shared.user?.firstName ?? L10n.Settings.UpdateInfo.firstName) \(UserProvider.shared.user?.lastName ?? L10n.Settings.UpdateInfo.lastName)")
+                                Text("\(viewModel.userRepository.getUser()?.firstName ?? L10n.Settings.UpdateInfo.firstName) \(viewModel.userRepository.getUser()?.lastName ?? L10n.Settings.UpdateInfo.lastName)")
                                     .font(.title3)
                                 Text(L10n.Settings.UpdateInfo.subTitle)
                                     .font(.subheadline)
@@ -56,6 +56,9 @@ struct SettingsView: View {
                 }
                 .listStyle(InsetGroupedListStyle())
                 .navigationBarTitle(L10n.Settings.title, displayMode: .automatic)
+                .onAppear {
+                    viewModel.checkUser()
+                }
             }
         }
     }

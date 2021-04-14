@@ -13,6 +13,7 @@ final class ProfileAssembly: Assembly {
         container.register(ProfileViewModel.self) { r -> ProfileViewModel in
             let viewModel = ProfileViewModel()
             viewModel.getUserWebService = r.resolve(GetUserWebService.self)
+            viewModel.userRepository = r.resolve(UserRepository.self)
             return viewModel
         }
 

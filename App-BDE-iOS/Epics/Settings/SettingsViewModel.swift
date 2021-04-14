@@ -9,6 +9,7 @@ import Foundation
 
 class SettingsViewModel: BaseViewModel {
 
+    var userRepository: UserRepository!
     var deleteUserWebService: DeleteUserWebService!
     
     func deleteUser() {
@@ -16,7 +17,7 @@ class SettingsViewModel: BaseViewModel {
         
         executeRequestWithoutDecode(serviceParameters, onSuccess: {
             KeyChainService.shared.deleteAllElement()
-            UserProvider.shared.user = nil
+            self.userRepository.setUser(with: nil)
         }, onError: { error in
             print(error)
         })
@@ -24,6 +25,14 @@ class SettingsViewModel: BaseViewModel {
     
     func logout() {
         disconnect()
-        UserProvider.shared.user = nil
+        userRepository.setUser(with: nil)
+    }
+    
+    func checkUser() {
+        guard let user = userRepository.getUser() else {
+            print("ya pas de user : \(String(describing: userRepository.getUser()))")
+            return
+        }
+        print("Voila le user : \(user)")
     }
 }
