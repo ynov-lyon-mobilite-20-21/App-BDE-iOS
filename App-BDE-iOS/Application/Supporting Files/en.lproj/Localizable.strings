@@ -24,6 +24,7 @@
 "eventDetail.button.scanner" = "Scan QRCode";
 
 "checkoutPayment.title" = "Checkout cart";
+"checkoutPayment.button.cardRegistration" = "Save this card";
 "checkoutDone.title" = "Purchase successful !";
 "checkoutDone.thanks.ticket" = "Nous avons bien reçu ton paiement, merci et à très bientôt !";
 "checkoutDone.thanks.food" = "Nous avons bien reçu ton paiement, merci et bon appétit !";

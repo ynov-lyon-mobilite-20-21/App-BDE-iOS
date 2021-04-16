@@ -12,7 +12,6 @@ struct CheckoutTicketSucceedView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        NavigationView {
             VStack {
                 Spacer()
                 Image(colorScheme == .light ? Asset.Checkout.confirmTicketLight.name : Asset.Checkout.confirmTicketDark.name)
@@ -32,7 +31,6 @@ struct CheckoutTicketSucceedView: View {
                 Spacer()
             }
             .navigationTitle(L10n.CheckoutDone.title)
-        }
     }
 }
 

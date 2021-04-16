@@ -12,10 +12,14 @@ struct CheckoutPaymentView: View {
     @ObservedObject var viewModel: CheckoutPaymentViewModel
     
     var body: some View {
-        if viewModel.userHasPaid {
-            CheckoutTicketSucceedView()
-        } else {
-            NavigationView {
+        NavigationView {
+            if viewModel.userHasPaid {
+                VStack {
+                    CheckoutTicketSucceedView()
+                        .frame(width: 100, height: 100)
+                }
+                .animation(.easeInOut)
+            } else {
                 ScrollView {
                     VStack(spacing: 50) {
                         VStack(alignment: .leading, spacing: 15) {
@@ -27,108 +31,105 @@ struct CheckoutPaymentView: View {
                             Text("Tarif adhérent")
                         }
                         .padding()
-                        .background(Color.gray)
+                        .background(Color.bdeForm)
                         .cornerRadius(10)
                         
-                        if viewModel.userHasACardRegistered {
-                            VStack {
-                                HStack {
-                                    Circle()
-                                        .frame(width: 10, height: 10)
-                                    Text(L10n.CardPayment.CreditCard.indications)
-                                    Spacer()
+                        VStack {
+                            if viewModel.userHasACardRegistered {
+                                VStack {
                                     HStack {
-                                        Image(Asset.Checkout.mastercard.name)
-                                        Image(Asset.Checkout.visa.name)
-                                        Image(Asset.Checkout.cb.name)
-                                    }
-                                    .padding(.trailing, 8)
-                                }
-                                VStack(alignment: .leading) {
-                                    
-                                    VStack(alignment: .leading) {
-                                        Text(L10n.CardPayment.CreditCard.number)
-                                        TextField("", text: $viewModel.number)
-                                            .padding(8)
-                                            .foregroundColor(Color.black)
-                                            .background(Color.white)
-                                            .cornerRadius(5)
-                                    }
-                                    VStack(alignment: .leading) {
-                                        Text(L10n.CardPayment.CreditCard.owner)
-                                        TextField("", text: $viewModel.owner)
-                                            .padding(8)
-                                            .foregroundColor(Color.black)
-                                            .background(Color.white)
-                                            .cornerRadius(5)
-                                    }
-                                    HStack(spacing: 40) {
-                                        VStack(alignment: .leading) {
-                                            Text(L10n.CardPayment.CreditCard.expirationDate)
-                                            HStack {
-                                                TextField("", text: $viewModel.exp_month)
-                                                    .padding(8)
-                                                    .foregroundColor(Color.black)
-                                                    .background(Color.white)
-                                                    .cornerRadius(5)
-                                                
-                                                TextField("", text: $viewModel.exp_year)
-                                                    .padding(8)
-                                                    .foregroundColor(Color.black)
-                                                    .background(Color.white)
-                                                    .cornerRadius(5)
-                                            }
+                                        Circle()
+                                            .frame(width: 10, height: 10)
+                                        Text(L10n.CardPayment.CreditCard.indications)
+                                        Spacer()
+                                        HStack {
+                                            Image(Asset.Checkout.mastercard.name)
+                                            Image(Asset.Checkout.visa.name)
+                                            Image(Asset.Checkout.cb.name)
                                         }
+                                        .padding(.trailing, 8)
+                                    }
+                                    VStack(alignment: .leading) {
+                                        
                                         VStack(alignment: .leading) {
-                                            Text(L10n.CardPayment.CreditCard.cvc)
-                                            TextField("", text: $viewModel.cvc)
+                                            Text(L10n.CardPayment.CreditCard.number)
+                                            TextField("", text: $viewModel.number)
                                                 .padding(8)
                                                 .foregroundColor(Color.black)
                                                 .background(Color.white)
                                                 .cornerRadius(5)
                                         }
-                                        .padding(.leading, 15)
+                                        VStack(alignment: .leading) {
+                                            Text(L10n.CardPayment.CreditCard.owner)
+                                            TextField("", text: $viewModel.owner)
+                                                .padding(8)
+                                                .foregroundColor(Color.black)
+                                                .background(Color.white)
+                                                .cornerRadius(5)
+                                        }
+                                        HStack(spacing: 40) {
+                                            VStack(alignment: .leading) {
+                                                Text(L10n.CardPayment.CreditCard.expirationDate)
+                                                HStack {
+                                                    TextField("", text: $viewModel.exp_month)
+                                                        .padding(8)
+                                                        .foregroundColor(Color.black)
+                                                        .background(Color.white)
+                                                        .cornerRadius(5)
+                                                    
+                                                    TextField("", text: $viewModel.exp_year)
+                                                        .padding(8)
+                                                        .foregroundColor(Color.black)
+                                                        .background(Color.white)
+                                                        .cornerRadius(5)
+                                                }
+                                            }
+                                            VStack(alignment: .leading) {
+                                                Text(L10n.CardPayment.CreditCard.cvc)
+                                                TextField("", text: $viewModel.cvc)
+                                                    .padding(8)
+                                                    .foregroundColor(Color.black)
+                                                    .background(Color.white)
+                                                    .cornerRadius(5)
+                                            }
+                                            .padding(.leading, 15)
+                                        }
                                     }
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                                    .background(Color.bdeForm)
+                                    .cornerRadius(10)
                                 }
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.gray)
-                                .cornerRadius(10)
+                                .transition(.slide)
                             }
-                            .transition(.slide)
                         }
+                        .animation(.default)
                         
-                        Button(action: {
-                            withAnimation {
-                                if !viewModel.userHasACardRegistered {
-                                    viewModel.preparePaymentIfUserHasCard()
+                        if viewModel.isLoading {
+                            LoadingView()
+                        } else {
+                            Button(action: {
+                                if viewModel.isShowingCardRegister {
+                                    viewModel.createNewCreditCards()
                                 } else {
-                                    viewModel.userHasACardRegistered.toggle()
-                                    viewModel.preparePayment()
+                                    viewModel.verifyIfUserHasCardElsePay()
                                 }
-                            }
-                        }, label: {
-                            HStack {
-                                Text(!viewModel.userHasACardRegistered ? L10n.EventDetail.Button.payment : "Payer")
-                                    .foregroundColor(Color.white)
-                                    .padding(.vertical, 15)
-                                    .padding(.horizontal, 70)
-                            }
-                            .background(LinearGradient(gradient: Gradient(colors: [Color.blueToGreenGradiantStartingPoint, Color.blueToGreenGradiantEndingPoint]), startPoint: .leading, endPoint: .trailing))
-                            .cornerRadius(30)
-                        })
-                        .shadow(radius: 8)
-                        
-                        Button(action: {
-                            viewModel.createNewCreditCards()
-                        }, label: {
-                            Text("creer carte")
-                        })
-                        
+                            },
+                            label: {
+                                HStack {
+                                    Text(!viewModel.userHasACardRegistered ? L10n.EventDetail.Button.payment : L10n.CheckoutPayment.Button.cardRegistration)
+                                        .foregroundColor(Color.white)
+                                        .padding(.vertical, 15)
+                                        .padding(.horizontal, 70)
+                                }
+                                .background(LinearGradient(gradient: Gradient(colors: [Color.blueToGreenGradiantStartingPoint, Color.blueToGreenGradiantEndingPoint]), startPoint: .leading, endPoint: .trailing))
+                                .cornerRadius(30)
+                            })
+                            .shadow(radius: 8)
+                        }
                     }
                     .padding(.horizontal, 30)
                     .navigationTitle(L10n.CheckoutPayment.title)
-                    .animation(.easeOut(duration: 5))
                 }
                 .padding(.top, 50)
             }

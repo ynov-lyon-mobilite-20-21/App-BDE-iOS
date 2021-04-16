@@ -64,6 +64,10 @@ internal enum L10n {
   internal enum CheckoutPayment {
     /// Confirmation d'achat
     internal static let title = L10n.tr("Localizable", "checkoutPayment.title")
+    internal enum Button {
+      /// Enregistrer cette carte
+      internal static let cardRegistration = L10n.tr("Localizable", "checkoutPayment.button.cardRegistration")
+    }
   }
 
   internal enum Error {

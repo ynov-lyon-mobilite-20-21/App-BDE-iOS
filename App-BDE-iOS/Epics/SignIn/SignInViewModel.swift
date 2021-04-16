@@ -20,7 +20,14 @@ class SignInViewModel: BaseViewModel {
     @Published var passwordIsValid: Bool = false
 
     @Published var requestStatus: String = ""
-    @Published var showSignUp: Bool = false
+    @Published var showSignUp: Bool = false {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    
     var showAlert: Bool = false {
         didSet {
             DispatchQueue.main.async {
@@ -31,13 +38,22 @@ class SignInViewModel: BaseViewModel {
     
     @Published var alertTitle: String = ""
     @Published var alertDescription: String = ""
+    var isLoading: Bool = false {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+
     
     func handleSignIn(onSigned: @escaping () -> Void) {
-
+        isLoading.toggle()
         mailIsValid = !mail.emailValidation()
         self.passwordIsValid = self.password.isEmpty
 
         if passwordIsValid || mailIsValid {
+            isLoading.toggle()
             return
         }
         UIApplication.shared.endEditing() // Call to dismiss keyboard

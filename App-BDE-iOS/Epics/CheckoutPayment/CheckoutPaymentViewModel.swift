@@ -7,6 +7,8 @@
 
 import Foundation
 import Stripe
+import Combine
+import SwiftUI
 
 class CheckoutPaymentViewModel: BaseViewModel {
     
@@ -24,6 +26,14 @@ class CheckoutPaymentViewModel: BaseViewModel {
     var registerStripeNewCreditCard: RegisterStripeNewCreditCard!
     var createNewStripeCreditCardWebService: CreateNewStripeCreditCardWebService!
     
+    var isShowingCardRegister: Bool = false {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    
     var userHasACardRegistered: Bool = false {
         didSet {
             DispatchQueue.main.async {
@@ -31,7 +41,16 @@ class CheckoutPaymentViewModel: BaseViewModel {
             }
         }
     }
+    
     var userHasPaid: Bool = false {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    
+    var isLoading: Bool = false {
         didSet {
             DispatchQueue.main.async {
                 self.objectWillChange.send()
@@ -75,18 +94,13 @@ class CheckoutPaymentViewModel: BaseViewModel {
         }
     }
     
-    enum Sheet: String, Identifiable {
-        var id: String {
-            rawValue
-        }
-        case qrCodeScanner
-        case checkoutPayment
-    }
-    
-    func preparePaymentIfUserHasCard() {
+    func verifyIfUserHasCardElsePay() {
+        self.isLoading.toggle()
         getCreditsCards(onCardsFound: { cards in
             if cards.isEmpty {
+                self.isLoading.toggle()
                 self.userHasACardRegistered.toggle()
+                self.isShowingCardRegister.toggle()
             } else {
                 self.preparePayment()
             }
@@ -94,19 +108,36 @@ class CheckoutPaymentViewModel: BaseViewModel {
     }
     
     func preparePayment() {
-        makeStripePaymentRequest(onPaymentIntented: { paymentIntent in
+        makeStripePaymentRequest(onPaymentIntented: { stripePaymentResponse in
             DispatchQueue.main.async {
-                self.userHasPaid.toggle()
-//                self.pay(with: paymentIntent.paymentIntentId, onPaymentDone: {
-//                    self.userHasPaid.toggle()
-//                })
+                if let appURL = URL(string: stripePaymentResponse.payLink) {
+                    UIApplication.shared.open(appURL) { success in
+                        if success {
+                            print("The URL was delivered successfully.")
+                        } else {
+                            self.isLoading.toggle()
+                            self.userHasPaid.toggle()
+                            print("The URL failed to open.")
+                        }
+                    }
+                } else {
+                    print("Invalid URL specified.")
+                }
+                //                self.pay(with: paymentIntent.clientSecret, onPaymentDone: {
+                //                    self.userHasPaid.toggle()
+                //                })
             }
         })
     }
     
     func createNewCreditCards() {
-        createStripeCreditCardOnStripeServer {
-            self.userHasACardRegistered.toggle()
+        if number.isEmpty, exp_month.isEmpty, exp_year.isEmpty, cvc.isEmpty, owner.isEmpty {
+            isLoading.toggle()
+        } else {
+            createStripeCreditCardOnStripeServer {
+                self.userHasACardRegistered.toggle()
+                self.isShowingCardRegister.toggle()
+            }
         }
     }
     
@@ -119,59 +150,60 @@ class CheckoutPaymentViewModel: BaseViewModel {
         })
     }
     
-    private func makeStripePaymentRequest(onPaymentIntented: @escaping (StripePaymentResponse) -> Void) {
-        let serviceParameters = ExecuteServiceSetup(service: stripePaymentWebService, parameters: EmptyParameters(), urlParameters: [event._id], isRequestAuthenticated: true)
+    func createStripeCreditCardOnStripeServer(onCardCreated: @escaping () -> Void) {
+        let registerStripeNewCreditCardParameters = RegisterStripeNewCreditCardParameters(number: number,
+                                                                                          exp_month: exp_month,
+                                                                                          exp_year: exp_year,
+                                                                                          cvc: cvc,
+                                                                                          name: owner)
         
-        executeRequest(serviceParameters, onSuccess: { value in
-            onPaymentIntented(value.data)
+        let serviceParameters = ExecuteServiceSetup(service: registerStripeNewCreditCard,
+                                                    parameters: registerStripeNewCreditCardParameters)
+        executeRequestWithURLEncoded(serviceParameters, onSuccess: { value in
+            self.createStripeCreditCardOnServer(with: value.id, onCardCreated: onCardCreated)
+        }, onError: { error in
+            print("VOILA L'ERREUR \(error)")
+        })
+    }
+    
+    private func createStripeCreditCardOnServer(with stripeIdCard: String, onCardCreated: @escaping () -> Void) {
+        let stripeIDServiceParameters = StripeIDServiceParameters(stripeId: stripeIdCard)
+        let serviceParameters = ExecuteServiceSetup(service: createNewStripeCreditCardWebService, parameters: stripeIDServiceParameters, isRequestAuthenticated: true)
+        executeRequest(serviceParameters, onSuccess: { _ in
+            onCardCreated()
         }, onError: { error in
             print(error)
         })
     }
     
-    func createStripeCreditCardOnStripeServer(onCardCreated: @escaping () -> Void) {
-           let registerStripeNewCreditCardParameters = RegisterStripeNewCreditCardParameters(number: number,
-                                                                                             exp_month: exp_month,
-                                                                                             exp_year: exp_year,
-                                                                                             cvc: cvc,
-                                                                                             name: owner)
-           
-           let serviceParameters = ExecuteServiceSetup(service: registerStripeNewCreditCard,
-                                                       parameters: registerStripeNewCreditCardParameters)
-           executeRequestWithURLEncoded(serviceParameters, onSuccess: { value in
-               self.createStripeCreditCardOnServer(with: value.id, onCardCreated: onCardCreated)
-           }, onError: { error in
-               print("VOILA L'ERREUR \(error)")
-           })
-       }
-       
-       private func createStripeCreditCardOnServer(with stripeIdCard: String, onCardCreated: @escaping () -> Void) {
-           let stripeIDServiceParameters = StripeIDServiceParameters(stripeId: stripeIdCard)
-           let serviceParameters = ExecuteServiceSetup(service: createNewStripeCreditCardWebService, parameters: stripeIDServiceParameters, isRequestAuthenticated: true)
-           executeRequest(serviceParameters, onSuccess: { value in
-               onCardCreated()
-           }, onError: { error in
-               print(error)
-           })
-       }
-
+    private func makeStripePaymentRequest(onPaymentIntented: @escaping (StripePaymentResponse) -> Void) {
+        let stripePaymentParameter = StripePaymentParameters(basicPaymentFallback: true)
+        let serviceParameters = ExecuteServiceSetup(service: stripePaymentWebService, parameters: stripePaymentParameter, urlParameters: [event._id], isRequestAuthenticated: true)
+        
+        executeRequest(serviceParameters, onSuccess: { value in
+            onPaymentIntented(value.data)
+            
+        }, onError: { error in
+            print(error)
+        })
+    }
     
-//    private func pay(with paymentIntent: String, onPaymentDone: @escaping () -> Void) {
-//        let paymentIntentParams = STPPaymentIntentParams(clientSecret: paymentIntent)
-//        let paymentHandler = STPPaymentHandler.shared()
-//
-//        paymentHandler.confirmPayment(withParams: paymentIntentParams, authenticationContext: self) { (status, paymentIntent, error) in
-//            switch (status) {
-//            case .failed:
-//                print("Payment fail")
-//            case .canceled:
-//                print("Payment cancel")
-//            case .succeeded:
-//                print("Payment Succeed")
-//                onPaymentDone()
-//            @unknown default:
-//                fatalError()
-//            }
-//        }
-//    }
+    private func pay(with paymentIntent: String, onPaymentDone: @escaping () -> Void) {
+        let paymentIntentParams = STPPaymentIntentParams(clientSecret: paymentIntent)
+        let paymentHandler = STPPaymentHandler.shared()
+        
+        //        paymentHandler.confirmPayment(paymentIntentParams, with: self) { (status, paymentIntent, error) in
+        //            switch (status) {
+        //            case .failed:
+        //                print("Payment fail")
+        //            case .canceled:
+        //                print("Payment cancel")
+        //            case .succeeded:
+        //                print("Payment Succeed")
+        //                onPaymentDone()
+        //            @unknown default:
+        //                fatalError()
+        //            }
+        //        }
+    }
 }

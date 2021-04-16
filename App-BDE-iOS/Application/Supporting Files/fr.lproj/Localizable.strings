@@ -25,10 +25,12 @@
 "eventDetail.button.scanner" = "Scanner un QRCode";
 
 "checkoutPayment.title" = "Confirmation d'achat";
+"checkoutPayment.button.cardRegistration" = "Enregistrer cette carte";
 "checkoutDone.title" = "Achat réussi !";
 "checkoutDone.thanks.ticket" = "Nous avons bien reçu ton paiement, merci et à très bientôt !";
 "checkoutDone.thanks.food" = "Nous avons bien reçu ton paiement, merci et bon appétit !";
 "checkoutDone.signature" = "Ton BDE 🦁";
+
 
 "profil.userTitle" = "MES INFORMATIONS";
 "profil.ticketsTitle" = "MES BILLETS";

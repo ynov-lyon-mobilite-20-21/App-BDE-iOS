@@ -8,14 +8,20 @@
 import Foundation
 
 struct StripePaymentResponse: Decodable {
+    var basicPaymentFallback: Bool
     var paymentIntentId: String
     var clientSecret: String
+    var payLink: String
+}
+
+struct StripePaymentParameters: Encodable {
+    var basicPaymentFallback: Bool
 }
 
 class StripePaymentWebService: WebService {
     
     typealias DecodedType = StripePaymentResponse
-    typealias ServiceParameters = EmptyParameters
+    typealias ServiceParameters = StripePaymentParameters
     
     var url: String = "https://lyon-ynov-bde-api.herokuapp.com/api/events/pay/%@"
     

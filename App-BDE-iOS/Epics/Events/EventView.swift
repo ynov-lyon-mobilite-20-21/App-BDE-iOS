@@ -31,10 +31,12 @@ struct EventView: View {
                     ForEach(viewModel.eventList, id: \._id) { event in
                         EventItem(event: event)
                             .shadow(radius: 5)
+                            .transition(.scale)
                     }
                 }
                 .padding(.horizontal)
                 .frame(width: gr.size.width)
+                .animation(.default)
             }
             .background(
                 ZStack {
