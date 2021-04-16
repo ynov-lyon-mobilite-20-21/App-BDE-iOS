@@ -69,14 +69,23 @@ class SignUpViewModel: BaseViewModel {
             }
         }
     }
+    var isLoading: Bool = false {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
 
     var user: SignUpDTO?
 
-    public func handleSignUp() {
+    public func handleSignUp(onSignUp: @escaping () -> Void) {
+        isLoading.toggle()
         mailIsValid = !mail.emailValidation()
         self.passwordIsValid = self.password.isEmpty
 
         if passwordIsValid || mailIsValid {
+            isLoading.toggle()
             return
         }
 
@@ -92,6 +101,7 @@ class SignUpViewModel: BaseViewModel {
         
         executeRequest(serviceParameters, onSuccess: { value in
             print(value.data)
+            onSignUp()
         })
     }
 }

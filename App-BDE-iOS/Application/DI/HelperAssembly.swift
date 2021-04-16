@@ -25,6 +25,9 @@ class HelperAssembly: Assembly {
         container.autoregister(DeleteUserWebService.self, initializer: DeleteUserWebService.init)
         container.autoregister(UpdateUserWebService.self, initializer: UpdateUserWebService.init)
         container.autoregister(GetEventWebService.self, initializer: GetEventWebService.init)
+        container.autoregister(StripePaymentWebService.self, initializer: StripePaymentWebService.init)
+        container.autoregister(GetCreditsCardsWebService.self, initializer: GetCreditsCardsWebService.init)
+        container.autoregister(RegisterStripeNewCreditCard.self, initializer: RegisterStripeNewCreditCard.init)
+        container.autoregister(CreateNewStripeCreditCardWebService.self, initializer: CreateNewStripeCreditCardWebService.init)
     }
-
 }

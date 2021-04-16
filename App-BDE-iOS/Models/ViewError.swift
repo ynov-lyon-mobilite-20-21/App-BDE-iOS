@@ -19,5 +19,11 @@ struct ViewError: Error, Identifiable {
         case UNKNOW_ERROR
         case PARTY_REFUSED
         case TOKEN_NOT_FOUND
+        case USER_INACTIVE
+        case BAD_CREDENTIALS
+        case EMAIL_REQUIRED
+        case PASSWORD_REQUIRED
+        case FIRSTNAME_REQUIRED
+        case LASTNAME_REQUIRED
     }
 }

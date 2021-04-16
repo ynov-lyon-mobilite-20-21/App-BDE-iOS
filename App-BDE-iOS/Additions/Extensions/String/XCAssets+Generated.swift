@@ -37,6 +37,13 @@ internal enum Asset {
     internal static let cardPARTY = ImageAsset(name: "card_PARTY")
     internal static let cardSPORT = ImageAsset(name: "card_SPORT")
   }
+  internal enum Checkout {
+    internal static let visa = ImageAsset(name: "Visa")
+    internal static let cb = ImageAsset(name: "cb")
+    internal static let confirmTicketDark = ImageAsset(name: "confirm-ticket-dark")
+    internal static let confirmTicketLight = ImageAsset(name: "confirm-ticket-light")
+    internal static let mastercard = ImageAsset(name: "mastercard")
+  }
   internal enum EventTypeImage {
     internal static let foodStand = ImageAsset(name: "FOOD_stand")
     internal static let kolokBiere = ImageAsset(name: "KOLOK_biere")

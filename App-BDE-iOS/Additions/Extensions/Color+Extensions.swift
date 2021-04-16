@@ -26,5 +26,5 @@ extension Color {
     static let bdeYellow = Color("bdeYellow")
     static let blueToGreenGradiantStartingPoint = Color("blueToGreenGradiantStartingPoint")
     static let blueToGreenGradiantEndingPoint = Color("blueToGreenGradiantEndingPoint")
-
+    static let bdeForm = Color("bdeForm")
 }

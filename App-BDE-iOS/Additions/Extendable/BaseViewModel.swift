@@ -42,7 +42,6 @@ class BaseViewModel: ObservableObject, Weakable {
     func disconnect() {
         keyChainService.removeStringInKeyChain(name: "UserToken")
         keyChainService.removeStringInKeyChain(name: "UserRefreshToken")
-        print(keyChainService.getStringInKeyChain(name: "UserToken"))
     }
     
     func getNewToken(onTokenSuccess: @escaping (String) -> Void) {
@@ -70,6 +69,7 @@ class BaseViewModel: ObservableObject, Weakable {
         }
         executeTheRequest(serviceSetupParameter: serviceSetup, serviceExecution: serviceExecution)
     }
+    
     func executeRequestWithoutDecode<T: WebService>(_ serviceSetup: ExecuteServiceSetup<T>, onSuccess: @escaping (() -> Void), onError: ((ViewError) -> Void)? = nil) {
         let serviceExecution = weakify { strongSelf in
             serviceSetup.service
@@ -78,6 +78,21 @@ class BaseViewModel: ObservableObject, Weakable {
                     strongSelf.onReceiveCompletion(result: result, onError: onError)
                 }, receiveValue: {
                     onSuccess()
+                }).store(in: &strongSelf.bag)
+        }
+        executeTheRequest(serviceSetupParameter: serviceSetup, serviceExecution: serviceExecution)
+    }
+    
+    func executeRequestWithURLEncoded<T: WebService>(_ serviceSetup: ExecuteServiceSetup<T>,
+                                                     onSuccess: @escaping ((RegisterStripeNewCreditCardResponse) -> Void),
+                                                     onError: ((ViewError) -> Void)? = nil) {
+        let serviceExecution = weakify { strongSelf in
+            serviceSetup.service
+                .callWithURLEncoded(serviceSetup.parameters, urlParameters: serviceSetup.urlParameters)
+                .sink(receiveCompletion: { result in
+                    strongSelf.onReceiveCompletion(result: result, onError: onError)
+                }, receiveValue: { value in
+                    onSuccess(value)
                 }).store(in: &strongSelf.bag)
         }
         executeTheRequest(serviceSetupParameter: serviceSetup, serviceExecution: serviceExecution)

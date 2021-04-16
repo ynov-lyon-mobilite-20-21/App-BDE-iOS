@@ -11,6 +11,27 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum CardPayment {
+    /// Ajouter une carte de crédit
+    internal static let title = L10n.tr("Localizable", "CardPayment.title")
+    internal enum Button {
+      /// Ajouter cette carte
+      internal static let addCard = L10n.tr("Localizable", "CardPayment.button.addCard")
+    }
+    internal enum CreditCard {
+      /// Cryptogramme
+      internal static let cvc = L10n.tr("Localizable", "CardPayment.creditCard.cvc")
+      /// Date d'expiration
+      internal static let expirationDate = L10n.tr("Localizable", "CardPayment.creditCard.expirationDate")
+      /// MasterCard / Visa / CB
+      internal static let indications = L10n.tr("Localizable", "CardPayment.creditCard.indications")
+      /// Numéro de la carte
+      internal static let number = L10n.tr("Localizable", "CardPayment.creditCard.number")
+      /// Titulaire de la carte
+      internal static let owner = L10n.tr("Localizable", "CardPayment.creditCard.owner")
+    }
+  }
+
   internal enum QRCode {
     /// QR-code à présenter au membre du  BDE responsable à l’entrée le jour J
     internal static let indication = L10n.tr("Localizable", "QRCode.indication")
@@ -27,8 +48,36 @@ internal enum L10n {
     }
   }
 
+  internal enum CheckoutDone {
+    /// Ton BDE 🦁
+    internal static let signature = L10n.tr("Localizable", "checkoutDone.signature")
+    /// Achat réussi !
+    internal static let title = L10n.tr("Localizable", "checkoutDone.title")
+    internal enum Thanks {
+      /// Nous avons bien reçu ton paiement, merci et bon appétit !
+      internal static let food = L10n.tr("Localizable", "checkoutDone.thanks.food")
+      /// Nous avons bien reçu ton paiement, merci et à très bientôt !
+      internal static let ticket = L10n.tr("Localizable", "checkoutDone.thanks.ticket")
+    }
+  }
+
+  internal enum CheckoutPayment {
+    /// Confirmation d'achat
+    internal static let title = L10n.tr("Localizable", "checkoutPayment.title")
+    internal enum Button {
+      /// Enregistrer cette carte
+      internal static let cardRegistration = L10n.tr("Localizable", "checkoutPayment.button.cardRegistration")
+    }
+  }
+
   internal enum Error {
     internal enum Alert {
+      internal enum BadCredentials {
+        /// Votre adresse mail ou votre mot de passe sont incorrects
+        internal static let description = L10n.tr("Localizable", "error.alert.BAD_CREDENTIALS.description")
+        /// Attention
+        internal static let title = L10n.tr("Localizable", "error.alert.BAD_CREDENTIALS.title")
+      }
       internal enum PartyRefused {
         /// Bah la partie est refusée hein
         internal static let description = L10n.tr("Localizable", "error.alert.PARTY_REFUSED.description")
@@ -46,6 +95,12 @@ internal enum L10n {
         internal static let description = L10n.tr("Localizable", "error.alert.UNKNOW_ERROR.description")
         /// une erreur est survenue
         internal static let title = L10n.tr("Localizable", "error.alert.UNKNOW_ERROR.title")
+      }
+      internal enum UserInactive {
+        /// Votre compte n'a pas encore été activé !\n Rendez-vous dans vos mails
+        internal static let description = L10n.tr("Localizable", "error.alert.USER_INACTIVE.description")
+        /// Attention
+        internal static let title = L10n.tr("Localizable", "error.alert.USER_INACTIVE.title")
       }
       internal enum Button {
         /// Annuler
