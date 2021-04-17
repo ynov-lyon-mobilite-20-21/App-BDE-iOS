@@ -53,6 +53,8 @@ class BaseViewModel: ObservableObject, Weakable {
         executeRequest(serviceParameter, onSuccess: { value in
             KeyChainService.shared.addTokensInKeyChain(token: value.data.token, refreshToken: value.data.refreshToken)
             onTokenSuccess(value.data.token)
+        }, onError: { error in
+            print(error)
         })
     }
     func executeRequest<T: WebService>(_ serviceSetup: ExecuteServiceSetup<T>,

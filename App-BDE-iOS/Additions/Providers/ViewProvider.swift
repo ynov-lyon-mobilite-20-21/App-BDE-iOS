@@ -11,8 +11,8 @@ import SwiftUI
 class ViewProvider: ObservableObject {
 
     static var shared = ViewProvider()
-
+    static private var helperAssembly = HelperAssembly()
     static func generateAssembler(viewControllerAssembly: Assembly) -> Assembler {
-        return Assembler([viewControllerAssembly, HelperAssembly()])
+        return Assembler([viewControllerAssembly, helperAssembly])
     }
 }
