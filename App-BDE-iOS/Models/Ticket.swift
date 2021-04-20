@@ -11,8 +11,7 @@ struct Ticket: Decodable {
     var _id: String
     var eventId: String
     var userId: String
-    var isValid: Bool
-    var validationCount: Int
     var paymentId: String?
-    // add qrCodeString: String
+    var validationCount: Int
+    var qrCodeString: String
 }

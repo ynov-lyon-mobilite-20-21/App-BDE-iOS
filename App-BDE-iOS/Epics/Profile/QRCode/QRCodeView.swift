@@ -18,18 +18,18 @@ struct QRCodeView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                 VStack {
-                    Text("Espit Chupitos")
+                    Text("Nom de l'évènement")
                         .font(.title2)
                         .bold()
                         .foregroundColor(.white)
 
-                    Text("Billet n°1")
+                    Text("Numéro du billet")
                         .font(.title3)
                         .bold()
                         .foregroundColor(.white)
 
                     ZStack {
-                        Image(uiImage: viewModel.generateQRCode(from: "test"))
+                        Image(uiImage: viewModel.generateQRCode(from: viewModel.ticket.qrCodeString))
                             .interpolation(.none)
                             .resizable()
                             .scaledToFit()
@@ -40,7 +40,7 @@ struct QRCodeView: View {
                     .background(LinearGradient(gradient: Gradient(colors: [.bdePink, .bdeGreen]), startPoint: .leading, endPoint: .trailing))
                     .cornerRadius(30)
 
-                    Text("Nicolas Barbosa")
+                    Text("Nom du propriétaire")
                         .font(.title3)
                         .bold()
                         .foregroundColor(.white)

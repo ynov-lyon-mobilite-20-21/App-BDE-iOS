@@ -13,9 +13,9 @@ struct TicketCard: View {
             Spacer()
             HStack {
                 VStack(alignment: .leading) {
-                    Text("test")
+                    Text("Type de l'event")
                         .font(.subheadline).foregroundColor(.gray)
-                    Text("test")
+                    Text("Nom de l'event")
                         .font(.title3).bold()
                         .foregroundColor(.blackToGreen)
                 }

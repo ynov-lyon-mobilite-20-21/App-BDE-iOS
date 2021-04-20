@@ -8,27 +8,8 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
     @ObservedObject var viewModel: ProfileViewModel
-    
-    let eventList: [Event] = [Event(_id: "1",
-                                    name: "Espit Chupitos",
-                                    type: .studentParty,
-                                    imgType: .party,
-                                    logoType: .party,
-                                    date: "21/12/2020", hour: "20h",
-                                    address: "22 rue du Test",
-                                    description: "C'est une sacré description",
-                                    price: 5),
-                              Event(_id: "1",
-                                    name: "Espit Chupitos",
-                                    type: .studentParty,
-                                    imgType: .party,
-                                    logoType: .party,
-                                    date: "21/12/2020", hour: "20h",
-                                    address: "22 rue du Test",
-                                    description: "C'est une sacré description",
-                                    price: 5)]
-    
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
@@ -132,13 +113,13 @@ struct ProfileView: View {
 
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 20) {
-                                ForEach(eventList, id: \._id) { _ in
+                                ForEach(viewModel.userTickets, id: \._id) { ticket in
 
                                     TicketCard()
                                         .frame(width: gr.size.width * 0.6, height: gr.size.width * 0.6 * 1.4)
                                         .shadow(radius: 6)
                                         .onTapGesture {
-                                            viewModel.showModal = .qrCode
+                                            viewModel.showTicket(with: ticket)
                                         }
                                 }
                             }
@@ -165,7 +146,7 @@ struct ProfileView: View {
             case .settings:
                 ViewProvider.settings()
             case .qrCode:
-                ViewProvider.QRCode()
+                ViewProvider.QRCode(ticket: viewModel.userTicket ?? Ticket(_id: "", eventId: "", userId: "", paymentId: "", validationCount: 0, qrCodeString: ""))
             }
 
         }

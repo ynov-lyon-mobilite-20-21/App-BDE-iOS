@@ -10,6 +10,7 @@ import Foundation
 class ProfileViewModel: BaseViewModel {
     
     var getUserWebService: GetUserWebService!
+    var getUserTicketsWebService: GetUserTicketsWebService!
     
     enum Sheet: String, Identifiable {
         var id: String {
@@ -35,8 +36,29 @@ class ProfileViewModel: BaseViewModel {
         }
     }
     
+    var userTickets: [Ticket] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    
+    var userTicket: Ticket? {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    
     func showSettings() {
         showModal = .settings
+    }
+    
+    func showTicket(with ticket: Ticket) {
+        userTicket = ticket
+        showModal = .qrCode
     }
 
     func checkIfUserAuth() {
@@ -45,6 +67,7 @@ class ProfileViewModel: BaseViewModel {
             return
         }
         getUser()
+        getTickets()
     }
     
     func redirectToEvent() {
@@ -61,6 +84,16 @@ class ProfileViewModel: BaseViewModel {
             print(value.data)
             self.user = value.data
             UserProvider.shared.user = value.data
+        })
+    }
+    
+    private func getTickets() {
+        let serviceParameters = ExecuteServiceSetup(service: getUserTicketsWebService, parameters: EmptyParameters(), isRequestAuthenticated: true)
+        executeRequest(serviceParameters, onSuccess: { value in
+            print(value.data.first?.qrCodeString)
+            self.userTickets = value.data
+        }, onError: { error in
+            print(error)
         })
     }
 }
