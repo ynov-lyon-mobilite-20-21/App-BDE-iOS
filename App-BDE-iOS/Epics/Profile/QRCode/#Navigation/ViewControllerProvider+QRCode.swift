@@ -9,9 +9,9 @@ import Foundation
 import Swinject
 
 extension ViewProvider {
-    static func QRCode() -> QRCodeView {
+    static func QRCode(ticket: Ticket) -> QRCodeView {
         let assembler = generateAssembler(viewControllerAssembly: QRCodeAssembly())
 
-        return assembler.resolver.resolve(QRCodeView.self)!
+        return assembler.resolver.resolve(QRCodeView.self, argument: ticket)!
     }
 }

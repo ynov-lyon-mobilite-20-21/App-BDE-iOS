@@ -16,12 +16,16 @@ class QRScannerViewModel: BaseViewModel {
     var qrScannerWebService: QRScannerWebService!
     var ticketOwner: String = "" {
         didSet {
-            objectWillChange.send()
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
         }
     }
     var ticketId: String = "" {
         didSet {
-            objectWillChange.send()
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
         }
     }
     var isScanning: Bool = true {
@@ -45,8 +49,8 @@ class QRScannerViewModel: BaseViewModel {
                                                     isRequestAuthenticated: true)
 
         executeRequest(serviceParameters, onSuccess: { value in
-            self.ticketOwner = value.data.user.firstName
-            self.ticketId = value.data.ticket._id
+            self.ticketOwner = "\(value.data.user.firstName) \(value.data.user.lastName)"
+            self.ticketId = value.data.user.mail
             print(value.data.user.mail)
         }, onError: { error in
             print(error)

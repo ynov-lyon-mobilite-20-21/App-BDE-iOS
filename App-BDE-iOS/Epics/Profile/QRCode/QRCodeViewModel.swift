@@ -10,6 +10,11 @@ import SwiftUI
 
 class QRCodeViewModel: BaseViewModel {
 
+    func setup(ticket: Ticket) {
+        self.ticket = ticket
+    }
+    var ticket: Ticket!
+    
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
 

@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     @Environment(\.presentationMode) var presentation
     @ObservedObject var viewModel: SettingsViewModel
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -27,13 +27,20 @@ struct SettingsView: View {
                         }
                     }
                     Section(header: Text("")) {
-                        Text(L10n.Settings.onboarding)
-                            .font(.title3)
-                            .padding(.vertical)
-                        NavigationLink(destination: ViewProvider.event()) {
+                        NavigationLink(destination: VStack {
+                            Text("Page en cours de développement")
+                        }) {
+                            Text(L10n.Settings.onboarding)
+                                .font(.title3)
+                                .padding(.vertical)
+                        }
+                        NavigationLink(destination: VStack {
+                            Text("Page en cours de développement")
+                        }) {
                             Text(L10n.Settings.Payment.info)
                                 .font(.title3)
                                 .padding(.vertical)
+                            
                         }
                         Text(L10n.Settings.Account.delete)
                             .font(.title3)
@@ -51,7 +58,7 @@ struct SettingsView: View {
                             .font(.title3)
                             .padding(.vertical)
                             .foregroundColor(Color.bdePink)
-
+                        
                     }
                 }
                 .listStyle(InsetGroupedListStyle())

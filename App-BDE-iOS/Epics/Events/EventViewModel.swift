@@ -10,11 +10,20 @@ import SwiftUI
 
 class EventViewModel: BaseViewModel {
     
-    @Published var show = false
     var getEventWebService: GetEventWebService!
     var eventList: [Event] = [] {
         didSet {
-            objectWillChange.send()
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
+    }
+    
+    var isLoading: Bool = true {
+        didSet {
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
         }
     }
     
@@ -24,6 +33,7 @@ class EventViewModel: BaseViewModel {
        executeRequest(serviceParameters, onSuccess: weakify { strongSelf, events in
         DispatchQueue.main.async {
             strongSelf.eventList = events.data
+            self.isLoading = false
         }
        }, onError: { error in
         print(error)
