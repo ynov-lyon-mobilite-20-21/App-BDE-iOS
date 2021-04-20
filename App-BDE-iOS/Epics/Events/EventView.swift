@@ -11,33 +11,42 @@ struct EventView: View {
     
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: EventViewModel
-    @State private var showModal: Bool = false
     
     var body: some View {
-        
         GeometryReader { gr in
-            ScrollView {
-                HStack(alignment: .bottom) {
-                    ZStack {
-                        TitleShape(radius: 20)
-                            .fill(Color.blueToBlack)
-                        TitleCustom(title: L10n.Event.title, font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
+            VStack {
+                Spacer()
+                if viewModel.isLoading {
+                        LoadingView()
+                            .frame(width: 100, height: 100)
+                } else {
+                    ScrollView {
+                        HStack(alignment: .bottom) {
+                            ZStack {
+                                TitleShape(radius: 20)
+                                    .fill(Color.blueToBlack)
+                                TitleCustom(title: L10n.Event.title, font: .custom("TabacBigSans-SemiBoldIt", size: 25), textColor: .white, shadowColor: .bdeGreen)
+                            }
+                            .frame(width: 250, height: 40)
+                            .shadow(radius: 6)
+                            Spacer()
+                        }
+                        VStack(spacing: 10) {
+                            ForEach(viewModel.eventList, id: \._id) { event in
+                                EventItem(event: event)
+                                    .shadow(radius: 5)
+                                    .transition(.scale)
+                            }
+                        }
+                        .padding(.horizontal)
+                        .frame(width: gr.size.width)
+                        .animation(.default)
                     }
-                    .frame(width: 250, height: 40)
-                    .shadow(radius: 6)
-                    Spacer()
                 }
-                VStack(spacing: 10) {
-                    ForEach(viewModel.eventList, id: \._id) { event in
-                        EventItem(event: event)
-                            .shadow(radius: 5)
-                            .transition(.scale)
-                    }
-                }
-                .padding(.horizontal)
-                .frame(width: gr.size.width)
-                .animation(.default)
+                Spacer()
+
             }
+            .frame(width: gr.size.width, height: gr.size.height)
             .background(
                 ZStack {
                     Color.whiteToBlue
