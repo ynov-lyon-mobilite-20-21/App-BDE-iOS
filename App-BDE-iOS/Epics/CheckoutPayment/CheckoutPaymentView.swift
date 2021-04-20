@@ -107,6 +107,7 @@ struct CheckoutPaymentView: View {
                         
                         if viewModel.isLoading {
                             LoadingView()
+                                .frame(width: 100, height: 100)
                         } else {
                             Button(action: {
                                 if viewModel.isShowingCardRegister {
